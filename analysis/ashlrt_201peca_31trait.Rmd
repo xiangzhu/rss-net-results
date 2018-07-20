@@ -1,0 +1,71 @@
+---
+title: "A quick assessment of PECA networks on human complex traits"
+author: "Xiang Zhu"
+date: "2018-07-19"
+output: workflowr::wflow_html
+---
+
+```{r, echo=FALSE}
+suppressPackageStartupMessages(library(data.table))
+suppressPackageStartupMessages(library(dplyr))
+suppressPackageStartupMessages(library(knitr))
+```
+
+## PECA networks
+
+Below is an example of PECA networks (courtesy of Duren).
+Columns 1-6 are TG, RE, TF, corr(TG, RE), corr(TG, TF)
+and combined p-value for corr(TG, RE) and corr(TG, TF). 
+
+```{r, echo=FALSE}
+peca_net <- data.table::fread("~/Downloads/TissueNet/Tissue_network_43.txt")
+dplyr::sample_n(peca_net,5)
+```
+
+There are 201 PECA networks, each corresponding to a tissue or cell type.
+
+```{r, echo=FALSE}
+sample_name <- scan("~/Dropbox/rss/Data/peca_human/out_market/sampleName",what="character",sep="\n")
+net_info <- data.frame(sample_name=sample_name,net_id=(1:length(sample_name)),stringsAsFactors=FALSE)
+
+dplyr::sample_n(net_info,5)
+```
+
+## Analysis methods
+
+- Use PECA network to annotate SNPs: $a_j=1$ if SNP $j$ is inside any TG, RE and TF of a network.
+- Apply a simple enrichment method from [Zhu and Stephens (2017)](https://doi.org/10.1101/160770)
+to 201 PECA networks and 31 complex human traits (`r 201*31` analyses in total);
+see [Supplementary Figure 17](https://www.biorxiv.org/content/biorxiv/suppl/2018/07/16/160770.DC2/160770-3.pdf) for details.
+- Output a log10 likelihood ratio value to measure the strength of enrichment.
+
+Some known limitations of this quick assessment:
+
+- Ignore the difference among TG, RE and TF.
+- Focus on 1.1 million HapMap3 common SNPs only.
+- Unable to account for LD in a principled way.
+
+## Full results
+
+```{r, echo=FALSE}
+res_mat <- readRDS("~/Dropbox/rss/Data/peca_human/out_market/peca_human_ashlrt_20180719.rds")
+res_df <- as.data.frame(res_mat/log(10), row.names=NULL)
+res_df$net_id <- (1:201)
+res_df <- dplyr::inner_join(net_info, res_df, by="net_id")
+```
+
+```{r, echo=FALSE, results="asis"}
+trait_set <- colnames(res_mat)
+num_trait <- length(trait_set)
+#num_trait <- 2 # for testing
+
+for (j in 1:num_trait) {
+  cat(paste0('### Complex trait: ',trait_set[j],'\n')) 
+  tmp_df <- res_df[, c("sample_name","net_id",trait_set[j])]
+  tmp_df <- tmp_df[order(tmp_df[[trait_set[j]]], decreasing=TRUE),]
+  rownames(tmp_df) <- NULL
+  print(knitr::kable(tmp_df))
+  cat('\r\n\r\n')
+}
+```
+

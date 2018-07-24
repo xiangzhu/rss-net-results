@@ -373,7 +373,7 @@ div.section {
 </div>
 
 
-<p><strong>Last updated:</strong> 2018-07-19</p>
+<p><strong>Last updated:</strong> 2018-07-24</p>
 <strong>workflowr checks:</strong> <small>(Click a bullet for more information)</small>
 <ul>
 <li>
@@ -402,14 +402,14 @@ div.section {
 </li>
 <li>
 <details>
-<p><summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> <a href="https://github.com/xiangzhu/rss-peca/tree/31929497228e8bc7d3cb741b0365267e9e42c156" target="_blank">3192949</a> </summary></p>
+<p><summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> <a href="https://github.com/xiangzhu/rss-peca/tree/7f7d3b0add79c1b81948a2456a72ac8188370444" target="_blank">7f7d3b0</a> </summary></p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
 <pre><code>
 Ignored files:
+    Ignored:    .Rhistory
     Ignored:    .Rproj.user/
 
 Unstaged changes:
-    Modified:   analysis/_site.yml
     Modified:   analysis/index.Rmd
 
 </code></pre>
@@ -446,6 +446,40 @@ Message
 Rmd
 </td>
 <td style="text-align:left;">
+<a href="https://github.com/xiangzhu/rss-peca/blob/7f7d3b0add79c1b81948a2456a72ac8188370444/analysis/ashlrt_201peca_31trait.Rmd" target="_blank">7f7d3b0</a>
+</td>
+<td style="text-align:left;">
+Xiang Zhu
+</td>
+<td style="text-align:left;">
+2018-07-24
+</td>
+<td style="text-align:left;">
+wflow_publish(“analysis/ashlrt_201peca_31trait.Rmd”)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://cdn.rawgit.com/xiangzhu/rss-peca/8817749698a4008c22fc2f188f4977427e1c92f3/docs/ashlrt_201peca_31trait.html" target="_blank">8817749</a>
+</td>
+<td style="text-align:left;">
+Xiang Zhu
+</td>
+<td style="text-align:left;">
+2018-07-19
+</td>
+<td style="text-align:left;">
+Build site.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Rmd
+</td>
+<td style="text-align:left;">
 <a href="https://github.com/xiangzhu/rss-peca/blob/31929497228e8bc7d3cb741b0365267e9e42c156/analysis/ashlrt_201peca_31trait.Rmd" target="_blank">3192949</a>
 </td>
 <td style="text-align:left;">
@@ -466,12 +500,12 @@ wflow_publish(“analysis/ashlrt_201peca_31trait.Rmd”)
 <div id="peca-networks" class="section level2">
 <h2>PECA networks</h2>
 <p>Below is an example of PECA networks (courtesy of Duren). Columns 1-6 are TG, RE, TF, corr(TG, RE), corr(TG, TF) and combined p-value for corr(TG, RE) and corr(TG, TF).</p>
-<pre><code>      V1                       V2      V3         V4        V5          V6
-1:  PTEN  chr10_89574885_89579284   NFKB1 -0.0794517 0.4640440 0.00000e+00
-2: WDR77 chr1_112134286_112141848   FOXM1  0.0979808 0.4113350 0.00000e+00
-3:  ICMT     chr1_6319741_6324375    ETV5 -0.2266470 0.0792422 4.34913e-03
-4: MMS19  chr10_99090974_99095839 CREB3L4  0.0585205 0.3093300 8.75054e-05
-5: HIPK3  chr11_33181171_33184553     SP3 -0.3423130 0.4462230 0.00000e+00</code></pre>
+<pre><code>        V1                        V2     V3         V4        V5          V6
+1:   RAD21  chr8_117766768_117768834    YY1  0.1697000  0.631378 0.000000000
+2:  ZNF672  chr1_249151296_249154858 ZBTB7B -0.3405460  0.642075 0.000000000
+3:     PXN chr12_120728346_120731719 ZBTB7A  0.0686138  0.230355 0.004719010
+4:  AKR1A1    chr1_46150152_46155212   MITF  0.2210800 -0.208812 0.000130369
+5: HSPA12A chr10_118529441_118532016  MEIS1  0.2472040  0.329031 0.000000000</code></pre>
 <p>There are 201 PECA networks, each corresponding to a tissue or cell type.</p>
 <pre><code>                         sample_name net_id
 98                Treg Primary Cells     98
@@ -490,8 +524,19 @@ wflow_publish(“analysis/ashlrt_201peca_31trait.Rmd”)
 <p>Some known limitations of this quick assessment:</p>
 <ul>
 <li>Ignore the difference among TG, RE and TF.</li>
+<li>Ignore the directionality among TG, RE and TF.</li>
 <li>Focus on 1.1 million HapMap3 common SNPs only.</li>
 <li>Unable to account for LD in a principled way.</li>
+<li>Unable to correct for general enrichments near genes (TG, TF) and regulatory regions (RE).</li>
+<li>Some tissues and cell types have multiple PECA networks.</li>
+</ul>
+<p>This simple analysis yields some findings in concordance with literature:</p>
+<ul>
+<li>Age at natural menopause — MCF-7 (breast cancer cell line)</li>
+<li>Crohn’s disease — primary B cells from peripheral blood</li>
+<li>Gout — Treg Primary Cells</li>
+<li>High-density lipoprotein — HepG2 (liver cancer cell line)</li>
+<li>Rheumatoid arthritis — CD8 Primary Cells</li>
 </ul>
 </div>
 <div id="full-results" class="section level2">
@@ -32107,17 +32152,8 @@ other attached packages:
 [1] knitr_1.20        dplyr_0.7.5       data.table_1.11.4
 
 loaded via a namespace (and not attached):
- [1] Rcpp_0.12.17      bindr_0.1.1       whisker_0.3-2    
- [4] magrittr_1.5      workflowr_1.1.1   tidyselect_0.2.4 
- [7] R6_2.2.2          rlang_0.2.1       highr_0.7        
-[10] stringr_1.3.1     tools_3.5.1       R.oo_1.22.0      
-[13] git2r_0.21.0      htmltools_0.3.6   yaml_2.1.19      
-[16] rprojroot_1.3-2   digest_0.6.15     assertthat_0.2.0 
-[19] tibble_1.4.2      bindrcpp_0.2.2    purrr_0.2.5      
-[22] R.utils_2.6.0     glue_1.2.0        evaluate_0.10.1  
-[25] rmarkdown_1.10    stringi_1.2.3     pillar_1.2.3     
-[28] compiler_3.5.1    backports_1.1.2   R.methodsS3_1.7.1
-[31] pkgconfig_2.0.1  </code></pre>
+ [1] Rcpp_0.12.17      bindr_0.1.1       whisker_0.3-2     magrittr_1.5      workflowr_1.1.1   tidyselect_0.2.4  R6_2.2.2          rlang_0.2.1       highr_0.7         stringr_1.3.1     tools_3.5.1       R.oo_1.22.0       git2r_0.21.0      htmltools_0.3.6   yaml_2.1.19       rprojroot_1.3-2  
+[17] digest_0.6.15     assertthat_0.2.0  tibble_1.4.2      bindrcpp_0.2.2    purrr_0.2.5       R.utils_2.6.0     glue_1.2.0        evaluate_0.10.1   rmarkdown_1.10    stringi_1.2.3     pillar_1.2.3      compiler_3.5.1    backports_1.1.2   R.methodsS3_1.7.1 pkgconfig_2.0.1  </code></pre>
 </div>
 
 <!-- Adjust MathJax settings so that all math formulae are shown using

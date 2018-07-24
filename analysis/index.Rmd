@@ -21,4 +21,16 @@ If you have any question about this project, please feel free to contact me:
 
 ## Data analysis
 
-[Here](ashlrt_201peca_31trait.html) is a quick assessment of 201 PECA networks on 31 human complex traits.
+### Quick assessments
+
+Below are some quick assessments of PECA networks I received from Duren,
+using a simple likelihood ratio calculation introduced in
+[Zhu and Stephens (2017)](https://doi.org/10.1101/160770).
+The aim of these quick assessments is to confirms whether these networks
+are informative in identifying disease-related tissues or cell types.
+
+- [201 PECA networks and 31 human complex traits](ashlrt_201peca_31trait.html)
+- [73 PECA networks and 33 human complex traits](ashlrt_73peca_33trait.html)
+- [73 PECA networks (TG only) and 33 human complex traits](ashlrt_73peca_33trait_tg.html)
+- [73 PECA networks (RE only) and 33 human complex traits](ashlrt_73peca_33trait_re.html)
+- [66 MusDev lists and 33 human complex traits](ashlrt_66musdev_33traits.html)

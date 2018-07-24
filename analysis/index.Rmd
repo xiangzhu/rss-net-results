@@ -33,4 +33,5 @@ are informative in identifying disease-related tissues or cell types.
 - [73 PECA networks and 33 human complex traits](ashlrt_73peca_33trait.html)
 - [73 PECA networks (TG only) and 33 human complex traits](ashlrt_73peca_33trait_tg.html)
 - [73 PECA networks (RE only) and 33 human complex traits](ashlrt_73peca_33trait_re.html)
+- [Comparison between TG or RE with full PECA networks](ashlrt_73peca_33trait_compare.html)
 - [66 MusDev lists and 33 human complex traits](ashlrt_66musdev_33traits.html)

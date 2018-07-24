@@ -39,17 +39,6 @@ Note that here I only used the RE column of each network in the following analys
 I run the same quick assessment on the RE parts of networks;
 analysis details are the same as my [previous analysis](ashlrt_201peca_31trait.html).
 
-This simple analysis yields some findings in concordance with literature:
-
-- Age at natural menopause --- MCF-7 (breast cancer cell line)
-- Crohn’s disease --- primary B cells from peripheral blood
-- High-density lipoprotein --- HepG2 (liver cancer cell line)
-- Heart rate --- Fetal Heart
-- Rheumatoid arthritis --- CD8 Primary Cells
-- Schizophrenia --- Primary T cells from cord blood
-- Waist-hip ratio --- Fetal Muscle
-- Atrial fibrillation --- Fetal Heart
-
 ## Full results
 
 ```{r, echo=FALSE}

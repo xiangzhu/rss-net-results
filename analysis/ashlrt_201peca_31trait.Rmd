@@ -18,7 +18,8 @@ Columns 1-6 are TG, RE, TF, corr(TG, RE), corr(TG, TF)
 and combined p-value for corr(TG, RE) and corr(TG, TF). 
 
 ```{r, echo=FALSE}
-peca_net <- data.table::fread("~/Downloads/TissueNet/Tissue_network_43.txt")
+options(width=300)
+peca_net <- data.table::fread("~/Downloads/TissueNet_merged/Tissue_network_Ovary.txt")
 dplyr::sample_n(peca_net,5)
 ```
 
@@ -42,8 +43,19 @@ see [Supplementary Figure 17](https://www.biorxiv.org/content/biorxiv/suppl/2018
 Some known limitations of this quick assessment:
 
 - Ignore the difference among TG, RE and TF.
+- Ignore the directionality among TG, RE and TF.
 - Focus on 1.1 million HapMap3 common SNPs only.
 - Unable to account for LD in a principled way.
+- Unable to correct for general enrichments near genes (TG, TF) and regulatory regions (RE).
+- Some tissues and cell types have multiple PECA networks.
+
+This simple analysis yields some findings in concordance with literature:
+
+- Age at natural menopause --- MCF-7 (breast cancer cell line)
+- Crohn’s disease --- primary B cells from peripheral blood
+- Gout --- Treg Primary Cells
+- High-density lipoprotein --- HepG2 (liver cancer cell line)
+- Rheumatoid arthritis --- CD8 Primary Cells
 
 ## Full results
 
@@ -54,7 +66,7 @@ res_df$net_id <- (1:201)
 res_df <- dplyr::inner_join(net_info, res_df, by="net_id")
 ```
 
-```{r, echo=FALSE, results="asis"}
+```{r, echo=FALSE, results="asis", eval=TRUE}
 trait_set <- colnames(res_mat)
 num_trait <- length(trait_set)
 #num_trait <- 2 # for testing

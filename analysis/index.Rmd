@@ -21,7 +21,7 @@ If you have any question about this project, please feel free to contact me:
 
 ## Data analysis
 
-### Quick assessments
+### Likelihood ratio assessments
 
 Below are some quick assessments of PECA networks I received from Duren,
 using a simple likelihood ratio calculation introduced in
@@ -35,3 +35,9 @@ are informative in identifying disease-related tissues or cell types.
 - [73 PECA networks (RE only) and 33 human complex traits](ashlrt_73peca_33trait_re.html)
 - [Comparison between TG or RE with full PECA networks](ashlrt_73peca_33trait_compare.html)
 - [66 MusDev lists and 33 human complex traits](ashlrt_66musdev_33traits.html)
+
+### Application of new methods
+
+Below are applications of the new methods to real datasets.
+
+- [Late-onset Alzheimer's disease & Liver-specific network](load2013_liver.html)

@@ -1,0 +1,63 @@
+---
+title: "Late-onset Alzheimer's disease & Liver-specific network"
+author: "Xiang Zhu"
+date: "2018-08-30"
+output: workflowr::wflow_html
+---
+
+## Input data
+
+- Processed GWAS file: `/project/mstephens/test_rss/data/load2013/load2013_sumstat.mat`
+- PECA2 liver-specific network: `/scratch/PI/whwong/zduren/share/PECA_human/PECA2/Liver_network.txt`
+- $L_0$: 40 kb; $L_1$: 100 kb
+- SNP-to-gene windown: 10 Mb
+- Hyperparameter grid: TBA
+
+```{r, echo=FALSE}
+suppressPackageStartupMessages(library(R.matlab))
+suppressPackageStartupMessages(library(dplyr))
+
+# normalize log likelihood to probability
+normalize_logw <- function(logw){
+  # guard against underflow or overflow
+  c <- max(logw)
+  w <- exp(logw-c)
+  # normalize the probabilities
+  w <- w / sum(w)
+  return(w)
+}
+```
+
+```{r}
+res <- R.matlab::readMat("~/Dropbox/rss/Data/peca_human/out_market/load2013_liver_out.mat")
+
+# create a data frame for ELBO
+elbo_df <- data.frame(
+  piva <- c(res$piva),
+  sigb <- c(res$sigb),
+  elbo <- c(res$vb.elbo),
+  time <- c(res$exe.time)
+)
+names(elbo_df) <- c("piva","sigb","elbo","time")
+
+elbo_df$posp <- normalize_logw(elbo_df$elbo)
+```
+
+```{r}
+map_id <- which.max(elbo_df$elbo)
+map_id <- 1
+
+gene_df <- data.frame(vb_weight=res$vb.weight[, map_id],
+                      vb_mean=res$vb.mean[, map_id],
+                      vb_var=res$vb.var[, map_id],
+                      gene_nid=1:dim(res$vb.weight)[1])
+
+gene_info <- readRDS("~/Dropbox/rss/Data/peca_human/data_factory/20180820/Homo_sapiens_GRCh37_gene_info.rds")
+
+gene_df <- dplyr::inner_join(gene_info[,c("hgnc_symbol","chromosome_name","start_position","end_position","gene_nid")], gene_df, by="gene_nid")
+
+gene_df <- dplyr::arrange(gene_df, -vb_weight, -vb_mean)
+```
+
+## Results summary
+

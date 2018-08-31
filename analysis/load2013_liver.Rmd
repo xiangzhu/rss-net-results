@@ -30,13 +30,14 @@ normalize_logw <- function(logw){
 
 ```{r, echo=FALSE}
 res <- R.matlab::readMat("~/Dropbox/rss/Data/peca_human/out_market/load2013_liver_out.mat")
+res_2 <- R.matlab::readMat("~/Dropbox/rss/Data/peca_human/out_market/load2013_liver_out_2.mat")
 
 # create a data frame for ELBO
 elbo_df <- data.frame(
-  piva <- c(res$piva),
-  sigb <- c(res$sigb),
-  elbo <- c(res$vb.elbo),
-  time <- c(res$exe.time)
+  piva <- c(res$piva, res_2$piva),
+  sigb <- c(res$sigb, res_2$sigb),
+  elbo <- c(res$vb.elbo, res_2$vb.elbo),
+  time <- c(res$exe.time, res_2$exe.time)
 )
 names(elbo_df) <- c("piva","sigb","elbo","time")
 
@@ -45,11 +46,14 @@ elbo_df$posp <- normalize_logw(elbo_df$elbo)
 
 ```{r, echo=FALSE}
 map_id <- which.max(elbo_df$elbo)
-map_id <- 1
 
-gene_df <- data.frame(vb_weight=res$vb.weight[, map_id],
-                      vb_mean=res$vb.mean[, map_id],
-                      vb_var=res$vb.var[, map_id],
+vb.weight <- cbind(res$vb.weight, res_2$vb.weight)
+vb.mean <- cbind(res$vb.mean, res_2$vb.mean)
+vb.var <- cbind(res$vb.var, res_2$vb.var)
+
+gene_df <- data.frame(vb_weight=vb.weight[, map_id],
+                      vb_mean=vb.mean[, map_id],
+                      vb_var=vb.var[, map_id],
                       gene_nid=1:dim(res$vb.weight)[1])
 
 gene_info <- readRDS("~/Dropbox/rss/Data/peca_human/data_factory/20180820/Homo_sapiens_GRCh37_gene_info.rds")

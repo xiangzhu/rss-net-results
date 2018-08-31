@@ -402,15 +402,12 @@ div.section {
 </li>
 <li>
 <details>
-<p><summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> <a href="https://github.com/xiangzhu/rss-peca/tree/e5fe6e00671d07bddea48d233180772c3c0c854a" target="_blank">e5fe6e0</a> </summary></p>
+<p><summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> <a href="https://github.com/xiangzhu/rss-peca/tree/6b3b28088145131e9c1043a8f32a67dbc559f3e7" target="_blank">6b3b280</a> </summary></p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
 <pre><code>
 Ignored files:
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
-
-Unstaged changes:
-    Modified:   analysis/index.Rmd
 
 </code></pre>
 Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes.
@@ -446,6 +443,57 @@ Message
 Rmd
 </td>
 <td style="text-align:left;">
+<a href="https://github.com/xiangzhu/rss-peca/blob/6b3b28088145131e9c1043a8f32a67dbc559f3e7/analysis/load2013_liver.Rmd" target="_blank">6b3b280</a>
+</td>
+<td style="text-align:left;">
+Xiang Zhu
+</td>
+<td style="text-align:left;">
+2018-08-30
+</td>
+<td style="text-align:left;">
+wflow_publish(“analysis/load2013_liver.Rmd”)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Rmd
+</td>
+<td style="text-align:left;">
+<a href="https://github.com/xiangzhu/rss-peca/blob/dbd04eb9c75242803debc5b63bedd871e60da542/analysis/load2013_liver.Rmd" target="_blank">dbd04eb</a>
+</td>
+<td style="text-align:left;">
+Xiang Zhu
+</td>
+<td style="text-align:left;">
+2018-08-30
+</td>
+<td style="text-align:left;">
+minor update chunk option
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://cdn.rawgit.com/xiangzhu/rss-peca/8843641aea0bb91ad2afd705761a15ed53dd7bf3/docs/load2013_liver.html" target="_blank">8843641</a>
+</td>
+<td style="text-align:left;">
+Xiang Zhu
+</td>
+<td style="text-align:left;">
+2018-08-30
+</td>
+<td style="text-align:left;">
+Build site.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Rmd
+</td>
+<td style="text-align:left;">
 <a href="https://github.com/xiangzhu/rss-peca/blob/e5fe6e00671d07bddea48d233180772c3c0c854a/analysis/load2013_liver.Rmd" target="_blank">e5fe6e0</a>
 </td>
 <td style="text-align:left;">
@@ -472,38 +520,13 @@ wflow_publish(“analysis/load2013_liver.Rmd”)
 <li>SNP-to-gene windown: 10 Mb</li>
 <li>Hyperparameter grid: TBA</li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1">res &lt;-<span class="st"> </span>R.matlab<span class="op">::</span><span class="kw">readMat</span>(<span class="st">&quot;~/Dropbox/rss/Data/peca_human/out_market/load2013_liver_out.mat&quot;</span>)</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="co"># create a data frame for ELBO</span></a>
-<a class="sourceLine" id="cb1-4" data-line-number="4">elbo_df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(</a>
-<a class="sourceLine" id="cb1-5" data-line-number="5">  piva &lt;-<span class="st"> </span><span class="kw">c</span>(res<span class="op">$</span>piva),</a>
-<a class="sourceLine" id="cb1-6" data-line-number="6">  sigb &lt;-<span class="st"> </span><span class="kw">c</span>(res<span class="op">$</span>sigb),</a>
-<a class="sourceLine" id="cb1-7" data-line-number="7">  elbo &lt;-<span class="st"> </span><span class="kw">c</span>(res<span class="op">$</span>vb.elbo),</a>
-<a class="sourceLine" id="cb1-8" data-line-number="8">  time &lt;-<span class="st"> </span><span class="kw">c</span>(res<span class="op">$</span>exe.time)</a>
-<a class="sourceLine" id="cb1-9" data-line-number="9">)</a>
-<a class="sourceLine" id="cb1-10" data-line-number="10"><span class="kw">names</span>(elbo_df) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;piva&quot;</span>,<span class="st">&quot;sigb&quot;</span>,<span class="st">&quot;elbo&quot;</span>,<span class="st">&quot;time&quot;</span>)</a>
-<a class="sourceLine" id="cb1-11" data-line-number="11"></a>
-<a class="sourceLine" id="cb1-12" data-line-number="12">elbo_df<span class="op">$</span>posp &lt;-<span class="st"> </span><span class="kw">normalize_logw</span>(elbo_df<span class="op">$</span>elbo)</a></code></pre></div>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">map_id &lt;-<span class="st"> </span><span class="kw">which.max</span>(elbo_df<span class="op">$</span>elbo)</a>
-<a class="sourceLine" id="cb2-2" data-line-number="2">map_id &lt;-<span class="st"> </span><span class="dv">1</span></a>
-<a class="sourceLine" id="cb2-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb2-4" data-line-number="4">gene_df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">vb_weight=</span>res<span class="op">$</span>vb.weight[, map_id],</a>
-<a class="sourceLine" id="cb2-5" data-line-number="5">                      <span class="dt">vb_mean=</span>res<span class="op">$</span>vb.mean[, map_id],</a>
-<a class="sourceLine" id="cb2-6" data-line-number="6">                      <span class="dt">vb_var=</span>res<span class="op">$</span>vb.var[, map_id],</a>
-<a class="sourceLine" id="cb2-7" data-line-number="7">                      <span class="dt">gene_nid=</span><span class="dv">1</span><span class="op">:</span><span class="kw">dim</span>(res<span class="op">$</span>vb.weight)[<span class="dv">1</span>])</a>
-<a class="sourceLine" id="cb2-8" data-line-number="8"></a>
-<a class="sourceLine" id="cb2-9" data-line-number="9">gene_info &lt;-<span class="st"> </span><span class="kw">readRDS</span>(<span class="st">&quot;~/Dropbox/rss/Data/peca_human/data_factory/20180820/Homo_sapiens_GRCh37_gene_info.rds&quot;</span>)</a>
-<a class="sourceLine" id="cb2-10" data-line-number="10"></a>
-<a class="sourceLine" id="cb2-11" data-line-number="11">gene_df &lt;-<span class="st"> </span>dplyr<span class="op">::</span><span class="kw">inner_join</span>(gene_info[,<span class="kw">c</span>(<span class="st">&quot;hgnc_symbol&quot;</span>,<span class="st">&quot;chromosome_name&quot;</span>,<span class="st">&quot;start_position&quot;</span>,<span class="st">&quot;end_position&quot;</span>,<span class="st">&quot;gene_nid&quot;</span>)], gene_df, <span class="dt">by=</span><span class="st">&quot;gene_nid&quot;</span>)</a>
-<a class="sourceLine" id="cb2-12" data-line-number="12"></a>
-<a class="sourceLine" id="cb2-13" data-line-number="13">gene_df &lt;-<span class="st"> </span>dplyr<span class="op">::</span><span class="kw">arrange</span>(gene_df, <span class="op">-</span>vb_weight, <span class="op">-</span>vb_mean)</a></code></pre></div>
 </div>
 <div id="results-summary" class="section level2">
 <h2>Results summary</h2>
 </div>
 <div id="session-information" class="section level2">
 <h2>Session information</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">sessionInfo</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">sessionInfo</span>()</a></code></pre></div>
 <pre><code>R version 3.5.1 (2018-07-02)
 Platform: x86_64-apple-darwin15.6.0 (64-bit)
 Running under: macOS High Sierra 10.13.6

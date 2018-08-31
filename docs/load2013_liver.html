@@ -373,7 +373,7 @@ div.section {
 </div>
 
 
-<p><strong>Last updated:</strong> 2018-08-30</p>
+<p><strong>Last updated:</strong> 2018-08-31</p>
 <strong>workflowr checks:</strong> <small>(Click a bullet for more information)</small>
 <ul>
 <li>
@@ -402,11 +402,10 @@ div.section {
 </li>
 <li>
 <details>
-<p><summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> <a href="https://github.com/xiangzhu/rss-peca/tree/6b3b28088145131e9c1043a8f32a67dbc559f3e7" target="_blank">6b3b280</a> </summary></p>
+<p><summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> <a href="https://github.com/xiangzhu/rss-peca/tree/86e52f5711e1f63555fca3aa68fbb51097a863d0" target="_blank">86e52f5</a> </summary></p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
 <pre><code>
 Ignored files:
-    Ignored:    .Rhistory
     Ignored:    .Rproj.user/
 
 </code></pre>
@@ -438,6 +437,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align:left;">
+Rmd
+</td>
+<td style="text-align:left;">
+<a href="https://github.com/xiangzhu/rss-peca/blob/86e52f5711e1f63555fca3aa68fbb51097a863d0/analysis/load2013_liver.Rmd" target="_blank">86e52f5</a>
+</td>
+<td style="text-align:left;">
+Xiang Zhu
+</td>
+<td style="text-align:left;">
+2018-08-31
+</td>
+<td style="text-align:left;">
+wflow_publish(“analysis/load2013_liver.Rmd”)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://cdn.rawgit.com/xiangzhu/rss-peca/1734decb4679174e73104878dbd7332dd4c4aef4/docs/load2013_liver.html" target="_blank">1734dec</a>
+</td>
+<td style="text-align:left;">
+Xiang Zhu
+</td>
+<td style="text-align:left;">
+2018-08-30
+</td>
+<td style="text-align:left;">
+Build site.
+</td>
+</tr>
 <tr>
 <td style="text-align:left;">
 Rmd
@@ -523,11 +556,238 @@ wflow_publish(“analysis/load2013_liver.Rmd”)
 </div>
 <div id="results-summary" class="section level2">
 <h2>Results summary</h2>
+<p>First look at the approximated log marginal likelihoods (<code>elbo</code> column below).</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">piva</th>
+<th align="center">sigb</th>
+<th align="center">elbo</th>
+<th align="center">time</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">0.0001000</td>
+<td align="center">0.0515913</td>
+<td align="center">189566935.0</td>
+<td align="center">1047.9433</td>
+</tr>
+<tr class="even">
+<td align="center">0.0001778</td>
+<td align="center">0.0386880</td>
+<td align="center">88426696.9</td>
+<td align="center">957.1887</td>
+</tr>
+<tr class="odd">
+<td align="center">0.0003162</td>
+<td align="center">0.0290119</td>
+<td align="center">64568073.4</td>
+<td align="center">1302.2966</td>
+</tr>
+<tr class="even">
+<td align="center">0.0005623</td>
+<td align="center">0.0217559</td>
+<td align="center">35953379.4</td>
+<td align="center">1276.2622</td>
+</tr>
+<tr class="odd">
+<td align="center">0.0010000</td>
+<td align="center">0.0163146</td>
+<td align="center">16999449.9</td>
+<td align="center">1443.6655</td>
+</tr>
+<tr class="even">
+<td align="center">0.0017783</td>
+<td align="center">0.0122342</td>
+<td align="center">6239008.6</td>
+<td align="center">1536.1694</td>
+</tr>
+<tr class="odd">
+<td align="center">0.0031623</td>
+<td align="center">0.0091744</td>
+<td align="center">1241460.2</td>
+<td align="center">1233.5987</td>
+</tr>
+<tr class="even">
+<td align="center">0.1000000</td>
+<td align="center">0.0016315</td>
+<td align="center">-640022.0</td>
+<td align="center">4096.3463</td>
+</tr>
+<tr class="odd">
+<td align="center">0.3162278</td>
+<td align="center">0.0009174</td>
+<td align="center">-731651.6</td>
+<td align="center">3479.1000</td>
+</tr>
+<tr class="even">
+<td align="center">0.1778279</td>
+<td align="center">0.0012234</td>
+<td align="center">-766687.1</td>
+<td align="center">3141.6219</td>
+</tr>
+<tr class="odd">
+<td align="center">0.5623413</td>
+<td align="center">0.0006880</td>
+<td align="center">-898377.8</td>
+<td align="center">2900.3702</td>
+</tr>
+<tr class="even">
+<td align="center">0.0056234</td>
+<td align="center">0.0068798</td>
+<td align="center">-946876.3</td>
+<td align="center">3797.0045</td>
+</tr>
+<tr class="odd">
+<td align="center">0.0562341</td>
+<td align="center">0.0021756</td>
+<td align="center">-997159.9</td>
+<td align="center">3615.5936</td>
+</tr>
+<tr class="even">
+<td align="center">0.0316228</td>
+<td align="center">0.0029012</td>
+<td align="center">-1100972.1</td>
+<td align="center">4003.9145</td>
+</tr>
+<tr class="odd">
+<td align="center">0.0100000</td>
+<td align="center">0.0051591</td>
+<td align="center">-1141247.3</td>
+<td align="center">4012.4360</td>
+</tr>
+<tr class="even">
+<td align="center">0.0177828</td>
+<td align="center">0.0038688</td>
+<td align="center">-1435636.8</td>
+<td align="center">3133.8837</td>
+</tr>
+</tbody>
+</table>
+<p>Next look at the gene-level posterior statistics when the marginal likelihood is maximized.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">hgnc_symbol</th>
+<th align="right">chromosome_name</th>
+<th align="right">start_position</th>
+<th align="right">end_position</th>
+<th align="right">gene_nid</th>
+<th align="right">vb_weight</th>
+<th align="right">vb_mean</th>
+<th align="right">vb_var</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">LGALS9B</td>
+<td align="right">17</td>
+<td align="right">20352708</td>
+<td align="right">20370852</td>
+<td align="right">14712</td>
+<td align="right">1</td>
+<td align="right">444.66672</td>
+<td align="right">0.0010826</td>
+</tr>
+<tr class="even">
+<td align="left">OR11H1</td>
+<td align="right">22</td>
+<td align="right">16448824</td>
+<td align="right">16449805</td>
+<td align="right">17914</td>
+<td align="right">1</td>
+<td align="right">207.94006</td>
+<td align="right">0.0026617</td>
+</tr>
+<tr class="odd">
+<td align="left">CBWD6</td>
+<td align="right">9</td>
+<td align="right">69204538</td>
+<td align="right">69269662</td>
+<td align="right">8588</td>
+<td align="right">1</td>
+<td align="right">197.17232</td>
+<td align="right">0.0026617</td>
+</tr>
+<tr class="even">
+<td align="left">RGL2</td>
+<td align="right">6</td>
+<td align="right">33259431</td>
+<td align="right">33267101</td>
+<td align="right">6194</td>
+<td align="right">1</td>
+<td align="right">167.12435</td>
+<td align="right">0.0005348</td>
+</tr>
+<tr class="odd">
+<td align="left">CDRT15L2</td>
+<td align="right">17</td>
+<td align="right">20483037</td>
+<td align="right">20484224</td>
+<td align="right">14713</td>
+<td align="right">1</td>
+<td align="right">162.23593</td>
+<td align="right">0.0006613</td>
+</tr>
+<tr class="even">
+<td align="left">C16orf86</td>
+<td align="right">16</td>
+<td align="right">67700719</td>
+<td align="right">67702661</td>
+<td align="right">14191</td>
+<td align="right">1</td>
+<td align="right">132.58307</td>
+<td align="right">0.0000199</td>
+</tr>
+<tr class="odd">
+<td align="left">GALNT4</td>
+<td align="right">12</td>
+<td align="right">89913185</td>
+<td align="right">89920039</td>
+<td align="right">11797</td>
+<td align="right">1</td>
+<td align="right">128.69132</td>
+<td align="right">0.0000426</td>
+</tr>
+<tr class="even">
+<td align="left">ARL17A</td>
+<td align="right">17</td>
+<td align="right">44594068</td>
+<td align="right">44657088</td>
+<td align="right">15110</td>
+<td align="right">1</td>
+<td align="right">93.25737</td>
+<td align="right">0.0004824</td>
+</tr>
+<tr class="odd">
+<td align="left">CLEC18B</td>
+<td align="right">16</td>
+<td align="right">74442529</td>
+<td align="right">74455368</td>
+<td align="right">14272</td>
+<td align="right">1</td>
+<td align="right">93.07069</td>
+<td align="right">0.0000250</td>
+</tr>
+<tr class="even">
+<td align="left">ALOXE3</td>
+<td align="right">17</td>
+<td align="right">7999218</td>
+<td align="right">8022365</td>
+<td align="right">14590</td>
+<td align="right">1</td>
+<td align="right">74.02143</td>
+<td align="right">0.0000047</td>
+</tr>
+</tbody>
+</table>
+<p>Look at top genes: <em>LGALS9B</em>, <em>OR11H1</em>, <em>RGL2</em>.</p>
 </div>
 <div id="session-information" class="section level2">
 <h2>Session information</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">sessionInfo</span>()</a></code></pre></div>
-<pre><code>R version 3.5.1 (2018-07-02)
+<pre><code>R version 3.5.0 (2018-04-23)
 Platform: x86_64-apple-darwin15.6.0 (64-bit)
 Running under: macOS High Sierra 10.13.6
 
@@ -542,19 +802,21 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] bindrcpp_0.2.2 dplyr_0.7.5    R.matlab_3.6.1
+[1] bindrcpp_0.2.2 DT_0.4         knitr_1.20     dplyr_0.7.5   
+[5] R.matlab_3.6.1
 
 loaded via a namespace (and not attached):
- [1] Rcpp_0.12.17      knitr_1.20        bindr_0.1.1      
- [4] whisker_0.3-2     magrittr_1.5      workflowr_1.1.1  
- [7] tidyselect_0.2.4  R6_2.2.2          rlang_0.2.1      
-[10] stringr_1.3.1     tools_3.5.1       R.oo_1.22.0      
+ [1] Rcpp_0.12.17      bindr_0.1.1       whisker_0.3-2    
+ [4] magrittr_1.5      workflowr_1.1.1   tidyselect_0.2.4 
+ [7] R6_2.2.2          rlang_0.2.1       highr_0.7        
+[10] stringr_1.3.1     tools_3.5.0       R.oo_1.22.0      
 [13] git2r_0.21.0      htmltools_0.3.6   yaml_2.1.19      
 [16] rprojroot_1.3-2   digest_0.6.15     assertthat_0.2.0 
-[19] tibble_1.4.2      purrr_0.2.5       R.utils_2.6.0    
-[22] glue_1.2.0        evaluate_0.10.1   rmarkdown_1.10   
-[25] stringi_1.2.3     pillar_1.2.3      compiler_3.5.1   
-[28] backports_1.1.2   R.methodsS3_1.7.1 pkgconfig_2.0.1  </code></pre>
+[19] tibble_1.4.2      purrr_0.2.5       htmlwidgets_1.2  
+[22] R.utils_2.6.0     glue_1.2.0        evaluate_0.10.1  
+[25] rmarkdown_1.10    stringi_1.2.3     pillar_1.2.3     
+[28] compiler_3.5.0    backports_1.1.2   R.methodsS3_1.7.1
+[31] pkgconfig_2.0.1  </code></pre>
 </div>
 
 <!-- Adjust MathJax settings so that all math formulae are shown using

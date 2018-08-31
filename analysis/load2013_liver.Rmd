@@ -28,7 +28,7 @@ normalize_logw <- function(logw){
 }
 ```
 
-```{r}
+```{r, echo=FALSE}
 res <- R.matlab::readMat("~/Dropbox/rss/Data/peca_human/out_market/load2013_liver_out.mat")
 
 # create a data frame for ELBO
@@ -43,7 +43,7 @@ names(elbo_df) <- c("piva","sigb","elbo","time")
 elbo_df$posp <- normalize_logw(elbo_df$elbo)
 ```
 
-```{r}
+```{r, echo=FALSE}
 map_id <- which.max(elbo_df$elbo)
 map_id <- 1
 

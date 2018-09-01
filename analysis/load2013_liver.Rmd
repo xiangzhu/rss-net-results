@@ -10,8 +10,9 @@ output: workflowr::wflow_html
 - Processed GWAS file: `/project/mstephens/test_rss/data/load2013/load2013_sumstat.mat`
 - PECA2 liver-specific network: `/scratch/PI/whwong/zduren/share/PECA_human/PECA2/Liver_network.txt`
 - $L_0$: 40 kb; $L_1$: 100 kb
-- SNP-to-gene windown: 10 Mb
-- Hyperparameter grid: TBA
+- SNP-to-gene window: 10 Mb
+- SNP-to-RE window: **exact zero**
+- Hyperparameter grid: `h=0.3; piva=10.^(-(0.25:0.25:8))`
 
 ```{r, echo=FALSE}
 suppressPackageStartupMessages(library(R.matlab))
@@ -35,12 +36,12 @@ res <- R.matlab::readMat("~/Dropbox/rss/Data/peca_human/out_market/load2013_live
 
 # create a data frame for ELBO
 elbo_df <- data.frame(
-  piva <- c(res$piva),
+  log10.piva <- log10(c(res$piva)),
   sigb <- c(res$sigb),
   elbo <- c(res$vb.elbo),
   time <- c(res$exe.time)
 )
-names(elbo_df) <- c("piva","sigb","elbo","time")
+names(elbo_df) <- c("log10.piva","sigb","elbo","time")
 
 #elbo_df$posp <- normalize_logw(elbo_df$elbo)
 ```
@@ -74,6 +75,3 @@ Next look at the gene-level posterior statistics when the marginal likelihood is
 ```{r, echo=FALSE}
 knitr::kable(head(gene_df, 10))
 ```
-
-Look at top genes: *LGALS9B*, *OR11H1*, *RGL2*.
-

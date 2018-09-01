@@ -402,10 +402,11 @@ div.section {
 </li>
 <li>
 <details>
-<p><summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> <a href="https://github.com/xiangzhu/rss-peca/tree/86e52f5711e1f63555fca3aa68fbb51097a863d0" target="_blank">86e52f5</a> </summary></p>
+<p><summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> <a href="https://github.com/xiangzhu/rss-peca/tree/4af30025c6862ba6e5ab425903c6a1bf4ae9bf8c" target="_blank">4af3002</a> </summary></p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
 <pre><code>
 Ignored files:
+    Ignored:    .Rhistory
     Ignored:    .Rproj.user/
 
 </code></pre>
@@ -437,6 +438,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align:left;">
+Rmd
+</td>
+<td style="text-align:left;">
+<a href="https://github.com/xiangzhu/rss-peca/blob/4af30025c6862ba6e5ab425903c6a1bf4ae9bf8c/analysis/load2013_liver.Rmd" target="_blank">4af3002</a>
+</td>
+<td style="text-align:left;">
+Xiang Zhu
+</td>
+<td style="text-align:left;">
+2018-08-31
+</td>
+<td style="text-align:left;">
+wflow_publish(“analysis/load2013_liver.Rmd”)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://cdn.rawgit.com/xiangzhu/rss-peca/5a3c37b57a4ae80fad838bbda6aa4c2b605e88f1/docs/load2013_liver.html" target="_blank">5a3c37b</a>
+</td>
+<td style="text-align:left;">
+Xiang Zhu
+</td>
+<td style="text-align:left;">
+2018-08-31
+</td>
+<td style="text-align:left;">
+Build site.
+</td>
+</tr>
 <tr>
 <td style="text-align:left;">
 Rmd
@@ -550,8 +585,9 @@ wflow_publish(“analysis/load2013_liver.Rmd”)
 <li>Processed GWAS file: <code>/project/mstephens/test_rss/data/load2013/load2013_sumstat.mat</code></li>
 <li>PECA2 liver-specific network: <code>/scratch/PI/whwong/zduren/share/PECA_human/PECA2/Liver_network.txt</code></li>
 <li><span class="math inline">\(L_0\)</span>: 40 kb; <span class="math inline">\(L_1\)</span>: 100 kb</li>
-<li>SNP-to-gene windown: 10 Mb</li>
-<li>Hyperparameter grid: TBA</li>
+<li>SNP-to-gene window: 10 Mb</li>
+<li>SNP-to-RE window: <strong>exact zero</strong></li>
+<li>Hyperparameter grid: <code>h=0.3; piva=10.^(-(0.25:0.25:8))</code></li>
 </ul>
 </div>
 <div id="results-summary" class="section level2">
@@ -560,7 +596,7 @@ wflow_publish(“analysis/load2013_liver.Rmd”)
 <table>
 <thead>
 <tr class="header">
-<th align="center">piva</th>
+<th align="left">log10.piva</th>
 <th align="center">sigb</th>
 <th align="center">elbo</th>
 <th align="center">time</th>
@@ -568,100 +604,196 @@ wflow_publish(“analysis/load2013_liver.Rmd”)
 </thead>
 <tbody>
 <tr class="odd">
-<td align="center">0.0001000</td>
+<td align="left">-7.75</td>
+<td align="center">3.8688047</td>
+<td align="center">3.983163e+15</td>
+<td align="center">67.84746</td>
+</tr>
+<tr class="even">
+<td align="left">-8.00</td>
+<td align="center">5.1591340</td>
+<td align="center">3.116692e+11</td>
+<td align="center">68.16840</td>
+</tr>
+<tr class="odd">
+<td align="left">-7.25</td>
+<td align="center">2.1755888</td>
+<td align="center">3.978008e+10</td>
+<td align="center">58.15310</td>
+</tr>
+<tr class="even">
+<td align="left">-7.50</td>
+<td align="center">2.9011943</td>
+<td align="center">3.797890e+10</td>
+<td align="center">45.59751</td>
+</tr>
+<tr class="odd">
+<td align="left">-7.00</td>
+<td align="center">1.6314614</td>
+<td align="center">1.465382e+10</td>
+<td align="center">61.22707</td>
+</tr>
+<tr class="even">
+<td align="left">-6.75</td>
+<td align="center">1.2234235</td>
+<td align="center">4.938467e+09</td>
+<td align="center">24.58350</td>
+</tr>
+<tr class="odd">
+<td align="left">-5.75</td>
+<td align="center">0.3868805</td>
+<td align="center">1.478323e+09</td>
+<td align="center">112.50603</td>
+</tr>
+<tr class="even">
+<td align="left">-6.50</td>
+<td align="center">0.9174382</td>
+<td align="center">1.470216e+09</td>
+<td align="center">26.28262</td>
+</tr>
+<tr class="odd">
+<td align="left">-5.50</td>
+<td align="center">0.2901194</td>
+<td align="center">1.068584e+09</td>
+<td align="center">1111.35141</td>
+</tr>
+<tr class="even">
+<td align="left">-5.25</td>
+<td align="center">0.2175589</td>
+<td align="center">8.074074e+08</td>
+<td align="center">94.58703</td>
+</tr>
+<tr class="odd">
+<td align="left">-6.25</td>
+<td align="center">0.6879816</td>
+<td align="center">5.243371e+08</td>
+<td align="center">1825.34849</td>
+</tr>
+<tr class="even">
+<td align="left">-5.00</td>
+<td align="center">0.1631461</td>
+<td align="center">4.497749e+08</td>
+<td align="center">64.31936</td>
+</tr>
+<tr class="odd">
+<td align="left">-6.00</td>
+<td align="center">0.5159134</td>
+<td align="center">4.489631e+08</td>
+<td align="center">25.41265</td>
+</tr>
+<tr class="even">
+<td align="left">-4.75</td>
+<td align="center">0.1223423</td>
+<td align="center">2.190502e+08</td>
+<td align="center">1027.00462</td>
+</tr>
+<tr class="odd">
+<td align="left">-4.00</td>
 <td align="center">0.0515913</td>
-<td align="center">189566935.0</td>
-<td align="center">1047.9433</td>
+<td align="center">1.895669e+08</td>
+<td align="center">1047.94328</td>
 </tr>
 <tr class="even">
-<td align="center">0.0001778</td>
+<td align="left">-4.25</td>
+<td align="center">0.0687982</td>
+<td align="center">1.065638e+08</td>
+<td align="center">1664.43326</td>
+</tr>
+<tr class="odd">
+<td align="left">-3.75</td>
 <td align="center">0.0386880</td>
-<td align="center">88426696.9</td>
-<td align="center">957.1887</td>
+<td align="center">8.842670e+07</td>
+<td align="center">957.18869</td>
+</tr>
+<tr class="even">
+<td align="left">-4.50</td>
+<td align="center">0.0917438</td>
+<td align="center">6.921695e+07</td>
+<td align="center">1258.99004</td>
 </tr>
 <tr class="odd">
-<td align="center">0.0003162</td>
+<td align="left">-3.50</td>
 <td align="center">0.0290119</td>
-<td align="center">64568073.4</td>
-<td align="center">1302.2966</td>
+<td align="center">6.456807e+07</td>
+<td align="center">1302.29656</td>
 </tr>
 <tr class="even">
-<td align="center">0.0005623</td>
+<td align="left">-3.25</td>
 <td align="center">0.0217559</td>
-<td align="center">35953379.4</td>
-<td align="center">1276.2622</td>
+<td align="center">3.595338e+07</td>
+<td align="center">1276.26215</td>
 </tr>
 <tr class="odd">
-<td align="center">0.0010000</td>
+<td align="left">-3.00</td>
 <td align="center">0.0163146</td>
-<td align="center">16999449.9</td>
-<td align="center">1443.6655</td>
+<td align="center">1.699945e+07</td>
+<td align="center">1443.66553</td>
 </tr>
 <tr class="even">
-<td align="center">0.0017783</td>
+<td align="left">-2.75</td>
 <td align="center">0.0122342</td>
-<td align="center">6239008.6</td>
-<td align="center">1536.1694</td>
+<td align="center">6.239009e+06</td>
+<td align="center">1536.16943</td>
 </tr>
 <tr class="odd">
-<td align="center">0.0031623</td>
+<td align="left">-2.50</td>
 <td align="center">0.0091744</td>
-<td align="center">1241460.2</td>
-<td align="center">1233.5987</td>
+<td align="center">1.241460e+06</td>
+<td align="center">1233.59871</td>
 </tr>
 <tr class="even">
-<td align="center">0.1000000</td>
+<td align="left">-1.00</td>
 <td align="center">0.0016315</td>
-<td align="center">-640022.0</td>
-<td align="center">4096.3463</td>
+<td align="center">-6.400220e+05</td>
+<td align="center">4096.34627</td>
 </tr>
 <tr class="odd">
-<td align="center">0.3162278</td>
+<td align="left">-0.50</td>
 <td align="center">0.0009174</td>
-<td align="center">-731651.6</td>
-<td align="center">3479.1000</td>
+<td align="center">-7.316516e+05</td>
+<td align="center">3479.09999</td>
 </tr>
 <tr class="even">
-<td align="center">0.1778279</td>
+<td align="left">-0.75</td>
 <td align="center">0.0012234</td>
-<td align="center">-766687.1</td>
-<td align="center">3141.6219</td>
+<td align="center">-7.666871e+05</td>
+<td align="center">3141.62185</td>
 </tr>
 <tr class="odd">
-<td align="center">0.5623413</td>
+<td align="left">-0.25</td>
 <td align="center">0.0006880</td>
-<td align="center">-898377.8</td>
-<td align="center">2900.3702</td>
+<td align="center">-8.983778e+05</td>
+<td align="center">2900.37023</td>
 </tr>
 <tr class="even">
-<td align="center">0.0056234</td>
+<td align="left">-2.25</td>
 <td align="center">0.0068798</td>
-<td align="center">-946876.3</td>
-<td align="center">3797.0045</td>
+<td align="center">-9.468763e+05</td>
+<td align="center">3797.00448</td>
 </tr>
 <tr class="odd">
-<td align="center">0.0562341</td>
+<td align="left">-1.25</td>
 <td align="center">0.0021756</td>
-<td align="center">-997159.9</td>
-<td align="center">3615.5936</td>
+<td align="center">-9.971599e+05</td>
+<td align="center">3615.59358</td>
 </tr>
 <tr class="even">
-<td align="center">0.0316228</td>
+<td align="left">-1.50</td>
 <td align="center">0.0029012</td>
-<td align="center">-1100972.1</td>
-<td align="center">4003.9145</td>
+<td align="center">-1.100972e+06</td>
+<td align="center">4003.91446</td>
 </tr>
 <tr class="odd">
-<td align="center">0.0100000</td>
+<td align="left">-2.00</td>
 <td align="center">0.0051591</td>
-<td align="center">-1141247.3</td>
-<td align="center">4012.4360</td>
+<td align="center">-1.141247e+06</td>
+<td align="center">4012.43595</td>
 </tr>
 <tr class="even">
-<td align="center">0.0177828</td>
+<td align="left">-1.75</td>
 <td align="center">0.0038688</td>
-<td align="center">-1435636.8</td>
-<td align="center">3133.8837</td>
+<td align="center">-1.435637e+06</td>
+<td align="center">3133.88371</td>
 </tr>
 </tbody>
 </table>
@@ -681,113 +813,112 @@ wflow_publish(“analysis/load2013_liver.Rmd”)
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">LGALS9B</td>
+<td align="left">STH</td>
 <td align="right">17</td>
-<td align="right">20352708</td>
-<td align="right">20370852</td>
-<td align="right">14712</td>
+<td align="right">44076616</td>
+<td align="right">44077060</td>
+<td align="right">15105</td>
 <td align="right">1</td>
-<td align="right">444.66672</td>
-<td align="right">0.0010826</td>
+<td align="right">82230388</td>
+<td align="right">0.0907612</td>
 </tr>
 <tr class="even">
-<td align="left">OR11H1</td>
+<td align="left">ARL17B</td>
+<td align="right">17</td>
+<td align="right">44352150</td>
+<td align="right">44439130</td>
+<td align="right">15107</td>
+<td align="right">1</td>
+<td align="right">75155535</td>
+<td align="right">0.4658901</td>
+</tr>
+<tr class="odd">
+<td align="left">LRRC37A</td>
+<td align="right">17</td>
+<td align="right">44370099</td>
+<td align="right">44415160</td>
+<td align="right">15108</td>
+<td align="right">1</td>
+<td align="right">70458266</td>
+<td align="right">0.7754152</td>
+</tr>
+<tr class="even">
+<td align="left">POTEH</td>
 <td align="right">22</td>
-<td align="right">16448824</td>
-<td align="right">16449805</td>
-<td align="right">17914</td>
+<td align="right">16256441</td>
+<td align="right">16287937</td>
+<td align="right">17913</td>
 <td align="right">1</td>
-<td align="right">207.94006</td>
-<td align="right">0.0026617</td>
+<td align="right">62692235</td>
+<td align="right">14.9676118</td>
 </tr>
 <tr class="odd">
-<td align="left">CBWD6</td>
+<td align="left">FAM27C</td>
 <td align="right">9</td>
-<td align="right">69204538</td>
-<td align="right">69269662</td>
-<td align="right">8588</td>
+<td align="right">44990314</td>
+<td align="right">44991483</td>
+<td align="right">8578</td>
 <td align="right">1</td>
-<td align="right">197.17232</td>
-<td align="right">0.0026617</td>
+<td align="right">9903777</td>
+<td align="right">0.0945179</td>
 </tr>
 <tr class="even">
-<td align="left">RGL2</td>
+<td align="left">FOXD4L5</td>
+<td align="right">9</td>
+<td align="right">70175707</td>
+<td align="right">70178815</td>
+<td align="right">8590</td>
+<td align="right">1</td>
+<td align="right">4213858</td>
+<td align="right">14.9676299</td>
+</tr>
+<tr class="odd">
+<td align="left">NBPF11</td>
+<td align="right">1</td>
+<td align="right">146032647</td>
+<td align="right">146082765</td>
+<td align="right">1073</td>
+<td align="right">1</td>
+<td align="right">4206964</td>
+<td align="right">0.0505033</td>
+</tr>
+<tr class="even">
+<td align="left">FAM27A</td>
+<td align="right">9</td>
+<td align="right">45727107</td>
+<td align="right">45728274</td>
+<td align="right">8579</td>
+<td align="right">1</td>
+<td align="right">3620112</td>
+<td align="right">14.9676502</td>
+</tr>
+<tr class="odd">
+<td align="left">HLA-A</td>
 <td align="right">6</td>
-<td align="right">33259431</td>
-<td align="right">33267101</td>
-<td align="right">6194</td>
+<td align="right">29909037</td>
+<td align="right">29913661</td>
+<td align="right">6055</td>
 <td align="right">1</td>
-<td align="right">167.12435</td>
-<td align="right">0.0005348</td>
-</tr>
-<tr class="odd">
-<td align="left">CDRT15L2</td>
-<td align="right">17</td>
-<td align="right">20483037</td>
-<td align="right">20484224</td>
-<td align="right">14713</td>
-<td align="right">1</td>
-<td align="right">162.23593</td>
-<td align="right">0.0006613</td>
+<td align="right">3154370</td>
+<td align="right">5.0805388</td>
 </tr>
 <tr class="even">
-<td align="left">C16orf86</td>
-<td align="right">16</td>
-<td align="right">67700719</td>
-<td align="right">67702661</td>
-<td align="right">14191</td>
+<td align="left">FOXD4L6</td>
+<td align="right">9</td>
+<td align="right">69199480</td>
+<td align="right">69202204</td>
+<td align="right">8587</td>
 <td align="right">1</td>
-<td align="right">132.58307</td>
-<td align="right">0.0000199</td>
-</tr>
-<tr class="odd">
-<td align="left">GALNT4</td>
-<td align="right">12</td>
-<td align="right">89913185</td>
-<td align="right">89920039</td>
-<td align="right">11797</td>
-<td align="right">1</td>
-<td align="right">128.69132</td>
-<td align="right">0.0000426</td>
-</tr>
-<tr class="even">
-<td align="left">ARL17A</td>
-<td align="right">17</td>
-<td align="right">44594068</td>
-<td align="right">44657088</td>
-<td align="right">15110</td>
-<td align="right">1</td>
-<td align="right">93.25737</td>
-<td align="right">0.0004824</td>
-</tr>
-<tr class="odd">
-<td align="left">CLEC18B</td>
-<td align="right">16</td>
-<td align="right">74442529</td>
-<td align="right">74455368</td>
-<td align="right">14272</td>
-<td align="right">1</td>
-<td align="right">93.07069</td>
-<td align="right">0.0000250</td>
-</tr>
-<tr class="even">
-<td align="left">ALOXE3</td>
-<td align="right">17</td>
-<td align="right">7999218</td>
-<td align="right">8022365</td>
-<td align="right">14590</td>
-<td align="right">1</td>
-<td align="right">74.02143</td>
-<td align="right">0.0000047</td>
+<td align="right">2762005</td>
+<td align="right">14.9676502</td>
 </tr>
 </tbody>
 </table>
-<p>Look at top genes: <em>LGALS9B</em>, <em>OR11H1</em>, <em>RGL2</em>.</p>
 </div>
 <div id="session-information" class="section level2">
 <h2>Session information</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">sessionInfo</span>()</a></code></pre></div>
-<pre><code>R version 3.5.0 (2018-04-23)
+<pre><code>R version 3.5.1 (2018-07-02)
 Platform: x86_64-apple-darwin15.6.0 (64-bit)
 Running under: macOS High Sierra 10.13.6
 
@@ -809,13 +940,13 @@ loaded via a namespace (and not attached):
  [1] Rcpp_0.12.17      bindr_0.1.1       whisker_0.3-2    
  [4] magrittr_1.5      workflowr_1.1.1   tidyselect_0.2.4 
  [7] R6_2.2.2          rlang_0.2.1       highr_0.7        
-[10] stringr_1.3.1     tools_3.5.0       R.oo_1.22.0      
+[10] stringr_1.3.1     tools_3.5.1       R.oo_1.22.0      
 [13] git2r_0.21.0      htmltools_0.3.6   yaml_2.1.19      
 [16] rprojroot_1.3-2   digest_0.6.15     assertthat_0.2.0 
 [19] tibble_1.4.2      purrr_0.2.5       htmlwidgets_1.2  
 [22] R.utils_2.6.0     glue_1.2.0        evaluate_0.10.1  
 [25] rmarkdown_1.10    stringi_1.2.3     pillar_1.2.3     
-[28] compiler_3.5.0    backports_1.1.2   R.methodsS3_1.7.1
+[28] compiler_3.5.1    backports_1.1.2   R.methodsS3_1.7.1
 [31] pkgconfig_2.0.1  </code></pre>
 </div>
 

@@ -12,7 +12,7 @@ output: workflowr::wflow_html
 - $L_0$: 40 kb; $L_1$: 100 kb
 - SNP-to-gene window: 10 Mb
 - SNP-to-RE window: **exact zero**
-- Hyperparameter grid: `h=0.3; piva=10.^(-(0.25:0.25:8))`
+- Hyperparameter grid: `h=(0.05:0.05:0.75); piva=10.^(-(0.25:0.25:8))`
 
 ```{r, echo=FALSE}
 suppressPackageStartupMessages(library(R.matlab))
@@ -43,7 +43,7 @@ elbo_df <- data.frame(
 )
 names(elbo_df) <- c("log10.piva","sigb","elbo","time")
 
-#elbo_df$posp <- normalize_logw(elbo_df$elbo)
+elbo_df$posp <- normalize_logw(elbo_df$elbo)
 ```
 
 ```{r, echo=FALSE}
@@ -67,7 +67,7 @@ First look at the approximated log marginal likelihoods (`elbo` column below).
 
 ```{r, echo=FALSE}
 elbo_df <- dplyr::arrange(elbo_df, -elbo)
-knitr::kable(elbo_df)
+knitr::kable(head(elbo_df, 10))
 ```
 
 Next look at the gene-level posterior statistics when the marginal likelihood is maximized.

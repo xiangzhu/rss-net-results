@@ -40,4 +40,5 @@ are informative in identifying disease-related tissues or cell types.
 
 Below are applications of the new methods to real datasets.
 
+- [Map genome-wide SNPs to liver-specific network](snp2net_liver.html)
 - [Late-onset Alzheimer's disease & Liver-specific network](load2013_liver.html)

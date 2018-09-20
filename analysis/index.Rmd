@@ -18,7 +18,7 @@ If you have any question about this project, please feel free to contact me:
 ## Simulation study
 
 - [Simulated summary-level data based on WTCCC & Liver-specific network](wtccc_sumstats_liver.html)
-- [TBA: Simulated individual-level data based on WTCCC & Liver-specific network](wtccc_fulldata_liver.html)
+- [Simulated individual-level data based on WTCCC & Liver-specific network](wtccc_fulldata_liver.html)
 
 ***
 

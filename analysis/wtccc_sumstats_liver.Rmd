@@ -8,6 +8,7 @@ output: workflowr::wflow_html
 ```{r, echo=FALSE}
 suppressPackageStartupMessages(library(R.matlab))
 suppressPackageStartupMessages(library(ggpubr))
+suppressPackageStartupMessages(library(plotROC))
 
 data_path <- "~/Dropbox/rss/Data/peca_human/out_market/"
 ```
@@ -15,6 +16,10 @@ data_path <- "~/Dropbox/rss/Data/peca_human/out_market/"
 ```{r, echo=FALSE}
 viz_res <- function(pip,pve) {
   res <- R.matlab::readMat(paste0(data_path,"wtccc_liver_pip",100*pip,"pve",100*pve,"_seed644_res.mat"))
+  
+  cat("True total number of genes with nonzero effect: ", sum(c(res$gamma)!=0), "\n")
+  cat("Estimated total number of genes with nonzero effect: ", sum(c(res$vb.weight[,2])), "\n")
+  
   df <- data.frame(
     true_gamma <- c(res$gamma),
     estimate_gamma <- c(res$vb.mean[,2] * res$vb.weight[,2])
@@ -22,26 +27,32 @@ viz_res <- function(pip,pve) {
   names(df) <- c("true_gamma","estimated_gamma")
 
   sp <- ggpubr::ggscatter(df, x="true_gamma", y="estimated_gamma", xlab="True gamma", ylab="Estimated gamma", cor.coef=TRUE, cor.coeff.args=list(method="pearson", label.x=-3, label.sep="\n"))
-  sp <- sp + geom_abline(slope=1, intercept=0, color="red")
+  sp <- sp + geom_abline(slope=1, intercept=0, color="red") + ggtitle("Estimate gene-level effects")
+  
+  roc_df <- data.frame(D=ifelse(c(res$gamma)!=0, 1, 0), M=c(res$vb.weight[,2]))
+  
+  rp <- ggplot(roc_df, aes(d=D, m=M)) + geom_roc(n.cuts=0, color="blue") + style_roc() + theme_pubr() 
+  rp <- rp + annotate("text", x=0.75, y=0.25, label=paste0("AUC = ", round(calc_auc(rp)$AUC, 3)))
+  rp <- rp + geom_abline(intercept=0, slope=1, linetype="dashed") + ggtitle("Power to detect gene-level effects")
 
-  print(sp)
+  print(ggarrange(sp, rp, ncol=2))
 }
 ```
 
 ## PIP: `r pip=0.1; pip` & PVE: `r pve=0.2; pve`
 
-```{r, fig.width=5, fig.height=5, echo=FALSE}
+```{r, fig.width=10, fig.height=5, echo=FALSE}
 viz_res(pip,pve)
 ```
 
 ## PIP: `r pip=0.2; pip` & PVE: `r pve=0.2; pve`
 
-```{r, fig.width=5, fig.height=5, echo=FALSE}
+```{r, fig.width=10, fig.height=5, echo=FALSE}
 viz_res(pip,pve)
 ```
 
 ## PIP: `r pip=0.2; pip` & PVE: `r pve=0.4; pve`
 
-```{r, fig.width=5, fig.height=5, echo=FALSE}
+```{r, fig.width=10, fig.height=5, echo=FALSE}
 viz_res(pip,pve)
 ```

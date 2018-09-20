@@ -1,0 +1,47 @@
+---
+title: "Simulated summary-level data based on WTCCC & Liver-specific network"
+author: "Xiang Zhu"
+date: "2018-09-19"
+output: workflowr::wflow_html
+---
+
+```{r, echo=FALSE}
+suppressPackageStartupMessages(library(R.matlab))
+suppressPackageStartupMessages(library(ggpubr))
+
+data_path <- "~/Dropbox/rss/Data/peca_human/out_market/"
+```
+
+```{r, echo=FALSE}
+viz_res <- function(pip,pve) {
+  res <- R.matlab::readMat(paste0(data_path,"wtccc_liver_pip",100*pip,"pve",100*pve,"_seed644_res.mat"))
+  df <- data.frame(
+    true_gamma <- c(res$gamma),
+    estimate_gamma <- c(res$vb.mean[,2] * res$vb.weight[,2])
+  )
+  names(df) <- c("true_gamma","estimated_gamma")
+
+  sp <- ggpubr::ggscatter(df, x="true_gamma", y="estimated_gamma", xlab="True gamma", ylab="Estimated gamma", cor.coef=TRUE, cor.coeff.args=list(method="pearson", label.x=-3, label.sep="\n"))
+  sp <- sp + geom_abline(slope=1, intercept=0, color="red")
+
+  print(sp)
+}
+```
+
+## PIP: `r pip=0.1; pip` & PVE: `r pve=0.2; pve`
+
+```{r, fig.width=5, fig.height=5, echo=FALSE}
+viz_res(pip,pve)
+```
+
+## PIP: `r pip=0.2; pip` & PVE: `r pve=0.2; pve`
+
+```{r, fig.width=5, fig.height=5, echo=FALSE}
+viz_res(pip,pve)
+```
+
+## PIP: `r pip=0.2; pip` & PVE: `r pve=0.4; pve`
+
+```{r, fig.width=5, fig.height=5, echo=FALSE}
+viz_res(pip,pve)
+```

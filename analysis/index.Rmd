@@ -19,6 +19,10 @@ If you have any question about this project, please feel free to contact me:
 
 - [Simulated summary-level data based on WTCCC & Liver-specific network](wtccc_sumstats_liver.html)
 - [Simulated individual-level data based on WTCCC & Liver-specific network](wtccc_fulldata_liver.html)
+    - [Assess the impact of TF](wtccc_fulldata_liver_tf.html)
+    - [Assess the impact of TF-TG scores](wtccc_fulldata_liver_wt.html)
+    - [Assess the impact of RE](wtccc_fulldata_liver_re.html)
+- TBA
 
 ***
 

@@ -1,0 +1,58 @@
+---
+title: "Assess the impact of RE, using simulated individual-level data based on WTCCC & Liver-specific network"
+author: "Xiang Zhu"
+date: "2018-09-19"
+output: workflowr::wflow_html
+---
+
+```{r, echo=FALSE}
+suppressPackageStartupMessages(library(R.matlab))
+suppressPackageStartupMessages(library(ggpubr))
+suppressPackageStartupMessages(library(plotROC))
+
+data_path <- "~/Dropbox/rss/Data/peca_human/out_market/"
+```
+
+```{r, echo=FALSE}
+viz_res <- function(pip,pve) {
+  res <- R.matlab::readMat(paste0(data_path,"wtccc_ind_liver_pip",100*pip,"pve",100*pve,"_seed644_assess_re.mat"))
+  
+  logw_df <- data.frame(logw_full=c(res$logw), logw_base=c(res$logw.base))
+
+  sp <- ggpubr::ggscatter(logw_df, x="logw_base", y="logw_full", xlab="Marginal likelihood of baseline model", ylab="Marginal likelihood of full model")
+  sp <- sp + geom_abline(slope=1, intercept=0, color="red") + ggtitle("Impact of RE on marginal likelihood")
+  
+  est_df <- data.frame(
+    pip <- c(res$epip, res$epip.base),
+    pve <- c(res$epve, res$epve.base),
+    model <- rep(c("Full","Baseline"), each=100)
+  )
+  names(est_df) <- c("pip","pve","model")
+  
+  hp <- ggpubr::ggboxplot(est_df, x="model", y="pve", xlab="Model", ylab="Estimated PVE") 
+  hp <- hp + geom_hline(yintercept=res$pve, color="red") + ggtitle("Impact of RE on PVE")
+  
+  pp <- ggpubr::ggboxplot(est_df, x="model", y="pip", xlab="Model", ylab="Estimated PIP") 
+  pp <- pp + geom_hline(yintercept=res$pip, color="red") + ggtitle("Impact of RE on PIP")
+
+  print(ggarrange(sp, hp, pp, ncol=3))
+}
+```
+
+## PIP: `r pip=0.1; pip` & PVE: `r pve=0.2; pve` (still running)
+
+```{r, fig.width=15, fig.height=5, echo=FALSE, eval=FALSE}
+viz_res(pip,pve)
+```
+
+## PIP: `r pip=0.2; pip` & PVE: `r pve=0.2; pve` (still running)
+
+```{r, fig.width=15, fig.height=5, echo=FALSE, eval=FALSE}
+viz_res(pip,pve)
+```
+
+## PIP: `r pip=0.2; pip` & PVE: `r pve=0.4; pve`
+
+```{r, fig.width=15, fig.height=5, echo=FALSE}
+viz_res(pip,pve)
+```

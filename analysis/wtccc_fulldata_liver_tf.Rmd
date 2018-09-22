@@ -39,15 +39,15 @@ viz_res <- function(pip,pve) {
 }
 ```
 
-## PIP: `r pip=0.1; pip` & PVE: `r pve=0.2; pve` (still running)
+## PIP: `r pip=0.1; pip` & PVE: `r pve=0.2; pve`
 
-```{r, fig.width=15, fig.height=5, echo=FALSE, eval=FALSE}
+```{r, fig.width=15, fig.height=5, echo=FALSE}
 viz_res(pip,pve)
 ```
 
-## PIP: `r pip=0.2; pip` & PVE: `r pve=0.2; pve` (still running)
+## PIP: `r pip=0.2; pip` & PVE: `r pve=0.2; pve`
 
-```{r, fig.width=15, fig.height=5, echo=FALSE, eval=FALSE}
+```{r, fig.width=15, fig.height=5, echo=FALSE}
 viz_res(pip,pve)
 ```
 

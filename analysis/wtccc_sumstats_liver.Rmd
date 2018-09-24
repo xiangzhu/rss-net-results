@@ -15,7 +15,7 @@ data_path <- "~/Dropbox/rss/Data/peca_human/out_market/"
 
 ```{r, echo=FALSE}
 viz_res <- function(pip,pve) {
-  res <- R.matlab::readMat(paste0(data_path,"wtccc_liver_pip",100*pip,"pve",100*pve,"_seed644_res.mat"))
+  res <- R.matlab::readMat(paste0(data_path,"wtccc_liver_pip",100*pip,"pve",100*pve,"_seed644_out.mat"))
   
   cat("True total number of genes with nonzero effect: ", sum(c(res$gamma)!=0), "\n")
   cat("Estimated total number of genes with nonzero effect: ", sum(c(res$vb.weight[,2])), "\n")
@@ -34,8 +34,23 @@ viz_res <- function(pip,pve) {
   rp <- ggplot(roc_df, aes(d=D, m=M)) + geom_roc(n.cuts=0, color="blue") + style_roc() + theme_pubr() 
   rp <- rp + annotate("text", x=0.75, y=0.25, label=paste0("AUC = ", round(calc_auc(rp)$AUC, 3)))
   rp <- rp + geom_abline(intercept=0, slope=1, linetype="dashed") + ggtitle("Power to detect gene-level effects")
+  
+  df_snp <- data.frame(
+    true_beta <- c(res$beta),
+    estimate_beta <- c(res$beta.est)
+  )
+  names(df_snp) <- c("true_beta","estimated_beta")
 
-  print(ggarrange(sp, rp, ncol=2))
+  sp_snp <- ggpubr::ggscatter(df_snp, x="true_beta", y="estimated_beta", xlab="True beta", ylab="Estimated beta", cor.coef=TRUE, cor.coeff.args=list(method="pearson", label.x=-10, label.sep="\n"))
+  sp_snp <- sp_snp + geom_abline(slope=1, intercept=0, color="red") + ggtitle("Estimate SNP-level effects")
+  
+  roc_df_snp <- data.frame(D=ifelse(abs(res$beta)>=1, 1, 0), M=c(res$alpha.snp))
+  
+  rp_snp <- ggplot(roc_df_snp, aes(d=D, m=M)) + geom_roc(n.cuts=0, color="blue") + style_roc() + theme_pubr() 
+  rp_snp <- rp_snp + annotate("text", x=0.75, y=0.25, label=paste0("AUC = ", round(calc_auc(rp_snp)$AUC, 3)))
+  rp_snp <- rp_snp + geom_abline(intercept=0, slope=1, linetype="dashed") + ggtitle("Power to detect SNP-level effects")
+
+  print(ggarrange(sp, rp, sp_snp, rp_snp, ncol=2, nrow=2))
 }
 ```
 

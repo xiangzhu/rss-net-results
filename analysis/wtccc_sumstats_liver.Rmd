@@ -56,18 +56,18 @@ viz_res <- function(pip,pve) {
 
 ## PIP: `r pip=0.1; pip` & PVE: `r pve=0.2; pve`
 
-```{r, fig.width=10, fig.height=5, echo=FALSE}
+```{r, fig.width=10, fig.height=10, echo=FALSE}
 viz_res(pip,pve)
 ```
 
 ## PIP: `r pip=0.2; pip` & PVE: `r pve=0.2; pve`
 
-```{r, fig.width=10, fig.height=5, echo=FALSE}
+```{r, fig.width=10, fig.height=10, echo=FALSE}
 viz_res(pip,pve)
 ```
 
 ## PIP: `r pip=0.2; pip` & PVE: `r pve=0.4; pve`
 
-```{r, fig.width=10, fig.height=5, echo=FALSE}
+```{r, fig.width=10, fig.height=10, echo=FALSE}
 viz_res(pip,pve)
 ```

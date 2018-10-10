@@ -48,3 +48,7 @@ are informative in identifying disease-related tissues or cell types.
 Below are applications of the new methods to real datasets.
 
 - [Late-onset Alzheimer's disease & Liver-specific network](load2013_liver.html)
+
+### Miscellaneous investigations
+
+- []

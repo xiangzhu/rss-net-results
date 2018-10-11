@@ -34,7 +34,7 @@
 <style type="text/css">
 a.sourceLine { display: inline-block; line-height: 1.25; }
 a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; position: absolute; }
+a.sourceLine:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
 div.sourceCode { margin: 1em 0; }
@@ -47,13 +47,11 @@ code.sourceCode { white-space: pre-wrap; }
 a.sourceLine { text-indent: -1em; padding-left: 1em; }
 }
 pre.numberSource a.sourceLine
-  { position: relative; }
-pre.numberSource a.sourceLine:empty
-  { position: absolute; }
+  { position: relative; left: -4em; }
 pre.numberSource a.sourceLine::before
   { content: attr(data-line-number);
-    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all;
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -373,7 +371,7 @@ div.section {
 </div>
 
 
-<p><strong>Last updated:</strong> 2018-09-24</p>
+<p><strong>Last updated:</strong> 2018-10-11</p>
 <strong>workflowr checks:</strong> <small>(Click a bullet for more information)</small>
 <ul>
 <li>
@@ -402,15 +400,12 @@ div.section {
 </li>
 <li>
 <details>
-<p><summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> <a href="https://github.com/xiangzhu/rss-peca/tree/09af30511b1b2ba50abaec2867ef632d03cb954a" target="_blank">09af305</a> </summary></p>
+<p><summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> <a href="https://github.com/xiangzhu/rss-peca/tree/b7c4d0986f622abe00210e84babd0e89877ca26d" target="_blank">b7c4d09</a> </summary></p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
 <pre><code>
 Ignored files:
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
-
-Unstaged changes:
-    Deleted:    analysis/snp2net_liver.Rmd
 
 </code></pre>
 Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes.
@@ -441,6 +436,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align:left;">
+Rmd
+</td>
+<td style="text-align:left;">
+<a href="https://github.com/xiangzhu/rss-peca/blob/b7c4d0986f622abe00210e84babd0e89877ca26d/analysis/wtccc_fulldata_liver.Rmd" target="_blank">b7c4d09</a>
+</td>
+<td style="text-align:left;">
+Xiang Zhu
+</td>
+<td style="text-align:left;">
+2018-10-11
+</td>
+<td style="text-align:left;">
+wflow_publish(“analysis/wtccc_fulldata_liver.Rmd”)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://cdn.rawgit.com/xiangzhu/rss-peca/cc6b9f456a8a07f885d8e75d23c204a5b9961e51/docs/wtccc_fulldata_liver.html" target="_blank">cc6b9f4</a>
+</td>
+<td style="text-align:left;">
+Xiang Zhu
+</td>
+<td style="text-align:left;">
+2018-09-24
+</td>
+<td style="text-align:left;">
+Build site.
+</td>
+</tr>
 <tr>
 <td style="text-align:left;">
 Rmd
@@ -503,7 +532,7 @@ wflow_publish(“analysis/wtccc_fulldata_liver.Rmd”)
 Estimated total number of genes with nonzero effect:  1812.836 
 True PVE:  0.2 
 Estimated PVE: 0.2028945 </code></pre>
-<p><img src="figure/wtccc_fulldata_liver.Rmd/unnamed-chunk-3-1.png" width="960" style="display: block; margin: auto;" /></p>
+<p><img src="figure/wtccc_fulldata_liver.Rmd/unnamed-chunk-3-1.png" width="1152" style="display: block; margin: auto;" /></p>
 <details>
 <summary><em>Expand here to see past versions of unnamed-chunk-3-1.png:</em></summary>
 <table style = "border-collapse:separate; border-spacing:5px;">
@@ -521,6 +550,17 @@ Date
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/xiangzhu/rss-peca/blob/cc6b9f456a8a07f885d8e75d23c204a5b9961e51/docs/figure/wtccc_fulldata_liver.Rmd/unnamed-chunk-3-1.png" target="_blank">cc6b9f4</a>
+</td>
+<td style="text-align:left;">
+Xiang Zhu
+</td>
+<td style="text-align:left;">
+2018-09-24
+</td>
+</tr>
 <tr>
 <td style="text-align:left;">
 <a href="https://github.com/xiangzhu/rss-peca/blob/e083aa65daeb53830e7224ccf960c6b684d7b2ba/docs/figure/wtccc_fulldata_liver.Rmd/unnamed-chunk-3-1.png" target="_blank">e083aa6</a>
@@ -542,7 +582,7 @@ Xiang Zhu
 Estimated total number of genes with nonzero effect:  3647.185 
 True PVE:  0.2 
 Estimated PVE: 0.1916802 </code></pre>
-<p><img src="figure/wtccc_fulldata_liver.Rmd/unnamed-chunk-4-1.png" width="960" style="display: block; margin: auto;" /></p>
+<p><img src="figure/wtccc_fulldata_liver.Rmd/unnamed-chunk-4-1.png" width="1152" style="display: block; margin: auto;" /></p>
 <details>
 <summary><em>Expand here to see past versions of unnamed-chunk-4-1.png:</em></summary>
 <table style = "border-collapse:separate; border-spacing:5px;">
@@ -560,6 +600,17 @@ Date
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/xiangzhu/rss-peca/blob/cc6b9f456a8a07f885d8e75d23c204a5b9961e51/docs/figure/wtccc_fulldata_liver.Rmd/unnamed-chunk-4-1.png" target="_blank">cc6b9f4</a>
+</td>
+<td style="text-align:left;">
+Xiang Zhu
+</td>
+<td style="text-align:left;">
+2018-09-24
+</td>
+</tr>
 <tr>
 <td style="text-align:left;">
 <a href="https://github.com/xiangzhu/rss-peca/blob/e083aa65daeb53830e7224ccf960c6b684d7b2ba/docs/figure/wtccc_fulldata_liver.Rmd/unnamed-chunk-4-1.png" target="_blank">e083aa6</a>
@@ -581,7 +632,7 @@ Xiang Zhu
 Estimated total number of genes with nonzero effect:  3613.789 
 True PVE:  0.4 
 Estimated PVE: 0.4048478 </code></pre>
-<p><img src="figure/wtccc_fulldata_liver.Rmd/unnamed-chunk-5-1.png" width="960" style="display: block; margin: auto;" /></p>
+<p><img src="figure/wtccc_fulldata_liver.Rmd/unnamed-chunk-5-1.png" width="1152" style="display: block; margin: auto;" /></p>
 <details>
 <summary><em>Expand here to see past versions of unnamed-chunk-5-1.png:</em></summary>
 <table style = "border-collapse:separate; border-spacing:5px;">
@@ -599,6 +650,17 @@ Date
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/xiangzhu/rss-peca/blob/cc6b9f456a8a07f885d8e75d23c204a5b9961e51/docs/figure/wtccc_fulldata_liver.Rmd/unnamed-chunk-5-1.png" target="_blank">cc6b9f4</a>
+</td>
+<td style="text-align:left;">
+Xiang Zhu
+</td>
+<td style="text-align:left;">
+2018-09-24
+</td>
+</tr>
 <tr>
 <td style="text-align:left;">
 <a href="https://github.com/xiangzhu/rss-peca/blob/e083aa65daeb53830e7224ccf960c6b684d7b2ba/docs/figure/wtccc_fulldata_liver.Rmd/unnamed-chunk-5-1.png" target="_blank">e083aa6</a>
@@ -619,7 +681,7 @@ Xiang Zhu
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">sessionInfo</span>()</a></code></pre></div>
 <pre><code>R version 3.5.1 (2018-07-02)
 Platform: x86_64-apple-darwin15.6.0 (64-bit)
-Running under: macOS High Sierra 10.13.6
+Running under: macOS  10.14
 
 Matrix products: default
 BLAS: /Library/Frameworks/R.framework/Versions/3.5/Resources/lib/libRblas.0.dylib
@@ -633,10 +695,10 @@ attached base packages:
 
 other attached packages:
 [1] bindrcpp_0.2.2 plotROC_2.2.1  ggpubr_0.1.8   magrittr_1.5  
-[5] ggplot2_3.0.0  R.matlab_3.6.1
+[5] ggplot2_3.0.0  R.matlab_3.6.2
 
 loaded via a namespace (and not attached):
- [1] Rcpp_0.12.18      compiler_3.5.1    pillar_1.3.0     
+ [1] Rcpp_0.12.19      compiler_3.5.1    pillar_1.3.0     
  [4] git2r_0.23.0      plyr_1.8.4        workflowr_1.1.1  
  [7] bindr_0.1.1       R.methodsS3_1.7.1 R.utils_2.7.0    
 [10] tools_3.5.1       digest_0.6.17     evaluate_0.11    
@@ -644,12 +706,12 @@ loaded via a namespace (and not attached):
 [16] rlang_0.2.2       yaml_2.2.0        withr_2.1.2      
 [19] stringr_1.3.1     dplyr_0.7.6       knitr_1.20       
 [22] cowplot_0.9.3     rprojroot_1.3-2   grid_3.5.1       
-[25] tidyselect_0.2.4  glue_1.3.0        R6_2.2.2         
-[28] rmarkdown_1.10    purrr_0.2.5       whisker_0.3-2    
-[31] backports_1.1.2   scales_1.0.0      htmltools_0.3.6  
-[34] assertthat_0.2.0  colorspace_1.3-2  labeling_0.3     
-[37] stringi_1.2.4     lazyeval_0.2.1    munsell_0.5.0    
-[40] crayon_1.3.4      R.oo_1.22.0      </code></pre>
+[25] tidyselect_0.2.4  data.table_1.11.8 glue_1.3.0       
+[28] R6_2.3.0          rmarkdown_1.10    purrr_0.2.5      
+[31] whisker_0.3-2     backports_1.1.2   scales_1.0.0     
+[34] htmltools_0.3.6   assertthat_0.2.0  colorspace_1.3-2 
+[37] labeling_0.3      stringi_1.2.4     lazyeval_0.2.1   
+[40] munsell_0.5.0     crayon_1.3.4      R.oo_1.22.0      </code></pre>
 </div>
 
 <!-- Adjust MathJax settings so that all math formulae are shown using

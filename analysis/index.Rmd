@@ -1,54 +1,64 @@
 ---
-title: "Home"
+title: "Full results of Zhu et al (2019)"
+author: "Xiang Zhu"
+date: 2018-07-19
 site: workflowr::wflow_site
 output:
   workflowr::wflow_html:
     toc: true
 ---
 
-If you have any question about this project, please feel free to contact me:
-[Xiang Zhu](https://github.com/xiangzhu), `xiangzhu@stanford.edu`.
+[Zhu et al (2019)]: https://github.com/stephenslab/rss
 
-***
+## <img src="https://static.thenounproject.com/png/718557-200.png" width="38"/> Overview
 
-## Software development
+This is my online notebook to document and share the full results of
+whole-genome integrated analyses of regulatory networks and complex traits
+described in the manuscript:
 
-***
+> TBA
 
-## Simulation study
+If you find the analysis results, the pre-processed networks,
+the statistical methods, and/or the open-source software useful for your work,
+**please kindly cite our manuscript listed above, [Zhu et al (2019)][]**.
 
-- [Simulated summary-level data based on WTCCC & Liver-specific network](wtccc_sumstats_liver.html)
-- [Simulated individual-level data based on WTCCC & Liver-specific network](wtccc_fulldata_liver.html)
-    - [Assess the impact of TF](wtccc_fulldata_liver_tf.html)
-    - [Assess the impact of TF-TG scores](wtccc_fulldata_liver_wt.html)
-    - [Assess the impact of RE](wtccc_fulldata_liver_re.html)
-- TBA
+If you have any question about the notebook and/or the manuscript,
+please feel free to contact me:
+[Xiang Zhu](https://github.com/xiangzhu),
+`xiangzhu[at]stanford.edu`.
 
-***
+## <img src="https://static.thenounproject.com/png/808252-200.png" width="36"/> Main results
 
-## Data analysis
+For each phenotype below, please click
+<img src="https://static.thenounproject.com/png/1088173-200.png" width="18"/>
+to view results of network enrichment, and click
+<img src="https://static.thenounproject.com/png/1331179-200.png" width="18"/>
+to view results of gene prioritization.
 
-### Likelihood ratio assessments
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Phenotype (GWAS publication) </th>
+   <th style="text-align:right;"> Network enrichment </th>
+   <th style="text-align:right;"> Gene prioritization </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Adult human height (Wood et al. 2014) </td>
+   <td style="text-align:right;"> [<img src="https://static.thenounproject.com/png/1088173-200.png" width="28"/>](license.html) </td>
+   <td style="text-align:right;"> [<img src="https://static.thenounproject.com/png/1331179-200.png" width="28"/>](license.html) </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Schizophrenia (Ripke et al. 2014) </td>
+   <td style="text-align:right;"> [<img src="https://static.thenounproject.com/png/1088173-200.png" width="28"/>](license.html) </td>
+   <td style="text-align:right;"> [<img src="https://static.thenounproject.com/png/1331179-200.png" width="28"/>](license.html) </td>
+  </tr>
+</tbody>
+</table>
 
-Below are some quick assessments of PECA networks I received from Duren,
-using a simple likelihood ratio calculation introduced in
-[Zhu and Stephens (2017)](https://doi.org/10.1101/160770).
-The aim of these quick assessments is to confirms whether these networks
-are informative in identifying disease-related tissues or cell types.
 
-- [201 PECA networks and 31 human complex traits](ashlrt_201peca_31trait.html)
-- [73 PECA networks and 33 human complex traits](ashlrt_73peca_33trait.html)
-- [73 PECA networks (TG only) and 33 human complex traits](ashlrt_73peca_33trait_tg.html)
-- [73 PECA networks (RE only) and 33 human complex traits](ashlrt_73peca_33trait_re.html)
-- [Comparison between TG or RE with full PECA networks](ashlrt_73peca_33trait_compare.html)
-- [66 MusDev lists and 33 human complex traits](ashlrt_66musdev_33traits.html)
+## <img src="https://static.thenounproject.com/png/824132-200.png" width="38"/> Additional resources
 
-### Application of new methods
+TBA
 
-Below are applications of the new methods to real datasets.
-
-- [Late-onset Alzheimer's disease & Liver-specific network](load2013_liver.html)
-
-### Miscellaneous investigations
-
-- []

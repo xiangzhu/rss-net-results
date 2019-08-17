@@ -7,15 +7,18 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="Xiang Zhu" />
 
+<meta name="date" content="2018-07-19" />
 
-<title>Home</title>
+<title>Full results of Zhu et al (2019)</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/journal.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/sandstone.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
@@ -23,9 +26,8 @@
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet" />
-<script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
-<script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
 
 
@@ -58,9 +60,7 @@ h6 {
 </style>
 
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -85,6 +85,9 @@ img {
 button.code-folding-btn:focus {
   outline: none;
 }
+summary {
+  display: list-item;
+}
 </style>
 
 
@@ -99,7 +102,6 @@ body {
   padding-top: 56px;
   margin-top: -56px;
 }
-
 .section h2 {
   padding-top: 56px;
   margin-top: -56px;
@@ -119,6 +121,43 @@ body {
 .section h6 {
   padding-top: 56px;
   margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -140,47 +179,65 @@ $(document).ready(function () {
 });
 </script>
 
-
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-</script>
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
 
 <!-- code folding -->
 
 
-
-
-<script>
-$(document).ready(function ()  {
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = true;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
 <style type="text/css">
 
@@ -229,8 +286,6 @@ div.tocify {
 
 .tocify-subheader .tocify-item {
   font-size: 0.90em;
-  padding-left: 25px;
-  text-indent: 0;
 }
 
 .tocify .list-group-item {
@@ -239,6 +294,16 @@ div.tocify {
 
 
 </style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
 
 <!-- setup 3col/9col grid for toc_float and main content  -->
 <div class="row-fluid">
@@ -294,468 +359,568 @@ div.section {
 
 
 
-<h1 class="title toc-ignore">Home</h1>
+<h1 class="title toc-ignore">Full results of Zhu et al (2019)</h1>
+<h4 class="author">Xiang Zhu</h4>
+<h4 class="date">2018-07-19</h4>
 
 </div>
 
 
-<p><strong>Last updated:</strong> 2018-10-09</p>
-<strong>workflowr checks:</strong> <small>(Click a bullet for more information)</small>
-<ul>
-<li>
-<details>
-<p><summary> <strong style="color:blue;">✔</strong> <strong>R Markdown file:</strong> up-to-date </summary></p>
-<p>Great! Since the R Markdown file has been committed to the Git repository, you know the exact version of the code that produced these results.</p>
-</details>
+<p>
+<button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
+<span class="glyphicon glyphicon-list" aria-hidden="true"></span> workflowr <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+</button>
+</p>
+<div id="workflowr-report" class="collapse">
+<ul class="nav nav-tabs">
+<li class="active">
+<a data-toggle="tab" href="#summary">Summary</a>
 </li>
 <li>
-<details>
-<p><summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> <a href="https://github.com/xiangzhu/rss-peca/tree/7dd26b15d6a4cc5a466b75fe607313463658f240" target="_blank">7dd26b1</a> </summary></p>
+<a data-toggle="tab" href="#checks"> Checks <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> </a>
+</li>
+<li>
+<a data-toggle="tab" href="#versions">Past versions</a>
+</li>
+</ul>
+<div class="tab-content">
+<div id="summary" class="tab-pane fade in active">
+<p>
+<strong>Last updated:</strong> 2019-08-17
+</p>
+<p>
+<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 2 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
+</p>
+<p>
+<strong>Knit directory:</strong> <code>rss-peca/</code> <span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="This is the local directory in which the code in this file was executed."> </span>
+</p>
+<p>
+This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis was created with <a
+  href="https://github.com/jdblischak/workflowr">workflowr</a> (version 1.4.0). The <em>Checks</em> tab describes the reproducibility checks that were applied when the results were created. The <em>Past versions</em> tab lists the development history.
+</p>
+<hr>
+</div>
+<div id="checks" class="tab-pane fade">
+<div id="workflowr-checks" class="panel-group">
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date </a>
+</p>
+</div>
+<div id="strongRMarkdownfilestronguptodate" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great! Since the R Markdown file has been committed to the Git repository, you know the exact version of the code that produced these results.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomxiangzhursspecatreeaa4cbe01a75b9c1c17956818c7b0a93e689906b7targetblankaa4cbe0a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/xiangzhu/rss-peca/tree/aa4cbe01a75b9c1c17956818c7b0a93e689906b7" target="_blank">aa4cbe0</a> </a>
+</p>
+</div>
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomxiangzhursspecatreeaa4cbe01a75b9c1c17956818c7b0a93e689906b7targetblankaa4cbe0a" class="panel-collapse collapse">
+<div class="panel-body">
+<p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
+</p>
 <pre><code>
 Ignored files:
-    Ignored:    .Rhistory
     Ignored:    .Rproj.user/
 
 </code></pre>
+<p>
 Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes.
-</details>
-</li>
-</ul>
-<details>
-<summary> <small><strong>Expand here to see past versions:</strong></small> </summary>
-<ul>
-<table style="border-collapse:separate; border-spacing:5px;">
+</p>
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="versions" class="tab-pane fade">
+
+<p>
+These are the previous versions of the R Markdown and HTML files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view them.
+</p>
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
 <thead>
 <tr>
-<th style="text-align:left;">
+<th>
 File
 </th>
-<th style="text-align:left;">
+<th>
 Version
 </th>
-<th style="text-align:left;">
+<th>
 Author
 </th>
-<th style="text-align:left;">
+<th>
 Date
 </th>
-<th style="text-align:left;">
+<th>
 Message
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
+<a href="https://github.com/xiangzhu/rss-peca/blob/aa4cbe01a75b9c1c17956818c7b0a93e689906b7/analysis/index.Rmd" target="_blank">aa4cbe0</a>
+</td>
+<td>
+xiangzhu
+</td>
+<td>
+2019-08-17
+</td>
+<td>
+wflow_publish(“analysis/index.Rmd”)
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-peca/07651770d5c9e7c6ae713c235007a3d81c4e8148/docs/index.html" target="_blank">0765177</a>
+</td>
+<td>
+Xiang Zhu
+</td>
+<td>
+2018-10-10
+</td>
+<td>
+Build site.
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
 <a href="https://github.com/xiangzhu/rss-peca/blob/7dd26b15d6a4cc5a466b75fe607313463658f240/analysis/index.Rmd" target="_blank">7dd26b1</a>
 </td>
-<td style="text-align:left;">
+<td>
 Xiang Zhu
 </td>
-<td style="text-align:left;">
-2018-10-09
+<td>
+2018-10-10
 </td>
-<td style="text-align:left;">
+<td>
 wflow_publish(“analysis/index.Rmd”)
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/xiangzhu/rss-peca/dd65113b8dff6b4ffbc3f4ba6720f26cc128253e/docs/index.html" target="_blank">dd65113</a>
+<td>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-peca/dd65113b8dff6b4ffbc3f4ba6720f26cc128253e/docs/index.html" target="_blank">dd65113</a>
 </td>
-<td style="text-align:left;">
+<td>
 Xiang Zhu
 </td>
-<td style="text-align:left;">
+<td>
 2018-09-21
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/xiangzhu/rss-peca/blob/283f43bb21c30c3c26ad3e330f8980d89461d7c8/analysis/index.Rmd" target="_blank">283f43b</a>
 </td>
-<td style="text-align:left;">
+<td>
 Xiang Zhu
 </td>
-<td style="text-align:left;">
+<td>
 2018-09-21
 </td>
-<td style="text-align:left;">
+<td>
 wflow_publish(“analysis/index.Rmd”)
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/xiangzhu/rss-peca/f4e42f1b09220be3e34343219655522089ef03ae/docs/index.html" target="_blank">f4e42f1</a>
+<td>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-peca/f4e42f1b09220be3e34343219655522089ef03ae/docs/index.html" target="_blank">f4e42f1</a>
 </td>
-<td style="text-align:left;">
+<td>
 Xiang Zhu
 </td>
-<td style="text-align:left;">
+<td>
 2018-09-20
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/xiangzhu/rss-peca/blob/69cfef7bd3b748d7a0d46f0165812d8d2ef57c13/analysis/index.Rmd" target="_blank">69cfef7</a>
 </td>
-<td style="text-align:left;">
+<td>
 Xiang Zhu
 </td>
-<td style="text-align:left;">
+<td>
 2018-09-20
 </td>
-<td style="text-align:left;">
+<td>
 wflow_publish(“analysis/index.Rmd”)
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/xiangzhu/rss-peca/c08d574ec582bd9dcd9cc42fea92ad6ee01a41ae/docs/index.html" target="_blank">c08d574</a>
+<td>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-peca/c08d574ec582bd9dcd9cc42fea92ad6ee01a41ae/docs/index.html" target="_blank">c08d574</a>
 </td>
-<td style="text-align:left;">
+<td>
 Xiang Zhu
 </td>
-<td style="text-align:left;">
-2018-09-19
+<td>
+2018-09-20
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/xiangzhu/rss-peca/blob/3a196a1973fbff0b7061710b6e2d2dda85d45c53/analysis/index.Rmd" target="_blank">3a196a1</a>
 </td>
-<td style="text-align:left;">
+<td>
 Xiang Zhu
 </td>
-<td style="text-align:left;">
-2018-09-19
+<td>
+2018-09-20
 </td>
-<td style="text-align:left;">
+<td>
 wflow_publish(“analysis/index.Rmd”)
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/xiangzhu/rss-peca/b303bb70464296bb9da89107bf40b269aa33d684/docs/index.html" target="_blank">b303bb7</a>
+<td>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-peca/b303bb70464296bb9da89107bf40b269aa33d684/docs/index.html" target="_blank">b303bb7</a>
 </td>
-<td style="text-align:left;">
+<td>
 Xiang Zhu
 </td>
-<td style="text-align:left;">
-2018-09-04
+<td>
+2018-09-05
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/xiangzhu/rss-peca/blob/665f7a316e33e9c6f63a98d5bb0f754d5b72ac0d/analysis/index.Rmd" target="_blank">665f7a3</a>
 </td>
-<td style="text-align:left;">
+<td>
 Xiang Zhu
 </td>
-<td style="text-align:left;">
-2018-09-04
+<td>
+2018-09-05
 </td>
-<td style="text-align:left;">
+<td>
 wflow_publish(“analysis/index.Rmd”)
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/xiangzhu/rss-peca/2a3e63f06a1ccb207b40d5e427ee574a52d2b905/docs/index.html" target="_blank">2a3e63f</a>
+<td>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-peca/2a3e63f06a1ccb207b40d5e427ee574a52d2b905/docs/index.html" target="_blank">2a3e63f</a>
 </td>
-<td style="text-align:left;">
+<td>
 Xiang Zhu
 </td>
-<td style="text-align:left;">
+<td>
 2018-08-30
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/xiangzhu/rss-peca/blob/a5d175783413b03c462029ed76b2439c2ce13184/analysis/index.Rmd" target="_blank">a5d1757</a>
 </td>
-<td style="text-align:left;">
+<td>
 Xiang Zhu
 </td>
-<td style="text-align:left;">
+<td>
 2018-08-30
 </td>
-<td style="text-align:left;">
+<td>
 wflow_publish(“analysis/index.Rmd”)
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/xiangzhu/rss-peca/6142cc22045088cdcf49d555ea3bb23d12c85430/docs/index.html" target="_blank">6142cc2</a>
+<td>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-peca/6142cc22045088cdcf49d555ea3bb23d12c85430/docs/index.html" target="_blank">6142cc2</a>
 </td>
-<td style="text-align:left;">
+<td>
 Xiang Zhu
 </td>
-<td style="text-align:left;">
+<td>
 2018-07-24
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/xiangzhu/rss-peca/blob/d17ed5f4ce4cf1a8e7a8dcce7ff8a00b502a9f9c/analysis/index.Rmd" target="_blank">d17ed5f</a>
 </td>
-<td style="text-align:left;">
+<td>
 Xiang Zhu
 </td>
-<td style="text-align:left;">
+<td>
 2018-07-24
 </td>
-<td style="text-align:left;">
+<td>
 wflow_publish(“analysis/index.Rmd”)
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/xiangzhu/rss-peca/b978776ef95d99c798b48d7035d734e41da0ae21/docs/index.html" target="_blank">b978776</a>
+<td>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-peca/b978776ef95d99c798b48d7035d734e41da0ae21/docs/index.html" target="_blank">b978776</a>
 </td>
-<td style="text-align:left;">
+<td>
 Xiang Zhu
 </td>
-<td style="text-align:left;">
+<td>
 2018-07-24
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/xiangzhu/rss-peca/blob/1017c63011d74bef36e2335d40388c9fb222dbe6/analysis/index.Rmd" target="_blank">1017c63</a>
 </td>
-<td style="text-align:left;">
+<td>
 Xiang Zhu
 </td>
-<td style="text-align:left;">
+<td>
 2018-07-24
 </td>
-<td style="text-align:left;">
+<td>
 wflow_publish(“analysis/index.Rmd”)
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/xiangzhu/rss-peca/9aaa70fb56de89425a8f6109ee9262346f26e1bc/docs/index.html" target="_blank">9aaa70f</a>
+<td>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-peca/9aaa70fb56de89425a8f6109ee9262346f26e1bc/docs/index.html" target="_blank">9aaa70f</a>
 </td>
-<td style="text-align:left;">
+<td>
 Xiang Zhu
 </td>
-<td style="text-align:left;">
-2018-07-19
+<td>
+2018-07-20
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/xiangzhu/rss-peca/blob/2cd97ad194a849163799020f7d47e27c7b7e3331/analysis/index.Rmd" target="_blank">2cd97ad</a>
 </td>
-<td style="text-align:left;">
+<td>
 Xiang Zhu
 </td>
-<td style="text-align:left;">
-2018-07-19
+<td>
+2018-07-20
 </td>
-<td style="text-align:left;">
+<td>
 wflow_publish(“analysis/index.Rmd”)
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/xiangzhu/rss-peca/889612b0f6ad49b659f11e3e001278c37d16dd2f/docs/index.html" target="_blank">889612b</a>
+<td>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-peca/889612b0f6ad49b659f11e3e001278c37d16dd2f/docs/index.html" target="_blank">889612b</a>
 </td>
-<td style="text-align:left;">
+<td>
 Xiang Zhu
 </td>
-<td style="text-align:left;">
+<td>
 2018-07-19
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/xiangzhu/rss-peca/fcdb217dddbd0bc3380b366027ada06a393d26f5/docs/index.html" target="_blank">fcdb217</a>
+<td>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-peca/fcdb217dddbd0bc3380b366027ada06a393d26f5/docs/index.html" target="_blank">fcdb217</a>
 </td>
-<td style="text-align:left;">
+<td>
 Xiang Zhu
 </td>
-<td style="text-align:left;">
+<td>
 2018-07-19
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/xiangzhu/rss-peca/blob/041a3efc65fa838843d64c15e6fe8bd99ea0a9e0/analysis/index.Rmd" target="_blank">041a3ef</a>
 </td>
-<td style="text-align:left;">
+<td>
 Xiang Zhu
 </td>
-<td style="text-align:left;">
+<td>
 2018-07-19
 </td>
-<td style="text-align:left;">
+<td>
 wflow_publish(files = c(“analysis/index.Rmd”, “analysis/license.Rmd”))
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/xiangzhu/rss-peca/blob/c07849bd3f8f45230b74f3402f5540af44543239/analysis/index.Rmd" target="_blank">c07849b</a>
 </td>
-<td style="text-align:left;">
+<td>
 Xiang Zhu
 </td>
-<td style="text-align:left;">
+<td>
 2018-07-19
 </td>
-<td style="text-align:left;">
+<td>
 Start workflowr project.
 </td>
 </tr>
 </tbody>
 </table>
-</ul>
-</details>
-<hr />
-<p>If you have any question about this project, please feel free to contact me: <a href="https://github.com/xiangzhu">Xiang Zhu</a>, <code>xiangzhu@stanford.edu</code>.</p>
-<hr />
-<div id="software-development" class="section level2">
-<h2>Software development</h2>
-<hr />
 </div>
-<div id="simulation-study" class="section level2">
-<h2>Simulation study</h2>
-<ul>
-<li><a href="wtccc_sumstats_liver.html">Simulated summary-level data based on WTCCC &amp; Liver-specific network</a></li>
-<li><a href="wtccc_fulldata_liver.html">Simulated individual-level data based on WTCCC &amp; Liver-specific network</a>
-<ul>
-<li><a href="wtccc_fulldata_liver_tf.html">Assess the impact of TF</a></li>
-<li><a href="wtccc_fulldata_liver_wt.html">Assess the impact of TF-TG scores</a></li>
-<li><a href="wtccc_fulldata_liver_re.html">Assess the impact of RE</a></li>
-</ul></li>
-<li>TBA</li>
-</ul>
-<hr />
-</div>
-<div id="data-analysis" class="section level2">
-<h2>Data analysis</h2>
-<div id="likelihood-ratio-assessments" class="section level3">
-<h3>Likelihood ratio assessments</h3>
-<p>Below are some quick assessments of PECA networks I received from Duren, using a simple likelihood ratio calculation introduced in <a href="https://doi.org/10.1101/160770">Zhu and Stephens (2017)</a>. The aim of these quick assessments is to confirms whether these networks are informative in identifying disease-related tissues or cell types.</p>
-<ul>
-<li><a href="ashlrt_201peca_31trait.html">201 PECA networks and 31 human complex traits</a></li>
-<li><a href="ashlrt_73peca_33trait.html">73 PECA networks and 33 human complex traits</a></li>
-<li><a href="ashlrt_73peca_33trait_tg.html">73 PECA networks (TG only) and 33 human complex traits</a></li>
-<li><a href="ashlrt_73peca_33trait_re.html">73 PECA networks (RE only) and 33 human complex traits</a></li>
-<li><a href="ashlrt_73peca_33trait_compare.html">Comparison between TG or RE with full PECA networks</a></li>
-<li><a href="ashlrt_66musdev_33traits.html">66 MusDev lists and 33 human complex traits</a></li>
-</ul>
-</div>
-<div id="application-of-new-methods" class="section level3">
-<h3>Application of new methods</h3>
-<p>Below are applications of the new methods to real datasets.</p>
-<ul>
-<li><a href="load2013_liver.html">Late-onset Alzheimer’s disease &amp; Liver-specific network</a></li>
-</ul>
-</div>
-<div id="miscellaneous-investigations" class="section level3">
-<h3>Miscellaneous investigations</h3>
-<ul>
-<li>[]</li>
-</ul>
+<hr>
 </div>
 </div>
+</div>
+<div id="overview" class="section level2">
+<h2><img src="https://static.thenounproject.com/png/718557-200.png" width="38"/> Overview</h2>
+<p>This is my online notebook to document and share the full results of whole-genome integrated analyses of regulatory networks and complex traits described in the manuscript:</p>
+<blockquote>
+<p>TBA</p>
+</blockquote>
+<p>If you find the analysis results, the pre-processed networks, the statistical methods, and/or the open-source software useful for your work, <strong>please kindly cite our manuscript listed above, <a href="https://github.com/stephenslab/rss">Zhu et al (2019)</a></strong>.</p>
+<p>If you have any question about the notebook and/or the manuscript, please feel free to contact me: <a href="https://github.com/xiangzhu">Xiang Zhu</a>, <code>xiangzhu[at]stanford.edu</code>.</p>
+</div>
+<div id="main-results" class="section level2">
+<h2><img src="https://static.thenounproject.com/png/808252-200.png" width="36"/> Main results</h2>
+<p>For each phenotype below, please click <img src="https://static.thenounproject.com/png/1088173-200.png" width="18"/> to view results of network enrichment, and click <img src="https://static.thenounproject.com/png/1331179-200.png" width="18"/> to view results of gene prioritization.</p>
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Phenotype (GWAS publication)
+</th>
+<th style="text-align:right;">
+Network enrichment
+</th>
+<th style="text-align:right;">
+Gene prioritization
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Adult human height (Wood et al. 2014)
+</td>
+<td style="text-align:right;">
+<a href="license.html"><img src="https://static.thenounproject.com/png/1088173-200.png" width="28"/></a>
+</td>
+<td style="text-align:right;">
+<a href="license.html"><img src="https://static.thenounproject.com/png/1331179-200.png" width="28"/></a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Schizophrenia (Ripke et al. 2014)
+</td>
+<td style="text-align:right;">
+<a href="license.html"><img src="https://static.thenounproject.com/png/1088173-200.png" width="28"/></a>
+</td>
+<td style="text-align:right;">
+<a href="license.html"><img src="https://static.thenounproject.com/png/1331179-200.png" width="28"/></a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="additional-resources" class="section level2">
+<h2><img src="https://static.thenounproject.com/png/824132-200.png" width="38"/> Additional resources</h2>
+<p>TBA</p>
+</div>
+
 
 <!-- Adjust MathJax settings so that all math formulae are shown using
 TeX fonts only; see
@@ -768,14 +933,6 @@ footer is added to webpages before the MathJax javascript. -->
     "HTML-CSS": { availableFonts: ["TeX"] }
   });
 </script>
-
-<hr>
-<p>
-  This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a>
-  analysis was created with
-  <a href="https://github.com/jdblischak/workflowr">workflowr</a> 1.1.1
-</p>
-<hr>
 
 
 </div>
@@ -794,6 +951,49 @@ $(document).ready(function () {
 });
 
 
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
 </script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->

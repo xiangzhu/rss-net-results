@@ -1,26 +1,25 @@
 ## Table legends
 
-Prioritization results are summarized by the following two tables,
+Prioritization results of network genes are summarized as two tables,
 one for network transcription factors (TFs)
 and the other for network target genes (TGs).
 
-- **P1**: posterior probability that at least one SNP within
+- `P1`: posterior probability that at least one SNP within
 100 kb of the transcribed region of a given network gene
-(specified by **Chr.**, **Start** and **End** columns)
+(specified by `Gene`, `Chr.`, `Start` and `End` columns)
 has non-zero effect on the trait of interest;
 
-- **H-distance**: the physical distance, in base pair,
+- `H-distance`: the physical distance, in base pair,
 between a given network gene and its nearest GWAS hit;
 
-- **Nearest hit**: the nearest GWAS hit to a given network gene,
+- `Nearest hit`: the nearest GWAS hit to a given network gene,
 reported in the corresponding GWAS publication.
+The "none" values in this column indicate that there is no
+published GWAS hit on the same chromosome as the network gene.
 
-The "Inf" values in column **H-distance** indicate that
-there is no GWAS hit on the same chromosome as the pathway gene.
-
-**Baseline P1** and **Enrichment P1** are obtained from fitting
-RSS-NET baseline and enrichment models respetively.
-Differences between **Baseline P1** and **Enrichment P1** reflect
+`Baseline P1` and `Enrichment P1` are obtained from fitting
+RSS-NET baseline and enrichment models respectively.
+Differences between `Baseline P1` and `Enrichment P1` reflect
 the influence of network enrichment on genetic associations,
 which can help identify putatively new trait-associated genes. 
 

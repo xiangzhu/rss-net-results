@@ -17,8 +17,8 @@ reported in the corresponding GWAS publication.
 The "none" values in this column indicate that there is no
 published GWAS hit on the same chromosome as the network gene.
 
-`Baseline P1` and `Enrichment P1` are obtained from fitting
-RSS-NET baseline and enrichment models respectively.
+Note that `Baseline P1` and `Enrichment P1` are obtained from
+fitting RSS-NET baseline and enrichment models respectively.
 Differences between `Baseline P1` and `Enrichment P1` reflect
 the influence of network enrichment on genetic associations,
 which can help identify putatively new trait-associated genes. 

@@ -30,6 +30,97 @@
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
 
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
 
 
 <style type="text/css">
@@ -386,10 +477,10 @@ div.section {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2019-08-19
+<strong>Last updated:</strong> 2019-08-20
 </p>
 <p>
-<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 2 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
+<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
 </p>
 <p>
 <strong>Knit directory:</strong> <code>rss-peca/</code> <span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="This is the local directory in which the code in this file was executed."> </span>
@@ -417,10 +508,70 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomxiangzhursspecatree883bf454424f7b3772047435445321cd9dbed24ftargetblank883bf45a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/xiangzhu/rss-peca/tree/883bf454424f7b3772047435445321cd9dbed24f" target="_blank">883bf45</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongEnvironmentstrongempty"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Environment:</strong> empty </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomxiangzhursspecatree883bf454424f7b3772047435445321cd9dbed24ftargetblank883bf45a" class="panel-collapse collapse">
+<div id="strongEnvironmentstrongempty" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! The global environment was empty. Objects defined in the global environment can affect the analysis in your R Markdown file in unknown ways. For reproduciblity it’s best to always run the code in an empty environment.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSeedstrongcodesetseed20180719code"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Seed:</strong> <code>set.seed(20180719)</code> </a>
+</p>
+</div>
+<div id="strongSeedstrongcodesetseed20180719code" class="panel-collapse collapse">
+<div class="panel-body">
+<p>The command <code>set.seed(20180719)</code> was run prior to running the code in the R Markdown file. Setting a seed ensures that any results that rely on randomness, e.g. subsampling or permutations, are reproducible.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSessioninformationstrongrecorded"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Session information:</strong> recorded </a>
+</p>
+</div>
+<div id="strongSessioninformationstrongrecorded" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! Recording the operating system, R version, and package versions is critical for reproducibility.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongCachestrongnone"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Cache:</strong> none </a>
+</p>
+</div>
+<div id="strongCachestrongnone" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Nice! There were no cached chunks for this analysis, so you can be confident that you successfully produced the results during this run.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongFilepathsstrongrelative"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>File paths:</strong> relative </a>
+</p>
+</div>
+<div id="strongFilepathsstrongrelative" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! Using relative paths to the files within your workflowr project makes it easier to run your code on other machines.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomxiangzhursspecatree1a85c202d01c93ff42f42ad49d6d0826dd12c8bbtargetblank1a85c20a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/xiangzhu/rss-peca/tree/1a85c202d01c93ff42f42ad49d6d0826dd12c8bb" target="_blank">1a85c20</a> </a>
+</p>
+</div>
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomxiangzhursspecatree1a85c202d01c93ff42f42ad49d6d0826dd12c8bbtargetblank1a85c20a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -467,6 +618,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/xiangzhu/rss-peca/blob/1a85c202d01c93ff42f42ad49d6d0826dd12c8bb/analysis/index.Rmd" target="_blank">1a85c20</a>
+</td>
+<td>
+xiangzhu
+</td>
+<td>
+2019-08-20
+</td>
+<td>
+wflow_publish(“analysis/index.Rmd”)
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-peca/966067419b9b91b9136adab88d79195099819eb1/docs/index.html" target="_blank">9660674</a>
+</td>
+<td>
+xiangzhu
+</td>
+<td>
+2019-08-19
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -910,7 +1095,7 @@ Start workflowr project.
 </div>
 <div id="main-results" class="section level2">
 <h2><img src="https://static.thenounproject.com/png/808252-200.png" width="36"/> Main results</h2>
-<p>For each phenotype below, please click <img src="https://static.thenounproject.com/png/1088173-200.png" width="18"/> to view results of network enrichment, and click <img src="https://static.thenounproject.com/png/1331179-200.png" width="18"/> to view results of gene prioritization.</p>
+<p>For each phenotype below, please click <img src="https://static.thenounproject.com/png/1088173-200.png" width="18"/> to view network enrichment results, and click <img src="https://static.thenounproject.com/png/1331179-200.png" width="18"/> to view gene prioritization results. Please note that loading pages of gene prioritization results may take a while because of the large number of genes displayed.</p>
 <table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -928,13 +1113,46 @@ Gene prioritization
 <tbody>
 <tr>
 <td style="text-align:left;">
-Adult human height (Wood et al. 2014)
+Adult height (Wood et al. 2014)
 </td>
 <td style="text-align:right;">
 <a href=""><img src="https://static.thenounproject.com/png/1088173-200.png" width="28"/></a>
 </td>
 <td style="text-align:right;">
-<a href=""><img src="https://static.thenounproject.com/png/1331179-200.png" width="28"/></a>
+<a href="height2014_gene.html"><img src="https://static.thenounproject.com/png/1331179-200.png" width="28"/></a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Inflammatory bowel disease (Liu et al. 2015)
+</td>
+<td style="text-align:right;">
+<a href=""><img src="https://static.thenounproject.com/png/1088173-200.png" width="28"/></a>
+</td>
+<td style="text-align:right;">
+<a href="ibd2015_gene.html"><img src="https://static.thenounproject.com/png/1331179-200.png" width="28"/></a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Low-density lipoprotein (Teslovich et al. 2010)
+</td>
+<td style="text-align:right;">
+<a href=""><img src="https://static.thenounproject.com/png/1088173-200.png" width="28"/></a>
+</td>
+<td style="text-align:right;">
+<a href="ldl2010_gene.html"><img src="https://static.thenounproject.com/png/1331179-200.png" width="28"/></a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Alzheimer’s disease (Lambert et al. 2013)
+</td>
+<td style="text-align:right;">
+<a href=""><img src="https://static.thenounproject.com/png/1088173-200.png" width="28"/></a>
+</td>
+<td style="text-align:right;">
+<a href="load2013_gene.html"><img src="https://static.thenounproject.com/png/1331179-200.png" width="28"/></a>
 </td>
 </tr>
 <tr>
@@ -945,7 +1163,7 @@ Schizophrenia (Ripke et al. 2014)
 <a href=""><img src="https://static.thenounproject.com/png/1088173-200.png" width="28"/></a>
 </td>
 <td style="text-align:right;">
-<a href=""><img src="https://static.thenounproject.com/png/1331179-200.png" width="28"/></a>
+<a href="scz2014_gene.html"><img src="https://static.thenounproject.com/png/1331179-200.png" width="28"/></a>
 </td>
 </tr>
 </tbody>
@@ -954,6 +1172,71 @@ Schizophrenia (Ripke et al. 2014)
 <div id="additional-resources" class="section level2">
 <h2><img src="https://static.thenounproject.com/png/824132-200.png" width="38"/> Additional resources</h2>
 <p>TBA</p>
+<br>
+<p>
+<button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
+<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Session information
+</button>
+</p>
+<div id="workflowr-sessioninfo" class="collapse">
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1">devtools<span class="op">::</span><span class="kw">session_info</span>()</a></code></pre></div>
+<pre><code>─ Session info ──────────────────────────────────────────────────────────
+ setting  value                       
+ version  R version 3.6.1 (2019-07-05)
+ os       Ubuntu 18.04.3 LTS          
+ system   x86_64, linux-gnu           
+ ui       X11                         
+ language (EN)                        
+ collate  en_US.UTF-8                 
+ ctype    en_US.UTF-8                 
+ tz       America/Los_Angeles         
+ date     2019-08-20                  
+
+─ Packages ──────────────────────────────────────────────────────────────
+ package     * version date       lib source        
+ assertthat    0.2.1   2019-03-21 [1] CRAN (R 3.6.0)
+ backports     1.1.4   2019-04-10 [1] CRAN (R 3.6.0)
+ callr         3.3.1   2019-07-18 [1] CRAN (R 3.6.1)
+ cli           1.1.0   2019-03-19 [1] CRAN (R 3.6.0)
+ crayon        1.3.4   2017-09-16 [1] CRAN (R 3.6.0)
+ desc          1.2.0   2018-05-01 [1] CRAN (R 3.6.0)
+ devtools      2.1.0   2019-07-06 [1] CRAN (R 3.6.1)
+ digest        0.6.20  2019-07-04 [1] CRAN (R 3.6.1)
+ evaluate      0.14    2019-05-28 [1] CRAN (R 3.6.0)
+ fs            1.3.1   2019-05-06 [1] CRAN (R 3.6.0)
+ git2r         0.26.1  2019-06-29 [1] CRAN (R 3.6.0)
+ glue          1.3.1   2019-03-12 [1] CRAN (R 3.6.0)
+ htmltools     0.3.6   2017-04-28 [1] CRAN (R 3.6.0)
+ knitr         1.24    2019-08-08 [1] CRAN (R 3.6.1)
+ magrittr      1.5     2014-11-22 [1] CRAN (R 3.6.0)
+ memoise       1.1.0   2017-04-21 [1] CRAN (R 3.6.0)
+ pkgbuild      1.0.4   2019-08-05 [1] CRAN (R 3.6.1)
+ pkgload       1.0.2   2018-10-29 [1] CRAN (R 3.6.0)
+ prettyunits   1.0.2   2015-07-13 [1] CRAN (R 3.6.0)
+ processx      3.4.1   2019-07-18 [1] CRAN (R 3.6.1)
+ ps            1.3.0   2018-12-21 [1] CRAN (R 3.6.0)
+ R6            2.4.0   2019-02-14 [1] CRAN (R 3.6.0)
+ Rcpp          1.0.2   2019-07-25 [1] CRAN (R 3.6.1)
+ remotes       2.1.0   2019-06-24 [1] CRAN (R 3.6.0)
+ rlang         0.4.0   2019-06-25 [1] CRAN (R 3.6.0)
+ rmarkdown     1.14    2019-07-12 [1] CRAN (R 3.6.1)
+ rprojroot     1.3-2   2018-01-03 [1] CRAN (R 3.6.0)
+ sessioninfo   1.1.1   2018-11-05 [1] CRAN (R 3.6.0)
+ stringi       1.4.3   2019-03-12 [1] CRAN (R 3.6.0)
+ stringr       1.4.0   2019-02-10 [1] CRAN (R 3.6.0)
+ testthat      2.2.1   2019-07-25 [1] CRAN (R 3.6.1)
+ usethis       1.5.1   2019-07-04 [1] CRAN (R 3.6.1)
+ whisker       0.3-2   2013-04-28 [1] CRAN (R 3.6.0)
+ withr         2.1.2   2018-03-15 [1] CRAN (R 3.6.0)
+ workflowr     1.4.0   2019-06-08 [1] CRAN (R 3.6.0)
+ xfun          0.8     2019-06-25 [1] CRAN (R 3.6.0)
+ yaml          2.2.0   2018-07-25 [1] CRAN (R 3.6.0)
+
+[1] /home/maimaizhu/R/x86_64-pc-linux-gnu-library/3.6
+[2] /usr/local/lib/R/site-library
+[3] /usr/lib/R/site-library
+[4] /usr/lib/R/library</code></pre>
+</div>
 </div>
 
 

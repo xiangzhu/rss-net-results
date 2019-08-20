@@ -21,6 +21,6 @@ gwas_name <- "scz2014"
 source(paste0(proj_path,"scz_2014/pathway/variant_prioritization/load_gwas_hits.R"))
 ```
 
-```{r, child=here::here("analysis/child/tab_gene.Rmd")}
+```{r, child="~/Dropbox/rss/Data/peca_human/job_camp/gwas33_net71/results/wflow_child/tab_gene.Rmd"}
 ```
 

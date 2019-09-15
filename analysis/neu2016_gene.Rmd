@@ -1,0 +1,26 @@
+---
+title: "Prioritization results of neuroticism"
+author: "Xiang Zhu"
+date: "2019-08-19"
+output: workflowr::wflow_html
+editor_options:
+  chunk_output_type: console
+---
+
+```{r, include=FALSE}
+# specify project path
+proj_path <- "~/Dropbox/rss/Data/"
+
+# specify result folder
+res_dir <- "peca_human/job_camp/gwas33_net71/results/aggregated_results/" 
+
+# specify GWAS name
+gwas_name <- "neu2016"
+
+# load GWAS hit data frame
+source(paste0(proj_path,"neuroticism_2016/pathway/variant_prioritization/load_gwas_hits.R"))
+```
+
+```{r, child="~/Dropbox/rss/Data/peca_human/job_camp/gwas33_net71/results/wflow_child/tab_gene.Rmd"}
+```
+

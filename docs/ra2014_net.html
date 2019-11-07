@@ -23,12 +23,12 @@
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<script src="site_libs/htmlwidgets-1.3/htmlwidgets.js"></script>
+<script src="site_libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
 <link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="site_libs/datatables-binding-0.8/datatables.js"></script>
-<link href="site_libs/dt-core-1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
-<link href="site_libs/dt-core-1.10.16/css/jquery.dataTables.extra.css" rel="stylesheet" />
-<script src="site_libs/dt-core-1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="site_libs/datatables-binding-0.9/datatables.js"></script>
+<link href="site_libs/dt-core-1.10.19/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="site_libs/dt-core-1.10.19/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="site_libs/dt-core-1.10.19/js/jquery.dataTables.min.js"></script>
 <link href="site_libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
 <script src="site_libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
@@ -37,9 +37,9 @@
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
 div.sourceCode { margin: 1em 0; }
@@ -49,16 +49,14 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
+    border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -67,9 +65,9 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  {  }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+a.sourceLine::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -416,7 +414,7 @@ div.section {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2019-08-30
+<strong>Last updated:</strong> 2019-11-07
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -426,7 +424,7 @@ div.section {
 </p>
 <p>
 This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis was created with <a
-  href="https://github.com/jdblischak/workflowr">workflowr</a> (version 1.4.0). The <em>Checks</em> tab describes the reproducibility checks that were applied when the results were created. The <em>Past versions</em> tab lists the development history.
+  href="https://github.com/jdblischak/workflowr">workflowr</a> (version 1.5.0). The <em>Checks</em> tab describes the reproducibility checks that were applied when the results were created. The <em>Past versions</em> tab lists the development history.
 </p>
 <hr>
 </div>
@@ -507,10 +505,10 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomxiangzhursspecatree662ea78907783b8a93f13825e71bb8827cf1bea5targetblank662ea78a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/xiangzhu/rss-peca/tree/662ea78907783b8a93f13825e71bb8827cf1bea5" target="_blank">662ea78</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomxiangzhursspecatreeed9d05c1367e08a0dae26cf71f730c2406955b38targetblanked9d05ca"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/xiangzhu/rss-peca/tree/ed9d05c1367e08a0dae26cf71f730c2406955b38" target="_blank">ed9d05c</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomxiangzhursspecatree662ea78907783b8a93f13825e71bb8827cf1bea5targetblank662ea78a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomxiangzhursspecatreeed9d05c1367e08a0dae26cf71f730c2406955b38targetblanked9d05ca" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -557,6 +555,23 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-peca/d94522cca58c1437dd6c0f5766ba0adcbd9a6a1e/docs/ra2014_net.html" target="_blank">d94522c</a>
+</td>
+<td>
+Xiang Zhu
+</td>
+<td>
+2019-08-30
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 html
@@ -609,7 +624,7 @@ wflow_publish(“analysis/ra2014_net.Rmd”)
 <div id="enrichment-results" class="section level2">
 <h2>Enrichment results</h2>
 <div id="htmlwidget-df4a1fd35b70caa27ccd" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-df4a1fd35b70caa27ccd">{"x":{"filter":"none","data":[["NK cell","B cell","CD8 cell","Monocyte","Transverse colon","CD4 cell","Terminal ileum","Spleen","Stomach","Adrenal gland","Lung","Skeletal muscle","Visceral omentum","Uterus","Sun-exposed skin","Sigmoid colon","Subcutaneous adipose","Esophagus muscularis","Vagina","Prostate","Esophagus mucosa","Testis","Cerebellum","Gastroesophageal junction","Cortex","Atrial appendage","Aorta","Liver","Breast","Thyroid","Pancreas","Left ventricle","Ovary","Hippocampus","Putamen","Caudate","Tibial nerve","Omnibus"],[60.4702476524397,57.519678893958,56.8429185716899,53.9500812129138,53.6908083213885,52.4801657701035,51.5382259060361,50.9698822808379,49.217729954467,49.0652319180609,48.4358793290158,48.4292697183392,48.2716663851019,47.8845474977765,47.8144836512626,47.2404033724061,46.4698182417292,46.2261230092349,45.6177436526362,45.3190668891036,44.9898058257987,44.8519240422081,44.8340063928701,44.6049586576393,44.1787662901147,43.969042578894,43.6998558999548,43.504189624873,43.3586869171664,42.7719539663096,42.4059380683536,42.0883056620654,41.8228205840309,40.2145647490264,40.0918583216894,38.0680585346782,38.0025294440976,29.9639969544111],[18.621927457241,16.9336671534354,14.3925594357514,13.6931924891394,5.13346297426584,12.0849448149554,2.32069052774654,2.48736607832386,3.51123040115931,3.39691631040739,1.94063888729444,5.77998348408774,2.95332653241621,1.84953257387528,2.88321018223984,3.98787485397593,3.99850863542627,2.54684010196351,1.28122330517466,3.51504990906243,1.78707878475296,2.17775088184121,2.9685684888593,5.21848163330822,2.03637459432841,4.7434758323202,3.13980038485481,8.10940366843515,5.81132943416401,1.23706644466793,9.78286155997777,5.71130821480341,2.51391319651465,1.62971487057544,3.13427678683269,2.17261107731399,2.97200439565343,3.02209757559917],[33.9188736960733,33.9140136289768,34.676422137391,34.401195696518,42.3337888485509,34.1974931079524,43.2290955457741,35.8490162036911,34.2345581767128,35.3602267213712,34.5592184180513,33.3514474298341,34.2172530852744,41.1216474735264,33.921733533419,35.5423626855885,34.7501406834461,33.3433107494889,33.2557886201726,31.821390868535,38.9061933862878,31.7044415679261,39.7100653723437,33.1487462722514,33.5475696199868,33.2463277546613,33.723074833528,32.0449780488604,32.5695798251792,31.1400622681376,31.055950578121,31.72810936661,33.5448935094159,32.1716844464958,31.7043583655997,31.7084381333204,32.5972998952049,23.901972268641],[60.6640676784558,57.7134989199741,57.036738597706,54.1439012389298,53.8846283474043,52.6739857961196,51.7320459317112,51.163702306854,49.4115499804831,49.259051944077,48.629699355032,48.6230897443553,48.465486411118,48.0783675117975,48.0083036772787,47.434223398422,46.6636382677452,46.419943035251,45.8115636786523,45.5128869151197,45.1836257944966,45.0457440682242,45.0278258965339,44.7987786836552,44.3725863161292,44.1628626049088,43.8936759259636,43.6980096508888,43.5525069431814,42.9657739923256,42.5997580943694,42.2821256880785,42.0166406096806,40.408384774413,40.2856783474208,38.2618785303355,38.1963491967916,30.1578169201879],["-2.7231<br/>[-2.7251, -2.7006]","-2.7028<br/>[-2.7039, -2.6980]","-2.7225<br/>[-2.7238, -2.7211]","-2.7037<br/>[-2.7043, -2.6987]","-2.7950<br/>[-2.7958, -2.7709]","-2.7020<br/>[-2.7109, -2.6761]","-2.8606<br/>[-2.9857, -2.7929]","-2.8019<br/>[-2.8068, -2.7741]","-2.8113<br/>[-2.9673, -2.7752]","-2.9148<br/>[-2.9917, -2.7755]","-2.8615<br/>[-2.9937, -2.7999]","-2.7852<br/>[-2.7873, -2.7595]","-2.7766<br/>[-2.7768, -2.7748]","-2.9821<br/>[-2.9956, -2.9464]","-2.7729<br/>[-2.8003, -2.7501]","-2.8761<br/>[-2.9698, -2.7312]","-2.7579<br/>[-2.7591, -2.7579]","-2.9102<br/>[-2.9481, -2.7798]","-2.9851<br/>[-2.9975, -2.9479]","-2.9538<br/>[-2.9974, -2.7804]","-2.9514<br/>[-2.9746, -2.7805]","-2.9610<br/>[-2.9775, -2.9278]","-2.9729<br/>[-2.9790, -2.9300]","-2.8082<br/>[-3.0462, -2.7105]","-2.9417<br/>[-2.9490, -2.9244]","-2.7555<br/>[-2.7558, -2.7526]","-2.9638<br/>[-3.0296, -2.7946]","-2.7926<br/>[-2.8177, -2.7432]","-2.7643<br/>[-2.8103, -2.7094]","-2.9718<br/>[-2.9787, -2.9539]","-2.8150<br/>[-2.8209, -2.7961]","-2.8074<br/>[-2.8194, -2.7442]","-2.7801<br/>[-2.8120, -2.7615]","-2.9457<br/>[-2.9514, -2.9267]","-2.7629<br/>[-2.7727, -2.7617]","-2.7958<br/>[-2.9781, -2.7629]","-3.0123<br/>[-3.0475, -2.9502]","-2.9927<br/>[-3.0618, -2.9634]"],["-3.2111<br/>[-3.2133, -3.1868]","-3.1854<br/>[-3.1865, -3.1831]","-3.2091<br/>[-3.2105, -3.2074]","-3.1836<br/>[-3.1842, -3.1793]","-3.2743<br/>[-3.2762, -3.2502]","-3.1834<br/>[-3.1850, -3.1562]","-3.2622<br/>[-3.2792, -3.2276]","-3.2774<br/>[-3.2808, -3.2546]","-3.2748<br/>[-3.2805, -3.2541]","-3.2443<br/>[-3.2556, -3.2021]","-3.2711<br/>[-3.2867, -3.2357]","-3.2482<br/>[-3.2495, -3.2238]","-3.2584<br/>[-3.2587, -3.2584]","-3.2359<br/>[-3.2485, -3.1957]","-3.2584<br/>[-3.2874, -3.2345]","-3.2170<br/>[-3.2440, -3.1669]","-3.2197<br/>[-3.2209, -3.2191]","-3.2050<br/>[-3.2513, -3.1740]","-3.2522<br/>[-3.2634, -3.2091]","-3.2527<br/>[-3.2638, -3.2097]","-3.2284<br/>[-3.2572, -3.1797]","-3.2284<br/>[-3.2385, -3.1843]","-3.2107<br/>[-3.2170, -3.1652]","-3.2402<br/>[-3.3016, -3.1736]","-3.1912<br/>[-3.1949, -3.1687]","-3.2295<br/>[-3.2299, -3.2272]","-3.2393<br/>[-3.2711, -3.1939]","-3.2556<br/>[-3.2817, -3.2043]","-3.2320<br/>[-3.2792, -3.1765]","-3.2276<br/>[-3.2349, -3.2080]","-3.2752<br/>[-3.2813, -3.2558]","-3.2620<br/>[-3.2743, -3.1975]","-3.2394<br/>[-3.2729, -3.2219]","-3.1929<br/>[-3.1968, -3.1705]","-3.2229<br/>[-3.2233, -3.2202]","-3.2204<br/>[-3.2229, -3.1967]","-3.2666<br/>[-3.3035, -3.1984]","-3.2449<br/>[-3.3204, -3.2129]"],["0.0380<br/>[0.0370, 0.0381]","0.0366<br/>[0.0364, 0.0366]","0.0357<br/>[0.0357, 0.0358]","0.0354<br/>[0.0352, 0.0354]","0.0359<br/>[0.0348, 0.0359]","0.0341<br/>[0.0331, 0.0342]","0.0364<br/>[0.0333, 0.0412]","0.0346<br/>[0.0335, 0.0349]","0.0356<br/>[0.0341, 0.0417]","0.0402<br/>[0.0342, 0.0429]","0.0369<br/>[0.0340, 0.0419]","0.0371<br/>[0.0360, 0.0372]","0.0340<br/>[0.0338, 0.0340]","0.0421<br/>[0.0404, 0.0427]","0.0336<br/>[0.0326, 0.0347]","0.0401<br/>[0.0341, 0.0435]","0.0358<br/>[0.0352, 0.0359]","0.0395<br/>[0.0345, 0.0408]","0.0415<br/>[0.0398, 0.0420]","0.0421<br/>[0.0347, 0.0437]","0.0409<br/>[0.0339, 0.0417]","0.0419<br/>[0.0402, 0.0425]","0.0433<br/>[0.0413, 0.0436]","0.0387<br/>[0.0342, 0.0483]","0.0410<br/>[0.0401, 0.0413]","0.0345<br/>[0.0345, 0.0345]","0.0451<br/>[0.0381, 0.0477]","0.0394<br/>[0.0371, 0.0404]","0.0362<br/>[0.0340, 0.0381]","0.0414<br/>[0.0406, 0.0417]","0.0413<br/>[0.0405, 0.0416]","0.0392<br/>[0.0365, 0.0397]","0.0354<br/>[0.0346, 0.0366]","0.0404<br/>[0.0396, 0.0407]","0.0350<br/>[0.0349, 0.0351]","0.0361<br/>[0.0345, 0.0429]","0.0449<br/>[0.0419, 0.0466]","0.0445<br/>[0.0431, 0.0478]"],["0.0279<br/>[0.0272, 0.0280]","0.0271<br/>[0.0268, 0.0272]","0.0261<br/>[0.0260, 0.0261]","0.0261<br/>[0.0260, 0.0261]","0.0279<br/>[0.0271, 0.0279]","0.0252<br/>[0.0244, 0.0253]","0.0264<br/>[0.0251, 0.0287]","0.0264<br/>[0.0255, 0.0271]","0.0270<br/>[0.0260, 0.0294]","0.0291<br/>[0.0263, 0.0306]","0.0258<br/>[0.0245, 0.0283]","0.0307<br/>[0.0298, 0.0307]","0.0257<br/>[0.0257, 0.0257]","0.0314<br/>[0.0300, 0.0318]","0.0252<br/>[0.0237, 0.0253]","0.0316<br/>[0.0285, 0.0331]","0.0299<br/>[0.0298, 0.0299]","0.0299<br/>[0.0281, 0.0305]","0.0287<br/>[0.0274, 0.0290]","0.0293<br/>[0.0259, 0.0301]","0.0290<br/>[0.0259, 0.0295]","0.0286<br/>[0.0274, 0.0290]","0.0339<br/>[0.0322, 0.0341]","0.0310<br/>[0.0278, 0.0363]","0.0308<br/>[0.0301, 0.0310]","0.0276<br/>[0.0275, 0.0276]","0.0358<br/>[0.0329, 0.0376]","0.0328<br/>[0.0309, 0.0337]","0.0293<br/>[0.0273, 0.0309]","0.0293<br/>[0.0287, 0.0296]","0.0347<br/>[0.0339, 0.0349]","0.0334<br/>[0.0309, 0.0338]","0.0293<br/>[0.0286, 0.0305]","0.0310<br/>[0.0302, 0.0311]","0.0293<br/>[0.0292, 0.0298]","0.0295<br/>[0.0288, 0.0327]","0.0341<br/>[0.0316, 0.0354]","0.0316<br/>[0.0305, 0.0340]"]],"container":"<table class=\"white-space: nowrap\">\n  <thead>\n    <tr>\n      <th>Network<\/th>\n      <th>Log10 BF<br/>(&theta;>0 or &sigma;<sup>2<\/sup>>0)<\/th>\n      <th>Log10 BF<br/>(&theta;>0 and &sigma;<sup>2<\/sup>=0)<\/th>\n      <th>Log10 BF<br/>(&theta;=0 and &sigma;<sup>2<\/sup>>0)<\/th>\n      <th>Log10 BF<br/>(&theta;>0 and &sigma;<sup>2<\/sup>>0)<\/th>\n      <th>Log10 inside &pi;<br/>(mean, 95% CI)<\/th>\n      <th>Log10 outside &pi;<br/>(mean, 95% CI)<\/th>\n      <th>Inside &tau;<br/>(mean, 95% CI)<\/th>\n      <th>Outside &tau;<br/>(mean, 95% CI)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4]}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data) {\nDTWidget.formatRound(this, row, data, 1, 4, 3, \",\", \".\");\nDTWidget.formatRound(this, row, data, 2, 4, 3, \",\", \".\");\nDTWidget.formatRound(this, row, data, 3, 4, 3, \",\", \".\");\nDTWidget.formatRound(this, row, data, 4, 4, 3, \",\", \".\");\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-df4a1fd35b70caa27ccd">{"x":{"filter":"none","data":[["NK cell","B cell","CD8 cell","Monocyte","Transverse colon","CD4 cell","Terminal ileum","Spleen","Stomach","Adrenal gland","Lung","Skeletal muscle","Visceral omentum","Uterus","Sun-exposed skin","Sigmoid colon","Subcutaneous adipose","Esophagus muscularis","Vagina","Prostate","Esophagus mucosa","Testis","Cerebellum","Gastroesophageal junction","Cortex","Atrial appendage","Aorta","Liver","Breast","Thyroid","Pancreas","Left ventricle","Ovary","Hippocampus","Putamen","Caudate","Tibial nerve","Omnibus","Near-gene control"],[60.4702476524397,57.519678893958,56.8429185716899,53.9500812129138,53.6908083213885,52.4801657701035,51.5382259060361,50.9698822808379,49.217729954467,49.0652319180609,48.4358793290158,48.4292697183392,48.2716663851019,47.8845474977765,47.8144836512626,47.2404033724061,46.4698182417292,46.2261230092349,45.6177436526362,45.3190668891036,44.9898058257987,44.8519240422081,44.8340063928701,44.6049586576393,44.1787662901147,43.969042578894,43.6998558999548,43.504189624873,43.3586869171664,42.7719539663096,42.4059380683536,42.0883056620654,41.8228205840309,40.2145647490264,40.0918583216894,38.0680585346782,38.0025294440976,29.9639969544111,15.2480279231284],[18.621927457241,16.9336671534354,14.3925594357514,13.6931924891394,5.13346297426584,12.0849448149554,2.32069052774654,2.48736607832386,3.51123040115931,3.39691631040739,1.94063888729444,5.77998348408774,2.95332653241621,1.84953257387528,2.88321018223984,3.98787485397593,3.99850863542627,2.54684010196351,1.28122330517466,3.51504990906243,1.78707878475296,2.17775088184121,2.9685684888593,5.21848163330822,2.03637459432841,4.7434758323202,3.13980038485481,8.10940366843515,5.81132943416401,1.23706644466793,9.78286155997777,5.71130821480341,2.51391319651465,1.62971487057544,3.13427678683269,2.17261107731399,2.97200439565343,3.02209757559917,-4.3336907161656],[33.9188736960733,33.9140136289768,34.676422137391,34.401195696518,42.3337888485509,34.1974931079524,43.2290955457741,35.8490162036911,34.2345581767128,35.3602267213712,34.5592184180513,33.3514474298341,34.2172530852744,41.1216474735264,33.921733533419,35.5423626855885,34.7501406834461,33.3433107494889,33.2557886201726,31.821390868535,38.9061933862878,31.7044415679261,39.7100653723437,33.1487462722514,33.5475696199868,33.2463277546613,33.723074833528,32.0449780488604,32.5695798251792,31.1400622681376,31.055950578121,31.72810936661,33.5448935094159,32.1716844464958,31.7043583655997,31.7084381333204,32.5972998952049,23.901972268641,10.291613025073],[60.6640676784558,57.7134989199741,57.036738597706,54.1439012389298,53.8846283474043,52.6739857961196,51.7320459317112,51.163702306854,49.4115499804831,49.259051944077,48.629699355032,48.6230897443553,48.465486411118,48.0783675117975,48.0083036772787,47.434223398422,46.6636382677452,46.419943035251,45.8115636786523,45.5128869151197,45.1836257944966,45.0457440682242,45.0278258965339,44.7987786836552,44.3725863161292,44.1628626049088,43.8936759259636,43.6980096508888,43.5525069431814,42.9657739923256,42.5997580943694,42.2821256880785,42.0166406096806,40.408384774413,40.2856783474208,38.2618785303355,38.1963491967916,30.1578169201879,15.4418471809171],["-2.7231<br/>[-2.7251, -2.7006]","-2.7028<br/>[-2.7039, -2.6980]","-2.7225<br/>[-2.7238, -2.7211]","-2.7037<br/>[-2.7043, -2.6987]","-2.7950<br/>[-2.7958, -2.7709]","-2.7020<br/>[-2.7109, -2.6761]","-2.8606<br/>[-2.9857, -2.7929]","-2.8019<br/>[-2.8068, -2.7741]","-2.8113<br/>[-2.9673, -2.7752]","-2.9148<br/>[-2.9917, -2.7755]","-2.8615<br/>[-2.9937, -2.7999]","-2.7852<br/>[-2.7873, -2.7595]","-2.7766<br/>[-2.7768, -2.7748]","-2.9821<br/>[-2.9956, -2.9464]","-2.7729<br/>[-2.8003, -2.7501]","-2.8761<br/>[-2.9698, -2.7312]","-2.7579<br/>[-2.7591, -2.7579]","-2.9102<br/>[-2.9481, -2.7798]","-2.9851<br/>[-2.9975, -2.9479]","-2.9538<br/>[-2.9974, -2.7804]","-2.9514<br/>[-2.9746, -2.7805]","-2.9610<br/>[-2.9775, -2.9278]","-2.9729<br/>[-2.9790, -2.9300]","-2.8082<br/>[-3.0462, -2.7105]","-2.9417<br/>[-2.9490, -2.9244]","-2.7555<br/>[-2.7558, -2.7526]","-2.9638<br/>[-3.0296, -2.7946]","-2.7926<br/>[-2.8177, -2.7432]","-2.7643<br/>[-2.8103, -2.7094]","-2.9718<br/>[-2.9787, -2.9539]","-2.8150<br/>[-2.8209, -2.7961]","-2.8074<br/>[-2.8194, -2.7442]","-2.7801<br/>[-2.8120, -2.7615]","-2.9457<br/>[-2.9514, -2.9267]","-2.7629<br/>[-2.7727, -2.7617]","-2.7958<br/>[-2.9781, -2.7629]","-3.0123<br/>[-3.0475, -2.9502]","-2.9927<br/>[-3.0618, -2.9634]","-3.0992<br/>[-3.1050, -3.0796]"],["-3.2111<br/>[-3.2133, -3.1868]","-3.1854<br/>[-3.1865, -3.1831]","-3.2091<br/>[-3.2105, -3.2074]","-3.1836<br/>[-3.1842, -3.1793]","-3.2743<br/>[-3.2762, -3.2502]","-3.1834<br/>[-3.1850, -3.1562]","-3.2622<br/>[-3.2792, -3.2276]","-3.2774<br/>[-3.2808, -3.2546]","-3.2748<br/>[-3.2805, -3.2541]","-3.2443<br/>[-3.2556, -3.2021]","-3.2711<br/>[-3.2867, -3.2357]","-3.2482<br/>[-3.2495, -3.2238]","-3.2584<br/>[-3.2587, -3.2584]","-3.2359<br/>[-3.2485, -3.1957]","-3.2584<br/>[-3.2874, -3.2345]","-3.2170<br/>[-3.2440, -3.1669]","-3.2197<br/>[-3.2209, -3.2191]","-3.2050<br/>[-3.2513, -3.1740]","-3.2522<br/>[-3.2634, -3.2091]","-3.2527<br/>[-3.2638, -3.2097]","-3.2284<br/>[-3.2572, -3.1797]","-3.2284<br/>[-3.2385, -3.1843]","-3.2107<br/>[-3.2170, -3.1652]","-3.2402<br/>[-3.3016, -3.1736]","-3.1912<br/>[-3.1949, -3.1687]","-3.2295<br/>[-3.2299, -3.2272]","-3.2393<br/>[-3.2711, -3.1939]","-3.2556<br/>[-3.2817, -3.2043]","-3.2320<br/>[-3.2792, -3.1765]","-3.2276<br/>[-3.2349, -3.2080]","-3.2752<br/>[-3.2813, -3.2558]","-3.2620<br/>[-3.2743, -3.1975]","-3.2394<br/>[-3.2729, -3.2219]","-3.1929<br/>[-3.1968, -3.1705]","-3.2229<br/>[-3.2233, -3.2202]","-3.2204<br/>[-3.2229, -3.1967]","-3.2666<br/>[-3.3035, -3.1984]","-3.2449<br/>[-3.3204, -3.2129]","-3.3170<br/>[-3.3231, -3.2963]"],["0.0380<br/>[0.0370, 0.0381]","0.0366<br/>[0.0364, 0.0366]","0.0357<br/>[0.0357, 0.0358]","0.0354<br/>[0.0352, 0.0354]","0.0359<br/>[0.0348, 0.0359]","0.0341<br/>[0.0331, 0.0342]","0.0364<br/>[0.0333, 0.0412]","0.0346<br/>[0.0335, 0.0349]","0.0356<br/>[0.0341, 0.0417]","0.0402<br/>[0.0342, 0.0429]","0.0369<br/>[0.0340, 0.0419]","0.0371<br/>[0.0360, 0.0372]","0.0340<br/>[0.0338, 0.0340]","0.0421<br/>[0.0404, 0.0427]","0.0336<br/>[0.0326, 0.0347]","0.0401<br/>[0.0341, 0.0435]","0.0358<br/>[0.0352, 0.0359]","0.0395<br/>[0.0345, 0.0408]","0.0415<br/>[0.0398, 0.0420]","0.0421<br/>[0.0347, 0.0437]","0.0409<br/>[0.0339, 0.0417]","0.0419<br/>[0.0402, 0.0425]","0.0433<br/>[0.0413, 0.0436]","0.0387<br/>[0.0342, 0.0483]","0.0410<br/>[0.0401, 0.0413]","0.0345<br/>[0.0345, 0.0345]","0.0451<br/>[0.0381, 0.0477]","0.0394<br/>[0.0371, 0.0404]","0.0362<br/>[0.0340, 0.0381]","0.0414<br/>[0.0406, 0.0417]","0.0413<br/>[0.0405, 0.0416]","0.0392<br/>[0.0365, 0.0397]","0.0354<br/>[0.0346, 0.0366]","0.0404<br/>[0.0396, 0.0407]","0.0350<br/>[0.0349, 0.0351]","0.0361<br/>[0.0345, 0.0429]","0.0449<br/>[0.0419, 0.0466]","0.0445<br/>[0.0431, 0.0478]","0.0483<br/>[0.0474, 0.0485]"],["0.0279<br/>[0.0272, 0.0280]","0.0271<br/>[0.0268, 0.0272]","0.0261<br/>[0.0260, 0.0261]","0.0261<br/>[0.0260, 0.0261]","0.0279<br/>[0.0271, 0.0279]","0.0252<br/>[0.0244, 0.0253]","0.0264<br/>[0.0251, 0.0287]","0.0264<br/>[0.0255, 0.0271]","0.0270<br/>[0.0260, 0.0294]","0.0291<br/>[0.0263, 0.0306]","0.0258<br/>[0.0245, 0.0283]","0.0307<br/>[0.0298, 0.0307]","0.0257<br/>[0.0257, 0.0257]","0.0314<br/>[0.0300, 0.0318]","0.0252<br/>[0.0237, 0.0253]","0.0316<br/>[0.0285, 0.0331]","0.0299<br/>[0.0298, 0.0299]","0.0299<br/>[0.0281, 0.0305]","0.0287<br/>[0.0274, 0.0290]","0.0293<br/>[0.0259, 0.0301]","0.0290<br/>[0.0259, 0.0295]","0.0286<br/>[0.0274, 0.0290]","0.0339<br/>[0.0322, 0.0341]","0.0310<br/>[0.0278, 0.0363]","0.0308<br/>[0.0301, 0.0310]","0.0276<br/>[0.0275, 0.0276]","0.0358<br/>[0.0329, 0.0376]","0.0328<br/>[0.0309, 0.0337]","0.0293<br/>[0.0273, 0.0309]","0.0293<br/>[0.0287, 0.0296]","0.0347<br/>[0.0339, 0.0349]","0.0334<br/>[0.0309, 0.0338]","0.0293<br/>[0.0286, 0.0305]","0.0310<br/>[0.0302, 0.0311]","0.0293<br/>[0.0292, 0.0298]","0.0295<br/>[0.0288, 0.0327]","0.0341<br/>[0.0316, 0.0354]","0.0316<br/>[0.0305, 0.0340]","0.0370<br/>[0.0363, 0.0372]"]],"container":"<table class=\"white-space: nowrap\">\n  <thead>\n    <tr>\n      <th>Network<\/th>\n      <th>Log10 BF<br/>(&theta;>0 or &sigma;<sup>2<\/sup>>0)<\/th>\n      <th>Log10 BF<br/>(&theta;>0 and &sigma;<sup>2<\/sup>=0)<\/th>\n      <th>Log10 BF<br/>(&theta;=0 and &sigma;<sup>2<\/sup>>0)<\/th>\n      <th>Log10 BF<br/>(&theta;>0 and &sigma;<sup>2<\/sup>>0)<\/th>\n      <th>Log10 inside &pi;<br/>(mean, 95% CI)<\/th>\n      <th>Log10 outside &pi;<br/>(mean, 95% CI)<\/th>\n      <th>Inside &tau;<br/>(mean, 95% CI)<\/th>\n      <th>Outside &tau;<br/>(mean, 95% CI)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4]}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data) {\nDTWidget.formatRound(this, row, data, 1, 4, 3, \",\", \".\");\nDTWidget.formatRound(this, row, data, 2, 4, 3, \",\", \".\");\nDTWidget.formatRound(this, row, data, 3, 4, 3, \",\", \".\");\nDTWidget.formatRound(this, row, data, 4, 4, 3, \",\", \".\");\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -617,76 +632,81 @@ wflow_publish(“analysis/ra2014_net.Rmd”)
 </button>
 </p>
 <div id="workflowr-sessioninfo" class="collapse">
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>devtools<span class="op">::</span><span class="kw">session_info</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1">devtools<span class="op">::</span><span class="kw">session_info</span>()</a></code></pre></div>
 <pre><code>─ Session info ──────────────────────────────────────────────────────────
  setting  value                       
  version  R version 3.6.1 (2019-07-05)
- os       macOS Mojave 10.14.6        
- system   x86_64, darwin15.6.0        
+ os       Ubuntu 18.04.3 LTS          
+ system   x86_64, linux-gnu           
  ui       X11                         
  language (EN)                        
  collate  en_US.UTF-8                 
  ctype    en_US.UTF-8                 
  tz       America/Los_Angeles         
- date     2019-08-30                  
+ date     2019-11-07                  
 
 ─ Packages ──────────────────────────────────────────────────────────────
  package     * version date       lib source        
  assertthat    0.2.1   2019-03-21 [1] CRAN (R 3.6.0)
- backports     1.1.4   2019-04-10 [1] CRAN (R 3.6.0)
- callr         3.3.1   2019-07-18 [1] CRAN (R 3.6.0)
+ backports     1.1.5   2019-10-02 [1] CRAN (R 3.6.1)
+ callr         3.3.2   2019-09-22 [1] CRAN (R 3.6.1)
  cli           1.1.0   2019-03-19 [1] CRAN (R 3.6.0)
  crayon        1.3.4   2017-09-16 [1] CRAN (R 3.6.0)
  crosstalk     1.0.0   2016-12-21 [1] CRAN (R 3.6.0)
  desc          1.2.0   2018-05-01 [1] CRAN (R 3.6.0)
- devtools      2.1.0   2019-07-06 [1] CRAN (R 3.6.0)
- digest        0.6.20  2019-07-04 [1] CRAN (R 3.6.0)
- dplyr       * 0.8.3   2019-07-04 [1] CRAN (R 3.6.0)
- DT          * 0.8     2019-08-07 [1] CRAN (R 3.6.0)
+ devtools      2.2.1   2019-09-24 [1] CRAN (R 3.6.1)
+ digest        0.6.22  2019-10-21 [1] CRAN (R 3.6.1)
+ dplyr       * 0.8.3   2019-07-04 [1] CRAN (R 3.6.1)
+ DT          * 0.9     2019-09-17 [1] CRAN (R 3.6.1)
+ ellipsis      0.3.0   2019-09-20 [1] CRAN (R 3.6.1)
  evaluate      0.14    2019-05-28 [1] CRAN (R 3.6.0)
+ fastmap       1.0.1   2019-10-08 [1] CRAN (R 3.6.1)
  fs            1.3.1   2019-05-06 [1] CRAN (R 3.6.0)
  git2r         0.26.1  2019-06-29 [1] CRAN (R 3.6.0)
  glue          1.3.1   2019-03-12 [1] CRAN (R 3.6.0)
- htmltools     0.3.6   2017-04-28 [1] CRAN (R 3.6.0)
- htmlwidgets   1.3     2018-09-30 [1] CRAN (R 3.6.0)
- httpuv        1.5.1   2019-04-05 [1] CRAN (R 3.6.0)
+ htmltools     0.4.0   2019-10-04 [1] CRAN (R 3.6.1)
+ htmlwidgets   1.5.1   2019-10-08 [1] CRAN (R 3.6.1)
+ httpuv        1.5.2   2019-09-11 [1] CRAN (R 3.6.1)
  jsonlite      1.6     2018-12-07 [1] CRAN (R 3.6.0)
- knitr         1.24    2019-08-08 [1] CRAN (R 3.6.0)
- later         0.8.0   2019-02-11 [1] CRAN (R 3.6.0)
+ knitr         1.25    2019-09-18 [1] CRAN (R 3.6.1)
+ later         1.0.0   2019-10-04 [1] CRAN (R 3.6.1)
  magrittr      1.5     2014-11-22 [1] CRAN (R 3.6.0)
  memoise       1.1.0   2017-04-21 [1] CRAN (R 3.6.0)
  mime          0.7     2019-06-11 [1] CRAN (R 3.6.0)
  pillar        1.4.2   2019-06-29 [1] CRAN (R 3.6.0)
- pkgbuild      1.0.5   2019-08-26 [1] CRAN (R 3.6.0)
- pkgconfig     2.0.2   2018-08-16 [1] CRAN (R 3.6.0)
+ pkgbuild      1.0.6   2019-10-09 [1] CRAN (R 3.6.1)
+ pkgconfig     2.0.3   2019-09-22 [1] CRAN (R 3.6.1)
  pkgload       1.0.2   2018-10-29 [1] CRAN (R 3.6.0)
  prettyunits   1.0.2   2015-07-13 [1] CRAN (R 3.6.0)
- processx      3.4.1   2019-07-18 [1] CRAN (R 3.6.0)
- promises      1.0.1   2018-04-13 [1] CRAN (R 3.6.0)
+ processx      3.4.1   2019-07-18 [1] CRAN (R 3.6.1)
+ promises      1.1.0   2019-10-04 [1] CRAN (R 3.6.1)
  ps            1.3.0   2018-12-21 [1] CRAN (R 3.6.0)
- purrr         0.3.2   2019-03-15 [1] CRAN (R 3.6.0)
+ purrr         0.3.3   2019-10-18 [1] CRAN (R 3.6.1)
  R6            2.4.0   2019-02-14 [1] CRAN (R 3.6.0)
  Rcpp          1.0.2   2019-07-25 [1] CRAN (R 3.6.1)
  remotes       2.1.0   2019-06-24 [1] CRAN (R 3.6.0)
- rlang         0.4.0   2019-06-25 [1] CRAN (R 3.6.0)
- rmarkdown     1.15    2019-08-21 [1] CRAN (R 3.6.0)
+ rlang         0.4.1   2019-10-24 [1] CRAN (R 3.6.1)
+ rmarkdown     1.16    2019-10-01 [1] CRAN (R 3.6.1)
  rprojroot     1.3-2   2018-01-03 [1] CRAN (R 3.6.0)
  sessioninfo   1.1.1   2018-11-05 [1] CRAN (R 3.6.0)
- shiny         1.3.2   2019-04-22 [1] CRAN (R 3.6.0)
+ shiny         1.4.0   2019-10-10 [1] CRAN (R 3.6.1)
  stringi       1.4.3   2019-03-12 [1] CRAN (R 3.6.0)
  stringr       1.4.0   2019-02-10 [1] CRAN (R 3.6.0)
- testthat      2.2.1   2019-07-25 [1] CRAN (R 3.6.1)
+ testthat      2.3.0   2019-11-05 [1] CRAN (R 3.6.1)
  tibble        2.1.3   2019-06-06 [1] CRAN (R 3.6.0)
  tidyselect    0.2.5   2018-10-11 [1] CRAN (R 3.6.0)
- usethis       1.5.1   2019-07-04 [1] CRAN (R 3.6.0)
- whisker       0.4     2019-08-28 [1] CRAN (R 3.6.0)
+ usethis       1.5.1   2019-07-04 [1] CRAN (R 3.6.1)
+ whisker       0.4     2019-08-28 [1] CRAN (R 3.6.1)
  withr         2.1.2   2018-03-15 [1] CRAN (R 3.6.0)
- workflowr     1.4.0   2019-06-08 [1] CRAN (R 3.6.0)
- xfun          0.9     2019-08-21 [1] CRAN (R 3.6.0)
+ workflowr     1.5.0   2019-11-01 [1] CRAN (R 3.6.1)
+ xfun          0.10    2019-10-01 [1] CRAN (R 3.6.1)
  xtable        1.8-4   2019-04-21 [1] CRAN (R 3.6.0)
  yaml          2.2.0   2018-07-25 [1] CRAN (R 3.6.0)
 
-[1] /Library/Frameworks/R.framework/Versions/3.6/Resources/library</code></pre>
+[1] /home/maimaizhu/R/x86_64-pc-linux-gnu-library/3.6
+[2] /usr/local/lib/R/site-library
+[3] /usr/lib/R/site-library
+[4] /usr/lib/R/library</code></pre>
 </div>
 </div>
 

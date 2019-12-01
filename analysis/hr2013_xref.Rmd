@@ -1,0 +1,19 @@
+---
+title: "Cross-reference results of heart rate"
+author: "Xiang Zhu"
+date: "2019-08-19"
+output:
+  workflowr::wflow_html:
+    toc: false
+editor_options:
+  chunk_output_type: console
+---
+
+```{r, include=FALSE}
+# specify GWAS name
+gwas_name <- "hr2013"
+```
+
+```{r, child="~/Dropbox/rss/Data/peca_human/job_camp/gwas33_net71/results/wflow_child/tab_xref.Rmd"}
+```
+

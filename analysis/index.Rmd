@@ -32,7 +32,7 @@ please feel free to contact me:
 ```{r, child="~/Dropbox/rss/Data/peca_human/job_camp/gwas33_net71/results/wflow_child/tab_index.Rmd"}
 ```
 
-## <img src="https://static.thenounproject.com/png/824132-200.png" width="38"/> Additional resources
+## <img src="https://static.thenounproject.com/png/1142473-200.png" width="38"/> Additional resources
 
 - Software codes: https://github.com/SUwonglab/rss-net/
 

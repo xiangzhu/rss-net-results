@@ -1,0 +1,23 @@
+---
+title: "MGI Information"
+author: "Xiang Zhu"
+date: "2019-12-02"
+output:
+  workflowr::wflow_html:
+    toc: true
+editor_options:
+  chunk_output_type: console
+---
+
+```{r, echo=FALSE, warning=FALSE}
+suppressPackageStartupMessages(library(DT))
+
+source("~/Dropbox/rss/Data/peca_human/job_camp/gwas33_net71/results/xref_results/load_MGI_long.R")
+
+names(mgi_df) <- c("Gene","MGI ID","MP group"," MP ID"," PMID"," MP name")
+
+mgi_dt <- DT::datatable(mgi_df, rownames=FALSE, class="white-space: nowrap", escape=FALSE, options=list(pageLength=100, lengthMenu=c(100,200,500,1000)))
+
+mgi_dt
+```
+

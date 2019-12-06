@@ -10,8 +10,14 @@ editor_options:
 ---
 
 ```{r, include=FALSE}
+# specify project path
+proj_path <- "~/Dropbox/rss/Data/"
+
 # specify GWAS name
 gwas_name <- "af2017"
+
+# load GWAS hit data frame
+source(paste0(proj_path,"af_2017/pathway/variant_prioritization/load_gwas_hits.R"))
 ```
 
 ```{r, child="~/Dropbox/rss/Data/peca_human/job_camp/gwas33_net71/results/wflow_child/tab_xref.Rmd"}

@@ -9,7 +9,7 @@ navbar:
       href: license.html
   right:
     - icon: fa-github
-      href: https://github.com/xiangzhu/rss-peca
+      href: https://xiangzhu.github.io/rss-peca/
 output:
   workflowr::wflow_html:
     toc: true

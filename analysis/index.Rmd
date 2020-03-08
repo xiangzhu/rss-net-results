@@ -1,5 +1,5 @@
 ---
-title: "Full results of Zhu et al (2019)"
+title: "Full results of Zhu et al (2020)"
 author: "Xiang Zhu"
 date: 2018-07-19
 site: workflowr::wflow_site
@@ -8,21 +8,21 @@ output:
     toc: true
 ---
 
-[Zhu et al (2019)]: https://github.com/SUwonglab/rss-net 
+[Zhu et al (2020)]: https://github.com/SUwonglab/rss-net 
 
 ## <img src="https://static.thenounproject.com/png/718557-200.png" width="38"/> Overview
 
-This is my online notebook to document and share the full results of
-whole-genome integrated analyses of regulatory networks and complex traits
-described in the manuscript:
+This is my online notebook to document and share the full results
+of whole-genome integrated analyses of 38 gene regulatory networks
+and 18 human complex traits described in the following research article:
 
-> TBA
+> Add RSS-NET citation.
 
 If you find the analysis results, the pre-processed networks,
 the statistical methods, and/or the open-source software useful for your work,
-**please kindly cite our manuscript listed above, [Zhu et al (2019)][]**.
+**please kindly cite our article listed above, [Zhu et al (2020)][]**.
 
-If you have any question about the notebook and/or the manuscript,
+If you have any question about the notebook and/or the article,
 please feel free to contact me:
 [Xiang Zhu](https://github.com/xiangzhu),
 `xiangzhu[at]stanford.edu`.
@@ -34,9 +34,7 @@ please feel free to contact me:
 
 ## <img src="https://static.thenounproject.com/png/1142473-200.png" width="38"/> Additional resources
 
-- Software codes: https://github.com/SUwonglab/rss-net/
+- Software source codes: <https://github.com/suwonglab/rss-net/>
 
-- Software documentations: https://suwonglab.github.io/rss-net/
-
-- Analysis results: https://xiangzhu.github.io/rss-peca/
+- Tutorials and documentations: <https://suwonglab.github.io/rss-net/>
 

@@ -38,3 +38,7 @@ please feel free to contact me:
 
 - Tutorials and documentations: <https://suwonglab.github.io/rss-net/>
 
+--------
+
+<small>Icons used in this wiki are credited to the [Noun Project](https://thenounproject.com/).</small>
+

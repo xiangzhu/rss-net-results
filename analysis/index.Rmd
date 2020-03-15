@@ -42,5 +42,10 @@ please feel free to contact me:
 
 --------
 
-<small>Icons used in this wiki are credited to the [Noun Project](https://thenounproject.com/).</small>
+<small>
+Icons used in this notebook are credited to the
+[Noun Project](https://thenounproject.com/).
+This notebook is created using
+[workflowr](https://github.com/jdblischak/workflowr).
+</small>
 

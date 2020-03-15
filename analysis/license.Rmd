@@ -14,10 +14,12 @@ Once the following research article becomes a peer-reviewed publication,
 I will remove the ND clause and use a different CC License.
 
 If you use any results from this notebook, please explicitly acknowledge
-that the results are retrieved from <https://github.com/xiangzhu/rss-peca>,
+that the results are retrieved from <https://xiangzhu.github.io/rss-peca/>,
 and cite the following research article:
 
-> Add RSS-NET citation.
+> Xiang Zhu, Zhana Duren, Wing Hung Wong (2020).
+> Modeling regulatory network topology improves genome-wide analyses of complex human traits.
+> *bioRxiv*. <https://doi.org/10.1101/2020.03.13.990010>.
 
 The source codes of the notebook are licensed under the
 [GNU General Public License, version 3.0 (GPLv3)][code-license].

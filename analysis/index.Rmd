@@ -8,7 +8,7 @@ output:
     toc: true
 ---
 
-[Zhu et al (2020)]: https://github.com/SUwonglab/rss-net 
+[Zhu et al (2020)]: https://doi.org/10.1101/2020.03.13.990010 
 
 ## <img src="https://static.thenounproject.com/png/718557-200.png" width="38"/> Overview
 
@@ -16,11 +16,13 @@ This is my online notebook to document and share the full results
 of whole-genome integrated analyses of 38 gene regulatory networks
 and 18 human complex traits described in the following research article:
 
-> Add RSS-NET citation.
+> Xiang Zhu, Zhana Duren, Wing Hung Wong (2020).
+> Modeling regulatory network topology improves genome-wide analyses of complex human traits.
+> *bioRxiv*. <https://doi.org/10.1101/2020.03.13.990010>.
 
 If you find the analysis results, the pre-processed networks,
 the statistical methods, and/or the open-source software useful for your work,
-**please kindly cite our article listed above, [Zhu et al (2020)][]**.
+**please kindly cite the research article listed above, [Zhu et al (2020)][]**.
 
 If you have any question about the notebook and/or the article,
 please feel free to contact me:

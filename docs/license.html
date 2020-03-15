@@ -23,6 +23,14 @@
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
+<link rel="icon" href="https://github.com/workflowr/workflowr-assets/raw/master/img/reproducible.png">
+<!-- Add a small amount of space between sections. -->
+<style type="text/css">
+div.section {
+  padding-top: 12px;
+}
+</style>
+
 
 
 
@@ -275,13 +283,6 @@ $(document).ready(function () {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<!-- Add a small amount of space between sections. -->
-<style type="text/css">
-div.section {
-  padding-top: 12px;
-}
-</style>
-
 <div class="fluid-row" id="header">
 
 
@@ -311,7 +312,7 @@ div.section {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2020-03-08
+<strong>Last updated:</strong> 2020-03-15
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 2 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -321,7 +322,7 @@ div.section {
 </p>
 <p>
 This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis was created with <a
-  href="https://github.com/jdblischak/workflowr">workflowr</a> (version 1.6.0). The <em>Checks</em> tab describes the reproducibility checks that were applied when the results were created. The <em>Past versions</em> tab lists the development history.
+  href="https://github.com/jdblischak/workflowr">workflowr</a> (version 1.6.1). The <em>Checks</em> tab describes the reproducibility checks that were applied when the results were created. The <em>Past versions</em> tab lists the development history.
 </p>
 <hr>
 </div>
@@ -342,38 +343,24 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomxiangzhursspecatreec41a2069415fdf769f93b6fd668648082036fd68targetblankc41a206a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/xiangzhu/rss-peca/tree/c41a2069415fdf769f93b6fd668648082036fd68" target="_blank">c41a206</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomxiangzhursspecatree7104402f672e7fb9900b08d6773e61f44786afaetargetblank7104402a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/xiangzhu/rss-peca/tree/7104402f672e7fb9900b08d6773e61f44786afae" target="_blank">7104402</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomxiangzhursspecatreec41a2069415fdf769f93b6fd668648082036fd68targetblankc41a206a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomxiangzhursspecatree7104402f672e7fb9900b08d6773e61f44786afaetargetblank7104402a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
-Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
+Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
+</p>
+<p>
+The results in this page were generated with repository version <a href="https://github.com/xiangzhu/rss-peca/tree/7104402f672e7fb9900b08d6773e61f44786afae" target="_blank">7104402</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+</p>
+<p>
+Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
 </p>
 <pre><code>
 Ignored files:
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
-
-Unstaged changes:
-    Modified:   analysis/af2017_gene.Rmd
-    Modified:   analysis/bmi2015_gene.Rmd
-    Modified:   analysis/cad2015_gene.Rmd
-    Modified:   analysis/cd2015_gene.Rmd
-    Modified:   analysis/gameon2012_gene.Rmd
-    Modified:   analysis/hdl2010_gene.Rmd
-    Modified:   analysis/height2014_gene.Rmd
-    Modified:   analysis/hr2013_gene.Rmd
-    Modified:   analysis/ibd2015_gene.Rmd
-    Modified:   analysis/ldl2010_gene.Rmd
-    Modified:   analysis/load2013_gene.Rmd
-    Modified:   analysis/mi2015_gene.Rmd
-    Modified:   analysis/neu2016_gene.Rmd
-    Modified:   analysis/ra2014_gene.Rmd
-    Modified:   analysis/scz2014_gene.Rmd
-    Modified:   analysis/t2d2012_gene.Rmd
-    Modified:   analysis/uc2015_gene.Rmd
-    Modified:   analysis/waist2015_gene.Rmd
 
 </code></pre>
 <p>
@@ -388,7 +375,7 @@ Note that any generated files, e.g. HTML, png, CSS, etc., are not included in t
 <div id="versions" class="tab-pane fade">
 
 <p>
-These are the previous versions of the R Markdown and HTML files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view them.
+These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/license.Rmd</code>) and HTML (<code>docs/license.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
 </p>
 <div class="table-responsive">
 <table class="table table-condensed table-hover">
@@ -412,6 +399,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/xiangzhu/rss-peca/blob/7104402f672e7fb9900b08d6773e61f44786afae/analysis/license.Rmd" target="_blank">7104402</a>
+</td>
+<td>
+xiangzhu
+</td>
+<td>
+2020-03-15
+</td>
+<td>
+wflow_publish(“analysis/license.Rmd”)
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-peca/9656863bb3ed2b28f9ede92706e3d7234960fbed/docs/license.html" target="_blank">9656863</a>
+</td>
+<td>
+xiangzhu
+</td>
+<td>
+2020-03-08
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -607,9 +628,9 @@ Start workflowr project.
 </div>
 </div>
 <p>Currently the online notebook is licensed under the <a href="https://creativecommons.org/licenses/by-nd/4.0/">Creative Commons Attribution-NoDerivatives 4.0 International License (CC BY-ND 4.0)</a>. This means you are free to include content from this site in your presentation, blog, or social media posts, as long you cite it. The “no derivatives” (ND) clause means you cannot modify the results and distribute them. Once the following research article becomes a peer-reviewed publication, I will remove the ND clause and use a different CC License.</p>
-<p>If you use any results from this notebook, please explicitly acknowledge that the results are retrieved from <a href="https://github.com/xiangzhu/rss-peca" class="uri">https://github.com/xiangzhu/rss-peca</a>, and cite the following research article:</p>
+<p>If you use any results from this notebook, please explicitly acknowledge that the results are retrieved from <a href="https://xiangzhu.github.io/rss-peca/" class="uri">https://xiangzhu.github.io/rss-peca/</a>, and cite the following research article:</p>
 <blockquote>
-<p>Add RSS-NET citation.</p>
+<p>Xiang Zhu, Zhana Duren, Wing Hung Wong (2020). Modeling regulatory network topology improves genome-wide analyses of complex human traits. <em>bioRxiv</em>. <a href="https://doi.org/10.1101/2020.03.13.990010" class="uri">https://doi.org/10.1101/2020.03.13.990010</a>.</p>
 </blockquote>
 <p>The source codes of the notebook are licensed under the <a href="https://www.gnu.org/licenses/gpl-3.0.txt">GNU General Public License, version 3.0 (GPLv3)</a>.</p>
 <p>Icons used in this notebook are credited to the Noun Project <a href="https://thenounproject.com" class="uri">https://thenounproject.com</a>.</p>

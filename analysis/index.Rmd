@@ -5,7 +5,7 @@ date: 2018-07-19
 site: workflowr::wflow_site
 output:
   workflowr::wflow_html:
-    toc: true
+    toc: false
 ---
 
 [Zhu et al (2020)]: https://doi.org/10.1101/2020.03.13.990010 

@@ -15,7 +15,6 @@
 
 <title>Enrichment results of coronary artery disease</title>
 
-<script src="site_libs/header-attrs-2.1/header-attrs.js"></script>
 <script src="site_libs/jquery-1.12.4/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/sandstone.min.css" rel="stylesheet" />
@@ -23,9 +22,10 @@
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <script src="site_libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
 <link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="site_libs/datatables-binding-0.13/datatables.js"></script>
+<script src="site_libs/datatables-binding-0.14/datatables.js"></script>
 <link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
 <link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
 <script src="site_libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
@@ -52,22 +52,21 @@ div.section {
 </style>
 
 
-
-
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -87,7 +86,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -428,7 +427,7 @@ $(document).ready(function () {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2020-04-29
+<strong>Last updated:</strong> 2020-08-03
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -438,7 +437,7 @@ $(document).ready(function () {
 </p>
 <p>
 This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis was created with <a
-  href="https://github.com/jdblischak/workflowr">workflowr</a> (version 1.6.1). The <em>Checks</em> tab describes the reproducibility checks that were applied when the results were created. The <em>Past versions</em> tab lists the development history.
+  href="https://github.com/jdblischak/workflowr">workflowr</a> (version 1.6.2). The <em>Checks</em> tab describes the reproducibility checks that were applied when the results were created. The <em>Past versions</em> tab lists the development history.
 </p>
 <hr>
 </div>
@@ -519,23 +518,22 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomxiangzhursspecatree714d52a926c94a81dd13f9dc2ee381d4f593849etargetblank714d52aa"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/xiangzhu/rss-peca/tree/714d52a926c94a81dd13f9dc2ee381d4f593849e" target="_blank">714d52a</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomxiangzhursspecatreebaee2491bb180b20ab7d21cb6e9a6e239332cebatargetblankbaee249a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/xiangzhu/rss-peca/tree/baee2491bb180b20ab7d21cb6e9a6e239332ceba" target="_blank">baee249</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomxiangzhursspecatree714d52a926c94a81dd13f9dc2ee381d4f593849etargetblank714d52aa" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomxiangzhursspecatreebaee2491bb180b20ab7d21cb6e9a6e239332cebatargetblankbaee249a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/xiangzhu/rss-peca/tree/714d52a926c94a81dd13f9dc2ee381d4f593849e" target="_blank">714d52a</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/xiangzhu/rss-peca/tree/baee2491bb180b20ab7d21cb6e9a6e239332ceba" target="_blank">baee249</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
 </p>
 <pre><code>
 Ignored files:
-    Ignored:    .Rhistory
     Ignored:    .Rproj.user/
 
 </code></pre>
@@ -575,6 +573,23 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-peca/81cd3c0eed768e315be776a4f2505fe8b09ec05e/docs/cad2015_net.html" target="_blank">81cd3c0</a>
+</td>
+<td>
+Xiang Zhu
+</td>
+<td>
+2020-04-29
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 html
@@ -718,10 +733,19 @@ wflow_publish(“analysis/cad2015_net.Rmd”)
 </div>
 </div>
 </div>
-<p>The following table reports enrichment Bayes factors (BFs) of <a href="https://github.com/SUwonglab/rss-net/tree/master/data">38 inferred gene regulatory networks</a> and 1 near-gene control network for a given trait. For each network, we evaluate BFs of the same baseline model (<span class="math inline">\(M_0\)</span>: <span class="math inline">\(\theta\)</span>=0 and <span class="math inline">\(\sigma^2=0\)</span>) against 4 enrichment models (<span class="math inline">\(M_1\)</span>, <span class="math inline">\(M_{11}\)</span>, <span class="math inline">\(M_{12}\)</span> and <span class="math inline">\(M_{13}\)</span>). Rows are sorted by BFs based on <span class="math inline">\(M_1\)</span> (the 2nd column).</p>
+<div id="rss-net-results" class="section level2">
+<h2>RSS-NET results</h2>
+<p>The following table reports enrichment Bayes factors (BFs) of <a href="https://github.com/SUwonglab/rss-net/tree/master/data">38 inferred gene regulatory networks</a> and 1 near-gene control network for a given trait. For each network, we evaluate BFs of the same baseline model (<span class="math inline">\(M_{0}\)</span>: <span class="math inline">\(\theta=0\)</span> and <span class="math inline">\(\sigma^2=0\)</span>) against 4 enrichment models (<span class="math inline">\(M_{1}\)</span>, <span class="math inline">\(M_{11}\)</span>, <span class="math inline">\(M_{12}\)</span> and <span class="math inline">\(M_{13}\)</span>). Rows are sorted by BFs based on <span class="math inline">\(M_{1}\)</span> (the 2nd column).</p>
 <p><br></p>
 <div id="htmlwidget-df4a1fd35b70caa27ccd" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-df4a1fd35b70caa27ccd">{"x":{"filter":"none","extensions":["Buttons"],"data":[["Subcutaneous adipose","Gastroesophageal junction","Uterus","Skeletal muscle","Left ventricle","Transverse colon","Sigmoid colon","Tibial nerve","Breast","Aorta","Atrial appendage","Adrenal gland","Stomach","Pancreas","Liver","Ovary","CD8 cell","Esophagus muscularis","Monocyte","Sun-exposed skin","Spleen","Visceral omentum","CD4 cell","Terminal ileum","Cerebellum","NK cell","Esophagus mucosa","Prostate","B cell","Caudate","Vagina","Putamen","Hippocampus","Lung","Cortex","Testis","Thyroid","Omnibus","Near-gene control"],[29.2238941143252,28.9902491281781,28.8890209743979,28.723608478562,28.2848924308265,28.122341590574,27.8003310958101,27.4293292101661,27.2946766924965,27.035727151045,26.8905926277102,26.4192022591672,25.9692821101647,25.9417897952978,25.4750167287362,25.2396249374332,25.0524792733397,25.0438862523911,24.7800117546889,24.7493172123489,24.7205873312408,24.5737976143173,24.5187622502748,24.2516635130157,24.1995399172173,23.8239087577676,23.6232347629486,23.4303417823923,23.4054482109902,23.2687300295497,23.2599971819036,23.0355675737617,23.015411945151,22.7116700231888,22.7086046553201,20.3351930401959,20.3186145990909,17.2614852978341,4.33522422187295],[13.4733748380467,14.0624318671713,11.7545138208536,13.2002690674058,14.5372934141118,9.62716082530483,11.879361391379,11.6797064920744,12.6370735377546,13.8695568869696,10.8440603953924,9.79613471324691,9.94891771052124,13.9674788683269,12.6627764235549,10.9482689335754,10.3936011033692,9.41446271531354,10.2429055519529,7.79161998679553,7.91176532087969,8.75425400384266,9.971256515009,6.38516766399451,8.60240057852343,9.96707810936024,8.13236912204538,8.54944084522132,10.1266506048967,7.43924503723531,6.93425852045848,7.78604692633203,7.27010889396946,6.5729748565742,6.6752218665999,7.09548722715704,6.70391068252878,6.89377042599977,5.13096632535114],[10.3816313937197,9.28245524283685,10.1444102363422,10.033194844143,8.5499048907996,11.3802606763324,10.0690662797625,9.25655922660613,9.42357767893728,8.22693522322454,9.64861687448543,9.88882357671683,9.31458097092239,7.99569187341006,8.31731972687144,8.72837979105263,9.31229743244665,9.18172610176273,9.23049688180416,10.2542069502426,9.6779179497823,9.15990034390744,8.92798082829976,11.3230497261503,10.3609402188107,9.47272816196273,8.78096925354827,8.66726000430715,8.8428843846516,9.75595712403104,9.41006911873744,9.96012109593867,9.71609520906366,8.93145618556231,10.1658583346616,7.39646539504853,8.44390657415514,6.24120365950336,-0.564311077982765],[29.4177141403413,29.1840691541942,29.082841000414,28.9174285045781,28.4787124568427,28.3161616165901,27.9941511218262,27.6231492361822,27.4884967185126,27.2295471770611,27.0844126537263,26.6130222851833,26.1631021361808,26.1356098213138,25.6688367547523,25.4334449634493,25.2462992993558,25.2377062784073,24.973831780705,24.943137238365,24.9144073572569,24.7676176403334,24.7125822762909,24.4454835390318,24.3933599432334,24.0177287837837,23.8170547889647,23.6241618084084,23.5992682370063,23.4625500555658,23.4538172079197,23.2293875997778,23.2092319711671,22.9054900492049,22.9024246813362,20.529013066212,20.512434625107,17.4553053238466,1.02547983159548]],"container":"<table class=\"white-space: nowrap\">\n  <thead>\n    <tr>\n      <th>Network<\/th>\n      <th>Log 10 BF<br/>(<i>M<\/i><sub>1<\/sub>: &theta;>0 or &sigma;<sup>2<\/sup>>0)<\/th>\n      <th>Log 10 BF<br/>(<i>M<\/i><sub>11<\/sub>: &theta;>0 and &sigma;<sup>2<\/sup>=0)<\/th>\n      <th>Log 10 BF<br/>(<i>M<\/i><sub>12<\/sub>: &theta;=0 and &sigma;<sup>2<\/sup>>0)<\/th>\n      <th>Log 10 BF<br/>(<i>M<\/i><sub>13<\/sub>: &theta;>0 and &sigma;<sup>2<\/sup>>0)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":false,"dom":"Bfrtip","buttons":["copy","print",{"extend":"collection","buttons":["csv","excel","pdf"],"text":"Download"}],"columnDefs":[{"targets":[1,2,3,4],"render":"function(data, type, row, meta) { return DTWidget.formatRound(data, 4, 3, \",\", \".\"); }"},{"className":"dt-right","targets":[1,2,3,4]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render"],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-df4a1fd35b70caa27ccd">{"x":{"filter":"none","extensions":["Buttons"],"data":[["Subcutaneous adipose","Gastroesophageal junction","Uterus","Skeletal muscle","Left ventricle","Transverse colon","Sigmoid colon","Tibial nerve","Breast","Aorta","Atrial appendage","Adrenal gland","Stomach","Pancreas","Liver","Ovary","CD8 cell","Esophagus muscularis","Monocyte","Sun-exposed skin","Spleen","Visceral omentum","CD4 cell","Terminal ileum","Cerebellum","NK cell","Esophagus mucosa","Prostate","B cell","Caudate","Vagina","Putamen","Hippocampus","Lung","Cortex","Testis","Thyroid","Omnibus","Near-gene control"],[29.2238941143252,28.9902491281781,28.8890209743979,28.723608478562,28.2848924308265,28.122341590574,27.8003310958101,27.4293292101661,27.2946766924965,27.035727151045,26.8905926277102,26.4192022591672,25.9692821101647,25.9417897952978,25.4750167287362,25.2396249374332,25.0524792733397,25.0438862523911,24.7800117546889,24.7493172123489,24.7205873312408,24.5737976143173,24.5187622502748,24.2516635130157,24.1995399172173,23.8239087577676,23.6232347629486,23.4303417823923,23.4054482109902,23.2687300295497,23.2599971819036,23.0355675737617,23.015411945151,22.7116700231888,22.7086046553201,20.3351930401959,20.3186145990909,17.2614852978341,4.33522422187295],[13.4733748380467,14.0624318671713,11.7545138208536,13.2002690674058,14.5372934141118,9.62716082530483,11.879361391379,11.6797064920744,12.6370735377546,13.8695568869696,10.8440603953924,9.79613471324691,9.94891771052124,13.9674788683269,12.6627764235549,10.9482689335754,10.3936011033692,9.41446271531354,10.2429055519529,7.79161998679553,7.91176532087969,8.75425400384266,9.971256515009,6.38516766399451,8.60240057852343,9.96707810936024,8.13236912204538,8.54944084522132,10.1266506048967,7.43924503723531,6.93425852045848,7.78604692633203,7.27010889396946,6.5729748565742,6.6752218665999,7.09548722715704,6.70391068252878,6.89377042599977,5.13096632535114],[10.3816313937197,9.28245524283685,10.1444102363422,10.033194844143,8.5499048907996,11.3802606763324,10.0690662797625,9.25655922660613,9.42357767893728,8.22693522322454,9.64861687448543,9.88882357671683,9.31458097092239,7.99569187341006,8.31731972687144,8.72837979105263,9.31229743244665,9.18172610176273,9.23049688180416,10.2542069502426,9.6779179497823,9.15990034390744,8.92798082829976,11.3230497261503,10.3609402188107,9.47272816196273,8.78096925354827,8.66726000430715,8.8428843846516,9.75595712403104,9.41006911873744,9.96012109593867,9.71609520906366,8.93145618556231,10.1658583346616,7.39646539504853,8.44390657415514,6.24120365950336,-0.564311077982765],[29.4177141403413,29.1840691541942,29.082841000414,28.9174285045781,28.4787124568427,28.3161616165901,27.9941511218262,27.6231492361822,27.4884967185126,27.2295471770611,27.0844126537263,26.6130222851833,26.1631021361808,26.1356098213138,25.6688367547523,25.4334449634493,25.2462992993558,25.2377062784073,24.973831780705,24.943137238365,24.9144073572569,24.7676176403334,24.7125822762909,24.4454835390318,24.3933599432334,24.0177287837837,23.8170547889647,23.6241618084084,23.5992682370063,23.4625500555658,23.4538172079197,23.2293875997778,23.2092319711671,22.9054900492049,22.9024246813362,20.529013066212,20.512434625107,17.4553053238466,1.02547983159548]],"container":"<table class=\"white-space: nowrap\">\n  <thead>\n    <tr>\n      <th>Network<\/th>\n      <th>Log 10 BF<br/>(<i>M<\/i><sub>1<\/sub>: &theta;>0 or &sigma;<sup>2<\/sup>>0)<\/th>\n      <th>Log 10 BF<br/>(<i>M<\/i><sub>11<\/sub>: &theta;>0 and &sigma;<sup>2<\/sup>=0)<\/th>\n      <th>Log 10 BF<br/>(<i>M<\/i><sub>12<\/sub>: &theta;=0 and &sigma;<sup>2<\/sup>>0)<\/th>\n      <th>Log 10 BF<br/>(<i>M<\/i><sub>13<\/sub>: &theta;>0 and &sigma;<sup>2<\/sup>>0)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":false,"dom":"Bfrtip","buttons":["copy","print",{"extend":"collection","buttons":["csv","excel","pdf"],"text":"Download"}],"columnDefs":[{"targets":1,"render":"function(data, type, row, meta) { return DTWidget.formatRound(data, 4, 3, \",\", \".\"); }"},{"targets":2,"render":"function(data, type, row, meta) { return DTWidget.formatRound(data, 4, 3, \",\", \".\"); }"},{"targets":3,"render":"function(data, type, row, meta) { return DTWidget.formatRound(data, 4, 3, \",\", \".\"); }"},{"targets":4,"render":"function(data, type, row, meta) { return DTWidget.formatRound(data, 4, 3, \",\", \".\"); }"},{"className":"dt-right","targets":[1,2,3,4]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render","options.columnDefs.2.render","options.columnDefs.3.render"],"jsHooks":[]}</script>
+</div>
+<div id="ldsc-and-pascal-results" class="section level2">
+<h2>LDSC and Pascal results</h2>
+<p>The following table reports minus log 10 enrichment <span class="math inline">\(p\)</span>-values of LDSC and Pascal. Rows are sorted by <span class="math inline">\(p\)</span>-values based on LDSC-baselineLD (the 3rd column). Empty entries correspond to zero <span class="math inline">\(p\)</span>-values.</p>
+<p><br></p>
+<div id="htmlwidget-e948555e45e1e9771a0d" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e948555e45e1e9771a0d">{"x":{"filter":"none","extensions":["Buttons"],"data":[["Lung","Thyroid","Uterus","Esophagus mucosa","Vagina","Tibial nerve","Sun-exposed skin","Testis","Adrenal gland","Visceral omentum","Spleen","Prostate","Breast","Omnibus","Terminal ileum","Esophagus muscularis","CD4 cell","Transverse colon","Stomach","Left ventricle","CD8 cell","Aorta","Subcutaneous adipose","Near-gene control","Gastroesophageal junction","B cell","Ovary","Monocyte","Skeletal muscle","Sigmoid colon","Liver","NK cell","Atrial appendage","Pancreas","Cortex","Putamen","Caudate","Cerebellum","Hippocampus"],[23.98149490766,23.4596263066388,22.8316421190788,22.7161336012674,23.2470551032513,22.4205409796438,21.3704350534732,21.476826654319,21.9447940489511,21.3069068337139,21.0199442784608,21.2583072273841,20.1327592110233,18.9957271538186,19.3573616751924,19.6546982396663,19.4773118415103,19.2544682480746,18.8144586102885,19.4895112282816,18.7998546447549,18.2540855368154,17.450853892107,17.8849637984773,16.5336458869878,15.9645284397335,18.0636895023467,16.1287446694792,15.1121999717563,15.7072666270379,14.199980697951,14.4157314076856,14.7190740053921,12.6476751535463,14.0987376089827,13.8728846769655,13.5947572612243,11.54513813973,11.9920512312703],[23.1242906300056,23.0763274631776,22.4093692084018,22.1195471431624,21.9706550142561,21.7449241343675,21.2376110764549,21.2140331977708,20.9658327215383,20.4610015170406,20.3714706415759,20.0226957250741,19.5021517060592,18.9477016169832,18.6298497618434,18.6197443795775,18.3745086388171,18.3261468423327,18.235181864998,17.896773848323,17.6831686530095,17.588693719745,16.744238620027,16.5784537882911,15.9239962492711,15.6256055460532,15.513125781712,15.2922857167619,14.4912446852175,13.8114424580928,13.6078309870098,13.2915976552949,13.0711900666897,12.0184312361881,11.9633876150428,11.942211801643,11.7043078678481,10.3388133978486,10.2076884572304],[12.9120142563895,13.8084617357632,10.8548953214683,13.9334004695774,14.1911617768187,9.78374889195143,9.4941664538246,12.0641687514574,7.96147370427723,9.95508949551703,12.4324064520966,8.04226077449638,5.86321950750966,14.6535597743804,12.4553151881429,9.12839746455805,4.92641866277017,6.68245309964313,7.74919176561219,7.48607233506864,3.74116101590011,8.50243012490441,5.69241012183007,null,7.38718892552096,5.32706280543706,8.06258753748949,6.38815564264069,4.98128636038057,7.13535917386213,9.12154330357155,5.3514645002168,8.87908394005767,7.92080133547384,5.98113019692991,3.83427118192982,4.40552471501375,3.32804068561932,4.45892535607889],[2.95078197732982,2.97881070093006,0.947960492998528,3.06550154875643,2.98716277529483,1.97963871735229,1.8847224086041,3.11918640771921,0.949774962116346,1.7594507517174,2.98716277529483,1.10248287059947,1.01718623786814,3.30627305107635,2.89279003035213,1.01367622294923,1.71896663275227,1.817870785947,1.88773023158273,0.39419951581276,0.947844932800435,1.01926962346405,1.7867479478036,4.89962945488244,1.02742691907345,0.938660633162933,0.949774962116346,1.75770709501707,1.85761053388116,0.99735885099996,2.80134291304558,0.991016796184528,1.06008157963094,1.76980662113095,1.17431429197824,1.16729952903943,1.16819419132561,1.92885470954892,1.13024040521759],[13.1911617768187,12.2580586500984,11.2959298024511,11.8920453892305,13.1423450733796,9.51646166197483,8.06535622077153,11.5820643877002,8.18426077262899,10.3116486782246,10.6332295725098,7.71492515627082,6.35232332215914,13.6804319201565,11.5499270692438,8.0354643212389,4.63223191293981,6.52986963401633,7.65518825310448,7.7410988785454,3.91371394157632,8.0410602988985,5.74983852375747,10.796879209903,6.31327570923913,5.50603325390915,9.38518577692804,5.84328719228199,4.79375216329894,8.05667068937688,8.30603243947608,4.5683636616694,8.28283245903209,7.80485841008414,6.83458127272221,5.08976361577849,4.67291723798419,3.59777385100684,5.46025573751509],[null,null,null,null,null,null,null,null,null,null,null,null,5.82390874094432,null,null,6.30102999566398,4.29242982390206,6.15490195998574,null,null,3.45717457304082,6.30102999566398,5.65757731917779,null,5.55284196865778,4.63078414258986,7,5.06048074738138,5.15490195998574,6.69897000433602,null,3.68824613894425,6.52287874528034,null,6.04575749056067,4.60554831917378,4.13076828026902,3.57024771999759,4.92081875395237]],"container":"<table class=\"white-space: nowrap\">\n  <thead>\n    <tr>\n      <th>Network<\/th>\n      <th>LDSC<br/>(baseline)<\/th>\n      <th>LDSC<br/>(baselineLD)<\/th>\n      <th>Pascal<br/>(max, chi)<\/th>\n      <th>Pascal<br/>(max, emp)<\/th>\n      <th>Pascal<br/>(sum, chi)<\/th>\n      <th>Pascal<br/>(sum, emp)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":false,"dom":"Bfrtip","buttons":["copy","print",{"extend":"collection","buttons":["csv","excel","pdf"],"text":"Download"}],"columnDefs":[{"targets":1,"render":"function(data, type, row, meta) { return DTWidget.formatRound(data, 4, 3, \",\", \".\"); }"},{"targets":2,"render":"function(data, type, row, meta) { return DTWidget.formatRound(data, 4, 3, \",\", \".\"); }"},{"targets":3,"render":"function(data, type, row, meta) { return DTWidget.formatRound(data, 4, 3, \",\", \".\"); }"},{"targets":4,"render":"function(data, type, row, meta) { return DTWidget.formatRound(data, 4, 3, \",\", \".\"); }"},{"targets":5,"render":"function(data, type, row, meta) { return DTWidget.formatRound(data, 4, 3, \",\", \".\"); }"},{"targets":6,"render":"function(data, type, row, meta) { return DTWidget.formatRound(data, 4, 3, \",\", \".\"); }"},{"className":"dt-right","targets":[1,2,3,4,5,6]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render","options.columnDefs.2.render","options.columnDefs.3.render","options.columnDefs.4.render","options.columnDefs.5.render"],"jsHooks":[]}</script>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -732,74 +756,80 @@ wflow_publish(“analysis/cad2015_net.Rmd”)
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>devtools<span class="op">::</span><span class="kw">session_info</span>()</span></code></pre></div>
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────
  setting  value                       
- version  R version 4.0.0 (2020-04-24)
- os       macOS Catalina 10.15.4      
- system   x86_64, darwin17.0          
+ version  R version 4.0.2 (2020-06-22)
+ os       Ubuntu 18.04.4 LTS          
+ system   x86_64, linux-gnu           
  ui       X11                         
  language (EN)                        
  collate  en_US.UTF-8                 
  ctype    en_US.UTF-8                 
  tz       America/Los_Angeles         
- date     2020-04-29                  
+ date     2020-08-03                  
 
 ─ Packages ───────────────────────────────────────────────────────────────────
  package     * version date       lib source        
- assertthat    0.2.1   2019-03-21 [1] CRAN (R 4.0.0)
- backports     1.1.6   2020-04-05 [1] CRAN (R 4.0.0)
- callr         3.4.3   2020-03-28 [1] CRAN (R 4.0.0)
- cli           2.0.2   2020-02-28 [1] CRAN (R 4.0.0)
- crayon        1.3.4   2017-09-16 [1] CRAN (R 4.0.0)
- crosstalk     1.1.0.1 2020-03-13 [1] CRAN (R 4.0.0)
- desc          1.2.0   2018-05-01 [1] CRAN (R 4.0.0)
- devtools      2.3.0   2020-04-10 [1] CRAN (R 4.0.0)
- digest        0.6.25  2020-02-23 [1] CRAN (R 4.0.0)
- dplyr       * 0.8.5   2020-03-07 [1] CRAN (R 4.0.0)
- DT          * 0.13    2020-03-23 [1] CRAN (R 4.0.0)
- ellipsis      0.3.0   2019-09-20 [1] CRAN (R 4.0.0)
- evaluate      0.14    2019-05-28 [1] CRAN (R 4.0.0)
- fansi         0.4.1   2020-01-08 [1] CRAN (R 4.0.0)
- fs            1.4.1   2020-04-04 [1] CRAN (R 4.0.0)
- git2r         0.26.1  2019-06-29 [1] CRAN (R 4.0.0)
- glue          1.4.0   2020-04-03 [1] CRAN (R 4.0.0)
- htmltools     0.4.0   2019-10-04 [1] CRAN (R 4.0.0)
- htmlwidgets   1.5.1   2019-10-08 [1] CRAN (R 4.0.0)
- httpuv        1.5.2   2019-09-11 [1] CRAN (R 4.0.0)
- jsonlite      1.6.1   2020-02-02 [1] CRAN (R 4.0.0)
- knitr         1.28    2020-02-06 [1] CRAN (R 4.0.0)
- later         1.0.0   2019-10-04 [1] CRAN (R 4.0.0)
- lifecycle     0.2.0   2020-03-06 [1] CRAN (R 4.0.0)
- magrittr      1.5     2014-11-22 [1] CRAN (R 4.0.0)
- memoise       1.1.0   2017-04-21 [1] CRAN (R 4.0.0)
- pillar        1.4.3   2019-12-20 [1] CRAN (R 4.0.0)
- pkgbuild      1.0.7   2020-04-25 [1] CRAN (R 4.0.0)
- pkgconfig     2.0.3   2019-09-22 [1] CRAN (R 4.0.0)
- pkgload       1.0.2   2018-10-29 [1] CRAN (R 4.0.0)
- prettyunits   1.1.1   2020-01-24 [1] CRAN (R 4.0.0)
- processx      3.4.2   2020-02-09 [1] CRAN (R 4.0.0)
- promises      1.1.0   2019-10-04 [1] CRAN (R 4.0.0)
- ps            1.3.2   2020-02-13 [1] CRAN (R 4.0.0)
- purrr         0.3.4   2020-04-17 [1] CRAN (R 4.0.0)
- R6            2.4.1   2019-11-12 [1] CRAN (R 4.0.0)
- Rcpp          1.0.4.6 2020-04-09 [1] CRAN (R 4.0.0)
- remotes       2.1.1   2020-02-15 [1] CRAN (R 4.0.0)
- rlang         0.4.5   2020-03-01 [1] CRAN (R 4.0.0)
- rmarkdown     2.1     2020-01-20 [1] CRAN (R 4.0.0)
- rprojroot     1.3-2   2018-01-03 [1] CRAN (R 4.0.0)
- sessioninfo   1.1.1   2018-11-05 [1] CRAN (R 4.0.0)
- stringi       1.4.6   2020-02-17 [1] CRAN (R 4.0.0)
- stringr       1.4.0   2019-02-10 [1] CRAN (R 4.0.0)
- testthat      2.3.2   2020-03-02 [1] CRAN (R 4.0.0)
- tibble        3.0.1   2020-04-20 [1] CRAN (R 4.0.0)
- tidyselect    1.0.0   2020-01-27 [1] CRAN (R 4.0.0)
- usethis       1.6.0   2020-04-09 [1] CRAN (R 4.0.0)
- vctrs         0.2.4   2020-03-10 [1] CRAN (R 4.0.0)
- whisker       0.4     2019-08-28 [1] CRAN (R 4.0.0)
- withr         2.2.0   2020-04-20 [1] CRAN (R 4.0.0)
- workflowr     1.6.1   2020-03-11 [1] CRAN (R 4.0.0)
- xfun          0.13    2020-04-13 [1] CRAN (R 4.0.0)
- yaml          2.2.1   2020-02-01 [1] CRAN (R 4.0.0)
+ assertthat    0.2.1   2019-03-21 [3] CRAN (R 4.0.0)
+ backports     1.1.8   2020-06-17 [3] CRAN (R 4.0.1)
+ callr         3.4.3   2020-03-28 [3] CRAN (R 4.0.0)
+ cli           2.0.2   2020-02-28 [3] CRAN (R 4.0.0)
+ crayon        1.3.4   2017-09-16 [3] CRAN (R 4.0.0)
+ crosstalk     1.1.0.1 2020-03-13 [3] CRAN (R 4.0.0)
+ desc          1.2.0   2018-05-01 [3] CRAN (R 4.0.0)
+ devtools      2.3.1   2020-07-21 [3] CRAN (R 4.0.2)
+ digest        0.6.25  2020-02-23 [3] CRAN (R 4.0.0)
+ dplyr       * 1.0.1   2020-07-31 [1] CRAN (R 4.0.2)
+ DT          * 0.14    2020-06-24 [3] CRAN (R 4.0.2)
+ ellipsis      0.3.1   2020-05-15 [3] CRAN (R 4.0.0)
+ evaluate      0.14    2019-05-28 [3] CRAN (R 4.0.0)
+ fansi         0.4.1   2020-01-08 [3] CRAN (R 4.0.0)
+ fs            1.5.0   2020-07-31 [3] CRAN (R 4.0.2)
+ generics      0.0.2   2018-11-29 [1] CRAN (R 4.0.2)
+ git2r         0.27.1  2020-05-03 [3] CRAN (R 4.0.0)
+ glue          1.4.1   2020-05-13 [3] CRAN (R 4.0.0)
+ htmltools     0.5.0   2020-06-16 [3] CRAN (R 4.0.1)
+ htmlwidgets   1.5.1   2019-10-08 [3] CRAN (R 4.0.0)
+ httpuv        1.5.4   2020-06-06 [3] CRAN (R 4.0.0)
+ jsonlite      1.7.0   2020-06-25 [3] CRAN (R 4.0.2)
+ knitr         1.29    2020-06-23 [3] CRAN (R 4.0.2)
+ later         1.1.0.1 2020-06-05 [3] CRAN (R 4.0.0)
+ lifecycle     0.2.0   2020-03-06 [3] CRAN (R 4.0.0)
+ magrittr      1.5     2014-11-22 [3] CRAN (R 4.0.0)
+ memoise       1.1.0   2017-04-21 [3] CRAN (R 4.0.0)
+ pillar        1.4.6   2020-07-10 [3] CRAN (R 4.0.2)
+ pkgbuild      1.1.0   2020-07-13 [3] CRAN (R 4.0.2)
+ pkgconfig     2.0.3   2019-09-22 [3] CRAN (R 4.0.0)
+ pkgload       1.1.0   2020-05-29 [3] CRAN (R 4.0.0)
+ prettyunits   1.1.1   2020-01-24 [3] CRAN (R 4.0.0)
+ processx      3.4.3   2020-07-05 [3] CRAN (R 4.0.2)
+ promises      1.1.1   2020-06-09 [3] CRAN (R 4.0.1)
+ ps            1.3.3   2020-05-08 [3] CRAN (R 4.0.0)
+ purrr         0.3.4   2020-04-17 [3] CRAN (R 4.0.0)
+ R6            2.4.1   2019-11-12 [3] CRAN (R 4.0.0)
+ Rcpp          1.0.5   2020-07-06 [3] CRAN (R 4.0.2)
+ remotes       2.2.0   2020-07-21 [3] CRAN (R 4.0.2)
+ rlang         0.4.7   2020-07-09 [3] CRAN (R 4.0.2)
+ rmarkdown     2.3     2020-06-18 [1] CRAN (R 4.0.2)
+ rprojroot     1.3-2   2018-01-03 [3] CRAN (R 4.0.0)
+ rstudioapi    0.11    2020-02-07 [3] CRAN (R 4.0.0)
+ sessioninfo   1.1.1   2018-11-05 [3] CRAN (R 4.0.0)
+ stringi       1.4.6   2020-02-17 [3] CRAN (R 4.0.0)
+ stringr       1.4.0   2019-02-10 [3] CRAN (R 4.0.0)
+ testthat      2.3.2   2020-03-02 [3] CRAN (R 4.0.0)
+ tibble        3.0.3   2020-07-10 [3] CRAN (R 4.0.2)
+ tidyselect    1.1.0   2020-05-11 [1] CRAN (R 4.0.2)
+ usethis       1.6.1   2020-04-29 [3] CRAN (R 4.0.0)
+ vctrs         0.3.2   2020-07-15 [3] CRAN (R 4.0.2)
+ whisker       0.4     2019-08-28 [3] CRAN (R 4.0.0)
+ withr         2.2.0   2020-04-20 [3] CRAN (R 4.0.0)
+ workflowr     1.6.2   2020-04-30 [1] CRAN (R 4.0.2)
+ xfun          0.16    2020-07-24 [3] CRAN (R 4.0.2)
+ yaml          2.2.1   2020-02-01 [3] CRAN (R 4.0.0)
 
-[1] /Library/Frameworks/R.framework/Versions/4.0/Resources/library</code></pre>
+[1] /home/maimaizhu/R/x86_64-pc-linux-gnu-library/4.0
+[2] /usr/local/lib/R/site-library
+[3] /usr/lib/R/site-library
+[4] /usr/lib/R/library</code></pre>
+</div>
 </div>
 
 
@@ -814,8 +844,6 @@ footer is added to webpages before the MathJax javascript. -->
     "HTML-CSS": { availableFonts: ["TeX"] }
   });
 </script>
-
-
 
 
 

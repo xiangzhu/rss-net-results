@@ -9,10 +9,11 @@ navbar:
       href: license.html
   right:
     - icon: fa-github
-      href: https://xiangzhu.github.io/rss-peca/
+      href: https://xiangzhu.github.io/rss-net-results/
 output:
   workflowr::wflow_html:
     toc: true
     toc_float: true
     theme: sandstone
     highlight: pygments
+    anchor_sections: false

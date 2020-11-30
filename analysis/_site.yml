@@ -1,19 +1,19 @@
-name: "rss-peca"
-output_dir: "../docs"
+name: rss-net-results
+output_dir: ../docs
 navbar:
-  title: "rss-peca"
+  title: rss-net-results
   left:
-    - text: "Home"
-      href: index.html
-    - text: "License"
-      href: license.html
+  - text: Home
+    href: index.html
+  - text: License
+    href: license.html
   right:
-    - icon: fa-github
-      href: https://xiangzhu.github.io/rss-net-results/
+  - icon: fa-github
+    href: https://xiangzhu.github.io/rss-net-results/
 output:
   workflowr::wflow_html:
-    toc: true
-    toc_float: true
+    toc: yes
+    toc_float: yes
     theme: sandstone
     highlight: pygments
-    anchor_sections: false
+    anchor_sections: no

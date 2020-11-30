@@ -1,4 +1,4 @@
-# rss-peca
+# rss-net-results
 
 A [workflowr][] project.
 

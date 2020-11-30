@@ -4,12 +4,12 @@ navbar:
   title: rss-net-results
   left:
   - text: Home
-    href: index.html
+    href: https://suwonglab.github.io/rss-net/results.html
   - text: License
     href: license.html
   right:
   - icon: fa-github
-    href: https://xiangzhu.github.io/rss-net-results/
+    href: https://suwonglab.github.io/rss-net/results.html
 output:
   workflowr::wflow_html:
     toc: yes

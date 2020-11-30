@@ -26,9 +26,9 @@
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <script src="site_libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<script src="site_libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<script src="site_libs/htmlwidgets-1.5.2/htmlwidgets.js"></script>
 <link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="site_libs/datatables-binding-0.14/datatables.js"></script>
+<script src="site_libs/datatables-binding-0.16/datatables.js"></script>
 <link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
 <link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
 <script src="site_libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
@@ -53,6 +53,15 @@ div.section {
   padding-top: 12px;
 }
 </style>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
 
 
 <style type="text/css">code{white-space: pre;}</style>
@@ -449,7 +458,7 @@ div.tocify {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">rss-peca</a>
+      <a class="navbar-brand" href="index.html">rss-net-results</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -462,7 +471,7 @@ div.tocify {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://xiangzhu.github.io/rss-peca/">
+  <a href="https://xiangzhu.github.io/rss-net-results/">
     <span class="fa fa-github"></span>
      
   </a>
@@ -503,13 +512,13 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2020-08-03
+<strong>Last updated:</strong> 2020-11-30
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
 </p>
 <p>
-<strong>Knit directory:</strong> <code>rss-peca/</code> <span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="This is the local directory in which the code in this file was executed."> </span>
+<strong>Knit directory:</strong> <code>rss-net-results/</code> <span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="This is the local directory in which the code in this file was executed."> </span>
 </p>
 <p>
 This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis was created with <a
@@ -594,22 +603,23 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomxiangzhursspecatree73fe14d8f84f40ff74ee66cdebdb8c11600cbf7ftargetblank73fe14da"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/xiangzhu/rss-peca/tree/73fe14d8f84f40ff74ee66cdebdb8c11600cbf7f" target="_blank">73fe14d</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomxiangzhursspecatreea2f291c4b5451bbcafc75195cafd1d7ef9f04c6ctargetblanka2f291ca"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/xiangzhu/rss-peca/tree/a2f291c4b5451bbcafc75195cafd1d7ef9f04c6c" target="_blank">a2f291c</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomxiangzhursspecatree73fe14d8f84f40ff74ee66cdebdb8c11600cbf7ftargetblank73fe14da" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomxiangzhursspecatreea2f291c4b5451bbcafc75195cafd1d7ef9f04c6ctargetblanka2f291ca" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/xiangzhu/rss-peca/tree/73fe14d8f84f40ff74ee66cdebdb8c11600cbf7f" target="_blank">73fe14d</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/xiangzhu/rss-peca/tree/a2f291c4b5451bbcafc75195cafd1d7ef9f04c6c" target="_blank">a2f291c</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
 </p>
 <pre><code>
 Ignored files:
+    Ignored:    .Rhistory
     Ignored:    .Rproj.user/
 
 </code></pre>
@@ -649,6 +659,23 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-peca/ea6773cc7a2b728c8a9fa66cf074aa8d707905e2/docs/scz2014_net.html" target="_blank">ea6773c</a>
+</td>
+<td>
+Xiang Zhu
+</td>
+<td>
+2020-08-03
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -745,7 +772,7 @@ html
 xiangzhu
 </td>
 <td>
-2020-01-30
+2020-01-31
 </td>
 <td>
 Build site.
@@ -848,14 +875,14 @@ wflow_publish(“analysis/scz2014_net.Rmd”)
 <p>The following table reports enrichment Bayes factors (BFs) of <a href="https://github.com/SUwonglab/rss-net/tree/master/data">38 inferred gene regulatory networks</a> and 1 near-gene control network for a given trait. For each network, we evaluate BFs of the same baseline model (<span class="math inline">\(M_{0}\)</span>: <span class="math inline">\(\theta=0\)</span> and <span class="math inline">\(\sigma^2=0\)</span>) against 4 enrichment models (<span class="math inline">\(M_{1}\)</span>, <span class="math inline">\(M_{11}\)</span>, <span class="math inline">\(M_{12}\)</span> and <span class="math inline">\(M_{13}\)</span>). Rows are sorted by BFs based on <span class="math inline">\(M_{1}\)</span> (the 2nd column).</p>
 <p><br></p>
 <div id="htmlwidget-df4a1fd35b70caa27ccd" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-df4a1fd35b70caa27ccd">{"x":{"filter":"none","extensions":["Buttons"],"data":[["Transverse colon","Spleen","Terminal ileum","Sigmoid colon","Uterus","B cell","NK cell","CD8 cell","Visceral omentum","CD4 cell","Monocyte","Subcutaneous adipose","Lung","Stomach","Cerebellum","Cortex","Adrenal gland","Sun-exposed skin","Aorta","Skeletal muscle","Tibial nerve","Esophagus muscularis","Ovary","Vagina","Esophagus mucosa","Hippocampus","Gastroesophageal junction","Testis","Putamen","Atrial appendage","Caudate","Prostate","Thyroid","Breast","Liver","Left ventricle","Pancreas","Omnibus","Near-gene control"],[144.080111320529,141.158621623095,141.04510606279,141.029433731503,136.433121834395,134.841331259209,134.550656131563,134.167247536572,132.951700686181,131.936721159805,131.766832559631,130.63582743053,130.467962094432,130.012865537369,129.498650395369,128.731442205305,128.622453573919,128.462714611566,127.875933401578,127.698431814063,127.553199089017,125.038218123558,122.442579357951,122.353902891227,121.945885555209,121.521603268523,121.458595921286,117.530317566792,116.858477771516,116.063729334267,115.956377369455,115.457979078278,115.147691878954,114.912361291844,114.687683640148,114.167957482136,108.390131029878,73.6938675109585,27.3801929559849],[-19.440707360164,-17.3907034026475,-17.7781104291537,-15.5479912390854,-16.2366012230343,-12.0374339849516,-11.5241973729289,-14.8396216527295,-18.6927639666784,-16.9896703201833,-12.6866002312834,-15.4697488251373,-17.2168196581881,-18.0392371805622,-1.66273145074738,-6.31185021370993,-18.4939885870604,-19.3007327865071,-12.1152155260617,-9.53326116994355,-17.3329612966011,-16.6243334698134,-16.2730815216057,-20.3662874781198,-18.7490410576272,-3.42297789996463,-17.1790035676927,-16.6731253823457,-4.35800135347746,-13.7970457613158,-7.66759286489961,-19.8682813299374,-18.2607762991511,-18.9813451026844,-14.3655860769421,-8.95205663693125,-8.88465109579683,-25.8224372745883,-11.8840634865752],[144.875991337873,141.954501640439,141.840986080134,141.825313748847,137.22900185174,135.637211276553,135.346536148907,134.963127553917,133.747580703526,132.732601177149,132.562712576975,131.431707447874,131.263842111776,130.808745554713,130.294530412713,129.527322222649,129.418333591263,129.25859462891,128.671813418922,128.494311831407,128.349079106361,125.834098140902,123.238459375295,123.149782908571,122.741765572553,122.317483285867,122.25447593863,118.326197584136,117.65435778886,116.859609351611,116.752257386799,116.253859095622,115.943571896298,115.708241309188,115.483563657492,114.96383749948,109.186011047222,74.4897475283026,28.176072973329],[112.735511163481,107.863643123863,115.692112570105,108.777751993697,103.206265226533,100.620663362807,101.252054703751,99.8889554225735,97.6647230087898,95.1464684797181,95.0506264427216,98.8652644700033,98.0993900130934,97.2958305508404,107.301570571787,102.794961922604,96.6730732537923,92.3037214278275,95.6637571838391,103.302384961521,90.5660807142829,90.9671230134658,85.4380019315938,87.6075922193768,84.9166026804732,99.1377325068638,85.6211126122359,80.1625662417098,94.6901074753994,84.0812968256267,90.6726477121487,77.7278121375301,79.3938128872414,78.7225709443821,79.4557555376909,84.9548070843416,80.5027342378165,31.7039463361025,-0.197879149084819]],"container":"<table class=\"white-space: nowrap\">\n  <thead>\n    <tr>\n      <th>Network<\/th>\n      <th>Log 10 BF<br/>(<i>M<\/i><sub>1<\/sub>: &theta;>0 or &sigma;<sup>2<\/sup>>0)<\/th>\n      <th>Log 10 BF<br/>(<i>M<\/i><sub>11<\/sub>: &theta;>0 and &sigma;<sup>2<\/sup>=0)<\/th>\n      <th>Log 10 BF<br/>(<i>M<\/i><sub>12<\/sub>: &theta;=0 and &sigma;<sup>2<\/sup>>0)<\/th>\n      <th>Log 10 BF<br/>(<i>M<\/i><sub>13<\/sub>: &theta;>0 and &sigma;<sup>2<\/sup>>0)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":false,"dom":"Bfrtip","buttons":["copy","print",{"extend":"collection","buttons":["csv","excel","pdf"],"text":"Download"}],"columnDefs":[{"targets":1,"render":"function(data, type, row, meta) { return DTWidget.formatRound(data, 4, 3, \",\", \".\"); }"},{"targets":2,"render":"function(data, type, row, meta) { return DTWidget.formatRound(data, 4, 3, \",\", \".\"); }"},{"targets":3,"render":"function(data, type, row, meta) { return DTWidget.formatRound(data, 4, 3, \",\", \".\"); }"},{"targets":4,"render":"function(data, type, row, meta) { return DTWidget.formatRound(data, 4, 3, \",\", \".\"); }"},{"className":"dt-right","targets":[1,2,3,4]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render","options.columnDefs.2.render","options.columnDefs.3.render"],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-df4a1fd35b70caa27ccd">{"x":{"filter":"none","extensions":["Buttons"],"data":[["Transverse colon","Spleen","Terminal ileum","Sigmoid colon","Uterus","B cell","NK cell","CD8 cell","Visceral omentum","CD4 cell","Monocyte","Subcutaneous adipose","Lung","Stomach","Cerebellum","Cortex","Adrenal gland","Sun-exposed skin","Aorta","Skeletal muscle","Tibial nerve","Esophagus muscularis","Ovary","Vagina","Esophagus mucosa","Hippocampus","Gastroesophageal junction","Testis","Putamen","Atrial appendage","Caudate","Prostate","Thyroid","Breast","Liver","Left ventricle","Pancreas","Omnibus","Near-gene control"],[144.080111320529,141.158621623095,141.04510606279,141.029433731503,136.433121834395,134.841331259209,134.550656131563,134.167247536572,132.951700686181,131.936721159805,131.766832559631,130.63582743053,130.467962094432,130.012865537369,129.498650395369,128.731442205305,128.622453573919,128.462714611566,127.875933401578,127.698431814063,127.553199089017,125.038218123558,122.442579357951,122.353902891227,121.945885555209,121.521603268523,121.458595921286,117.530317566792,116.858477771516,116.063729334267,115.956377369455,115.457979078278,115.147691878954,114.912361291844,114.687683640148,114.167957482136,108.390131029878,73.6938675109585,27.3801929559849],[-19.440707360164,-17.3907034026475,-17.7781104291537,-15.5479912390854,-16.2366012230343,-12.0374339849516,-11.5241973729289,-14.8396216527295,-18.6927639666784,-16.9896703201833,-12.6866002312834,-15.4697488251373,-17.2168196581881,-18.0392371805622,-1.66273145074738,-6.31185021370993,-18.4939885870604,-19.3007327865071,-12.1152155260617,-9.53326116994355,-17.3329612966011,-16.6243334698134,-16.2730815216057,-20.3662874781198,-18.7490410576272,-3.42297789996463,-17.1790035676927,-16.6731253823457,-4.35800135347746,-13.7970457613158,-7.66759286489961,-19.8682813299374,-18.2607762991511,-18.9813451026844,-14.3655860769421,-8.95205663693125,-8.88465109579683,-25.8224372745883,-11.8840634865752],[144.875991337873,141.954501640439,141.840986080134,141.825313748847,137.22900185174,135.637211276553,135.346536148907,134.963127553917,133.747580703526,132.732601177149,132.562712576975,131.431707447874,131.263842111776,130.808745554713,130.294530412713,129.527322222649,129.418333591263,129.25859462891,128.671813418922,128.494311831407,128.349079106361,125.834098140902,123.238459375295,123.149782908571,122.741765572553,122.317483285867,122.25447593863,118.326197584136,117.65435778886,116.859609351611,116.752257386799,116.253859095622,115.943571896298,115.708241309188,115.483563657492,114.96383749948,109.186011047222,74.4897475283026,28.176072973329],[112.735511163481,107.863643123863,115.692112570105,108.777751993697,103.206265226533,100.620663362807,101.252054703751,99.8889554225735,97.6647230087898,95.1464684797181,95.0506264427216,98.8652644700033,98.0993900130934,97.2958305508404,107.301570571787,102.794961922604,96.6730732537923,92.3037214278275,95.6637571838391,103.302384961521,90.5660807142829,90.9671230134658,85.4380019315938,87.6075922193768,84.9166026804732,99.1377325068638,85.6211126122359,80.1625662417098,94.6901074753994,84.0812968256267,90.6726477121487,77.7278121375301,79.3938128872414,78.7225709443821,79.4557555376909,84.9548070843416,80.5027342378165,31.7039463361025,-0.197879149084819]],"container":"<table class=\"white-space: nowrap\">\n  <thead>\n    <tr>\n      <th>Network<\/th>\n      <th>Log 10 BF<br/>(<i>M<\/i><sub>1<\/sub>: &theta;>0 or &sigma;<sup>2<\/sup>>0)<\/th>\n      <th>Log 10 BF<br/>(<i>M<\/i><sub>11<\/sub>: &theta;>0 and &sigma;<sup>2<\/sup>=0)<\/th>\n      <th>Log 10 BF<br/>(<i>M<\/i><sub>12<\/sub>: &theta;=0 and &sigma;<sup>2<\/sup>>0)<\/th>\n      <th>Log 10 BF<br/>(<i>M<\/i><sub>13<\/sub>: &theta;>0 and &sigma;<sup>2<\/sup>>0)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":false,"dom":"Bfrtip","buttons":["copy","print",{"extend":"collection","buttons":["csv","excel","pdf"],"text":"Download"}],"columnDefs":[{"targets":1,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\");\n  }"},{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\");\n  }"},{"targets":3,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\");\n  }"},{"targets":4,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\");\n  }"},{"className":"dt-right","targets":[1,2,3,4]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render","options.columnDefs.2.render","options.columnDefs.3.render"],"jsHooks":[]}</script>
 </div>
 <div id="ldsc-and-pascal-results" class="section level2">
 <h2>LDSC and Pascal results</h2>
 <p>The following table reports minus log 10 enrichment <span class="math inline">\(p\)</span>-values of LDSC and Pascal. Rows are sorted by <span class="math inline">\(p\)</span>-values based on LDSC-baselineLD (the 3rd column). Empty entries correspond to zero <span class="math inline">\(p\)</span>-values.</p>
 <p><br></p>
 <div id="htmlwidget-e948555e45e1e9771a0d" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-e948555e45e1e9771a0d">{"x":{"filter":"none","extensions":["Buttons"],"data":[["Cerebellum","Putamen","Near-gene control","Caudate","Hippocampus","Cortex","Skeletal muscle","Aorta","Left ventricle","Atrial appendage","Terminal ileum","Pancreas","Uterus","Ovary","Monocyte","Spleen","Thyroid","Sigmoid colon","Visceral omentum","CD8 cell","Sun-exposed skin","Lung","Testis","Stomach","Prostate","Subcutaneous adipose","Esophagus mucosa","CD4 cell","Adrenal gland","NK cell","B cell","Transverse colon","Vagina","Tibial nerve","Liver","Omnibus","Esophagus muscularis","Breast","Gastroesophageal junction"],[11.005181962269,9.94578602004589,9.47363356669359,9.22088694094663,8.31183066829558,8.26336115911083,5.32057366460996,5.21213834329232,5.01008931787428,5.01517748158167,4.52051936224402,4.66175990109937,4.22380115006455,4.24816318747539,4.03982258370499,4.20688041885424,4.01720344871055,4.16195341232398,3.99240272708624,3.97176515075094,3.80962434622792,3.7982649162293,3.85807609474086,3.77591522192896,3.7207964234169,3.62109166093593,3.50480748985277,3.49971814805722,3.6504254991833,3.67264311255953,3.19992182846172,3.11614814007793,3.31201753362441,3.24909164336702,2.82733759486047,2.57654084973017,3.06998741464714,2.82443802157404,2.49128204381591],[10.2163676680466,9.75412563368457,9.21281139519682,8.85864961729087,8.34069490358011,8.11942155958532,5.18993929857159,4.9500552823789,4.55760893560223,4.47407177028461,4.44992317183539,4.27657225445172,4.06397571279833,3.95262408290752,3.90713176745431,3.90603197665655,3.84004794053958,3.80769979742344,3.78870025506805,3.69252262500436,3.67444602284104,3.63312584262524,3.6180205745562,3.58668710323078,3.57126626755327,3.43515399167885,3.43348804930178,3.42573229613902,3.25719649876574,3.2383378412053,3.19597428680003,3.06102910105832,3.0536426444859,3.03297531338829,2.79270676899357,2.68737507906018,2.66793515541897,2.36361893293458,2.01667390457987],[13.3863880462417,13.4205636646173,null,15.6535597743804,13.1170013319226,14.4360758304628,7.7394355716355,9.70249413887382,7.57379058545749,8.72408702422524,13.6513937126725,8.29806433874158,11.9774150924245,10.7334129601029,7.05273602189814,15.3525297787164,null,8.95821133988478,9.83619242780332,11.9430616178525,14.4231108535774,13.7190613238191,null,8.47554408310314,11.4932263252389,7.2926731787301,null,10.169723667334,9.19797822946302,8.76050785701534,8.41973098610096,10.0715782757275,null,9.22492680028098,7.4632850060751,null,8.90051340551581,10.1837804537337,7.45654194467448],[1.01497791789046,1.01745741769706,3.04095860767891,1.03815194098168,0.994647863513783,1.01700554534134,0.996151877965702,0.998525903308267,2.53461714855158,2.50863830616573,0.984640244590786,0.987162775294828,0.972039140214553,0.977860429601608,0.973834591160748,2.41341269532824,1.19253262431572,2.48678239993206,0.95054938186845,0.97159143488453,0.989912153001476,0.983509868379172,2.65169513695184,0.975268110344751,0.97724180576323,0.991059338622913,1.06900005804385,0.977695377064931,0.975473285612848,1.00357589604491,0.972120590792793,0.988429556402722,1.07145053299834,0.97819072297766,0.967542417285071,2.37365963262496,2.46218090492673,0.990676606618987,1.02525809549905],[null,null,null,null,null,null,null,null,null,15.9545897720003,null,15.3525297787164,null,null,null,null,null,null,null,null,null,null,null,null,null,15.0514997830524,null,null,null,null,null,null,null,null,15.9545897720003,null,null,null,14.6993172660277],[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]],"container":"<table class=\"white-space: nowrap\">\n  <thead>\n    <tr>\n      <th>Network<\/th>\n      <th>LDSC<br/>(baseline)<\/th>\n      <th>LDSC<br/>(baselineLD)<\/th>\n      <th>Pascal<br/>(max, chi)<\/th>\n      <th>Pascal<br/>(max, emp)<\/th>\n      <th>Pascal<br/>(sum, chi)<\/th>\n      <th>Pascal<br/>(sum, emp)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":false,"dom":"Bfrtip","buttons":["copy","print",{"extend":"collection","buttons":["csv","excel","pdf"],"text":"Download"}],"columnDefs":[{"targets":1,"render":"function(data, type, row, meta) { return DTWidget.formatRound(data, 4, 3, \",\", \".\"); }"},{"targets":2,"render":"function(data, type, row, meta) { return DTWidget.formatRound(data, 4, 3, \",\", \".\"); }"},{"targets":3,"render":"function(data, type, row, meta) { return DTWidget.formatRound(data, 4, 3, \",\", \".\"); }"},{"targets":4,"render":"function(data, type, row, meta) { return DTWidget.formatRound(data, 4, 3, \",\", \".\"); }"},{"targets":5,"render":"function(data, type, row, meta) { return DTWidget.formatRound(data, 4, 3, \",\", \".\"); }"},{"targets":6,"render":"function(data, type, row, meta) { return DTWidget.formatRound(data, 4, 3, \",\", \".\"); }"},{"className":"dt-right","targets":[1,2,3,4,5,6]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render","options.columnDefs.2.render","options.columnDefs.3.render","options.columnDefs.4.render","options.columnDefs.5.render"],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-e948555e45e1e9771a0d">{"x":{"filter":"none","extensions":["Buttons"],"data":[["Cerebellum","Putamen","Near-gene control","Caudate","Hippocampus","Cortex","Skeletal muscle","Aorta","Left ventricle","Atrial appendage","Terminal ileum","Pancreas","Uterus","Ovary","Monocyte","Spleen","Thyroid","Sigmoid colon","Visceral omentum","CD8 cell","Sun-exposed skin","Lung","Testis","Stomach","Prostate","Subcutaneous adipose","Esophagus mucosa","CD4 cell","Adrenal gland","NK cell","B cell","Transverse colon","Vagina","Tibial nerve","Liver","Omnibus","Esophagus muscularis","Breast","Gastroesophageal junction"],[11.005181962269,9.94578602004589,9.47363356669359,9.22088694094663,8.31183066829558,8.26336115911083,5.32057366460996,5.21213834329232,5.01008931787428,5.01517748158167,4.52051936224402,4.66175990109937,4.22380115006455,4.24816318747539,4.03982258370499,4.20688041885424,4.01720344871055,4.16195341232398,3.99240272708624,3.97176515075094,3.80962434622792,3.7982649162293,3.85807609474086,3.77591522192896,3.7207964234169,3.62109166093593,3.50480748985277,3.49971814805722,3.6504254991833,3.67264311255953,3.19992182846172,3.11614814007793,3.31201753362441,3.24909164336702,2.82733759486047,2.57654084973017,3.06998741464714,2.82443802157404,2.49128204381591],[10.2163676680466,9.75412563368457,9.21281139519682,8.85864961729087,8.34069490358011,8.11942155958532,5.18993929857159,4.9500552823789,4.55760893560223,4.47407177028461,4.44992317183539,4.27657225445172,4.06397571279833,3.95262408290752,3.90713176745431,3.90603197665655,3.84004794053958,3.80769979742344,3.78870025506805,3.69252262500436,3.67444602284104,3.63312584262524,3.6180205745562,3.58668710323078,3.57126626755327,3.43515399167885,3.43348804930178,3.42573229613902,3.25719649876574,3.2383378412053,3.19597428680003,3.06102910105832,3.0536426444859,3.03297531338829,2.79270676899357,2.68737507906018,2.66793515541897,2.36361893293458,2.01667390457987],[13.3863880462417,13.4205636646173,null,15.6535597743804,13.1170013319226,14.4360758304628,7.7394355716355,9.70249413887382,7.57379058545749,8.72408702422524,13.6513937126725,8.29806433874158,11.9774150924245,10.7334129601029,7.05273602189814,15.3525297787164,null,8.95821133988478,9.83619242780332,11.9430616178525,14.4231108535774,13.7190613238191,null,8.47554408310314,11.4932263252389,7.2926731787301,null,10.169723667334,9.19797822946302,8.76050785701534,8.41973098610096,10.0715782757275,null,9.22492680028098,7.4632850060751,null,8.90051340551581,10.1837804537337,7.45654194467448],[1.01497791789046,1.01745741769706,3.04095860767891,1.03815194098168,0.994647863513783,1.01700554534134,0.996151877965702,0.998525903308267,2.53461714855158,2.50863830616573,0.984640244590786,0.987162775294828,0.972039140214553,0.977860429601608,0.973834591160748,2.41341269532824,1.19253262431572,2.48678239993206,0.95054938186845,0.97159143488453,0.989912153001476,0.983509868379172,2.65169513695184,0.975268110344751,0.97724180576323,0.991059338622913,1.06900005804385,0.977695377064931,0.975473285612848,1.00357589604491,0.972120590792793,0.988429556402722,1.07145053299834,0.97819072297766,0.967542417285071,2.37365963262496,2.46218090492673,0.990676606618987,1.02525809549905],[null,null,null,null,null,null,null,null,null,15.9545897720003,null,15.3525297787164,null,null,null,null,null,null,null,null,null,null,null,null,null,15.0514997830524,null,null,null,null,null,null,null,null,15.9545897720003,null,null,null,14.6993172660277],[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]],"container":"<table class=\"white-space: nowrap\">\n  <thead>\n    <tr>\n      <th>Network<\/th>\n      <th>LDSC<br/>(baseline)<\/th>\n      <th>LDSC<br/>(baselineLD)<\/th>\n      <th>Pascal<br/>(max, chi)<\/th>\n      <th>Pascal<br/>(max, emp)<\/th>\n      <th>Pascal<br/>(sum, chi)<\/th>\n      <th>Pascal<br/>(sum, emp)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":false,"dom":"Bfrtip","buttons":["copy","print",{"extend":"collection","buttons":["csv","excel","pdf"],"text":"Download"}],"columnDefs":[{"targets":1,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\");\n  }"},{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\");\n  }"},{"targets":3,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\");\n  }"},{"targets":4,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\");\n  }"},{"targets":5,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\");\n  }"},{"targets":6,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\");\n  }"},{"className":"dt-right","targets":[1,2,3,4,5,6]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render","options.columnDefs.2.render","options.columnDefs.3.render","options.columnDefs.4.render","options.columnDefs.5.render"],"jsHooks":[]}</script>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -866,73 +893,72 @@ wflow_publish(“analysis/scz2014_net.Rmd”)
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>devtools<span class="op">::</span><span class="kw">session_info</span>()</span></code></pre></div>
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────
  setting  value                       
- version  R version 4.0.2 (2020-06-22)
- os       Ubuntu 18.04.4 LTS          
+ version  R version 4.0.3 (2020-10-10)
+ os       Ubuntu 20.04.1 LTS          
  system   x86_64, linux-gnu           
  ui       X11                         
  language (EN)                        
  collate  en_US.UTF-8                 
  ctype    en_US.UTF-8                 
- tz       America/Los_Angeles         
- date     2020-08-03                  
+ tz       America/New_York            
+ date     2020-11-30                  
 
 ─ Packages ───────────────────────────────────────────────────────────────────
  package     * version date       lib source        
  assertthat    0.2.1   2019-03-21 [3] CRAN (R 4.0.0)
- backports     1.1.8   2020-06-17 [3] CRAN (R 4.0.1)
- callr         3.4.3   2020-03-28 [3] CRAN (R 4.0.0)
- cli           2.0.2   2020-02-28 [3] CRAN (R 4.0.0)
+ callr         3.5.1   2020-10-13 [1] CRAN (R 4.0.3)
+ cli           2.2.0   2020-11-20 [3] CRAN (R 4.0.3)
  crayon        1.3.4   2017-09-16 [3] CRAN (R 4.0.0)
  crosstalk     1.1.0.1 2020-03-13 [3] CRAN (R 4.0.0)
  desc          1.2.0   2018-05-01 [3] CRAN (R 4.0.0)
- devtools      2.3.1   2020-07-21 [3] CRAN (R 4.0.2)
- digest        0.6.25  2020-02-23 [3] CRAN (R 4.0.0)
- dplyr       * 1.0.1   2020-07-31 [1] CRAN (R 4.0.2)
- DT          * 0.14    2020-06-24 [3] CRAN (R 4.0.2)
+ devtools      2.3.2   2020-09-18 [3] CRAN (R 4.0.2)
+ digest        0.6.27  2020-10-24 [3] CRAN (R 4.0.3)
+ dplyr       * 1.0.2   2020-08-18 [1] CRAN (R 4.0.2)
+ DT          * 0.16    2020-10-13 [3] CRAN (R 4.0.3)
  ellipsis      0.3.1   2020-05-15 [3] CRAN (R 4.0.0)
  evaluate      0.14    2019-05-28 [3] CRAN (R 4.0.0)
  fansi         0.4.1   2020-01-08 [3] CRAN (R 4.0.0)
- fs            1.5.0   2020-07-31 [3] CRAN (R 4.0.2)
- generics      0.0.2   2018-11-29 [1] CRAN (R 4.0.2)
+ fs            1.5.0   2020-07-31 [1] CRAN (R 4.0.2)
+ generics      0.1.0   2020-10-31 [1] CRAN (R 4.0.3)
  git2r         0.27.1  2020-05-03 [3] CRAN (R 4.0.0)
- glue          1.4.1   2020-05-13 [3] CRAN (R 4.0.0)
+ glue          1.4.2   2020-08-27 [3] CRAN (R 4.0.2)
  htmltools     0.5.0   2020-06-16 [3] CRAN (R 4.0.1)
- htmlwidgets   1.5.1   2019-10-08 [3] CRAN (R 4.0.0)
+ htmlwidgets   1.5.2   2020-10-03 [3] CRAN (R 4.0.2)
  httpuv        1.5.4   2020-06-06 [3] CRAN (R 4.0.0)
- jsonlite      1.7.0   2020-06-25 [3] CRAN (R 4.0.2)
- knitr         1.29    2020-06-23 [3] CRAN (R 4.0.2)
+ jsonlite      1.7.1   2020-09-07 [3] CRAN (R 4.0.2)
+ knitr         1.30    2020-09-22 [3] CRAN (R 4.0.2)
  later         1.1.0.1 2020-06-05 [3] CRAN (R 4.0.0)
  lifecycle     0.2.0   2020-03-06 [3] CRAN (R 4.0.0)
- magrittr      1.5     2014-11-22 [3] CRAN (R 4.0.0)
+ magrittr      2.0.1   2020-11-17 [3] CRAN (R 4.0.3)
  memoise       1.1.0   2017-04-21 [3] CRAN (R 4.0.0)
- pillar        1.4.6   2020-07-10 [3] CRAN (R 4.0.2)
+ pillar        1.4.7   2020-11-20 [3] CRAN (R 4.0.3)
  pkgbuild      1.1.0   2020-07-13 [3] CRAN (R 4.0.2)
  pkgconfig     2.0.3   2019-09-22 [3] CRAN (R 4.0.0)
  pkgload       1.1.0   2020-05-29 [3] CRAN (R 4.0.0)
  prettyunits   1.1.1   2020-01-24 [3] CRAN (R 4.0.0)
- processx      3.4.3   2020-07-05 [3] CRAN (R 4.0.2)
+ processx      3.4.4   2020-09-03 [3] CRAN (R 4.0.2)
  promises      1.1.1   2020-06-09 [3] CRAN (R 4.0.1)
- ps            1.3.3   2020-05-08 [3] CRAN (R 4.0.0)
+ ps            1.4.0   2020-10-07 [3] CRAN (R 4.0.2)
  purrr         0.3.4   2020-04-17 [3] CRAN (R 4.0.0)
- R6            2.4.1   2019-11-12 [3] CRAN (R 4.0.0)
+ R6            2.5.0   2020-10-28 [3] CRAN (R 4.0.3)
  Rcpp          1.0.5   2020-07-06 [3] CRAN (R 4.0.2)
  remotes       2.2.0   2020-07-21 [3] CRAN (R 4.0.2)
- rlang         0.4.7   2020-07-09 [3] CRAN (R 4.0.2)
- rmarkdown     2.3     2020-06-18 [1] CRAN (R 4.0.2)
- rprojroot     1.3-2   2018-01-03 [3] CRAN (R 4.0.0)
- rstudioapi    0.11    2020-02-07 [3] CRAN (R 4.0.0)
+ rlang         0.4.9   2020-11-26 [3] CRAN (R 4.0.3)
+ rmarkdown     2.5     2020-10-21 [1] CRAN (R 4.0.3)
+ rprojroot     2.0.2   2020-11-15 [3] CRAN (R 4.0.3)
+ rstudioapi    0.13    2020-11-12 [3] CRAN (R 4.0.3)
  sessioninfo   1.1.1   2018-11-05 [3] CRAN (R 4.0.0)
- stringi       1.4.6   2020-02-17 [3] CRAN (R 4.0.0)
+ stringi       1.5.3   2020-09-09 [3] CRAN (R 4.0.2)
  stringr       1.4.0   2019-02-10 [3] CRAN (R 4.0.0)
- testthat      2.3.2   2020-03-02 [3] CRAN (R 4.0.0)
- tibble        3.0.3   2020-07-10 [3] CRAN (R 4.0.2)
- tidyselect    1.1.0   2020-05-11 [1] CRAN (R 4.0.2)
- usethis       1.6.1   2020-04-29 [3] CRAN (R 4.0.0)
- vctrs         0.3.2   2020-07-15 [3] CRAN (R 4.0.2)
+ testthat      3.0.0   2020-10-31 [3] CRAN (R 4.0.3)
+ tibble        3.0.4   2020-10-12 [3] CRAN (R 4.0.3)
+ tidyselect    1.1.0   2020-05-11 [1] CRAN (R 4.0.0)
+ usethis       1.6.3   2020-09-17 [3] CRAN (R 4.0.2)
+ vctrs         0.3.5   2020-11-17 [3] CRAN (R 4.0.3)
  whisker       0.4     2019-08-28 [3] CRAN (R 4.0.0)
- withr         2.2.0   2020-04-20 [3] CRAN (R 4.0.0)
- workflowr     1.6.2   2020-04-30 [1] CRAN (R 4.0.2)
- xfun          0.16    2020-07-24 [3] CRAN (R 4.0.2)
+ withr         2.3.0   2020-09-22 [3] CRAN (R 4.0.2)
+ workflowr     1.6.2   2020-04-30 [1] CRAN (R 4.0.0)
+ xfun          0.19    2020-10-30 [3] CRAN (R 4.0.3)
  yaml          2.2.1   2020-02-01 [3] CRAN (R 4.0.0)
 
 [1] /home/maimaizhu/R/x86_64-pc-linux-gnu-library/4.0
@@ -965,7 +991,7 @@ footer is added to webpages before the MathJax javascript. -->
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();

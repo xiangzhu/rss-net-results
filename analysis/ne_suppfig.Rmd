@@ -1,0 +1,203 @@
+---
+title: "Supplementary Figure 13 of Zhu et al (2020)"
+author: "Xiang Zhu"
+date: "2020-12-02"
+output: workflowr::wflow_html
+editor_options:
+  chunk_output_type: console
+---
+
+[Zhu et al, (2020)]: https://doi.org/10.1101/2020.03.13.990010
+
+```{r, include=FALSE}
+# load packages
+suppressPackageStartupMessages(library(dplyr))
+suppressPackageStartupMessages(library(DT))
+
+# specify paths
+proj_path <- "~/Dropbox/rss/Data/peca_human/job_camp/gwas33_net71/results/"
+
+# define functions
+make_df <- function(proj_path,gwas_name) {
+  oe_file <- paste0(proj_path,"aggregated_results/",gwas_name,"/",gwas_name,"_model.rds")
+  ne_file <- paste0(proj_path,"ne_model_results/aggregated_results/",gwas_name,"_model.rds")
+
+  oe_df <- readRDS(oe_file)
+  ne_df <- readRDS(ne_file)
+  
+  names(oe_df) <- paste0("oe_",names(oe_df))
+  names(ne_df) <- paste0("ne_",names(ne_df))
+
+  all_df <- dplyr::inner_join(ne_df[,c("ne_net","ne_bf40")],oe_df[,c("oe_net","oe_bf40")],by=c("ne_net"="oe_net"))
+  
+  all_df$log10_oe_bf40 <- log10(all_df$oe_bf40)
+  all_df$log10_ne_bf40 <- log10(all_df$ne_bf40)
+  
+  all_df <- all_df[,c("ne_net","log10_oe_bf40","log10_ne_bf40")]
+  
+  all_df <- dplyr::arrange(all_df,-log10_oe_bf40)
+  
+  names(all_df)[names(all_df)=="ne_net"] <- "Network"
+  names(all_df)[names(all_df)=="log10_oe_bf40"] <- "<i>y</i>-axis"
+  names(all_df)[names(all_df)=="log10_ne_bf40"] <- "<i>x</i>-axis"
+  
+  return(all_df)
+}
+```
+
+This page provides numerical values to reproduce
+Supplementary Figure 13 of [Zhu et al (2020)]().
+
+## Body mass index
+
+<br>
+
+```{r, echo=FALSE}
+my_df <- make_df(proj_path,gwas_name="bmi2015")
+
+my_dt <- DT::datatable(my_df, rownames=FALSE, class="white-space: nowrap", escape=FALSE, extensions="Buttons", options=list("paging"=FALSE, dom="Bfrtip",buttons=list("copy","print",list(extend="collection",buttons=c("csv","excel","pdf"),text="Download")))) %>% DT::formatRound(2:3, 4)
+
+my_dt
+
+rm(my_df,my_dt)
+```
+
+## Waist-to-hip ratio
+
+<br>
+
+```{r, echo=FALSE}
+my_df <- make_df(proj_path,gwas_name="waist2015")
+
+my_dt <- DT::datatable(my_df, rownames=FALSE, class="white-space: nowrap", escape=FALSE, extensions="Buttons", options=list("paging"=FALSE, dom="Bfrtip",buttons=list("copy","print",list(extend="collection",buttons=c("csv","excel","pdf"),text="Download")))) %>% DT::formatRound(2:3, 4)
+
+my_dt
+
+rm(my_df,my_dt)
+```
+
+## Breast cancer
+
+<br>
+
+```{r, echo=FALSE}
+my_df <- make_df(proj_path,gwas_name="gameon2012")
+
+my_dt <- DT::datatable(my_df, rownames=FALSE, class="white-space: nowrap", escape=FALSE, extensions="Buttons", options=list("paging"=FALSE, dom="Bfrtip",buttons=list("copy","print",list(extend="collection",buttons=c("csv","excel","pdf"),text="Download")))) %>% DT::formatRound(2:3, 4)
+
+my_dt
+
+rm(my_df,my_dt)
+```
+
+## Rheumatoid arthritis
+
+<br>
+
+```{r, echo=FALSE}
+my_df <- make_df(proj_path,gwas_name="ra2014")
+
+my_dt <- DT::datatable(my_df, rownames=FALSE, class="white-space: nowrap", escape=FALSE, extensions="Buttons", options=list("paging"=FALSE, dom="Bfrtip",buttons=list("copy","print",list(extend="collection",buttons=c("csv","excel","pdf"),text="Download")))) %>% DT::formatRound(2:3, 4)
+
+my_dt
+
+rm(my_df,my_dt)
+```
+
+## High-density lipoprotein
+
+<br>
+
+```{r, echo=FALSE}
+my_df <- make_df(proj_path,gwas_name="hdl2010")
+
+my_dt <- DT::datatable(my_df, rownames=FALSE, class="white-space: nowrap", escape=FALSE, extensions="Buttons", options=list("paging"=FALSE, dom="Bfrtip",buttons=list("copy","print",list(extend="collection",buttons=c("csv","excel","pdf"),text="Download")))) %>% DT::formatRound(2:3, 4)
+
+my_dt
+
+rm(my_df,my_dt)
+```
+
+## Low-density lipoprotein
+
+<br>
+
+```{r, echo=FALSE}
+my_df <- make_df(proj_path,gwas_name="ldl2010")
+
+my_dt <- DT::datatable(my_df, rownames=FALSE, class="white-space: nowrap", escape=FALSE, extensions="Buttons", options=list("paging"=FALSE, dom="Bfrtip",buttons=list("copy","print",list(extend="collection",buttons=c("csv","excel","pdf"),text="Download")))) %>% DT::formatRound(2:3, 4)
+
+my_dt
+
+rm(my_df,my_dt)
+```
+
+## Heart rate
+
+<br>
+
+```{r, echo=FALSE}
+my_df <- make_df(proj_path,gwas_name="hr2013")
+
+my_dt <- DT::datatable(my_df, rownames=FALSE, class="white-space: nowrap", escape=FALSE, extensions="Buttons", options=list("paging"=FALSE, dom="Bfrtip",buttons=list("copy","print",list(extend="collection",buttons=c("csv","excel","pdf"),text="Download")))) %>% DT::formatRound(2:3, 4)
+
+my_dt
+
+rm(my_df,my_dt)
+```
+
+## Coronary artery disease
+
+<br>
+
+```{r, echo=FALSE}
+my_df <- make_df(proj_path,gwas_name="cad2015")
+
+my_dt <- DT::datatable(my_df, rownames=FALSE, class="white-space: nowrap", escape=FALSE, extensions="Buttons", options=list("paging"=FALSE, dom="Bfrtip",buttons=list("copy","print",list(extend="collection",buttons=c("csv","excel","pdf"),text="Download")))) %>% DT::formatRound(2:3, 4)
+
+my_dt
+
+rm(my_df,my_dt)
+```
+
+## Atrial fibrillation
+
+<br>
+
+```{r, echo=FALSE}
+my_df <- make_df(proj_path,gwas_name="af2017")
+
+my_dt <- DT::datatable(my_df, rownames=FALSE, class="white-space: nowrap", escape=FALSE, extensions="Buttons", options=list("paging"=FALSE, dom="Bfrtip",buttons=list("copy","print",list(extend="collection",buttons=c("csv","excel","pdf"),text="Download")))) %>% DT::formatRound(2:3, 4)
+
+my_dt
+
+rm(my_df,my_dt)
+```
+
+## Schizophrenia
+
+<br>
+
+```{r, echo=FALSE}
+my_df <- make_df(proj_path,gwas_name="scz2014")
+
+my_dt <- DT::datatable(my_df, rownames=FALSE, class="white-space: nowrap", escape=FALSE, extensions="Buttons", options=list("paging"=FALSE, dom="Bfrtip",buttons=list("copy","print",list(extend="collection",buttons=c("csv","excel","pdf"),text="Download")))) %>% DT::formatRound(2:3, 4)
+
+my_dt
+
+rm(my_df,my_dt)
+```
+
+## Neuroticism
+
+<br>
+
+```{r, echo=FALSE}
+my_df <- make_df(proj_path,gwas_name="neu2016")
+
+my_dt <- DT::datatable(my_df, rownames=FALSE, class="white-space: nowrap", escape=FALSE, extensions="Buttons", options=list("paging"=FALSE, dom="Bfrtip",buttons=list("copy","print",list(extend="collection",buttons=c("csv","excel","pdf"),text="Download")))) %>% DT::formatRound(2:3, 4)
+
+my_dt
+
+rm(my_df,my_dt)
+```

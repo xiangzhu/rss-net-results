@@ -46,7 +46,7 @@ make_df <- function(proj_path,gwas_name) {
 ```
 
 This page provides numerical values to reproduce
-Supplementary Figure 14 of [Zhu et al (2020)]().
+Supplementary Figure 14 of [Zhu et al (2020)][].
 
 ## Body mass index
 

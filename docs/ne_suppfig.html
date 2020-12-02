@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Xiang Zhu" />
+
+<meta name="date" content="2020-12-02" />
+
+<title>Supplementary Figure 13 of Zhu et al (2020)</title>
+
+<script src="site_libs/jquery-1.12.4/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/sandstone.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<script src="site_libs/htmlwidgets-1.5.2/htmlwidgets.js"></script>
+<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="site_libs/datatables-binding-0.16/datatables.js"></script>
+<link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="site_libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+<script src="site_libs/jszip-1.10.20/jszip.min.js"></script>
+<script src="site_libs/pdfmake-1.10.20/pdfmake.js"></script>
+<script src="site_libs/pdfmake-1.10.20/vfs_fonts.js"></script>
+<link href="site_libs/dt-ext-buttons-1.10.20/css/buttons.dataTables.min.css" rel="stylesheet" />
+<script src="site_libs/dt-ext-buttons-1.10.20/js/dataTables.buttons.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.10.20/js/buttons.flash.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.10.20/js/buttons.html5.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.10.20/js/buttons.colVis.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.10.20/js/buttons.print.min.js"></script>
+<link href="site_libs/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<link rel="icon" href="https://github.com/workflowr/workflowr-assets/raw/master/img/reproducible.png">
+<!-- Add a small amount of space between sections. -->
+<style type="text/css">
+div.section {
+  padding-top: 12px;
+}
+</style>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">rss-net-results</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="https://suwonglab.github.io/rss-net/results.html">Home</a>
+</li>
+<li>
+  <a href="license.html">License</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://suwonglab.github.io/rss-net/results.html">
+    <span class="fa fa-github"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Supplementary Figure 13 of Zhu et al (2020)</h1>
+<h4 class="author">Xiang Zhu</h4>
+<h4 class="date">2020-12-02</h4>
+
+</div>
+
+
+<p>
+<button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
+<span class="glyphicon glyphicon-list" aria-hidden="true"></span> workflowr <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+</button>
+</p>
+<div id="workflowr-report" class="collapse">
+<ul class="nav nav-tabs">
+<li class="active">
+<a data-toggle="tab" href="#summary">Summary</a>
+</li>
+<li>
+<a data-toggle="tab" href="#checks"> Checks <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> </a>
+</li>
+<li>
+<a data-toggle="tab" href="#versions">Past versions</a>
+</li>
+</ul>
+<div class="tab-content">
+<div id="summary" class="tab-pane fade in active">
+<p>
+<strong>Last updated:</strong> 2020-12-02
+</p>
+<p>
+<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
+</p>
+<p>
+<strong>Knit directory:</strong> <code>rss-net-results/</code> <span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="This is the local directory in which the code in this file was executed."> </span>
+</p>
+<p>
+This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis was created with <a
+  href="https://github.com/jdblischak/workflowr">workflowr</a> (version 1.6.2). The <em>Checks</em> tab describes the reproducibility checks that were applied when the results were created. The <em>Past versions</em> tab lists the development history.
+</p>
+<hr>
+</div>
+<div id="checks" class="tab-pane fade">
+<div id="workflowr-checks" class="panel-group">
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date </a>
+</p>
+</div>
+<div id="strongRMarkdownfilestronguptodate" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great! Since the R Markdown file has been committed to the Git repository, you know the exact version of the code that produced these results.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongEnvironmentstrongempty"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Environment:</strong> empty </a>
+</p>
+</div>
+<div id="strongEnvironmentstrongempty" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! The global environment was empty. Objects defined in the global environment can affect the analysis in your R Markdown file in unknown ways. For reproduciblity it’s best to always run the code in an empty environment.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSeedstrongcodesetseed20180719code"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Seed:</strong> <code>set.seed(20180719)</code> </a>
+</p>
+</div>
+<div id="strongSeedstrongcodesetseed20180719code" class="panel-collapse collapse">
+<div class="panel-body">
+<p>The command <code>set.seed(20180719)</code> was run prior to running the code in the R Markdown file. Setting a seed ensures that any results that rely on randomness, e.g. subsampling or permutations, are reproducible.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSessioninformationstrongrecorded"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Session information:</strong> recorded </a>
+</p>
+</div>
+<div id="strongSessioninformationstrongrecorded" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! Recording the operating system, R version, and package versions is critical for reproducibility.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongCachestrongnone"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Cache:</strong> none </a>
+</p>
+</div>
+<div id="strongCachestrongnone" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Nice! There were no cached chunks for this analysis, so you can be confident that you successfully produced the results during this run.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongFilepathsstrongrelative"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>File paths:</strong> relative </a>
+</p>
+</div>
+<div id="strongFilepathsstrongrelative" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! Using relative paths to the files within your workflowr project makes it easier to run your code on other machines.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomxiangzhursspecatree876ed261b09baf0fdd9f815c2d0f918e6c902e99targetblank876ed26a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/xiangzhu/rss-peca/tree/876ed261b09baf0fdd9f815c2d0f918e6c902e99" target="_blank">876ed26</a> </a>
+</p>
+</div>
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomxiangzhursspecatree876ed261b09baf0fdd9f815c2d0f918e6c902e99targetblank876ed26a" class="panel-collapse collapse">
+<div class="panel-body">
+<p>
+Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
+</p>
+<p>
+The results in this page were generated with repository version <a href="https://github.com/xiangzhu/rss-peca/tree/876ed261b09baf0fdd9f815c2d0f918e6c902e99" target="_blank">876ed26</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+</p>
+<p>
+Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
+</p>
+<pre><code>
+Ignored files:
+    Ignored:    .Rhistory
+    Ignored:    .Rproj.user/
+
+</code></pre>
+<p>
+Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes.
+</p>
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="versions" class="tab-pane fade">
+
+<p>
+These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/ne_suppfig.Rmd</code>) and HTML (<code>docs/ne_suppfig.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
+</p>
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+File
+</th>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+<th>
+Message
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/xiangzhu/rss-peca/blob/876ed261b09baf0fdd9f815c2d0f918e6c902e99/analysis/ne_suppfig.Rmd" target="_blank">876ed26</a>
+</td>
+<td>
+xiangzhu
+</td>
+<td>
+2020-12-02
+</td>
+<td>
+wflow_publish(“analysis/ne_suppfig.Rmd”)
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr>
+</div>
+</div>
+</div>
+<p>This page provides numerical values to reproduce Supplementary Figure 13 of <a href="">Zhu et al (2020)</a>.</p>
+<div id="body-mass-index" class="section level2">
+<h2>Body mass index</h2>
+<p><br></p>
+<div id="htmlwidget-df4a1fd35b70caa27ccd" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-df4a1fd35b70caa27ccd">{"x":{"filter":"none","extensions":["Buttons"],"data":[["NK cell","Pancreas","Skeletal muscle","Transverse colon","Sigmoid colon","Adrenal gland","Terminal ileum","Subcutaneous adipose","CD8 cell","Spleen","Gastroesophageal junction","B cell","Lung","Atrial appendage","Left ventricle","Vagina","Cerebellum","Ovary","Aorta","Visceral omentum","Tibial nerve","Stomach","CD4 cell","Monocyte","Uterus","Esophagus muscularis","Sun-exposed skin","Liver","Breast","Cortex","Thyroid","Putamen","Caudate","Hippocampus","Prostate","Esophagus mucosa","Testis","Omnibus"],[13.5962997610614,13.3162744135944,12.9688692662094,12.9041042623783,12.7399320725478,12.7302526141797,12.6982070798455,12.6751050060391,12.5755268879772,12.4811304942289,12.4604782522969,12.2548292488403,12.2496287913207,12.0778239113052,12.0290918817127,11.9897327034028,11.939435296154,11.9269453842789,11.9134913488656,11.8994068968769,11.8866914903459,11.8722673511665,11.7933148836963,11.7291751038801,11.6319829099781,11.4845198691617,11.4641577488351,11.3247403290461,11.2377500955652,11.0173299834608,10.6678697313041,10.6655970060777,10.5358753098011,10.528529394676,10.50078534066,10.2696713819009,10.0683460598781,7.09054569815826],[2.80151779194922,4.49429462695951,2.25111095214026,2.1645405301428,1.94667350361374,1.90681478382409,1.95105648370387,2.03736110881876,2.01259338901475,1.81263053122818,2.18079007073802,2.36450934173862,1.91524070960952,1.76906254861251,2.23505958112932,1.96977599390481,2.00537340316936,2.03490255180493,2.00345076656399,1.77706679954532,1.83056923982112,1.75640142980961,1.79076604077194,1.98164183488415,1.77801554690635,1.66483435022168,1.65981681228298,2.9253716303036,1.85588393288425,1.72473198952583,1.76203847218108,1.69639597552524,1.64899504280528,1.68892710279818,1.74161651256622,1.73417474455274,1.60167393300274,1.83342166987728]],"container":"<table class=\"white-space: nowrap\">\n  <thead>\n    <tr>\n      <th>Network<\/th>\n      <th><i>y<\/i>-axis<\/th>\n      <th><i>x<\/i>-axis<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":false,"dom":"Bfrtip","buttons":["copy","print",{"extend":"collection","buttons":["csv","excel","pdf"],"text":"Download"}],"columnDefs":[{"targets":1,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\");\n  }"},{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\");\n  }"},{"className":"dt-right","targets":[1,2]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render"],"jsHooks":[]}</script>
+</div>
+<div id="waist-to-hip-ratio" class="section level2">
+<h2>Waist-to-hip ratio</h2>
+<p><br></p>
+<div id="htmlwidget-e948555e45e1e9771a0d" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e948555e45e1e9771a0d">{"x":{"filter":"none","extensions":["Buttons"],"data":[["Esophagus mucosa","Pancreas","Cortex","Putamen","Caudate","CD4 cell","B cell","Atrial appendage","CD8 cell","Stomach","Terminal ileum","Tibial nerve","Hippocampus","Subcutaneous adipose","NK cell","Uterus","Left ventricle","Aorta","Gastroesophageal junction","Vagina","Visceral omentum","Thyroid","Transverse colon","Skeletal muscle","Lung","Prostate","Liver","Adrenal gland","Esophagus muscularis","Breast","Sigmoid colon","Monocyte","Ovary","Testis","Sun-exposed skin","Spleen","Cerebellum","Omnibus"],[239.831260417358,212.433933413868,205.532433331995,202.727178068824,200.290082785921,199.649276356487,199.375867079508,198.07092058557,195.216393888766,190.946913936815,190.588013731636,190.464849557195,189.272454923125,184.825633209496,183.881729169147,180.53273234129,180.261697422063,178.785144800138,175.187020726271,175.014641819254,173.899245742205,172.040059066863,171.146808732387,168.739950614194,163.271063362786,160.037068655528,158.340171374123,157.495914118965,146.504781401387,146.484475780201,145.366514520452,145.046398332771,144.860738082371,137.948366044035,136.607488370799,129.325242321532,126.47940949492,53.5344855199864],[23.4256710739129,24.5119869977438,21.7432354003528,20.1248681157852,25.053455311547,23.6847216058291,24.5080417458081,24.6864591935884,22.9816624607492,23.344488218473,20.349819703895,25.001818319863,23.5494324958118,27.0044593913641,21.2149135622149,26.5558511535761,25.0864212624888,26.370681567625,24.0063074079307,20.2975745852139,27.5680601388725,26.8726958719391,23.6854545469225,25.9087130832742,24.1142909180175,26.373659713217,24.9695668435519,24.104052737756,24.5726065697475,26.0478747116082,24.4034341796245,22.866555421976,23.1133092373856,22.533354937948,24.9924174167297,23.763276545727,22.8303085270832,24.5227591650275]],"container":"<table class=\"white-space: nowrap\">\n  <thead>\n    <tr>\n      <th>Network<\/th>\n      <th><i>y<\/i>-axis<\/th>\n      <th><i>x<\/i>-axis<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":false,"dom":"Bfrtip","buttons":["copy","print",{"extend":"collection","buttons":["csv","excel","pdf"],"text":"Download"}],"columnDefs":[{"targets":1,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\");\n  }"},{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\");\n  }"},{"className":"dt-right","targets":[1,2]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render"],"jsHooks":[]}</script>
+</div>
+<div id="breast-cancer" class="section level2">
+<h2>Breast cancer</h2>
+<p><br></p>
+<div id="htmlwidget-be7ef12aac2f96185af6" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-be7ef12aac2f96185af6">{"x":{"filter":"none","extensions":["Buttons"],"data":[["Aorta","Breast","Atrial appendage","Lung","Cortex","Esophagus muscularis","Spleen","Terminal ileum","Hippocampus","Visceral omentum","Tibial nerve","Caudate","Transverse colon","Sun-exposed skin","Sigmoid colon","Adrenal gland","Stomach","Vagina","Subcutaneous adipose","Cerebellum","Pancreas","Uterus","Thyroid","Liver","Skeletal muscle","Esophagus mucosa","Ovary","Prostate","Gastroesophageal junction","Putamen","Testis","B cell","CD8 cell","Monocyte","NK cell","CD4 cell","Left ventricle","Omnibus"],[8.91755933830235,8.07876700961037,7.90738799927903,7.85339542200239,7.83831945305355,7.79910544926493,7.79138604899338,7.60600564066698,7.53852252107275,7.49737332298728,7.45758683907257,7.41935886661481,7.41887978942279,7.12463820248542,6.75868512148264,6.71883243325144,6.71428348593562,6.65863402097913,6.52439446019394,6.36477661198688,6.24922574830118,6.19798589295182,6.00669202181256,5.90877575043675,5.89611867592192,5.88181303656859,5.87559255345539,5.86625309384577,5.86404796093751,5.85786687433258,5.77461752691912,5.47901807514828,5.45070030633336,5.31366952507849,5.29428255961344,5.22346826095981,4.78469688323063,4.15810863066542],[2.18562101376106,1.61166434687847,1.70954757719654,1.5452843184144,1.35584681745987,1.7873155996365,1.21151562930401,1.8013637777327,1.33408192668584,1.49768135842496,1.32255053319281,1.3737121116486,1.95202125464661,1.77997963902845,1.64330223578375,1.71943056482239,1.77781058258062,1.34601331988468,1.60901023047875,0.853820053932331,2.08423287552652,1.25702130703126,1.40077986357192,1.89275842920697,1.05622046962456,1.70803307482224,1.75921091857314,1.54783192218092,1.49077813865509,0.91498056373017,1.75938496659748,1.00174668001229,1.05954755236676,1.1361221259007,1.12522771562987,0.990131041826148,0.957951350050822,1.17938776435694]],"container":"<table class=\"white-space: nowrap\">\n  <thead>\n    <tr>\n      <th>Network<\/th>\n      <th><i>y<\/i>-axis<\/th>\n      <th><i>x<\/i>-axis<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":false,"dom":"Bfrtip","buttons":["copy","print",{"extend":"collection","buttons":["csv","excel","pdf"],"text":"Download"}],"columnDefs":[{"targets":1,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\");\n  }"},{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\");\n  }"},{"className":"dt-right","targets":[1,2]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render"],"jsHooks":[]}</script>
+</div>
+<div id="rheumatoid-arthritis" class="section level2">
+<h2>Rheumatoid arthritis</h2>
+<p><br></p>
+<div id="htmlwidget-274ab9f45f2e462a1880" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-274ab9f45f2e462a1880">{"x":{"filter":"none","extensions":["Buttons"],"data":[["NK cell","B cell","CD8 cell","Monocyte","Transverse colon","CD4 cell","Terminal ileum","Spleen","Stomach","Adrenal gland","Lung","Skeletal muscle","Visceral omentum","Uterus","Sun-exposed skin","Sigmoid colon","Subcutaneous adipose","Esophagus muscularis","Vagina","Prostate","Esophagus mucosa","Testis","Cerebellum","Gastroesophageal junction","Cortex","Atrial appendage","Aorta","Liver","Breast","Thyroid","Pancreas","Left ventricle","Ovary","Hippocampus","Putamen","Caudate","Tibial nerve","Omnibus"],[60.4702476524397,57.519678893958,56.8429185716899,53.9500812129138,53.6908083213885,52.4801657701035,51.5382259060361,50.9698822808379,49.217729954467,49.0652319180609,48.4358793290158,48.4292697183392,48.2716663851019,47.8845474977765,47.8144836512626,47.2404033724061,46.4698182417292,46.2261230092349,45.6177436526362,45.3190668891036,44.9898058257987,44.8519240422081,44.8340063928701,44.6049586576393,44.1787662901147,43.969042578894,43.6998558999548,43.504189624873,43.3586869171664,42.7719539663096,42.4059380683536,42.0883056620654,41.8228205840309,40.2145647490264,40.0918583216894,38.0680585346782,38.0025294440976,29.9639969544111],[33.7211018138745,32.5743951697171,31.1926008963282,28.4512393131971,22.4149339678673,27.5714097699048,20.4382707286071,20.4107676728639,21.2900469150945,21.3417562040342,20.4423282512084,22.4354834678825,21.0899147992368,19.9090534268289,21.3150368772241,21.1652131583769,21.2517022977759,20.4137304308338,19.982395162836,21.1285854457949,20.1909288574756,20.5329533239544,20.3587557670567,22.0282770848474,19.7250060445841,22.0968833197655,20.4747093159105,23.05389386827,22.2156302587255,19.6464674828537,23.7821939013454,21.4346771559933,20.033123978963,19.6904011498956,20.8717010959384,20.1302701520614,20.769934233637,20.9297756878634]],"container":"<table class=\"white-space: nowrap\">\n  <thead>\n    <tr>\n      <th>Network<\/th>\n      <th><i>y<\/i>-axis<\/th>\n      <th><i>x<\/i>-axis<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":false,"dom":"Bfrtip","buttons":["copy","print",{"extend":"collection","buttons":["csv","excel","pdf"],"text":"Download"}],"columnDefs":[{"targets":1,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\");\n  }"},{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\");\n  }"},{"className":"dt-right","targets":[1,2]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render"],"jsHooks":[]}</script>
+</div>
+<div id="high-density-lipoprotein" class="section level2">
+<h2>High-density lipoprotein</h2>
+<p><br></p>
+<div id="htmlwidget-438a55c8aed61c56c067" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-438a55c8aed61c56c067">{"x":{"filter":"none","extensions":["Buttons"],"data":[["Liver","Gastroesophageal junction","NK cell","Ovary","Monocyte","Pancreas","B cell","Cerebellum","Spleen","Sigmoid colon","Aorta","CD4 cell","Transverse colon","Uterus","Left ventricle","Skeletal muscle","Visceral omentum","Caudate","Subcutaneous adipose","Breast","Terminal ileum","Adrenal gland","CD8 cell","Testis","Prostate","Putamen","Atrial appendage","Tibial nerve","Sun-exposed skin","Cortex","Esophagus mucosa","Vagina","Hippocampus","Lung","Esophagus muscularis","Omnibus","Stomach","Thyroid"],[21.4487418186116,16.4699240890101,16.3319070606078,15.8671456988615,15.6771022526889,15.5209316529306,15.425226574609,15.1568495907769,15.1544434178854,14.9515496631711,14.6920451596277,14.6326056785346,14.6135514308028,14.6049694793089,14.2504181699689,14.2189680365797,13.9393253628465,13.8888477259988,13.8837561727321,13.880330133953,13.82140428068,13.8042768363315,13.5960423589091,13.3942778580103,13.035244976764,12.9858977946387,12.9602395149445,12.7387809744515,12.5158774128161,12.2422793592588,12.0916830528514,12.0079234358717,11.9950200383234,11.9240537712832,11.7421037278578,11.2909137734282,11.2782941401379,9.50794167748112],[15.8265115580051,8.60475011046328,5.92110803920526,6.05860425641414,6.71224017772642,7.52974427087087,4.81932549351728,4.56339829471944,4.41412061350309,5.19988005208802,5.03978612723335,4.59202940220405,4.48355713691794,3.75605699720356,5.29767541825739,4.35205697162939,4.45147944154579,4.61640661919865,5.27208548336044,4.75696728854659,3.34883691758059,4.13065517969583,3.74294927139473,3.54354272262568,4.07423156100696,3.68099711517847,3.8019817352687,3.86783002775657,2.44768200896997,2.3041110955175,1.07671649863488,2.25093273493939,2.27696739109698,2.85840005575725,1.97231081646603,5.65234206330991,1.94655988594317,0.623657637625343]],"container":"<table class=\"white-space: nowrap\">\n  <thead>\n    <tr>\n      <th>Network<\/th>\n      <th><i>y<\/i>-axis<\/th>\n      <th><i>x<\/i>-axis<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":false,"dom":"Bfrtip","buttons":["copy","print",{"extend":"collection","buttons":["csv","excel","pdf"],"text":"Download"}],"columnDefs":[{"targets":1,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\");\n  }"},{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\");\n  }"},{"className":"dt-right","targets":[1,2]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render"],"jsHooks":[]}</script>
+</div>
+<div id="low-density-lipoprotein" class="section level2">
+<h2>Low-density lipoprotein</h2>
+<p><br></p>
+<div id="htmlwidget-363639f8f22198ee92ff" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-363639f8f22198ee92ff">{"x":{"filter":"none","extensions":["Buttons"],"data":[["NK cell","CD8 cell","Pancreas","Liver","Aorta","Monocyte","B cell","CD4 cell","Ovary","Visceral omentum","Breast","Transverse colon","Uterus","Sigmoid colon","Atrial appendage","Stomach","Cerebellum","Gastroesophageal junction","Lung","Left ventricle","Sun-exposed skin","Terminal ileum","Skeletal muscle","Subcutaneous adipose","Adrenal gland","Testis","Esophagus mucosa","Spleen","Esophagus muscularis","Cortex","Tibial nerve","Thyroid","Putamen","Vagina","Omnibus","Caudate","Prostate","Hippocampus"],[30.7142496479603,28.7678192231436,28.4828385641723,27.884244003307,27.5696854303416,27.4463829931856,26.7919750726977,26.4756384972564,23.2127963910208,22.1168677612021,20.0027232478491,18.2121042100762,17.4645511009485,16.6443111123427,16.5381844767926,16.1294265302708,16.0349162826477,15.9967018509895,15.9469685086094,15.7279465901821,15.0885981487494,14.8114457392699,14.7290053607048,14.7106476445988,14.6887800635306,14.669932651751,14.0592854471061,13.3101015025288,13.2185116631089,13.2156168841015,13.2141647555837,13.1369811938755,13.0507998016943,12.7978825687543,12.1563704541148,12.1111439273982,11.7583094709482,11.7401429651363],[25.3968084161331,21.9272061727335,26.7406509781028,29.9492379280174,21.7130490727966,24.1880574435864,21.1901245151142,22.2263196216789,20.1969112588248,15.0173575318852,22.0684112577135,20.0804063710775,13.2183781248182,20.75838738809,19.7870026827532,13.1390327965823,18.6276971886713,23.2692083728428,12.994099840818,22.6388649261731,16.3076462693588,14.8084510366126,20.7328497763082,23.370047464469,15.5538932132588,13.2025223985192,14.6456597468718,13.9688992922536,12.2809699469516,13.699025386074,14.5487143309494,13.438339305534,13.5894128384279,12.1291518026691,17.0409299930759,14.1361752264582,11.818208161646,11.6634097703392]],"container":"<table class=\"white-space: nowrap\">\n  <thead>\n    <tr>\n      <th>Network<\/th>\n      <th><i>y<\/i>-axis<\/th>\n      <th><i>x<\/i>-axis<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":false,"dom":"Bfrtip","buttons":["copy","print",{"extend":"collection","buttons":["csv","excel","pdf"],"text":"Download"}],"columnDefs":[{"targets":1,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\");\n  }"},{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\");\n  }"},{"className":"dt-right","targets":[1,2]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render"],"jsHooks":[]}</script>
+</div>
+<div id="heart-rate" class="section level2">
+<h2>Heart rate</h2>
+<p><br></p>
+<div id="htmlwidget-a04485cd1e0e3fdd4bfd" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a04485cd1e0e3fdd4bfd">{"x":{"filter":"none","extensions":["Buttons"],"data":[["Aorta","Left ventricle","Skeletal muscle","Gastroesophageal junction","Sigmoid colon","Tibial nerve","Transverse colon","Uterus","Adrenal gland","Putamen","Esophagus muscularis","Cortex","Subcutaneous adipose","Pancreas","Ovary","Terminal ileum","CD4 cell","Cerebellum","Visceral omentum","Caudate","Atrial appendage","Sun-exposed skin","Hippocampus","Liver","Esophagus mucosa","Prostate","Lung","CD8 cell","Vagina","Monocyte","Stomach","Spleen","Breast","Thyroid","NK cell","B cell","Testis","Omnibus"],[7.38638528395612,7.32599540248687,7.00735978768815,6.55727743255877,6.28372518795717,6.26686114651534,6.21891418676643,6.17910915938213,6.15935846394047,6.02132693611594,5.97748693251072,5.97325426215044,5.92496410710636,5.88008654718224,5.65831148951469,5.5141404287833,5.29104067556115,5.21861160135836,5.21380995451955,5.20370530376764,5.15825083454405,5.09697893139093,4.96867682784361,4.95917069335354,4.91557337726619,4.91468857865913,4.88123608056969,4.85601122792058,4.73103082055396,4.67726840315657,4.67273338838997,4.64045428290649,4.40373582733622,4.31263571631612,3.9755520830926,3.93136231832794,3.73737351043205,2.61967850974141],[1.34067287622843,1.48853573619132,0.782368588568731,0.750729549983516,0.189831585907613,0.398232922131283,-0.391726383193253,0.18430867300229,0.0537728769773107,0.609879981498801,0.171288401927844,0.25981341121689,0.16991767446363,0.572362411763263,0.210077467683697,-0.714277253327036,-0.160918496198866,-0.0455714316649593,-0.341926882754964,0.124278008110633,-0.207904936083123,-0.501431422598148,-0.0819516226299741,0.124955502975049,-0.295605747085838,-0.311979616925129,-0.579800751278817,-0.417684930128882,-0.498762066723182,-0.256132033652107,-0.613269471901315,-0.658896104990548,-0.574909959685882,-0.234143992796753,-0.733603759641109,-0.446677000506921,-0.273841638887089,-0.504074644030221]],"container":"<table class=\"white-space: nowrap\">\n  <thead>\n    <tr>\n      <th>Network<\/th>\n      <th><i>y<\/i>-axis<\/th>\n      <th><i>x<\/i>-axis<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":false,"dom":"Bfrtip","buttons":["copy","print",{"extend":"collection","buttons":["csv","excel","pdf"],"text":"Download"}],"columnDefs":[{"targets":1,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\");\n  }"},{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\");\n  }"},{"className":"dt-right","targets":[1,2]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render"],"jsHooks":[]}</script>
+</div>
+<div id="coronary-artery-disease" class="section level2">
+<h2>Coronary artery disease</h2>
+<p><br></p>
+<div id="htmlwidget-704093e13551d603e7a5" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-704093e13551d603e7a5">{"x":{"filter":"none","extensions":["Buttons"],"data":[["Subcutaneous adipose","Gastroesophageal junction","Uterus","Skeletal muscle","Left ventricle","Transverse colon","Sigmoid colon","Tibial nerve","Breast","Aorta","Atrial appendage","Adrenal gland","Stomach","Pancreas","Liver","Ovary","CD8 cell","Esophagus muscularis","Monocyte","Sun-exposed skin","Spleen","Visceral omentum","CD4 cell","Terminal ileum","Cerebellum","NK cell","Esophagus mucosa","Prostate","B cell","Caudate","Vagina","Putamen","Hippocampus","Lung","Cortex","Testis","Thyroid","Omnibus"],[29.2238941143252,28.9902491281781,28.8890209743979,28.723608478562,28.2848924308265,28.122341590574,27.8003310958101,27.4293292101661,27.2946766924965,27.035727151045,26.8905926277102,26.4192022591672,25.9692821101647,25.9417897952978,25.4750167287362,25.2396249374332,25.0524792733397,25.0438862523911,24.7800117546889,24.7493172123489,24.7205873312408,24.5737976143173,24.5187622502748,24.2516635130157,24.1995399172173,23.8239087577676,23.6232347629486,23.4303417823923,23.4054482109902,23.2687300295497,23.2599971819036,23.0355675737617,23.015411945151,22.7116700231888,22.7086046553201,20.3351930401959,20.3186145990909,17.2614852978341],[12.9482465476804,13.6500703001353,11.5571647029486,12.6898575815601,14.2796313743355,9.67032760055056,11.3353453881101,11.5670058207535,11.9142916320525,13.4507339945824,10.8511742215752,9.45309793088761,9.55481429796668,13.3535443107946,12.0702893610926,10.7553478660192,9.94890061234869,9.33613618946952,9.8167221494424,7.37432736768002,7.46291207414064,8.40507545406753,9.44980345098787,5.76176515488442,7.94563542776389,9.55642565598874,7.69841211159197,8.13813912072078,9.48758809572294,6.98173861774435,6.36871992084885,7.09681672613021,6.73106830885502,5.97066476381231,6.09950762580843,6.56283668981827,6.1108938574602,6.34154732270539]],"container":"<table class=\"white-space: nowrap\">\n  <thead>\n    <tr>\n      <th>Network<\/th>\n      <th><i>y<\/i>-axis<\/th>\n      <th><i>x<\/i>-axis<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":false,"dom":"Bfrtip","buttons":["copy","print",{"extend":"collection","buttons":["csv","excel","pdf"],"text":"Download"}],"columnDefs":[{"targets":1,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\");\n  }"},{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\");\n  }"},{"className":"dt-right","targets":[1,2]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render"],"jsHooks":[]}</script>
+</div>
+<div id="atrial-fibrillation" class="section level2">
+<h2>Atrial fibrillation</h2>
+<p><br></p>
+<div id="htmlwidget-488a03ce2befef8680db" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-488a03ce2befef8680db">{"x":{"filter":"none","extensions":["Buttons"],"data":[["Skeletal muscle","Transverse colon","Atrial appendage","Terminal ileum","Left ventricle","Monocyte","Gastroesophageal junction","Sigmoid colon","Esophagus muscularis","Pancreas","NK cell","Stomach","CD8 cell","B cell","Prostate","Tibial nerve","Aorta","Uterus","Lung","Spleen","Adrenal gland","Subcutaneous adipose","Breast","Visceral omentum","CD4 cell","Liver","Vagina","Esophagus mucosa","Sun-exposed skin","Cerebellum","Ovary","Hippocampus","Testis","Thyroid","Cortex","Putamen","Caudate","Omnibus"],[14.9319462457279,14.8771034178425,14.3324253968613,13.6462409340609,12.8384869812251,12.6849691507028,12.6830607278515,12.668873191182,12.6007103872248,12.4127564702587,12.38333635285,12.2623297972127,12.21116603977,12.2103525877286,11.9337885007562,11.8474836319571,11.6145893153398,11.4332818118175,11.3120164012912,11.277126804081,11.2427177896792,10.9424185579904,10.9021090441537,10.8409858270952,10.8138097997732,10.7179201468834,10.3612534966035,10.3060947089369,10.1464975322097,10.0822317910528,9.49985592097825,9.42847599009881,9.36617428137677,9.22720919812186,9.22362422079189,9.025935190962,8.63588211805523,8.27387317601901],[6.18069708646878,3.7172309226832,5.74559728406166,2.26454818501985,4.99863460018567,4.18699501753516,4.41755832275916,3.23553887760345,4.33973199599336,5.63492313733365,3.39360204164553,2.64046253709308,3.41070245951408,3.52154323307195,3.82504798929697,3.769450672697,4.44346795099317,2.83323100984449,2.92605076868719,2.23814659802113,3.17724678480133,3.03763593413554,3.48447949313221,3.14391565714992,2.22792504525785,3.43572752104095,2.44115395251612,2.46901358393381,1.08516858677481,1.56984247676535,2.26141159299952,1.50972967422511,1.97655505185374,2.69826775396396,0.952284039564074,1.11651522940091,0.691812771634559,3.52534794106969]],"container":"<table class=\"white-space: nowrap\">\n  <thead>\n    <tr>\n      <th>Network<\/th>\n      <th><i>y<\/i>-axis<\/th>\n      <th><i>x<\/i>-axis<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":false,"dom":"Bfrtip","buttons":["copy","print",{"extend":"collection","buttons":["csv","excel","pdf"],"text":"Download"}],"columnDefs":[{"targets":1,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\");\n  }"},{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\");\n  }"},{"className":"dt-right","targets":[1,2]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render"],"jsHooks":[]}</script>
+</div>
+<div id="schizophrenia" class="section level2">
+<h2>Schizophrenia</h2>
+<p><br></p>
+<div id="htmlwidget-1d339d3bd5461f278048" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1d339d3bd5461f278048">{"x":{"filter":"none","extensions":["Buttons"],"data":[["Transverse colon","Spleen","Terminal ileum","Sigmoid colon","Uterus","B cell","NK cell","CD8 cell","Visceral omentum","CD4 cell","Monocyte","Subcutaneous adipose","Lung","Stomach","Cerebellum","Cortex","Adrenal gland","Sun-exposed skin","Aorta","Skeletal muscle","Tibial nerve","Esophagus muscularis","Ovary","Vagina","Esophagus mucosa","Hippocampus","Gastroesophageal junction","Testis","Putamen","Atrial appendage","Caudate","Prostate","Thyroid","Breast","Liver","Left ventricle","Pancreas","Omnibus"],[144.080111320529,141.158621623095,141.04510606279,141.029433731503,136.433121834395,134.841331259209,134.550656131563,134.167247536572,132.951700686181,131.936721159805,131.766832559631,130.63582743053,130.467962094432,130.012865537369,129.498650395369,128.731442205305,128.622453573919,128.462714611566,127.875933401578,127.698431814063,127.553199089017,125.038218123558,122.442579357951,122.353902891227,121.945885555209,121.521603268523,121.458595921286,117.530317566792,116.858477771516,116.063729334267,115.956377369455,115.457979078278,115.147691878954,114.912361291844,114.687683640148,114.167957482136,108.390131029878,73.6938675109585],[27.2113385312765,27.4849047982785,27.2325389779144,27.1371605713678,27.0000342251069,25.9688553245161,26.5846493997151,26.2423827658049,27.5653741574787,26.4934350102784,26.0197523590362,27.0013316545066,27.23688440124,27.4059434296115,27.148607954735,27.5920448181541,26.8509997846358,27.3421886798084,27.5449722011188,27.3053481114729,27.6027042297803,27.3589123698215,27.3350036211377,26.8691287345401,27.2858141878352,27.3947964731499,27.3000237422122,27.2809975037202,27.0700280518557,26.97219996961,27.2741290631683,27.2315381565597,26.9901843261937,27.2196788753769,27.5098917455086,27.307426306807,27.4602643997906,27.3801929559855]],"container":"<table class=\"white-space: nowrap\">\n  <thead>\n    <tr>\n      <th>Network<\/th>\n      <th><i>y<\/i>-axis<\/th>\n      <th><i>x<\/i>-axis<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":false,"dom":"Bfrtip","buttons":["copy","print",{"extend":"collection","buttons":["csv","excel","pdf"],"text":"Download"}],"columnDefs":[{"targets":1,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\");\n  }"},{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\");\n  }"},{"className":"dt-right","targets":[1,2]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render"],"jsHooks":[]}</script>
+</div>
+<div id="neuroticism" class="section level2">
+<h2>Neuroticism</h2>
+<p><br></p>
+<div id="htmlwidget-b7d9290a2bdba91149a1" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b7d9290a2bdba91149a1">{"x":{"filter":"none","extensions":["Buttons"],"data":[["Terminal ileum","Transverse colon","CD8 cell","CD4 cell","Spleen","Putamen","Subcutaneous adipose","Cerebellum","Sun-exposed skin","B cell","NK cell","Lung","Sigmoid colon","Caudate","Hippocampus","Skeletal muscle","Cortex","Uterus","Adrenal gland","Breast","Stomach","Monocyte","Esophagus mucosa","Esophagus muscularis","Gastroesophageal junction","Visceral omentum","Atrial appendage","Ovary","Tibial nerve","Vagina","Thyroid","Prostate","Liver","Left ventricle","Aorta","Pancreas","Testis","Omnibus"],[22.9326129436291,21.1974158048311,20.5629937274339,20.4117519716949,19.3277975818875,19.3262123255497,18.703870509558,18.6855016453835,18.4675434273041,18.3638562159904,18.2953887588483,18.1537189459309,18.0086540131618,17.9984036804007,17.9850115147834,17.9138047235659,17.8830178348269,17.733156358769,17.538498777632,17.4510029337697,16.9209088539606,16.7445767136104,16.6994920128388,16.4238098625695,16.3552161975244,16.3321405816695,15.4640460611614,15.2135816904128,15.1726218745145,14.9425749863517,14.4813958698228,14.3612087704044,14.1016835047706,13.5350675472327,13.5087854575532,13.040981542112,12.8876407067573,11.1003961236401],[4.120787492533,4.33131018915211,5.3533511860003,5.45291112459353,4.42449025284033,5.42443578136734,4.96007895245954,4.81917074609289,3.99986237484546,5.80565306871736,5.18240995161065,3.90016479363904,4.64902239282889,4.65004197823277,4.3577192251557,4.71922900394506,4.33527241057458,4.25522642353039,4.0569457820549,4.48351359562172,4.09924785389714,4.45227274929701,4.01183375137491,3.83808899760612,4.23692362533972,3.69763065057729,4.15000179922938,4.37893981501969,3.88936849134181,3.65762517566832,3.85415213140397,3.64697543245906,4.50543787285152,4.29368031866169,3.7685623199843,4.20569724109259,4.04431820830215,3.99842784013439]],"container":"<table class=\"white-space: nowrap\">\n  <thead>\n    <tr>\n      <th>Network<\/th>\n      <th><i>y<\/i>-axis<\/th>\n      <th><i>x<\/i>-axis<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":false,"dom":"Bfrtip","buttons":["copy","print",{"extend":"collection","buttons":["csv","excel","pdf"],"text":"Download"}],"columnDefs":[{"targets":1,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\");\n  }"},{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\");\n  }"},{"className":"dt-right","targets":[1,2]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render"],"jsHooks":[]}</script>
+<br>
+<p>
+<button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
+<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Session information
+</button>
+</p>
+<div id="workflowr-sessioninfo" class="collapse">
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>devtools<span class="op">::</span><span class="kw">session_info</span>()</span></code></pre></div>
+<pre><code>─ Session info ───────────────────────────────────────────────────────────────
+ setting  value                       
+ version  R version 4.0.3 (2020-10-10)
+ os       Ubuntu 20.04.1 LTS          
+ system   x86_64, linux-gnu           
+ ui       X11                         
+ language (EN)                        
+ collate  en_US.UTF-8                 
+ ctype    en_US.UTF-8                 
+ tz       America/New_York            
+ date     2020-12-02                  
+
+─ Packages ───────────────────────────────────────────────────────────────────
+ package     * version date       lib source        
+ assertthat    0.2.1   2019-03-21 [3] CRAN (R 4.0.0)
+ callr         3.5.1   2020-10-13 [1] CRAN (R 4.0.3)
+ cli           2.2.0   2020-11-20 [3] CRAN (R 4.0.3)
+ crayon        1.3.4   2017-09-16 [3] CRAN (R 4.0.0)
+ crosstalk     1.1.0.1 2020-03-13 [3] CRAN (R 4.0.0)
+ desc          1.2.0   2018-05-01 [3] CRAN (R 4.0.0)
+ devtools      2.3.2   2020-09-18 [3] CRAN (R 4.0.2)
+ digest        0.6.27  2020-10-24 [3] CRAN (R 4.0.3)
+ dplyr       * 1.0.2   2020-08-18 [1] CRAN (R 4.0.2)
+ DT          * 0.16    2020-10-13 [3] CRAN (R 4.0.3)
+ ellipsis      0.3.1   2020-05-15 [3] CRAN (R 4.0.0)
+ evaluate      0.14    2019-05-28 [3] CRAN (R 4.0.0)
+ fansi         0.4.1   2020-01-08 [3] CRAN (R 4.0.0)
+ fs            1.5.0   2020-07-31 [1] CRAN (R 4.0.2)
+ generics      0.1.0   2020-10-31 [1] CRAN (R 4.0.3)
+ git2r         0.27.1  2020-05-03 [3] CRAN (R 4.0.0)
+ glue          1.4.2   2020-08-27 [3] CRAN (R 4.0.2)
+ htmltools     0.5.0   2020-06-16 [3] CRAN (R 4.0.1)
+ htmlwidgets   1.5.2   2020-10-03 [3] CRAN (R 4.0.2)
+ httpuv        1.5.4   2020-06-06 [3] CRAN (R 4.0.0)
+ jsonlite      1.7.1   2020-09-07 [3] CRAN (R 4.0.2)
+ knitr         1.30    2020-09-22 [3] CRAN (R 4.0.2)
+ later         1.1.0.1 2020-06-05 [3] CRAN (R 4.0.0)
+ lifecycle     0.2.0   2020-03-06 [3] CRAN (R 4.0.0)
+ magrittr      2.0.1   2020-11-17 [3] CRAN (R 4.0.3)
+ memoise       1.1.0   2017-04-21 [3] CRAN (R 4.0.0)
+ pillar        1.4.7   2020-11-20 [3] CRAN (R 4.0.3)
+ pkgbuild      1.1.0   2020-07-13 [3] CRAN (R 4.0.2)
+ pkgconfig     2.0.3   2019-09-22 [3] CRAN (R 4.0.0)
+ pkgload       1.1.0   2020-05-29 [3] CRAN (R 4.0.0)
+ prettyunits   1.1.1   2020-01-24 [3] CRAN (R 4.0.0)
+ processx      3.4.4   2020-09-03 [3] CRAN (R 4.0.2)
+ promises      1.1.1   2020-06-09 [3] CRAN (R 4.0.1)
+ ps            1.4.0   2020-10-07 [3] CRAN (R 4.0.2)
+ purrr         0.3.4   2020-04-17 [3] CRAN (R 4.0.0)
+ R6            2.5.0   2020-10-28 [3] CRAN (R 4.0.3)
+ Rcpp          1.0.5   2020-07-06 [3] CRAN (R 4.0.2)
+ remotes       2.2.0   2020-07-21 [3] CRAN (R 4.0.2)
+ rlang         0.4.9   2020-11-26 [3] CRAN (R 4.0.3)
+ rmarkdown     2.5     2020-10-21 [1] CRAN (R 4.0.3)
+ rprojroot     2.0.2   2020-11-15 [3] CRAN (R 4.0.3)
+ rstudioapi    0.13    2020-11-12 [3] CRAN (R 4.0.3)
+ sessioninfo   1.1.1   2018-11-05 [3] CRAN (R 4.0.0)
+ stringi       1.5.3   2020-09-09 [3] CRAN (R 4.0.2)
+ stringr       1.4.0   2019-02-10 [3] CRAN (R 4.0.0)
+ testthat      3.0.0   2020-10-31 [3] CRAN (R 4.0.3)
+ tibble        3.0.4   2020-10-12 [3] CRAN (R 4.0.3)
+ tidyselect    1.1.0   2020-05-11 [1] CRAN (R 4.0.0)
+ usethis       1.6.3   2020-09-17 [3] CRAN (R 4.0.2)
+ vctrs         0.3.5   2020-11-17 [3] CRAN (R 4.0.3)
+ whisker       0.4     2019-08-28 [3] CRAN (R 4.0.0)
+ withr         2.3.0   2020-09-22 [3] CRAN (R 4.0.2)
+ workflowr     1.6.2   2020-04-30 [1] CRAN (R 4.0.0)
+ xfun          0.19    2020-10-30 [3] CRAN (R 4.0.3)
+ yaml          2.2.1   2020-02-01 [3] CRAN (R 4.0.0)
+
+[1] /home/maimaizhu/R/x86_64-pc-linux-gnu-library/4.0
+[2] /usr/local/lib/R/site-library
+[3] /usr/lib/R/site-library
+[4] /usr/lib/R/library</code></pre>
+</div>
+</div>
+
+
+<!-- Adjust MathJax settings so that all math formulae are shown using
+TeX fonts only; see
+http://docs.mathjax.org/en/latest/configuration.html.  This will make
+the presentation more consistent at the cost of the webpage sometimes
+taking slightly longer to load. Note that this only works because the
+footer is added to webpages before the MathJax javascript. -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

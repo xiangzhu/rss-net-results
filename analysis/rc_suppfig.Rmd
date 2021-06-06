@@ -1,5 +1,5 @@
 ---
-title: "Supplementary Figure 14 of Zhu et al (2020)"
+title: "Supplementary Figure 14 of Zhu et al (2021)"
 author: "Xiang Zhu"
 date: "2020-12-02"
 output: workflowr::wflow_html
@@ -7,7 +7,7 @@ editor_options:
   chunk_output_type: console
 ---
 
-[Zhu et al (2020)]: https://doi.org/10.1101/2020.03.13.990010
+[Zhu et al (2021)]: https://doi.org/10.1038/s41467-021-22588-0
 
 ```{r, include=FALSE}
 # load packages
@@ -46,7 +46,7 @@ make_df <- function(proj_path,gwas_name) {
 ```
 
 This page provides numerical values to reproduce
-Supplementary Figure 14 of [Zhu et al (2020)][].
+Supplementary Figure 14 of [Zhu et al (2021)][].
 
 ## Body mass index
 

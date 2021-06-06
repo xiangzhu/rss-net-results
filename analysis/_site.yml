@@ -8,7 +8,7 @@ navbar:
   - text: License
     href: license.html
   right:
-  - icon: fa-github
+  - icon: fab fa-github
     href: https://suwonglab.github.io/rss-net/results.html
 output:
   workflowr::wflow_html:

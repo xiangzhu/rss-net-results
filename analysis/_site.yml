@@ -5,6 +5,8 @@ navbar:
   left:
   - text: Home
     href: https://suwonglab.github.io/rss-net/results.html
+  - text: News
+    href: https://stephenslab.github.io/rss/news.html
   - text: License
     href: license.html
   right:
@@ -14,6 +16,6 @@ output:
   workflowr::wflow_html:
     toc: yes
     toc_float: yes
-    theme: sandstone
+    theme: flatly
     highlight: pygments
     anchor_sections: no

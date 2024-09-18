@@ -13,24 +13,35 @@
 
 <title>License</title>
 
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/sandstone.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<script src="site_libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
 
-<link rel="icon" href="https://github.com/workflowr/workflowr-assets/raw/master/img/reproducible.png">
+<link rel="icon" href="https://github.com/workflowr/workflowr-assets/raw/main/img/reproducible.png">
 <!-- Add a small amount of space between sections. -->
 <style type="text/css">
 div.section {
   padding-top: 12px;
 }
 </style>
+
+
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -44,32 +55,8 @@ div.section {
 
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
+
+
 
 
 
@@ -79,10 +66,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -99,40 +82,16 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 51px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h2 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h3 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h4 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h5 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h6 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -160,7 +119,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -172,7 +131,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -182,11 +141,28 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.parent().addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -198,13 +174,12 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -212,16 +187,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -265,7 +233,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -278,13 +246,16 @@ $(document).ready(function () {
   <a href="https://suwonglab.github.io/rss-net/results.html">Home</a>
 </li>
 <li>
+  <a href="https://stephenslab.github.io/rss/news.html">News</a>
+</li>
+<li>
   <a href="license.html">License</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://suwonglab.github.io/rss-net/results.html">
-    <span class="fa fa-github"></span>
+    <span class="fab fa-github"></span>
      
   </a>
 </li>
@@ -293,7 +264,7 @@ $(document).ready(function () {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
@@ -304,7 +275,9 @@ $(document).ready(function () {
 
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
-<span class="glyphicon glyphicon-list" aria-hidden="true"></span> workflowr <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+<span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+workflowr <span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span>
 </button>
 </p>
 <div id="workflowr-report" class="collapse">
@@ -313,7 +286,9 @@ $(document).ready(function () {
 <a data-toggle="tab" href="#summary">Summary</a>
 </li>
 <li>
-<a data-toggle="tab" href="#checks"> Checks <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> </a>
+<a data-toggle="tab" href="#checks"> Checks <span
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+</a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -322,17 +297,27 @@ $(document).ready(function () {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2020-11-30
+<strong>Last updated:</strong> 2024-09-17
 </p>
 <p>
-<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 2 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
+<strong>Checks:</strong> <span
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 2
+<span class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> 0
 </p>
 <p>
-<strong>Knit directory:</strong> <code>rss-net-results/</code> <span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="This is the local directory in which the code in this file was executed."> </span>
+<strong>Knit directory:</strong> <code>rss-net-results/</code> <span
+class="glyphicon glyphicon-question-sign" aria-hidden="true"
+title="This is the local directory in which the code in this file was executed.">
+</span>
 </p>
 <p>
-This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis was created with <a
-  href="https://github.com/jdblischak/workflowr">workflowr</a> (version 1.6.2). The <em>Checks</em> tab describes the reproducibility checks that were applied when the results were created. The <em>Past versions</em> tab lists the development history.
+This reproducible <a href="https://rmarkdown.rstudio.com">R Markdown</a>
+analysis was created with <a
+  href="https://github.com/workflowr/workflowr">workflowr</a> (version
+1.7.1). The <em>Checks</em> tab describes the reproducibility checks
+that were applied when the results were created. The <em>Past
+versions</em> tab lists the development history.
 </p>
 <hr>
 </div>
@@ -341,31 +326,54 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date
+</a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguptodate" class="panel-collapse collapse">
+<div id="strongRMarkdownfilestronguptodate"
+class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great! Since the R Markdown file has been committed to the Git repository, you know the exact version of the code that produced these results.</p>
+<p>Great! Since the R Markdown file has been committed to the Git
+repository, you know the exact version of the code that produced these
+results.</p>
 </div>
 </div>
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomxiangzhursspecatreea0ae50d9a7c918bf97bcfc422615631178ec80d9targetblanka0ae50da"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/xiangzhu/rss-peca/tree/a0ae50d9a7c918bf97bcfc422615631178ec80d9" target="_blank">a0ae50d</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomxiangzhurssnetresultstreeb0dad18445c743649619896dc5bec8adfe7703d9targetblankb0dad18a">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Repository version:</strong>
+<a href="https://github.com/xiangzhu/rss-net-results/tree/b0dad18445c743649619896dc5bec8adfe7703d9" target="_blank">b0dad18</a>
+</a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomxiangzhursspecatreea0ae50d9a7c918bf97bcfc422615631178ec80d9targetblanka0ae50da" class="panel-collapse collapse">
+<div
+id="strongRepositoryversionstrongahrefhttpsgithubcomxiangzhurssnetresultstreeb0dad18445c743649619896dc5bec8adfe7703d9targetblankb0dad18a"
+class="panel-collapse collapse">
 <div class="panel-body">
 <p>
-Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
+Great! You are using Git for version control. Tracking code development
+and connecting the code version to the results is critical for
+reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/xiangzhu/rss-peca/tree/a0ae50d9a7c918bf97bcfc422615631178ec80d9" target="_blank">a0ae50d</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version
+<a href="https://github.com/xiangzhu/rss-net-results/tree/b0dad18445c743649619896dc5bec8adfe7703d9" target="_blank">b0dad18</a>.
+See the <em>Past versions</em> tab to see a history of the changes made
+to the R Markdown and HTML files.
 </p>
 <p>
-Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
+Note that you need to be careful to ensure that all relevant files for
+the analysis have been committed to Git prior to generating the results
+(you can use <code>wflow_publish</code> or
+<code>wflow_git_commit</code>). workflowr only checks the R Markdown
+file, but you know if there are other scripts or data files that it
+depends on. Below is the status of the Git repository when the results
+were generated:
 </p>
 <pre><code>
 Ignored files:
@@ -374,7 +382,9 @@ Ignored files:
 
 </code></pre>
 <p>
-Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes.
+Note that any generated files, e.g. HTML, png, CSS, etc., are not
+included in this status report because it is ok for generated content to
+have uncommitted changes.
 </p>
 </div>
 </div>
@@ -385,7 +395,12 @@ Note that any generated files, e.g. HTML, png, CSS, etc., are not included in t
 <div id="versions" class="tab-pane fade">
 
 <p>
-These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/license.Rmd</code>) and HTML (<code>docs/license.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
+These are the previous versions of the repository in which changes were
+made to the R Markdown (<code>analysis/license.Rmd</code>) and HTML
+(<code>docs/license.html</code>) files. If you’ve configured a remote
+Git repository (see <code>?wflow_git_remote</code>), click on the
+hyperlinks in the table below to view the files as they were in that
+past version.
 </p>
 <div class="table-responsive">
 <table class="table table-condensed table-hover">
@@ -414,7 +429,7 @@ Message
 html
 </td>
 <td>
-<a href="https://rawcdn.githack.com/xiangzhu/rss-peca/f40af1ccbbe02b956b9ec6066b3ccede2b722aea/docs/license.html" target="_blank">f40af1c</a>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-net-results/20bd27449a8ab4824c7a7c8f1e54743ecb705294/docs/license.html" target="_blank">20bd274</a>
 </td>
 <td>
 xiangzhu
@@ -431,7 +446,24 @@ Build site.
 html
 </td>
 <td>
-<a href="https://rawcdn.githack.com/xiangzhu/rss-peca/b09834cfabad07c9a1bcd1c3ffabedb649ca08e9/docs/license.html" target="_blank">b09834c</a>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-net-results/f40af1ccbbe02b956b9ec6066b3ccede2b722aea/docs/license.html" target="_blank">f40af1c</a>
+</td>
+<td>
+xiangzhu
+</td>
+<td>
+2020-11-30
+</td>
+<td>
+Build site.
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-net-results/b09834cfabad07c9a1bcd1c3ffabedb649ca08e9/docs/license.html" target="_blank">b09834c</a>
 </td>
 <td>
 xiangzhu
@@ -448,7 +480,7 @@ Build site.
 Rmd
 </td>
 <td>
-<a href="https://github.com/xiangzhu/rss-peca/blob/7104402f672e7fb9900b08d6773e61f44786afae/analysis/license.Rmd" target="_blank">7104402</a>
+<a href="https://github.com/xiangzhu/rss-net-results/blob/7104402f672e7fb9900b08d6773e61f44786afae/analysis/license.Rmd" target="_blank">7104402</a>
 </td>
 <td>
 xiangzhu
@@ -457,7 +489,7 @@ xiangzhu
 2020-03-15
 </td>
 <td>
-wflow_publish(“analysis/license.Rmd”)
+wflow_publish("analysis/license.Rmd")
 </td>
 </tr>
 <tr>
@@ -465,13 +497,13 @@ wflow_publish(“analysis/license.Rmd”)
 html
 </td>
 <td>
-<a href="https://rawcdn.githack.com/xiangzhu/rss-peca/9656863bb3ed2b28f9ede92706e3d7234960fbed/docs/license.html" target="_blank">9656863</a>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-net-results/9656863bb3ed2b28f9ede92706e3d7234960fbed/docs/license.html" target="_blank">9656863</a>
 </td>
 <td>
 xiangzhu
 </td>
 <td>
-2020-03-09
+2020-03-08
 </td>
 <td>
 Build site.
@@ -482,16 +514,16 @@ Build site.
 Rmd
 </td>
 <td>
-<a href="https://github.com/xiangzhu/rss-peca/blob/c41a2069415fdf769f93b6fd668648082036fd68/analysis/license.Rmd" target="_blank">c41a206</a>
+<a href="https://github.com/xiangzhu/rss-net-results/blob/c41a2069415fdf769f93b6fd668648082036fd68/analysis/license.Rmd" target="_blank">c41a206</a>
 </td>
 <td>
 xiangzhu
 </td>
 <td>
-2020-03-09
+2020-03-08
 </td>
 <td>
-wflow_publish(“analysis/license.Rmd”)
+wflow_publish("analysis/license.Rmd")
 </td>
 </tr>
 <tr>
@@ -499,13 +531,13 @@ wflow_publish(“analysis/license.Rmd”)
 html
 </td>
 <td>
-<a href="https://rawcdn.githack.com/xiangzhu/rss-peca/111157be4100a3a80a989a7573285a8302a80116/docs/license.html" target="_blank">111157b</a>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-net-results/111157be4100a3a80a989a7573285a8302a80116/docs/license.html" target="_blank">111157b</a>
 </td>
 <td>
 xiangzhu
 </td>
 <td>
-2020-03-09
+2020-03-08
 </td>
 <td>
 Build site.
@@ -516,16 +548,16 @@ Build site.
 Rmd
 </td>
 <td>
-<a href="https://github.com/xiangzhu/rss-peca/blob/e34126a2cb3f541420f88b929d3c353cf1de276b/analysis/license.Rmd" target="_blank">e34126a</a>
+<a href="https://github.com/xiangzhu/rss-net-results/blob/e34126a2cb3f541420f88b929d3c353cf1de276b/analysis/license.Rmd" target="_blank">e34126a</a>
 </td>
 <td>
 xiangzhu
 </td>
 <td>
-2020-03-09
+2020-03-08
 </td>
 <td>
-wflow_publish(“analysis/license.Rmd”)
+wflow_publish("analysis/license.Rmd")
 </td>
 </tr>
 <tr>
@@ -533,7 +565,7 @@ wflow_publish(“analysis/license.Rmd”)
 html
 </td>
 <td>
-<a href="https://rawcdn.githack.com/xiangzhu/rss-peca/8fde153b2847f7e0e68a7dc4e00e36f9afb6380b/docs/license.html" target="_blank">8fde153</a>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-net-results/8fde153b2847f7e0e68a7dc4e00e36f9afb6380b/docs/license.html" target="_blank">8fde153</a>
 </td>
 <td>
 xiangzhu
@@ -550,13 +582,13 @@ Build site.
 html
 </td>
 <td>
-<a href="https://rawcdn.githack.com/xiangzhu/rss-peca/8209433cdfb26fc8034e818434b5ab819a2ba7e9/docs/license.html" target="_blank">8209433</a>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-net-results/8209433cdfb26fc8034e818434b5ab819a2ba7e9/docs/license.html" target="_blank">8209433</a>
 </td>
 <td>
 xiangzhu
 </td>
 <td>
-2020-01-31
+2020-01-30
 </td>
 <td>
 Build site.
@@ -567,24 +599,7 @@ Build site.
 html
 </td>
 <td>
-<a href="https://rawcdn.githack.com/xiangzhu/rss-peca/23bbc4481f32d32fcb8736e1df1d91fc88bb0fbf/docs/license.html" target="_blank">23bbc44</a>
-</td>
-<td>
-xiangzhu
-</td>
-<td>
-2019-08-17
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/xiangzhu/rss-peca/blob/11e86302d1342142c6134619955253cb5de8fc0e/analysis/license.Rmd" target="_blank">11e8630</a>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-net-results/23bbc4481f32d32fcb8736e1df1d91fc88bb0fbf/docs/license.html" target="_blank">23bbc44</a>
 </td>
 <td>
 xiangzhu
@@ -593,7 +608,24 @@ xiangzhu
 2019-08-17
 </td>
 <td>
-wflow_publish(“analysis/license.Rmd”)
+Build site.
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/xiangzhu/rss-net-results/blob/11e86302d1342142c6134619955253cb5de8fc0e/analysis/license.Rmd" target="_blank">11e8630</a>
+</td>
+<td>
+xiangzhu
+</td>
+<td>
+2019-08-17
+</td>
+<td>
+wflow_publish("analysis/license.Rmd")
 </td>
 </tr>
 <tr>
@@ -601,7 +633,7 @@ wflow_publish(“analysis/license.Rmd”)
 html
 </td>
 <td>
-<a href="https://rawcdn.githack.com/xiangzhu/rss-peca/889612b0f6ad49b659f11e3e001278c37d16dd2f/docs/license.html" target="_blank">889612b</a>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-net-results/889612b0f6ad49b659f11e3e001278c37d16dd2f/docs/license.html" target="_blank">889612b</a>
 </td>
 <td>
 Xiang Zhu
@@ -618,7 +650,7 @@ Build site.
 html
 </td>
 <td>
-<a href="https://rawcdn.githack.com/xiangzhu/rss-peca/fcdb217dddbd0bc3380b366027ada06a393d26f5/docs/license.html" target="_blank">fcdb217</a>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-net-results/fcdb217dddbd0bc3380b366027ada06a393d26f5/docs/license.html" target="_blank">fcdb217</a>
 </td>
 <td>
 Xiang Zhu
@@ -635,7 +667,7 @@ Build site.
 Rmd
 </td>
 <td>
-<a href="https://github.com/xiangzhu/rss-peca/blob/041a3efc65fa838843d64c15e6fe8bd99ea0a9e0/analysis/license.Rmd" target="_blank">041a3ef</a>
+<a href="https://github.com/xiangzhu/rss-net-results/blob/041a3efc65fa838843d64c15e6fe8bd99ea0a9e0/analysis/license.Rmd" target="_blank">041a3ef</a>
 </td>
 <td>
 Xiang Zhu
@@ -644,7 +676,7 @@ Xiang Zhu
 2018-07-19
 </td>
 <td>
-wflow_publish(files = c(“analysis/index.Rmd”, “analysis/license.Rmd”))
+wflow_publish(files = c("analysis/index.Rmd", "analysis/license.Rmd"))
 </td>
 </tr>
 <tr>
@@ -652,7 +684,7 @@ wflow_publish(files = c(“analysis/index.Rmd”, “analysis/license.Rmd”))
 Rmd
 </td>
 <td>
-<a href="https://github.com/xiangzhu/rss-peca/blob/c07849bd3f8f45230b74f3402f5540af44543239/analysis/license.Rmd" target="_blank">c07849b</a>
+<a href="https://github.com/xiangzhu/rss-net-results/blob/c07849bd3f8f45230b74f3402f5540af44543239/analysis/license.Rmd" target="_blank">c07849b</a>
 </td>
 <td>
 Xiang Zhu
@@ -671,18 +703,37 @@ Start workflowr project.
 </div>
 </div>
 </div>
-<p>Currently the online notebook is licensed under the <a href="https://creativecommons.org/licenses/by-nd/4.0/">Creative Commons Attribution-NoDerivatives 4.0 International License (CC BY-ND 4.0)</a>. This means you are free to include content from this site in your presentation, blog, or social media posts, as long you cite it. The “no derivatives” (ND) clause means you cannot modify the results and distribute them. Once the following research article becomes a peer-reviewed publication, I will remove the ND clause and use a different CC License.</p>
-<p>If you use any results from this notebook, please explicitly acknowledge that the results are retrieved from <a href="https://xiangzhu.github.io/rss-peca/" class="uri">https://xiangzhu.github.io/rss-peca/</a>, and cite the following research article:</p>
+<p>Currently the online notebook is licensed under the <a
+href="https://creativecommons.org/licenses/by-nd/4.0/">Creative Commons
+Attribution-NoDerivatives 4.0 International License (CC BY-ND 4.0)</a>.
+This means you are free to include content from this site in your
+presentation, blog, or social media posts, as long you cite it. The “no
+derivatives” (ND) clause means you cannot modify the results and
+distribute them. Once the following research article becomes a
+peer-reviewed publication, I will remove the ND clause and use a
+different CC License.</p>
+<p>If you use any results from this notebook, please explicitly
+acknowledge that the results are retrieved from <a
+href="https://xiangzhu.github.io/rss-peca/"
+class="uri">https://xiangzhu.github.io/rss-peca/</a>, and cite the
+following research article:</p>
 <blockquote>
-<p>Xiang Zhu, Zhana Duren, Wing Hung Wong (2020). Modeling regulatory network topology improves genome-wide analyses of complex human traits. <em>bioRxiv</em>. <a href="https://doi.org/10.1101/2020.03.13.990010" class="uri">https://doi.org/10.1101/2020.03.13.990010</a>.</p>
+<p>Xiang Zhu, Zhana Duren, Wing Hung Wong (2020). Modeling regulatory
+network topology improves genome-wide analyses of complex human traits.
+<em>bioRxiv</em>. <a href="https://doi.org/10.1101/2020.03.13.990010"
+class="uri">https://doi.org/10.1101/2020.03.13.990010</a>.</p>
 </blockquote>
-<p>The source codes of the notebook are licensed under the <a href="https://www.gnu.org/licenses/gpl-3.0.txt">GNU General Public License, version 3.0 (GPLv3)</a>.</p>
-<p>Icons used in this notebook are credited to the Noun Project <a href="https://thenounproject.com" class="uri">https://thenounproject.com</a>.</p>
+<p>The source codes of the notebook are licensed under the <a
+href="https://www.gnu.org/licenses/gpl-3.0.txt">GNU General Public
+License, version 3.0 (GPLv3)</a>.</p>
+<p>Icons used in this notebook are credited to the Noun Project <a
+href="https://thenounproject.com"
+class="uri">https://thenounproject.com</a>.</p>
 
 
 <!-- Adjust MathJax settings so that all math formulae are shown using
 TeX fonts only; see
-http://docs.mathjax.org/en/latest/configuration.html.  This will make
+https://docs.mathjax.org/en/latest/web/configuration.html. This will make
 the presentation more consistent at the cost of the webpage sometimes
 taking slightly longer to load. Note that this only works because the
 footer is added to webpages before the MathJax javascript. -->
@@ -691,6 +742,8 @@ footer is added to webpages before the MathJax javascript. -->
     "HTML-CSS": { availableFonts: ["TeX"] }
   });
 </script>
+
+
 
 
 
@@ -718,7 +771,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>

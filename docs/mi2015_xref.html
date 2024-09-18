@@ -15,31 +15,44 @@
 
 <title>Cross-reference results of myocardial infarction</title>
 
-<script src="site_libs/jquery-1.12.4/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/sandstone.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<script src="site_libs/htmlwidgets-1.5.2/htmlwidgets.js"></script>
+<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
 <link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="site_libs/datatables-binding-0.16/datatables.js"></script>
-<link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
-<link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
-<script src="site_libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
-<link href="site_libs/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
-<script src="site_libs/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<script src="site_libs/datatables-binding-0.33/datatables.js"></script>
+<link href="site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+<link href="site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
 
-<link rel="icon" href="https://github.com/workflowr/workflowr-assets/raw/master/img/reproducible.png">
+<link rel="icon" href="https://github.com/workflowr/workflowr-assets/raw/main/img/reproducible.png">
 <!-- Add a small amount of space between sections. -->
 <style type="text/css">
 div.section {
   padding-top: 12px;
 }
 </style>
+
+
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -51,28 +64,38 @@ div.section {
     </style>
 
 
-<style type="text/css">code{white-space: pre;}</style>
+
+<style type="text/css">
+  code {
+    white-space: pre;
+  }
+  .sourceCode {
+    overflow: visible;
+  }
+</style>
 <style type="text/css" data-origin="pandoc">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -81,15 +104,15 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {  }
+  {   }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -102,7 +125,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -123,13 +146,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   for (var i = 0; i < sheets.length; i++) {
     if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
     try { var rules = sheets[i].cssRules; } catch (e) { continue; }
-    for (var j = 0; j < rules.length; j++) {
+    var j = 0;
+    while (j < rules.length) {
       var rule = rules[j];
       // check if there is a div.sourceCode rule
-      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") {
+        j++;
+        continue;
+      }
       var style = rule.style.cssText;
       // check if color or background-color is set
-      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      if (rule.style.color === '' && rule.style.backgroundColor === '') {
+        j++;
+        continue;
+      }
       // replace div.sourceCode by a pre.sourceCode rule
       sheets[i].deleteRule(j);
       sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
@@ -137,39 +167,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   }
 })();
 </script>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
+
 
 
 
@@ -179,10 +179,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -199,40 +195,16 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 51px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h2 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h3 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h4 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h5 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h6 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -260,7 +232,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -272,7 +244,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -282,11 +254,28 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.parent().addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -298,13 +287,12 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -312,16 +300,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -365,7 +346,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -378,13 +359,16 @@ $(document).ready(function () {
   <a href="https://suwonglab.github.io/rss-net/results.html">Home</a>
 </li>
 <li>
+  <a href="https://stephenslab.github.io/rss/news.html">News</a>
+</li>
+<li>
   <a href="license.html">License</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://suwonglab.github.io/rss-net/results.html">
-    <span class="fa fa-github"></span>
+    <span class="fab fa-github"></span>
      
   </a>
 </li>
@@ -393,11 +377,12 @@ $(document).ready(function () {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
-<h1 class="title toc-ignore">Cross-reference results of myocardial infarction</h1>
+<h1 class="title toc-ignore">Cross-reference results of myocardial
+infarction</h1>
 <h4 class="author">Xiang Zhu</h4>
 <h4 class="date">2019-08-19</h4>
 
@@ -406,7 +391,9 @@ $(document).ready(function () {
 
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
-<span class="glyphicon glyphicon-list" aria-hidden="true"></span> workflowr <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+<span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+workflowr <span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span>
 </button>
 </p>
 <div id="workflowr-report" class="collapse">
@@ -415,7 +402,9 @@ $(document).ready(function () {
 <a data-toggle="tab" href="#summary">Summary</a>
 </li>
 <li>
-<a data-toggle="tab" href="#checks"> Checks <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> </a>
+<a data-toggle="tab" href="#checks"> Checks <span
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+</a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -424,17 +413,27 @@ $(document).ready(function () {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2020-12-02
+<strong>Last updated:</strong> 2024-09-17
 </p>
 <p>
-<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
+<strong>Checks:</strong> <span
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7
+<span class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> 0
 </p>
 <p>
-<strong>Knit directory:</strong> <code>rss-net-results/</code> <span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="This is the local directory in which the code in this file was executed."> </span>
+<strong>Knit directory:</strong> <code>rss-net-results/</code> <span
+class="glyphicon glyphicon-question-sign" aria-hidden="true"
+title="This is the local directory in which the code in this file was executed.">
+</span>
 </p>
 <p>
-This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis was created with <a
-  href="https://github.com/jdblischak/workflowr">workflowr</a> (version 1.6.2). The <em>Checks</em> tab describes the reproducibility checks that were applied when the results were created. The <em>Past versions</em> tab lists the development history.
+This reproducible <a href="https://rmarkdown.rstudio.com">R Markdown</a>
+analysis was created with <a
+  href="https://github.com/workflowr/workflowr">workflowr</a> (version
+1.7.1). The <em>Checks</em> tab describes the reproducibility checks
+that were applied when the results were created. The <em>Past
+versions</em> tab lists the development history.
 </p>
 <hr>
 </div>
@@ -443,103 +442,149 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date
+</a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguptodate" class="panel-collapse collapse">
+<div id="strongRMarkdownfilestronguptodate"
+class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great! Since the R Markdown file has been committed to the Git repository, you know the exact version of the code that produced these results.</p>
+<p>Great! Since the R Markdown file has been committed to the Git
+repository, you know the exact version of the code that produced these
+results.</p>
 </div>
 </div>
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongEnvironmentstrongempty"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Environment:</strong> empty </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongEnvironmentstrongempty">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Environment:</strong> empty </a>
 </p>
 </div>
 <div id="strongEnvironmentstrongempty" class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great job! The global environment was empty. Objects defined in the global environment can affect the analysis in your R Markdown file in unknown ways. For reproduciblity it’s best to always run the code in an empty environment.</p>
+<p>Great job! The global environment was empty. Objects defined in the
+global environment can affect the analysis in your R Markdown file in
+unknown ways. For reproduciblity it’s best to always run the code in an
+empty environment.</p>
 </div>
 </div>
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSeedstrongcodesetseed20180719code"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Seed:</strong> <code>set.seed(20180719)</code> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSeedstrongcodesetseed20180719code">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Seed:</strong>
+<code>set.seed(20180719)</code> </a>
 </p>
 </div>
-<div id="strongSeedstrongcodesetseed20180719code" class="panel-collapse collapse">
+<div id="strongSeedstrongcodesetseed20180719code"
+class="panel-collapse collapse">
 <div class="panel-body">
-<p>The command <code>set.seed(20180719)</code> was run prior to running the code in the R Markdown file. Setting a seed ensures that any results that rely on randomness, e.g. subsampling or permutations, are reproducible.</p>
+<p>The command <code>set.seed(20180719)</code> was run prior to running
+the code in the R Markdown file. Setting a seed ensures that any results
+that rely on randomness, e.g. subsampling or permutations, are
+reproducible.</p>
 </div>
 </div>
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSessioninformationstrongrecorded"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Session information:</strong> recorded </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSessioninformationstrongrecorded">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Session information:</strong>
+recorded </a>
 </p>
 </div>
-<div id="strongSessioninformationstrongrecorded" class="panel-collapse collapse">
+<div id="strongSessioninformationstrongrecorded"
+class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great job! Recording the operating system, R version, and package versions is critical for reproducibility.</p>
+<p>Great job! Recording the operating system, R version, and package
+versions is critical for reproducibility.</p>
 </div>
 </div>
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongCachestrongnone"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Cache:</strong> none </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongCachestrongnone">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Cache:</strong> none </a>
 </p>
 </div>
 <div id="strongCachestrongnone" class="panel-collapse collapse">
 <div class="panel-body">
-<p>Nice! There were no cached chunks for this analysis, so you can be confident that you successfully produced the results during this run.</p>
+<p>Nice! There were no cached chunks for this analysis, so you can be
+confident that you successfully produced the results during this
+run.</p>
 </div>
 </div>
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongFilepathsstrongrelative"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>File paths:</strong> relative </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongFilepathsstrongrelative">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>File paths:</strong> relative </a>
 </p>
 </div>
 <div id="strongFilepathsstrongrelative" class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great job! Using relative paths to the files within your workflowr project makes it easier to run your code on other machines.</p>
+<p>Great job! Using relative paths to the files within your workflowr
+project makes it easier to run your code on other machines.</p>
 </div>
 </div>
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomxiangzhursspecatreef669e3e251d1c0f5c2b2cdeca5cf32f778e1cedatargetblankf669e3ea"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/xiangzhu/rss-peca/tree/f669e3e251d1c0f5c2b2cdeca5cf32f778e1ceda" target="_blank">f669e3e</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomxiangzhurssnetresultstreeb0dad18445c743649619896dc5bec8adfe7703d9targetblankb0dad18a">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Repository version:</strong>
+<a href="https://github.com/xiangzhu/rss-net-results/tree/b0dad18445c743649619896dc5bec8adfe7703d9" target="_blank">b0dad18</a>
+</a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomxiangzhursspecatreef669e3e251d1c0f5c2b2cdeca5cf32f778e1cedatargetblankf669e3ea" class="panel-collapse collapse">
+<div
+id="strongRepositoryversionstrongahrefhttpsgithubcomxiangzhurssnetresultstreeb0dad18445c743649619896dc5bec8adfe7703d9targetblankb0dad18a"
+class="panel-collapse collapse">
 <div class="panel-body">
 <p>
-Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
+Great! You are using Git for version control. Tracking code development
+and connecting the code version to the results is critical for
+reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/xiangzhu/rss-peca/tree/f669e3e251d1c0f5c2b2cdeca5cf32f778e1ceda" target="_blank">f669e3e</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version
+<a href="https://github.com/xiangzhu/rss-net-results/tree/b0dad18445c743649619896dc5bec8adfe7703d9" target="_blank">b0dad18</a>.
+See the <em>Past versions</em> tab to see a history of the changes made
+to the R Markdown and HTML files.
 </p>
 <p>
-Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
+Note that you need to be careful to ensure that all relevant files for
+the analysis have been committed to Git prior to generating the results
+(you can use <code>wflow_publish</code> or
+<code>wflow_git_commit</code>). workflowr only checks the R Markdown
+file, but you know if there are other scripts or data files that it
+depends on. Below is the status of the Git repository when the results
+were generated:
 </p>
 <pre><code>
 Ignored files:
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
 
-Untracked files:
-    Untracked:  analysis/ne_suppfig.Rmd
-
 </code></pre>
 <p>
-Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes.
+Note that any generated files, e.g. HTML, png, CSS, etc., are not
+included in this status report because it is ok for generated content to
+have uncommitted changes.
 </p>
 </div>
 </div>
@@ -550,7 +595,12 @@ Note that any generated files, e.g. HTML, png, CSS, etc., are not included in t
 <div id="versions" class="tab-pane fade">
 
 <p>
-These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/mi2015_xref.Rmd</code>) and HTML (<code>docs/mi2015_xref.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
+These are the previous versions of the repository in which changes were
+made to the R Markdown (<code>analysis/mi2015_xref.Rmd</code>) and HTML
+(<code>docs/mi2015_xref.html</code>) files. If you’ve configured a
+remote Git repository (see <code>?wflow_git_remote</code>), click on the
+hyperlinks in the table below to view the files as they were in that
+past version.
 </p>
 <div class="table-responsive">
 <table class="table table-condensed table-hover">
@@ -579,7 +629,7 @@ Message
 html
 </td>
 <td>
-<a href="https://rawcdn.githack.com/xiangzhu/rss-peca/f669e3e251d1c0f5c2b2cdeca5cf32f778e1ceda/docs/mi2015_xref.html" target="_blank">f669e3e</a>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-net-results/57af77473122877ed7ac45d7fbc45065500a1332/docs/mi2015_xref.html" target="_blank">57af774</a>
 </td>
 <td>
 xiangzhu
@@ -596,7 +646,24 @@ Build site.
 html
 </td>
 <td>
-<a href="https://rawcdn.githack.com/xiangzhu/rss-peca/f40af1ccbbe02b956b9ec6066b3ccede2b722aea/docs/mi2015_xref.html" target="_blank">f40af1c</a>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-net-results/f669e3e251d1c0f5c2b2cdeca5cf32f778e1ceda/docs/mi2015_xref.html" target="_blank">f669e3e</a>
+</td>
+<td>
+xiangzhu
+</td>
+<td>
+2020-12-02
+</td>
+<td>
+Build site.
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-net-results/f40af1ccbbe02b956b9ec6066b3ccede2b722aea/docs/mi2015_xref.html" target="_blank">f40af1c</a>
 </td>
 <td>
 xiangzhu
@@ -613,13 +680,13 @@ Build site.
 html
 </td>
 <td>
-<a href="https://rawcdn.githack.com/xiangzhu/rss-peca/04e60bf5b96a96203fac26147447bec9a8a7a214/docs/mi2015_xref.html" target="_blank">04e60bf</a>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-net-results/04e60bf5b96a96203fac26147447bec9a8a7a214/docs/mi2015_xref.html" target="_blank">04e60bf</a>
 </td>
 <td>
 xiangzhu
 </td>
 <td>
-2020-03-09
+2020-03-08
 </td>
 <td>
 Build site.
@@ -630,7 +697,7 @@ Build site.
 html
 </td>
 <td>
-<a href="https://rawcdn.githack.com/xiangzhu/rss-peca/8fde153b2847f7e0e68a7dc4e00e36f9afb6380b/docs/mi2015_xref.html" target="_blank">8fde153</a>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-net-results/8fde153b2847f7e0e68a7dc4e00e36f9afb6380b/docs/mi2015_xref.html" target="_blank">8fde153</a>
 </td>
 <td>
 xiangzhu
@@ -647,13 +714,13 @@ Build site.
 html
 </td>
 <td>
-<a href="https://rawcdn.githack.com/xiangzhu/rss-peca/8209433cdfb26fc8034e818434b5ab819a2ba7e9/docs/mi2015_xref.html" target="_blank">8209433</a>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-net-results/8209433cdfb26fc8034e818434b5ab819a2ba7e9/docs/mi2015_xref.html" target="_blank">8209433</a>
 </td>
 <td>
 xiangzhu
 </td>
 <td>
-2020-01-31
+2020-01-30
 </td>
 <td>
 Build site.
@@ -664,7 +731,7 @@ Build site.
 html
 </td>
 <td>
-<a href="https://rawcdn.githack.com/xiangzhu/rss-peca/d0646877c850c033f276df70cdd0e4f19d236384/docs/mi2015_xref.html" target="_blank">d064687</a>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-net-results/d0646877c850c033f276df70cdd0e4f19d236384/docs/mi2015_xref.html" target="_blank">d064687</a>
 </td>
 <td>
 xiangzhu
@@ -681,7 +748,7 @@ Build site.
 html
 </td>
 <td>
-<a href="https://rawcdn.githack.com/xiangzhu/rss-peca/6ec6d3ff0f654bb83209e36bf9beea0cb9db7cf7/docs/mi2015_xref.html" target="_blank">6ec6d3f</a>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-net-results/6ec6d3ff0f654bb83209e36bf9beea0cb9db7cf7/docs/mi2015_xref.html" target="_blank">6ec6d3f</a>
 </td>
 <td>
 xiangzhu
@@ -698,7 +765,7 @@ Build site.
 Rmd
 </td>
 <td>
-<a href="https://github.com/xiangzhu/rss-peca/blob/e9cd1dbf90ad5ea2c3ed64a80f0aa31eb41cc6ab/analysis/mi2015_xref.Rmd" target="_blank">e9cd1db</a>
+<a href="https://github.com/xiangzhu/rss-net-results/blob/e9cd1dbf90ad5ea2c3ed64a80f0aa31eb41cc6ab/analysis/mi2015_xref.Rmd" target="_blank">e9cd1db</a>
 </td>
 <td>
 xiangzhu
@@ -707,7 +774,7 @@ xiangzhu
 2019-12-06
 </td>
 <td>
-wflow_publish(“analysis/mi2015_xref.Rmd”)
+wflow_publish("analysis/mi2015_xref.Rmd")
 </td>
 </tr>
 <tr>
@@ -715,24 +782,7 @@ wflow_publish(“analysis/mi2015_xref.Rmd”)
 html
 </td>
 <td>
-<a href="https://rawcdn.githack.com/xiangzhu/rss-peca/8677943e477065617b778d95abb5d669c97507ec/docs/mi2015_xref.html" target="_blank">8677943</a>
-</td>
-<td>
-xiangzhu
-</td>
-<td>
-2019-12-06
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/xiangzhu/rss-peca/115fb0949f37a887d72951f5966cc27a1030ff58/docs/mi2015_xref.html" target="_blank">115fb09</a>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-net-results/8677943e477065617b778d95abb5d669c97507ec/docs/mi2015_xref.html" target="_blank">8677943</a>
 </td>
 <td>
 xiangzhu
@@ -749,7 +799,7 @@ Build site.
 html
 </td>
 <td>
-<a href="https://rawcdn.githack.com/xiangzhu/rss-peca/9173a0c975a0ce79bc9c304e8ea67acadbd08e16/docs/mi2015_xref.html" target="_blank">9173a0c</a>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-net-results/115fb0949f37a887d72951f5966cc27a1030ff58/docs/mi2015_xref.html" target="_blank">115fb09</a>
 </td>
 <td>
 xiangzhu
@@ -766,13 +816,13 @@ Build site.
 html
 </td>
 <td>
-<a href="https://rawcdn.githack.com/xiangzhu/rss-peca/985be58dba9126c32aed57887d92a161aad8bdf3/docs/mi2015_xref.html" target="_blank">985be58</a>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-net-results/9173a0c975a0ce79bc9c304e8ea67acadbd08e16/docs/mi2015_xref.html" target="_blank">9173a0c</a>
 </td>
 <td>
 xiangzhu
 </td>
 <td>
-2019-12-04
+2019-12-06
 </td>
 <td>
 Build site.
@@ -783,7 +833,7 @@ Build site.
 html
 </td>
 <td>
-<a href="https://rawcdn.githack.com/xiangzhu/rss-peca/6615e479947d0dfd9ca78ff9979d4acfb441eb35/docs/mi2015_xref.html" target="_blank">6615e47</a>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-net-results/985be58dba9126c32aed57887d92a161aad8bdf3/docs/mi2015_xref.html" target="_blank">985be58</a>
 </td>
 <td>
 xiangzhu
@@ -800,7 +850,24 @@ Build site.
 html
 </td>
 <td>
-<a href="https://rawcdn.githack.com/xiangzhu/rss-peca/bad6f44923447fe1df7ba0d55c53b9d5d709f8ce/docs/mi2015_xref.html" target="_blank">bad6f44</a>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-net-results/6615e479947d0dfd9ca78ff9979d4acfb441eb35/docs/mi2015_xref.html" target="_blank">6615e47</a>
+</td>
+<td>
+xiangzhu
+</td>
+<td>
+2019-12-03
+</td>
+<td>
+Build site.
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-net-results/bad6f44923447fe1df7ba0d55c53b9d5d709f8ce/docs/mi2015_xref.html" target="_blank">bad6f44</a>
 </td>
 <td>
 xiangzhu
@@ -817,7 +884,7 @@ Build site.
 html
 </td>
 <td>
-<a href="https://rawcdn.githack.com/xiangzhu/rss-peca/8ef19111a4e636b95ebe12300cf22217f5c45a0d/docs/mi2015_xref.html" target="_blank">8ef1911</a>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-net-results/8ef19111a4e636b95ebe12300cf22217f5c45a0d/docs/mi2015_xref.html" target="_blank">8ef1911</a>
 </td>
 <td>
 xiangzhu
@@ -834,7 +901,7 @@ Build site.
 html
 </td>
 <td>
-<a href="https://rawcdn.githack.com/xiangzhu/rss-peca/85a1fe4b72b447a1888f197d2e99901a88e43c8b/docs/mi2015_xref.html" target="_blank">85a1fe4</a>
+<a href="https://rawcdn.githack.com/xiangzhu/rss-net-results/85a1fe4b72b447a1888f197d2e99901a88e43c8b/docs/mi2015_xref.html" target="_blank">85a1fe4</a>
 </td>
 <td>
 xiangzhu
@@ -851,7 +918,7 @@ Build site.
 Rmd
 </td>
 <td>
-<a href="https://github.com/xiangzhu/rss-peca/blob/65b6ab23efa860def6e6be036a3ba1bf6f075249/analysis/mi2015_xref.Rmd" target="_blank">65b6ab2</a>
+<a href="https://github.com/xiangzhu/rss-net-results/blob/65b6ab23efa860def6e6be036a3ba1bf6f075249/analysis/mi2015_xref.Rmd" target="_blank">65b6ab2</a>
 </td>
 <td>
 xiangzhu
@@ -860,7 +927,7 @@ xiangzhu
 2019-11-30
 </td>
 <td>
-wflow_publish(“analysis/mi2015_xref.Rmd”)
+wflow_publish("analysis/mi2015_xref.Rmd")
 </td>
 </tr>
 </tbody>
@@ -873,110 +940,117 @@ wflow_publish(“analysis/mi2015_xref.Rmd”)
 <div id="therapeutic-target-database-ttd" class="section level2">
 <h2>Therapeutic Target Database (TTD)</h2>
 <p><br></p>
-<div id="htmlwidget-df4a1fd35b70caa27ccd" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-df4a1fd35b70caa27ccd">{"x":{"filter":"none","data":[["LIPA","CXCL12","CXCL12","CXCL12","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","LPL","LPL"],["TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG"],[0.999986545234744,0.30386399784474,0.30386399784474,0.30386399784474,0.348888496324251,0.348888496324251,0.348888496324251,0.348888496324251,0.348888496324251,0.348888496324251,0.348888496324251,0.29982130210309,0.29982130210309],[0.999991723127276,0.491755429404668,0.491755429404668,0.491755429404668,0.51017118883743,0.51017118883743,0.51017118883743,0.51017118883743,0.51017118883743,0.51017118883743,0.51017118883743,0.434373705716632,0.434373705716632],[0.999997507402414,0.836859531915781,0.836859531915781,0.836859531915781,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.714264665671552,0.714264665671552],["T24373","T04773","T04773","T04773","T23499","T23499","T23499","T23499","T23499","T23499","T23499","T28692","T28692"],["Enzyme deficiency [ICD-11: 5C51-5C57] Approved","Chronic arterial occlusive disease [ICD-11: BD4Z] Phase 2","Heart failure [ICD-11: BD10-BD1Z] Phase 2","Retinopathy [ICD-11: 9B71] Phase 1","Cardiovascular disease [ICD-11: BA00-BE2Z] Approved","Coronary vasospastic disease [ICD-11: BA85] Phase 3","Hypertension [ICD-11: BA00-BA04] Phase 2","Increased intracranial pressure [ICD-11: 8D60] Phase 1","Preterm labour/delivery [ICD-11: JB00] Investigative","Pulmonary hypertension [ICD-11: BB01] Approved","Urinary system clinical sympton [ICD-11: MF8Y] Phase 2/3","Hyper-lipoproteinaemia [ICD-11: 5C80] Approved","Pregnancy/childbirth/puerperium maternal infection [ICD-11: JB63] Phase 3"]],"container":"<table class=\"white-space: nowrap\">\n  <thead>\n    <tr>\n      <th>Gene<\/th>\n      <th>Role<\/th>\n      <th><i>P<\/i><sub>1<\/sub><sup>base<\/sup><\/th>\n      <th><i>P<\/i><sub>1<\/sub><sup>near<\/sup><\/th>\n      <th><i>P<\/i><sub>1<\/sub><sup>bma<\/sup><\/th>\n      <th>TTD ID<\/th>\n      <th>Disease<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\");\n  }"},{"targets":3,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\");\n  }"},{"targets":4,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\");\n  }"},{"className":"dt-right","targets":[2,3,4]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render","options.columnDefs.2.render"],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-df4a1fd35b70caa27ccd" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-df4a1fd35b70caa27ccd">{"x":{"filter":"none","vertical":false,"data":[["LIPA","LDLR","MAT2A","MAT2A","CYP17A1","CYP17A1","GGCX","GGCX","SMAD3","TBXAS1","TBXAS1","TBXAS1","TBXAS1","TBXAS1","TBXAS1","TBXAS1","CXCL12","CXCL12","CXCL12","CXCL12","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","LPL","LPL","LPL","PCSK9","PCSK9","PCSK9","PCSK9","PCSK9","PCSK9","PCSK9","PCSK9","PCSK9","PCSK9"],["TG","TG","TG","TG","TG","TG","TG","TG","TF","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG"],[0.9999865452347442,0.8465185401700255,0.7924349276952973,0.7924349276952973,0.8019750233350803,0.8019750233350803,0.7924360697846489,0.7924360697846489,0.7012546093926996,0.4376038905526262,0.4376038905526262,0.4376038905526262,0.4376038905526262,0.4376038905526262,0.4376038905526262,0.4376038905526262,0.3038639978447404,0.3038639978447404,0.3038639978447404,0.3038639978447404,0.3488884963242515,0.3488884963242515,0.3488884963242515,0.3488884963242515,0.3488884963242515,0.3488884963242515,0.3488884963242515,0.3488884963242515,0.3488884963242515,0.3488884963242515,0.3488884963242515,0.3488884963242515,0.3488884963242515,0.3488884963242515,0.3488884963242515,0.3488884963242515,0.3488884963242515,0.3488884963242515,0.3488884963242515,0.3488884963242515,0.29982130210309,0.29982130210309,0.29982130210309,0.3658137432346497,0.3658137432346497,0.3658137432346497,0.3658137432346497,0.3658137432346497,0.3658137432346497,0.3658137432346497,0.3658137432346497,0.3658137432346497,0.3658137432346497],[0.999991723127276,0.8850128075626434,0.8527934098225353,0.8527934098225353,0.8549411570831678,0.8549411570831678,0.8527945598493198,0.8527945598493198,0.797425141261958,0.5586426261260322,0.5586426261260322,0.5586426261260322,0.5586426261260322,0.5586426261260322,0.5586426261260322,0.5586426261260322,0.4917554294046685,0.4917554294046685,0.4917554294046685,0.4917554294046685,0.5101711888374303,0.5101711888374303,0.5101711888374303,0.5101711888374303,0.5101711888374303,0.5101711888374303,0.5101711888374303,0.5101711888374303,0.5101711888374303,0.5101711888374303,0.5101711888374303,0.5101711888374303,0.5101711888374303,0.5101711888374303,0.5101711888374303,0.5101711888374303,0.5101711888374303,0.5101711888374303,0.5101711888374303,0.5101711888374303,0.4343737057166317,0.4343737057166317,0.4343737057166317,0.4825769240121384,0.4825769240121384,0.4825769240121384,0.4825769240121384,0.4825769240121384,0.4825769240121384,0.4825769240121384,0.4825769240121384,0.4825769240121384,0.4825769240121384],[0.9999975074024142,0.9821706308914423,0.9551028697759809,0.9551028697759809,0.9384194648366461,0.9384194648366461,0.8737460217145534,0.8737460217145534,0.8704839154480394,0.8678858156500581,0.8678858156500581,0.8678858156500581,0.8678858156500581,0.8678858156500581,0.8678858156500581,0.8678858156500581,0.8368595319157808,0.8368595319157808,0.8368595319157808,0.8368595319157808,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.7142646656715524,0.7142646656715524,0.7142646656715524,0.7057881559362864,0.7057881559362864,0.7057881559362864,0.7057881559362864,0.7057881559362864,0.7057881559362864,0.7057881559362864,0.7057881559362864,0.7057881559362864,0.7057881559362864],["T24373","T94692","T97008","T97008","T89041","T89041","T88182","T88182","T35445","T78356","T78356","T78356","T78356","T78356","T78356","T78356","T04773","T04773","T04773","T04773","T23499","T23499","T23499","T23499","T23499","T23499","T23499","T23499","T23499","T23499","T23499","T23499","T23499","T23499","T23499","T23499","T23499","T23499","T23499","T23499","T28692","T28692","T28692","T62206","T62206","T62206","T62206","T62206","T62206","T86652","T86652","T86652","T86652"],["Enzyme deficiency [ICD-11: 5C51-5C57]","Non-small-cell lung cancer [ICD-11: 2C25.Y]","Solid tumour/cancer [ICD-11: 2A00-2F9Z]","Lymphoma [ICD-11: 2A80-2A86]","Prostate cancer [ICD-11: 2C82.0]","Breast cancer [ICD-11: 2C60-2C65]","Vitamin K deficiency [ICD-11: 5B59]","Bleeding disorder [ICD-11: GA20-GA21]","Ocular disease [ICD-11: 1F00.1Z]","Angina pectoris [ICD-11: BA40]","Type-2 diabetes [ICD-11: 5A11]","Asthma [ICD-11: CA23]","Thrombosis [ICD-11: DB61-GB90]","Inflammatory bowel disease [ICD-11: DD72]","Cardiac arrhythmias [ICD-11: BC9Z]","Nephritis [ICD-11: GB40]","Heart failure [ICD-11: BD10-BD13]","Peripheral arterial disease [ICD-11: BD4Z]","Macular degeneration [ICD-11: 9B78.3]","Congestive heart failure [ICD-11: BD10]","Cardiovascular disease [ICD-11: BA00-BE2Z]","Pulmonary hypertension [ICD-11: BB01]","Pulmonary arterial hypertension [ICD-11: BB01.0]","Hypotension [ICD-11: BA20-BA21]","Cerebral vasospasm [ICD-11: BA85.Z]","Diabetic nephropathy [ICD-11: GB61.Z]","Focal segmental glomerulosclerosis [ICD-11: MF8Y]","Prostate cancer [ICD-11: 2C82.0]","Hypertension [ICD-11: BA00-BA04]","Myocardial infarction [ICD-11: BA41-BA43]","Cerebral oedema in diabetic ketoacidosis [ICD-11: 8D60.1]","Vasospasm [ICD-11: 9B74.0]","Cerebrovascular disease [ICD-11: 8B2Z]","Arrhythmia [ICD-11: BC9Z]","Solid tumour/cancer [ICD-11: 2A00-2F9Z]","Depression [ICD-11: 6A70-6A7Z]","Anxiety disorder [ICD-11: 6B00-6B0Z]","Nerve injury [ICD-11: ND56.4]","Heart disease [ICD-11: BA41-BA42]","Premature labour [ICD-11: JB00]","Hyperlipidaemia [ICD-11: 5C80]","Dysbetalipoproteinemia [ICD-11: 5C80.2]","Blood forming organ disorder [ICD-11: JB64.1]","Hypercholesterolaemia [ICD-11: 5C80.0]","Familial hypercholesterolemia [ICD-11: 5C80.00]","Chronic obstructive pulmonary disease [ICD-11: CA22]","Cardiovascular disease [ICD-11: BA00-BE2Z]","Hyperlipidaemia [ICD-11: 5C80]","Coronary artery disease [ICD-11: BA80]","Cardiovascular disease [ICD-11: BA00-BE2Z]","Metabolic disorder [ICD-11: 5C50-5D2Z]","Hypercholesterolaemia [ICD-11: 5C80.0]","Coronary artery disease [ICD-11: BA80]"]],"container":"<table class=\"white-space: nowrap\">\n  <thead>\n    <tr>\n      <th>Gene<\/th>\n      <th>Role<\/th>\n      <th><i>P<\/i><sub>1<\/sub><sup>base<\/sup><\/th>\n      <th><i>P<\/i><sub>1<\/sub><sup>near<\/sup><\/th>\n      <th><i>P<\/i><sub>1<\/sub><sup>bma<\/sup><\/th>\n      <th>TTD ID<\/th>\n      <th>Disease<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\", null);\n  }"},{"targets":3,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\", null);\n  }"},{"targets":4,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\", null);\n  }"},{"className":"dt-right","targets":[2,3,4]},{"name":"Gene","targets":0},{"name":"Role","targets":1},{"name":"<i>P<\/i><sub>1<\/sub><sup>base<\/sup>","targets":2},{"name":"<i>P<\/i><sub>1<\/sub><sup>near<\/sup>","targets":3},{"name":"<i>P<\/i><sub>1<\/sub><sup>bma<\/sup>","targets":4},{"name":"TTD ID","targets":5},{"name":"Disease","targets":6}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render","options.columnDefs.2.render"],"jsHooks":[]}</script>
 </div>
 <div id="mouse-genome-informatics-mgi" class="section level2">
 <h2>Mouse Genome Informatics (MGI)</h2>
 <p><br></p>
-<div id="htmlwidget-e948555e45e1e9771a0d" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-e948555e45e1e9771a0d">{"x":{"filter":"none","data":[["CDKN2B","CDKN2B","CDKN2B","CDKN2B","CDKN2B","CDKN2A","CDKN2A","CDKN2A","CDKN2A","CDKN2A","CDKN2A","CDKN2A","CDKN2A","CDKN2A","CDKN2A","CDKN2A","CDKN2A","CDKN2A","CDKN2A","CDKN2A","CDKN2A","SLC22A3","SLC22A3","SLC22A3","WDR12","WDR12","WDR12","WDR12","FAM117B","FAM117B","FAM117B","IFIT2","IFIT2","IFIT2","IFIT2","IFIT3","CH25H","CH25H","CH25H","CH25H","CH25H","LIPA","LIPA","LIPA","LIPA","LIPA","LIPA","LIPA","LIPA","LIPA","LIPA","LIPA","LIPA","LIPA","LIPA","LIPA","RALGDS","RALGDS","GBGT1","GBGT1","GBGT1","MED22","MED22","MED22","MED22","MED22","SURF1","SURF1","SURF1","SURF1","SURF1","SURF1","SURF1","SURF1","SURF1","OBP2B","OBP2B","MIA3","MIA3","MIA3","MIA3","MIA3","MIA3","MIA3","MIA3","MIA3","MIA3","SORT1","SORT1","SORT1","SORT1","SORT1","SORT1","KIAA1324","KIAA1324","KIAA1324","KIAA1324","KIAA1324","KIAA1324","KIAA1324","KIAA1324","KIAA1324","KIAA1324","CELSR2","MYBPHL","MYBPHL","MYBPHL","MYBPHL","MYBPHL","MYBPHL","MYBPHL","MYBPHL","MYBPHL","MYBPHL","MYBPHL","MYBPHL","MYBPHL","MYBPHL","MYBPHL","MYBPHL","MYBPHL","MYBPHL","SH2B3","SH2B3","SH2B3","CUX2","CUX2","CUX2","CUX2","CUX2","CUX2","CUX2","CUX2","ATP2B1","ATP2B1","ATP2B1","ATP2B1","ATP2B1","ATP2B1","ATP2B1","ATP2B1","ATP2B1","ATP2B1","ATP2B1","COL4A1","COL4A1","COL4A1","COL4A1","COL4A1","COL4A1","COL4A1","COL4A1","COL4A1","COL4A1","COL4A1","COL4A1","COL4A1","COL4A1","COL4A1","COL4A2","COL4A2","COL4A2","COL4A2","COL4A2","COL4A2","COL4A2","COL4A2","COL4A2","COL4A2","COL4A2","COL4A2","COL4A2","COL4A2","COL4A2","COL4A2","COL4A2","COL4A2","COL4A2","SPECC1L","SPECC1L","SPECC1L","SPECC1L","SPECC1L","GGT5","KCNK5","KCNK5","KCNK5","KCNK5","KCNK5","KCNK5","ADAMTS7","ADAMTS7","ADAMTS7","ADAMTS7","ADAMTS7","ADAMTS7","ADAMTS7","MORF4L1","MORF4L1","MORF4L1","MORF4L1","MORF4L1","MORF4L1","MORF4L1","MORF4L1","MORF4L1","MORF4L1","MORF4L1","LDLR","LDLR","LDLR","LDLR","LDLR","LDLR","LDLR","LDLR","LDLR","LDLR","LDLR","LDLR","LDLR","LDLR","SMARCA4","SMARCA4","SMARCA4","SMARCA4","SMARCA4","SMARCA4","SMARCA4","SMARCA4","SMARCA4","SMARCA4","SMARCA4","SMARCA4","SMARCA4","SMARCA4","SMARCA4","SMARCA4","SMARCA4","SMARCA4","SMARCA4","SMARCA4","CAPG","CAPG","CAPG","VAMP8","VAMP8","VAMP8","VAMP8","VAMP8","VAMP8","VAMP8","VAMP8","VAMP8","MAT2A","MAT2A","WBP1L","WBP1L","AS3MT","AS3MT","USP39","USP39","TCF21","TCF21","TCF21","TCF21","TCF21","TCF21","TCF21","TCF21","TCF21","TCF21","TCF21","VAMP5","VAMP5","VAMP5","VAMP5","CYP17A1","CYP17A1","CYP17A1","CYP17A1","CYP17A1","CYP17A1","CYP17A1","CYP17A1","CYP17A1","CYP17A1","USP10","USP10","COTL1","COTL1","COTL1","FURIN","FURIN","FURIN","FURIN","FURIN","FURIN","FURIN","FURIN","FURIN","FURIN","MAN2A2","MAN2A2","MAN2A2","FES","FES","FES","FES","FES","FES","FES","FES","FES","FES","FES","FES","FES","FES","FES","FES","UNC45A","UNC45A","UNC45A","UNC45A","HDDC3","HDDC3","HDDC3","HDDC3","HDDC3","HDDC3","HDDC3","BLM","BLM","BLM","BLM","BLM","BLM","BLM","BLM","BLM","BLM","PDLIM5","PDLIM5","PDLIM5","PDLIM5","PDLIM5","PRC1","PRC1","PRC1","IL6R","IL6R","IL6R","IL6R","IL6R","IL6R","IL6R","IL6R","IL6R","IL6R","ATP8B2","ATP8B2","ATP8B2","ATP8B2","CNNM2","CNNM2","CNNM2","CNNM2","CNNM2","CNNM2","GGCX","GGCX","GGCX","GGCX","GGCX","GGCX","GGCX","SLC44A3","SLC44A3","SMAD3","SMAD3","SMAD3","SMAD3","SMAD3","SMAD3","SMAD3","SMAD3","SMAD3","SMAD3","SMAD3","SMAD3","SMAD3","SMAD3","SMAD3","SMAD3","TBXAS1","TBXAS1","TBXAS1","CXCL12","CXCL12","CXCL12","CXCL12","CXCL12","CXCL12","CXCL12","CXCL12","CXCL12","CXCL12","PARP12","PARP12","USP24","USP24","USP24","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","LPL","LPL","LPL","LPL","LPL","LPL","LPL","LPL","LPL","LPL","PCSK9","PCSK9","CYP4F2","CYP4F2","SOCS5","SOCS5","SOCS5","TRIB1","TRIB1","TRIB1","TRIB1","TRIB1","TRIB1","TRIB1","TRIB1","TRIB1","TRIB1","CEP120","CEP120","CEP120","CEP120","KALRN","KALRN","KALRN","KALRN","KALRN","KALRN","KALRN","KALRN","KALRN","CSNK1G3","CSNK1G3"],["TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TF","TF","TF","TF","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TF","TF","TF","TF","TF","TF","TF","TF","TF","TF","TF","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TF","TF","TF","TF","TF","TF","TF","TF","TF","TF","TF","TF","TF","TF","TF","TF","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG"],[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0.999994768427383,0.999994768427383,0.999994768427383,0.999995236562509,0.999995236562509,0.999995236562509,0.999995236562509,0.999995237564558,0.999995237564558,0.999995237564558,0.99998653699828,0.99998653699828,0.99998653699828,0.99998653699828,0.999986539247993,0.999986522688877,0.999986522688877,0.999986522688877,0.999986522688877,0.999986522688877,0.999986545234744,0.999986545234744,0.999986545234744,0.999986545234744,0.999986545234744,0.999986545234744,0.999986545234744,0.999986545234744,0.999986545234744,0.999986545234744,0.999986545234744,0.999986545234744,0.999986545234744,0.999986545234744,0.999986545234744,0.999967802277092,0.999967802277092,0.999967787130414,0.999967787130414,0.999967787130414,0.999968337913808,0.999968337913808,0.999968337913808,0.999968337913808,0.999968337913808,0.999968336809193,0.999968336809193,0.999968336809193,0.999968336809193,0.999968336809193,0.999968336809193,0.999968336809193,0.999968336809193,0.999968336809193,0.999968178564264,0.999968178564264,0.999864037557235,0.999864037557235,0.999864037557235,0.999864037557235,0.999864037557235,0.999864037557235,0.999864037557235,0.999864037557235,0.999864037557235,0.999864037557235,0.999770630532945,0.999770630532945,0.999770630532945,0.999770630532945,0.999770630532945,0.999770630532945,0.9997706219142,0.9997706219142,0.9997706219142,0.9997706219142,0.9997706219142,0.9997706219142,0.9997706219142,0.9997706219142,0.9997706219142,0.9997706219142,0.999770623962763,0.999770626201803,0.999770626201803,0.999770626201803,0.999770626201803,0.999770626201803,0.999770626201803,0.999770626201803,0.999770626201803,0.999770626201803,0.999770626201803,0.999770626201803,0.999770626201803,0.999770626201803,0.999770626201803,0.999770626201803,0.999770626201803,0.999770626201803,0.999770626201803,0.99865660238742,0.99865660238742,0.99865660238742,0.998656918677083,0.998656918677083,0.998656918677083,0.998656918677083,0.998656918677083,0.998656918677083,0.998656918677083,0.998656918677083,0.979201903065051,0.979201903065051,0.979201903065051,0.979201903065051,0.979201903065051,0.979201903065051,0.979201903065051,0.979201903065051,0.979201903065051,0.979201903065051,0.979201903065051,0.875466461523342,0.875466461523342,0.875466461523342,0.875466461523342,0.875466461523342,0.875466461523342,0.875466461523342,0.875466461523342,0.875466461523342,0.875466461523342,0.875466461523342,0.875466461523342,0.875466461523342,0.875466461523342,0.875466461523342,0.874051975132719,0.874051975132719,0.874051975132719,0.874051975132719,0.874051975132719,0.874051975132719,0.874051975132719,0.874051975132719,0.874051975132719,0.874051975132719,0.874051975132719,0.874051975132719,0.874051975132719,0.874051975132719,0.874051975132719,0.874051975132719,0.874051975132719,0.874051975132719,0.874051975132719,0.93837961821994,0.93837961821994,0.93837961821994,0.93837961821994,0.93837961821994,0.938348968435182,0.910784442234523,0.910784442234523,0.910784442234523,0.910784442234523,0.910784442234523,0.910784442234523,0.890345049804018,0.890345049804018,0.890345049804018,0.890345049804018,0.890345049804018,0.890345049804018,0.890345049804018,0.89035275174273,0.89035275174273,0.89035275174273,0.89035275174273,0.89035275174273,0.89035275174273,0.89035275174273,0.89035275174273,0.89035275174273,0.89035275174273,0.89035275174273,0.846518540170025,0.846518540170025,0.846518540170025,0.846518540170025,0.846518540170025,0.846518540170025,0.846518540170025,0.846518540170025,0.846518540170025,0.846518540170025,0.846518540170025,0.846518540170025,0.846518540170025,0.846518540170025,0.847453710442707,0.847453710442707,0.847453710442707,0.847453710442707,0.847453710442707,0.847453710442707,0.847453710442707,0.847453710442707,0.847453710442707,0.847453710442707,0.847453710442707,0.847453710442707,0.847453710442707,0.847453710442707,0.847453710442707,0.847453710442707,0.847453710442707,0.847453710442707,0.847453710442707,0.847453710442707,0.792383258113493,0.792383258113493,0.792383258113493,0.792433374229065,0.792433374229065,0.792433374229065,0.792433374229065,0.792433374229065,0.792433374229065,0.792433374229065,0.792433374229065,0.792433374229065,0.792434927695297,0.792434927695297,0.80199771239451,0.80199771239451,0.801970811143269,0.801970811143269,0.792460969837775,0.792460969837775,0.70302373034435,0.70302373034435,0.70302373034435,0.70302373034435,0.70302373034435,0.70302373034435,0.70302373034435,0.70302373034435,0.70302373034435,0.70302373034435,0.70302373034435,0.792433282667217,0.792433282667217,0.792433282667217,0.792433282667217,0.80197502333508,0.80197502333508,0.80197502333508,0.80197502333508,0.80197502333508,0.80197502333508,0.80197502333508,0.80197502333508,0.80197502333508,0.80197502333508,0.691209685481335,0.691209685481335,0.691108321393236,0.691108321393236,0.691108321393236,0.578708411124664,0.578708411124664,0.578708411124664,0.578708411124664,0.578708411124664,0.578708411124664,0.578708411124664,0.578708411124664,0.578708411124664,0.578708411124664,0.578697646887053,0.578697646887053,0.578697646887053,0.578702663718955,0.578702663718955,0.578702663718955,0.578702663718955,0.578702663718955,0.578702663718955,0.578702663718955,0.578702663718955,0.578702663718955,0.578702663718955,0.578702663718955,0.578702663718955,0.578702663718955,0.578702663718955,0.578702663718955,0.578702663718955,0.578692602318554,0.578692602318554,0.578692602318554,0.578692602318554,0.578662496909335,0.578662496909335,0.578662496909335,0.578662496909335,0.578662496909335,0.578662496909335,0.578662496909335,0.578678313893831,0.578678313893831,0.578678313893831,0.578678313893831,0.578678313893831,0.578678313893831,0.578678313893831,0.578678313893831,0.578678313893831,0.578678313893831,0.48642999319392,0.48642999319392,0.48642999319392,0.48642999319392,0.48642999319392,0.57873872667483,0.57873872667483,0.57873872667483,0.667986588168634,0.667986588168634,0.667986588168634,0.667986588168634,0.667986588168634,0.667986588168634,0.667986588168634,0.667986588168634,0.667986588168634,0.667986588168634,0.66790195766389,0.66790195766389,0.66790195766389,0.66790195766389,0.801997507326526,0.801997507326526,0.801997507326526,0.801997507326526,0.801997507326526,0.801997507326526,0.792436069784649,0.792436069784649,0.792436069784649,0.792436069784649,0.792436069784649,0.792436069784649,0.792436069784649,0.496827727895165,0.496827727895165,0.7012546093927,0.7012546093927,0.7012546093927,0.7012546093927,0.7012546093927,0.7012546093927,0.7012546093927,0.7012546093927,0.7012546093927,0.7012546093927,0.7012546093927,0.7012546093927,0.7012546093927,0.7012546093927,0.7012546093927,0.7012546093927,0.437603890552626,0.437603890552626,0.437603890552626,0.30386399784474,0.30386399784474,0.30386399784474,0.30386399784474,0.30386399784474,0.30386399784474,0.30386399784474,0.30386399784474,0.30386399784474,0.30386399784474,0.43699565346234,0.43699565346234,0.366054668782085,0.366054668782085,0.366054668782085,0.348888496324251,0.348888496324251,0.348888496324251,0.348888496324251,0.348888496324251,0.348888496324251,0.348888496324251,0.348888496324251,0.348888496324251,0.348888496324251,0.348888496324251,0.348888496324251,0.348888496324251,0.348888496324251,0.348888496324251,0.348888496324251,0.348888496324251,0.348888496324251,0.348888496324251,0.29982130210309,0.29982130210309,0.29982130210309,0.29982130210309,0.29982130210309,0.29982130210309,0.29982130210309,0.29982130210309,0.29982130210309,0.29982130210309,0.36581374323465,0.36581374323465,0.221994109145619,0.221994109145619,0.372016087814197,0.372016087814197,0.372016087814197,0.145971749646017,0.145971749646017,0.145971749646017,0.145971749646017,0.145971749646017,0.145971749646017,0.145971749646017,0.145971749646017,0.145971749646017,0.145971749646017,0.14291584631318,0.14291584631318,0.14291584631318,0.14291584631318,0.111185236164286,0.111185236164286,0.111185236164286,0.111185236164286,0.111185236164286,0.111185236164286,0.111185236164286,0.111185236164286,0.111185236164286,0.145858305990727,0.145858305990727],[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0.999996933676938,0.999996933676938,0.999996933676938,0.999997187324175,0.999997187324175,0.999997187324175,0.999997187324175,0.999997188313949,0.999997188313949,0.999997188313949,0.999991714797369,0.999991714797369,0.999991714797369,0.999991714797369,0.999991717057665,0.999991700469625,0.999991700469625,0.999991700469625,0.999991700469625,0.999991700469625,0.999991723127276,0.999991723127276,0.999991723127276,0.999991723127276,0.999991723127276,0.999991723127276,0.999991723127276,0.999991723127276,0.999991723127276,0.999991723127276,0.999991723127276,0.999991723127276,0.999991723127276,0.999991723127276,0.999991723127276,0.999978368873427,0.999978368873427,0.999978353559182,0.999978353559182,0.999978353559182,0.999978886842279,0.999978886842279,0.999978886842279,0.999978886842279,0.999978886842279,0.99997888575516,0.99997888575516,0.99997888575516,0.99997888575516,0.99997888575516,0.99997888575516,0.99997888575516,0.99997888575516,0.99997888575516,0.999978733392864,0.999978733392864,0.999921787485746,0.999921787485746,0.999921787485746,0.999921787485746,0.999921787485746,0.999921787485746,0.999921787485746,0.999921787485746,0.999921787485746,0.999921787485746,0.99984114956451,0.99984114956451,0.99984114956451,0.99984114956451,0.99984114956451,0.99984114956451,0.999841141399403,0.999841141399403,0.999841141399403,0.999841141399403,0.999841141399403,0.999841141399403,0.999841141399403,0.999841141399403,0.999841141399403,0.999841141399403,0.999841143292796,0.999841145471715,0.999841145471715,0.999841145471715,0.999841145471715,0.999841145471715,0.999841145471715,0.999841145471715,0.999841145471715,0.999841145471715,0.999841145471715,0.999841145471715,0.999841145471715,0.999841145471715,0.999841145471715,0.999841145471715,0.999841145471715,0.999841145471715,0.999841145471715,0.999140464265545,0.999140464265545,0.999140464265545,0.999140779469669,0.999140779469669,0.999140779469669,0.999140779469669,0.999140779469669,0.999140779469669,0.999140779469669,0.999140779469669,0.98889852181409,0.98889852181409,0.98889852181409,0.98889852181409,0.98889852181409,0.98889852181409,0.98889852181409,0.98889852181409,0.98889852181409,0.98889852181409,0.98889852181409,0.945772000067297,0.945772000067297,0.945772000067297,0.945772000067297,0.945772000067297,0.945772000067297,0.945772000067297,0.945772000067297,0.945772000067297,0.945772000067297,0.945772000067297,0.945772000067297,0.945772000067297,0.945772000067297,0.945772000067297,0.944770799627336,0.944770799627336,0.944770799627336,0.944770799627336,0.944770799627336,0.944770799627336,0.944770799627336,0.944770799627336,0.944770799627336,0.944770799627336,0.944770799627336,0.944770799627336,0.944770799627336,0.944770799627336,0.944770799627336,0.944770799627336,0.944770799627336,0.944770799627336,0.944770799627336,0.958118088940768,0.958118088940768,0.958118088940768,0.958118088940768,0.958118088940768,0.958086069835262,0.946868699258802,0.946868699258802,0.946868699258802,0.946868699258802,0.946868699258802,0.946868699258802,0.929117510060689,0.929117510060689,0.929117510060689,0.929117510060689,0.929117510060689,0.929117510060689,0.929117510060689,0.929124622321662,0.929124622321662,0.929124622321662,0.929124622321662,0.929124622321662,0.929124622321662,0.929124622321662,0.929124622321662,0.929124622321662,0.929124622321662,0.929124622321662,0.885012807562643,0.885012807562643,0.885012807562643,0.885012807562643,0.885012807562643,0.885012807562643,0.885012807562643,0.885012807562643,0.885012807562643,0.885012807562643,0.885012807562643,0.885012807562643,0.885012807562643,0.885012807562643,0.885737880460482,0.885737880460482,0.885737880460482,0.885737880460482,0.885737880460482,0.885737880460482,0.885737880460482,0.885737880460482,0.885737880460482,0.885737880460482,0.885737880460482,0.885737880460482,0.885737880460482,0.885737880460482,0.885737880460482,0.885737880460482,0.885737880460482,0.885737880460482,0.885737880460482,0.885737880460482,0.852769297585204,0.852769297585204,0.852769297585204,0.852791435087425,0.852791435087425,0.852791435087425,0.852791435087425,0.852791435087425,0.852791435087425,0.852791435087425,0.852791435087425,0.852791435087425,0.852793409822535,0.852793409822535,0.854963205452681,0.854963205452681,0.854937271321728,0.854937271321728,0.852820935429506,0.852820935429506,0.818588076558677,0.818588076558677,0.818588076558677,0.818588076558677,0.818588076558677,0.818588076558677,0.818588076558677,0.818588076558677,0.818588076558677,0.818588076558677,0.818588076558677,0.852791329847576,0.852791329847576,0.852791329847576,0.852791329847576,0.854941157083168,0.854941157083168,0.854941157083168,0.854941157083168,0.854941157083168,0.854941157083168,0.854941157083168,0.854941157083168,0.854941157083168,0.854941157083168,0.77928148046128,0.77928148046128,0.779193300123231,0.779193300123231,0.779193300123231,0.684452273885572,0.684452273885572,0.684452273885572,0.684452273885572,0.684452273885572,0.684452273885572,0.684452273885572,0.684452273885572,0.684452273885572,0.684452273885572,0.684439044403864,0.684439044403864,0.684439044403864,0.684445623246945,0.684445623246945,0.684445623246945,0.684445623246945,0.684445623246945,0.684445623246945,0.684445623246945,0.684445623246945,0.684445623246945,0.684445623246945,0.684445623246945,0.684445623246945,0.684445623246945,0.684445623246945,0.684445623246945,0.684445623246945,0.684434811346434,0.684434811346434,0.684434811346434,0.684434811346434,0.684398381432791,0.684398381432791,0.684398381432791,0.684398381432791,0.684398381432791,0.684398381432791,0.684398381432791,0.684414851391484,0.684414851391484,0.684414851391484,0.684414851391484,0.684414851391484,0.684414851391484,0.684414851391484,0.684414851391484,0.684414851391484,0.684414851391484,0.635235757141417,0.635235757141417,0.635235757141417,0.635235757141417,0.635235757141417,0.684512888263138,0.684512888263138,0.684512888263138,0.723049273182464,0.723049273182464,0.723049273182464,0.723049273182464,0.723049273182464,0.723049273182464,0.723049273182464,0.723049273182464,0.723049273182464,0.723049273182464,0.722974481530172,0.722974481530172,0.722974481530172,0.722974481530172,0.85496453099363,0.85496453099363,0.85496453099363,0.85496453099363,0.85496453099363,0.85496453099363,0.85279455984932,0.85279455984932,0.85279455984932,0.85279455984932,0.85279455984932,0.85279455984932,0.85279455984932,0.628914521509365,0.628914521509365,0.797425141261958,0.797425141261958,0.797425141261958,0.797425141261958,0.797425141261958,0.797425141261958,0.797425141261958,0.797425141261958,0.797425141261958,0.797425141261958,0.797425141261958,0.797425141261958,0.797425141261958,0.797425141261958,0.797425141261958,0.797425141261958,0.558642626126032,0.558642626126032,0.558642626126032,0.491755429404668,0.491755429404668,0.491755429404668,0.491755429404668,0.491755429404668,0.491755429404668,0.491755429404668,0.491755429404668,0.491755429404668,0.491755429404668,0.557886824755628,0.557886824755628,0.482912101554723,0.482912101554723,0.482912101554723,0.51017118883743,0.51017118883743,0.51017118883743,0.51017118883743,0.51017118883743,0.51017118883743,0.51017118883743,0.51017118883743,0.51017118883743,0.51017118883743,0.51017118883743,0.51017118883743,0.51017118883743,0.51017118883743,0.51017118883743,0.51017118883743,0.51017118883743,0.51017118883743,0.51017118883743,0.434373705716632,0.434373705716632,0.434373705716632,0.434373705716632,0.434373705716632,0.434373705716632,0.434373705716632,0.434373705716632,0.434373705716632,0.434373705716632,0.482576924012138,0.482576924012138,0.346338298844541,0.346338298844541,0.492337790959343,0.492337790959343,0.492337790959343,0.240921217163608,0.240921217163608,0.240921217163608,0.240921217163608,0.240921217163608,0.240921217163608,0.240921217163608,0.240921217163608,0.240921217163608,0.240921217163608,0.2419602315587,0.2419602315587,0.2419602315587,0.2419602315587,0.169334203760844,0.169334203760844,0.169334203760844,0.169334203760844,0.169334203760844,0.169334203760844,0.169334203760844,0.169334203760844,0.169334203760844,0.242477448232375,0.242477448232375],[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0.999999255599141,0.999999255599141,0.999999255599141,0.999999235669142,0.999999235669142,0.999999235669142,0.999999235669142,0.999999183880422,0.999999183880422,0.999999183880422,0.999997700854788,0.999997700854788,0.999997700854788,0.999997700854788,0.999997645257533,0.999997554113614,0.999997554113614,0.999997554113614,0.999997554113614,0.999997554113614,0.999997507402414,0.999997507402414,0.999997507402414,0.999997507402414,0.999997507402414,0.999997507402414,0.999997507402414,0.999997507402414,0.999997507402414,0.999997507402414,0.999997507402414,0.999997507402414,0.999997507402414,0.999997507402414,0.999997507402414,0.999993670474537,0.999993670474537,0.99999274027349,0.99999274027349,0.99999274027349,0.999987573862391,0.999987573862391,0.999987573862391,0.999987573862391,0.999987573862391,0.999987572713942,0.999987572713942,0.999987572713942,0.999987572713942,0.999987572713942,0.999987572713942,0.999987572713942,0.999987572713942,0.999987572713942,0.999987442475621,0.999987442475621,0.999977631961913,0.999977631961913,0.999977631961913,0.999977631961913,0.999977631961913,0.999977631961913,0.999977631961913,0.999977631961913,0.999977631961913,0.999977631961913,0.999958941052765,0.999958941052765,0.999958941052765,0.999958941052765,0.999958941052765,0.999958941052765,0.999957848597999,0.999957848597999,0.999957848597999,0.999957848597999,0.999957848597999,0.999957848597999,0.999957848597999,0.999957848597999,0.999957848597999,0.999957848597999,0.999946321684607,0.999924774812483,0.999924774812483,0.999924774812483,0.999924774812483,0.999924774812483,0.999924774812483,0.999924774812483,0.999924774812483,0.999924774812483,0.999924774812483,0.999924774812483,0.999924774812483,0.999924774812483,0.999924774812483,0.999924774812483,0.999924774812483,0.999924774812483,0.999924774812483,0.999808138838997,0.999808138838997,0.999808138838997,0.999769880713703,0.999769880713703,0.999769880713703,0.999769880713703,0.999769880713703,0.999769880713703,0.999769880713703,0.999769880713703,0.997665368115753,0.997665368115753,0.997665368115753,0.997665368115753,0.997665368115753,0.997665368115753,0.997665368115753,0.997665368115753,0.997665368115753,0.997665368115753,0.997665368115753,0.995945747542831,0.995945747542831,0.995945747542831,0.995945747542831,0.995945747542831,0.995945747542831,0.995945747542831,0.995945747542831,0.995945747542831,0.995945747542831,0.995945747542831,0.995945747542831,0.995945747542831,0.995945747542831,0.995945747542831,0.995717600615305,0.995717600615305,0.995717600615305,0.995717600615305,0.995717600615305,0.995717600615305,0.995717600615305,0.995717600615305,0.995717600615305,0.995717600615305,0.995717600615305,0.995717600615305,0.995717600615305,0.995717600615305,0.995717600615305,0.995717600615305,0.995717600615305,0.995717600615305,0.995717600615305,0.986438033595688,0.986438033595688,0.986438033595688,0.986438033595688,0.986438033595688,0.984729996444444,0.984460228121334,0.984460228121334,0.984460228121334,0.984460228121334,0.984460228121334,0.984460228121334,0.983185260341322,0.983185260341322,0.983185260341322,0.983185260341322,0.983185260341322,0.983185260341322,0.983185260341322,0.982416345223025,0.982416345223025,0.982416345223025,0.982416345223025,0.982416345223025,0.982416345223025,0.982416345223025,0.982416345223025,0.982416345223025,0.982416345223025,0.982416345223025,0.982170630891442,0.982170630891442,0.982170630891442,0.982170630891442,0.982170630891442,0.982170630891442,0.982170630891442,0.982170630891442,0.982170630891442,0.982170630891442,0.982170630891442,0.982170630891442,0.982170630891442,0.982170630891442,0.982024454029894,0.982024454029894,0.982024454029894,0.982024454029894,0.982024454029894,0.982024454029894,0.982024454029894,0.982024454029894,0.982024454029894,0.982024454029894,0.982024454029894,0.982024454029894,0.982024454029894,0.982024454029894,0.982024454029894,0.982024454029894,0.982024454029894,0.982024454029894,0.982024454029894,0.982024454029894,0.956697871125354,0.956697871125354,0.956697871125354,0.955740522689537,0.955740522689537,0.955740522689537,0.955740522689537,0.955740522689537,0.955740522689537,0.955740522689537,0.955740522689537,0.955740522689537,0.955102869775981,0.955102869775981,0.952344803916481,0.952344803916481,0.949791386814069,0.949791386814069,0.946985595417335,0.946985595417335,0.945264442912315,0.945264442912315,0.945264442912315,0.945264442912315,0.945264442912315,0.945264442912315,0.945264442912315,0.945264442912315,0.945264442912315,0.945264442912315,0.945264442912315,0.944680730066873,0.944680730066873,0.944680730066873,0.944680730066873,0.938419464836646,0.938419464836646,0.938419464836646,0.938419464836646,0.938419464836646,0.938419464836646,0.938419464836646,0.938419464836646,0.938419464836646,0.938419464836646,0.937405647482758,0.937405647482758,0.936393367983959,0.936393367983959,0.936393367983959,0.907137365200033,0.907137365200033,0.907137365200033,0.907137365200033,0.907137365200033,0.907137365200033,0.907137365200033,0.907137365200033,0.907137365200033,0.907137365200033,0.892771576630432,0.892771576630432,0.892771576630432,0.891583310177264,0.891583310177264,0.891583310177264,0.891583310177264,0.891583310177264,0.891583310177264,0.891583310177264,0.891583310177264,0.891583310177264,0.891583310177264,0.891583310177264,0.891583310177264,0.891583310177264,0.891583310177264,0.891583310177264,0.891583310177264,0.889483692532487,0.889483692532487,0.889483692532487,0.889483692532487,0.88807204932013,0.88807204932013,0.88807204932013,0.88807204932013,0.88807204932013,0.88807204932013,0.88807204932013,0.887432680687197,0.887432680687197,0.887432680687197,0.887432680687197,0.887432680687197,0.887432680687197,0.887432680687197,0.887432680687197,0.887432680687197,0.887432680687197,0.885979635582617,0.885979635582617,0.885979635582617,0.885979635582617,0.885979635582617,0.885273285114987,0.885273285114987,0.885273285114987,0.881016081786643,0.881016081786643,0.881016081786643,0.881016081786643,0.881016081786643,0.881016081786643,0.881016081786643,0.881016081786643,0.881016081786643,0.881016081786643,0.880331383076013,0.880331383076013,0.880331383076013,0.880331383076013,0.876950348361282,0.876950348361282,0.876950348361282,0.876950348361282,0.876950348361282,0.876950348361282,0.873746021714553,0.873746021714553,0.873746021714553,0.873746021714553,0.873746021714553,0.873746021714553,0.873746021714553,0.873001583303677,0.873001583303677,0.870483915448039,0.870483915448039,0.870483915448039,0.870483915448039,0.870483915448039,0.870483915448039,0.870483915448039,0.870483915448039,0.870483915448039,0.870483915448039,0.870483915448039,0.870483915448039,0.870483915448039,0.870483915448039,0.870483915448039,0.870483915448039,0.867885815650058,0.867885815650058,0.867885815650058,0.836859531915781,0.836859531915781,0.836859531915781,0.836859531915781,0.836859531915781,0.836859531915781,0.836859531915781,0.836859531915781,0.836859531915781,0.836859531915781,0.826652956556891,0.826652956556891,0.786892706491214,0.786892706491214,0.786892706491214,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.714264665671552,0.714264665671552,0.714264665671552,0.714264665671552,0.714264665671552,0.714264665671552,0.714264665671552,0.714264665671552,0.714264665671552,0.714264665671552,0.705788155936286,0.705788155936286,0.677423786173172,0.677423786173172,0.652013388437963,0.652013388437963,0.652013388437963,0.608538443507903,0.608538443507903,0.608538443507903,0.608538443507903,0.608538443507903,0.608538443507903,0.608538443507903,0.608538443507903,0.608538443507903,0.608538443507903,0.595216333365713,0.595216333365713,0.595216333365713,0.595216333365713,0.578867005543019,0.578867005543019,0.578867005543019,0.578867005543019,0.578867005543019,0.578867005543019,0.578867005543019,0.578867005543019,0.578867005543019,0.566576487764926,0.566576487764926],["MGI:104737","MGI:104737","MGI:104737","MGI:104737","MGI:104737","MGI:104738","MGI:104738","MGI:104738","MGI:104738","MGI:104738","MGI:104738","MGI:104738","MGI:104738","MGI:104738","MGI:104738","MGI:104738","MGI:104738","MGI:104738","MGI:104738","MGI:104738","MGI:104738","MGI:1333817","MGI:1333817","MGI:1333817","MGI:1927241","MGI:1927241","MGI:1927241","MGI:1927241","MGI:1920000","MGI:1920000","MGI:1920000","MGI:99449","MGI:99449","MGI:99449","MGI:99449","MGI:1101055","MGI:1333869","MGI:1333869","MGI:1333869","MGI:1333869","MGI:1333869","MGI:96789","MGI:96789","MGI:96789","MGI:96789","MGI:96789","MGI:96789","MGI:96789","MGI:96789","MGI:96789","MGI:96789","MGI:96789","MGI:96789","MGI:96789","MGI:96789","MGI:96789","MGI:107485","MGI:107485","MGI:2449143","MGI:2449143","MGI:2449143","MGI:98446","MGI:98446","MGI:98446","MGI:98446","MGI:98446","MGI:98443","MGI:98443","MGI:98443","MGI:98443","MGI:98443","MGI:98443","MGI:98443","MGI:98443","MGI:98443","MGI:2387617","MGI:2387617","MGI:2443183","MGI:2443183","MGI:2443183","MGI:2443183","MGI:2443183","MGI:2443183","MGI:2443183","MGI:2443183","MGI:2443183","MGI:2443183","MGI:1338015","MGI:1338015","MGI:1338015","MGI:1338015","MGI:1338015","MGI:1338015","MGI:1923930","MGI:1923930","MGI:1923930","MGI:1923930","MGI:1923930","MGI:1923930","MGI:1923930","MGI:1923930","MGI:1923930","MGI:1923930","MGI:1858235","MGI:1916003","MGI:1916003","MGI:1916003","MGI:1916003","MGI:1916003","MGI:1916003","MGI:1916003","MGI:1916003","MGI:1916003","MGI:1916003","MGI:1916003","MGI:1916003","MGI:1916003","MGI:1916003","MGI:1916003","MGI:1916003","MGI:1916003","MGI:1916003","MGI:893598","MGI:893598","MGI:893598","MGI:107321","MGI:107321","MGI:107321","MGI:107321","MGI:107321","MGI:107321","MGI:107321","MGI:107321","MGI:104653","MGI:104653","MGI:104653","MGI:104653","MGI:104653","MGI:104653","MGI:104653","MGI:104653","MGI:104653","MGI:104653","MGI:104653","MGI:88454","MGI:88454","MGI:88454","MGI:88454","MGI:88454","MGI:88454","MGI:88454","MGI:88454","MGI:88454","MGI:88454","MGI:88454","MGI:88454","MGI:88454","MGI:88454","MGI:88454","MGI:88455","MGI:88455","MGI:88455","MGI:88455","MGI:88455","MGI:88455","MGI:88455","MGI:88455","MGI:88455","MGI:88455","MGI:88455","MGI:88455","MGI:88455","MGI:88455","MGI:88455","MGI:88455","MGI:88455","MGI:88455","MGI:88455","MGI:1921642","MGI:1921642","MGI:1921642","MGI:1921642","MGI:1921642","MGI:1346063","MGI:1336175","MGI:1336175","MGI:1336175","MGI:1336175","MGI:1336175","MGI:1336175","MGI:1347346","MGI:1347346","MGI:1347346","MGI:1347346","MGI:1347346","MGI:1347346","MGI:1347346","MGI:1096551","MGI:1096551","MGI:1096551","MGI:1096551","MGI:1096551","MGI:1096551","MGI:1096551","MGI:1096551","MGI:1096551","MGI:1096551","MGI:1096551","MGI:96765","MGI:96765","MGI:96765","MGI:96765","MGI:96765","MGI:96765","MGI:96765","MGI:96765","MGI:96765","MGI:96765","MGI:96765","MGI:96765","MGI:96765","MGI:96765","MGI:88192","MGI:88192","MGI:88192","MGI:88192","MGI:88192","MGI:88192","MGI:88192","MGI:88192","MGI:88192","MGI:88192","MGI:88192","MGI:88192","MGI:88192","MGI:88192","MGI:88192","MGI:88192","MGI:88192","MGI:88192","MGI:88192","MGI:88192","MGI:1098259","MGI:1098259","MGI:1098259","MGI:1336882","MGI:1336882","MGI:1336882","MGI:1336882","MGI:1336882","MGI:1336882","MGI:1336882","MGI:1336882","MGI:1336882","MGI:2443731","MGI:2443731","MGI:107577","MGI:107577","MGI:1929882","MGI:1929882","MGI:107622","MGI:107622","MGI:1202715","MGI:1202715","MGI:1202715","MGI:1202715","MGI:1202715","MGI:1202715","MGI:1202715","MGI:1202715","MGI:1202715","MGI:1202715","MGI:1202715","MGI:1858622","MGI:1858622","MGI:1858622","MGI:1858622","MGI:88586","MGI:88586","MGI:88586","MGI:88586","MGI:88586","MGI:88586","MGI:88586","MGI:88586","MGI:88586","MGI:88586","MGI:894652","MGI:894652","MGI:1919292","MGI:1919292","MGI:1919292","MGI:97513","MGI:97513","MGI:97513","MGI:97513","MGI:97513","MGI:97513","MGI:97513","MGI:97513","MGI:97513","MGI:97513","MGI:2150656","MGI:2150656","MGI:2150656","MGI:95514","MGI:95514","MGI:95514","MGI:95514","MGI:95514","MGI:95514","MGI:95514","MGI:95514","MGI:95514","MGI:95514","MGI:95514","MGI:95514","MGI:95514","MGI:95514","MGI:95514","MGI:95514","MGI:2142246","MGI:2142246","MGI:2142246","MGI:2142246","MGI:1915945","MGI:1915945","MGI:1915945","MGI:1915945","MGI:1915945","MGI:1915945","MGI:1915945","MGI:1328362","MGI:1328362","MGI:1328362","MGI:1328362","MGI:1328362","MGI:1328362","MGI:1328362","MGI:1328362","MGI:1328362","MGI:1328362","MGI:1927489","MGI:1927489","MGI:1927489","MGI:1927489","MGI:1927489","MGI:1858961","MGI:1858961","MGI:1858961","MGI:105304","MGI:105304","MGI:105304","MGI:105304","MGI:105304","MGI:105304","MGI:105304","MGI:105304","MGI:105304","MGI:105304","MGI:1859660","MGI:1859660","MGI:1859660","MGI:1859660","MGI:2151054","MGI:2151054","MGI:2151054","MGI:2151054","MGI:2151054","MGI:2151054","MGI:1927655","MGI:1927655","MGI:1927655","MGI:1927655","MGI:1927655","MGI:1927655","MGI:1927655","MGI:2384860","MGI:2384860","MGI:1201674","MGI:1201674","MGI:1201674","MGI:1201674","MGI:1201674","MGI:1201674","MGI:1201674","MGI:1201674","MGI:1201674","MGI:1201674","MGI:1201674","MGI:1201674","MGI:1201674","MGI:1201674","MGI:1201674","MGI:1201674","MGI:98497","MGI:98497","MGI:98497","MGI:103556","MGI:103556","MGI:103556","MGI:103556","MGI:103556","MGI:103556","MGI:103556","MGI:103556","MGI:103556","MGI:103556","MGI:2143990","MGI:2143990","MGI:1919936","MGI:1919936","MGI:1919936","MGI:105923","MGI:105923","MGI:105923","MGI:105923","MGI:105923","MGI:105923","MGI:105923","MGI:105923","MGI:105923","MGI:105923","MGI:105923","MGI:105923","MGI:105923","MGI:105923","MGI:105923","MGI:105923","MGI:105923","MGI:105923","MGI:105923","MGI:96820","MGI:96820","MGI:96820","MGI:96820","MGI:96820","MGI:96820","MGI:96820","MGI:96820","MGI:96820","MGI:96820","MGI:2140260","MGI:2140260","MGI:1919304","MGI:1919304","MGI:2385459","MGI:2385459","MGI:2385459","MGI:2443397","MGI:2443397","MGI:2443397","MGI:2443397","MGI:2443397","MGI:2443397","MGI:2443397","MGI:2443397","MGI:2443397","MGI:2443397","MGI:2147298","MGI:2147298","MGI:2147298","MGI:2147298","MGI:2685385","MGI:2685385","MGI:2685385","MGI:2685385","MGI:2685385","MGI:2685385","MGI:2685385","MGI:2685385","MGI:2685385","MGI:1917675","MGI:1917675"],["immune system phenotype","neoplasm","hematopoietic system phenotype","mortality/aging","cellular phenotype","integument phenotype","endocrine/exocrine gland phenotype","cellular phenotype","homeostasis/metabolism phenotype","immune system phenotype","renal/urinary system phenotype","skeleton phenotype","behavior/neurological phenotype","respiratory system phenotype","mortality/aging","reproductive system phenotype","hematopoietic system phenotype","neoplasm","nervous system phenotype","digestive/alimentary phenotype","vision/eye phenotype","nervous system phenotype","homeostasis/metabolism phenotype","cellular phenotype","pigmentation phenotype","integument phenotype","mortality/aging","behavior/neurological phenotype","homeostasis/metabolism phenotype","vision/eye phenotype","skeleton phenotype","homeostasis/metabolism phenotype","mortality/aging","behavior/neurological phenotype","immune system phenotype","mortality/aging","hematopoietic system phenotype","cardiovascular system phenotype","reproductive system phenotype","immune system phenotype","endocrine/exocrine gland phenotype","behavior/neurological phenotype","liver/biliary system phenotype","respiratory system phenotype","mortality/aging","cardiovascular system phenotype","hematopoietic system phenotype","nervous system phenotype","digestive/alimentary phenotype","homeostasis/metabolism phenotype","immune system phenotype","renal/urinary system phenotype","integument phenotype","growth/size/body region phenotype","adipose tissue phenotype","endocrine/exocrine gland phenotype","neoplasm","homeostasis/metabolism phenotype","endocrine/exocrine gland phenotype","behavior/neurological phenotype","reproductive system phenotype","behavior/neurological phenotype","hematopoietic system phenotype","mortality/aging","skeleton phenotype","growth/size/body region phenotype","homeostasis/metabolism phenotype","cellular phenotype","growth/size/body region phenotype","mortality/aging","nervous system phenotype","limbs/digits/tail phenotype","embryo phenotype","behavior/neurological phenotype","reproductive system phenotype","integument phenotype","pigmentation phenotype","respiratory system phenotype","mortality/aging","cardiovascular system phenotype","limbs/digits/tail phenotype","skeleton phenotype","cellular phenotype","homeostasis/metabolism phenotype","integument phenotype","growth/size/body region phenotype","craniofacial phenotype","cellular phenotype","homeostasis/metabolism phenotype","vision/eye phenotype","mortality/aging","immune system phenotype","nervous system phenotype","vision/eye phenotype","limbs/digits/tail phenotype","skeleton phenotype","immune system phenotype","reproductive system phenotype","mortality/aging","hematopoietic system phenotype","cardiovascular system phenotype","cellular phenotype","homeostasis/metabolism phenotype","nervous system phenotype","muscle phenotype","craniofacial phenotype","homeostasis/metabolism phenotype","growth/size/body region phenotype","mortality/aging","endocrine/exocrine gland phenotype","digestive/alimentary phenotype","nervous system phenotype","vision/eye phenotype","immune system phenotype","skeleton phenotype","renal/urinary system phenotype","embryo phenotype","liver/biliary system phenotype","respiratory system phenotype","behavior/neurological phenotype","cardiovascular system phenotype","hematopoietic system phenotype","cellular phenotype","immune system phenotype","hematopoietic system phenotype","embryo phenotype","mortality/aging","nervous system phenotype","cellular phenotype","embryo phenotype","mortality/aging","nervous system phenotype","cellular phenotype","digestive/alimentary phenotype","renal/urinary system phenotype","skeleton phenotype","reproductive system phenotype","mortality/aging","integument phenotype","cardiovascular system phenotype","growth/size/body region phenotype","muscle phenotype","homeostasis/metabolism phenotype","endocrine/exocrine gland phenotype","cellular phenotype","homeostasis/metabolism phenotype","muscle phenotype","growth/size/body region phenotype","embryo phenotype","behavior/neurological phenotype","respiratory system phenotype","immune system phenotype","renal/urinary system phenotype","nervous system phenotype","vision/eye phenotype","mortality/aging","reproductive system phenotype","hematopoietic system phenotype","cardiovascular system phenotype","skeleton phenotype","immune system phenotype","vision/eye phenotype","digestive/alimentary phenotype","limbs/digits/tail phenotype","hearing/vestibular/ear phenotype","nervous system phenotype","neoplasm","cardiovascular system phenotype","hematopoietic system phenotype","reproductive system phenotype","mortality/aging","respiratory system phenotype","embryo phenotype","homeostasis/metabolism phenotype","craniofacial phenotype","muscle phenotype","endocrine/exocrine gland phenotype","growth/size/body region phenotype","embryo phenotype","mortality/aging","nervous system phenotype","cellular phenotype","craniofacial phenotype","immune system phenotype","homeostasis/metabolism phenotype","mortality/aging","growth/size/body region phenotype","nervous system phenotype","renal/urinary system phenotype","respiratory system phenotype","homeostasis/metabolism phenotype","cellular phenotype","cardiovascular system phenotype","hematopoietic system phenotype","behavior/neurological phenotype","respiratory system phenotype","liver/biliary system phenotype","growth/size/body region phenotype","integument phenotype","muscle phenotype","homeostasis/metabolism phenotype","cellular phenotype","respiratory system phenotype","liver/biliary system phenotype","cardiovascular system phenotype","hematopoietic system phenotype","mortality/aging","immune system phenotype","vision/eye phenotype","nervous system phenotype","immune system phenotype","liver/biliary system phenotype","behavior/neurological phenotype","pigmentation phenotype","adipose tissue phenotype","hematopoietic system phenotype","cardiovascular system phenotype","growth/size/body region phenotype","integument phenotype","homeostasis/metabolism phenotype","cellular phenotype","endocrine/exocrine gland phenotype","skeleton phenotype","immune system phenotype","vision/eye phenotype","limbs/digits/tail phenotype","nervous system phenotype","digestive/alimentary phenotype","neoplasm","mortality/aging","hematopoietic system phenotype","cardiovascular system phenotype","liver/biliary system phenotype","respiratory system phenotype","embryo phenotype","cellular phenotype","homeostasis/metabolism phenotype","craniofacial phenotype","muscle phenotype","endocrine/exocrine gland phenotype","integument phenotype","growth/size/body region phenotype","cellular phenotype","hematopoietic system phenotype","immune system phenotype","endocrine/exocrine gland phenotype","growth/size/body region phenotype","homeostasis/metabolism phenotype","immune system phenotype","behavior/neurological phenotype","hematopoietic system phenotype","mortality/aging","digestive/alimentary phenotype","renal/urinary system phenotype","mortality/aging","nervous system phenotype","nervous system phenotype","behavior/neurological phenotype","liver/biliary system phenotype","homeostasis/metabolism phenotype","pigmentation phenotype","integument phenotype","renal/urinary system phenotype","immune system phenotype","hematopoietic system phenotype","cardiovascular system phenotype","mortality/aging","reproductive system phenotype","respiratory system phenotype","homeostasis/metabolism phenotype","muscle phenotype","endocrine/exocrine gland phenotype","integument phenotype","growth/size/body region phenotype","renal/urinary system phenotype","respiratory system phenotype","mortality/aging","skeleton phenotype","hearing/vestibular/ear phenotype","cardiovascular system phenotype","mortality/aging","reproductive system phenotype","behavior/neurological phenotype","homeostasis/metabolism phenotype","cellular phenotype","growth/size/body region phenotype","adipose tissue phenotype","cellular phenotype","mortality/aging","integument phenotype","vision/eye phenotype","pigmentation phenotype","growth/size/body region phenotype","integument phenotype","embryo phenotype","hematopoietic system phenotype","cardiovascular system phenotype","mortality/aging","digestive/alimentary phenotype","limbs/digits/tail phenotype","nervous system phenotype","immune system phenotype","endocrine/exocrine gland phenotype","reproductive system phenotype","cellular phenotype","skeleton phenotype","immune system phenotype","vision/eye phenotype","digestive/alimentary phenotype","nervous system phenotype","cardiovascular system phenotype","hematopoietic system phenotype","reproductive system phenotype","mortality/aging","liver/biliary system phenotype","homeostasis/metabolism phenotype","craniofacial phenotype","muscle phenotype","endocrine/exocrine gland phenotype","growth/size/body region phenotype","integument phenotype","vision/eye phenotype","cardiovascular system phenotype","hematopoietic system phenotype","mortality/aging","endocrine/exocrine gland phenotype","renal/urinary system phenotype","liver/biliary system phenotype","cardiovascular system phenotype","hematopoietic system phenotype","reproductive system phenotype","immune system phenotype","neoplasm","cardiovascular system phenotype","hematopoietic system phenotype","mortality/aging","embryo phenotype","immune system phenotype","endocrine/exocrine gland phenotype","growth/size/body region phenotype","integument phenotype","cellular phenotype","behavior/neurological phenotype","cardiovascular system phenotype","mortality/aging","nervous system phenotype","muscle phenotype","mortality/aging","vision/eye phenotype","adipose tissue phenotype","endocrine/exocrine gland phenotype","adipose tissue phenotype","cellular phenotype","immune system phenotype","homeostasis/metabolism phenotype","liver/biliary system phenotype","behavior/neurological phenotype","neoplasm","mortality/aging","hematopoietic system phenotype","mortality/aging","skeleton phenotype","adipose tissue phenotype","homeostasis/metabolism phenotype","craniofacial phenotype","growth/size/body region phenotype","embryo phenotype","behavior/neurological phenotype","cardiovascular system phenotype","mortality/aging","growth/size/body region phenotype","adipose tissue phenotype","homeostasis/metabolism phenotype","mortality/aging","reproductive system phenotype","hematopoietic system phenotype","cardiovascular system phenotype","vision/eye phenotype","cardiovascular system phenotype","growth/size/body region phenotype","integument phenotype","endocrine/exocrine gland phenotype","homeostasis/metabolism phenotype","cellular phenotype","cardiovascular system phenotype","hematopoietic system phenotype","mortality/aging","reproductive system phenotype","neoplasm","behavior/neurological phenotype","immune system phenotype","renal/urinary system phenotype","skeleton phenotype","digestive/alimentary phenotype","limbs/digits/tail phenotype","immune system phenotype","hematopoietic system phenotype","homeostasis/metabolism phenotype","mortality/aging","reproductive system phenotype","cardiovascular system phenotype","hematopoietic system phenotype","liver/biliary system phenotype","immune system phenotype","nervous system phenotype","endocrine/exocrine gland phenotype","cellular phenotype","muscle phenotype","endocrine/exocrine gland phenotype","reproductive system phenotype","hematopoietic system phenotype","homeostasis/metabolism phenotype","growth/size/body region phenotype","growth/size/body region phenotype","endocrine/exocrine gland phenotype","muscle phenotype","craniofacial phenotype","homeostasis/metabolism phenotype","cellular phenotype","skeleton phenotype","renal/urinary system phenotype","embryo phenotype","behavior/neurological phenotype","respiratory system phenotype","hematopoietic system phenotype","cardiovascular system phenotype","mortality/aging","digestive/alimentary phenotype","hearing/vestibular/ear phenotype","nervous system phenotype","vision/eye phenotype","immune system phenotype","homeostasis/metabolism phenotype","cellular phenotype","muscle phenotype","growth/size/body region phenotype","integument phenotype","adipose tissue phenotype","respiratory system phenotype","liver/biliary system phenotype","cardiovascular system phenotype","mortality/aging","liver/biliary system phenotype","homeostasis/metabolism phenotype","homeostasis/metabolism phenotype","cellular phenotype","integument phenotype","endocrine/exocrine gland phenotype","reproductive system phenotype","immune system phenotype","vision/eye phenotype","mortality/aging","hematopoietic system phenotype","liver/biliary system phenotype","embryo phenotype","homeostasis/metabolism phenotype","adipose tissue phenotype","integument phenotype","growth/size/body region phenotype","embryo phenotype","cardiovascular system phenotype","mortality/aging","cellular phenotype","integument phenotype","growth/size/body region phenotype","endocrine/exocrine gland phenotype","homeostasis/metabolism phenotype","muscle phenotype","mortality/aging","reproductive system phenotype","behavior/neurological phenotype","nervous system phenotype","skeleton phenotype","craniofacial phenotype"]],"container":"<table class=\"white-space: nowrap\">\n  <thead>\n    <tr>\n      <th>Gene<\/th>\n      <th>Role<\/th>\n      <th><i>P<\/i><sub>1<\/sub><sup>base<\/sup><\/th>\n      <th><i>P<\/i><sub>1<\/sub><sup>near<\/sup><\/th>\n      <th><i>P<\/i><sub>1<\/sub><sup>bma<\/sup><\/th>\n      <th>MGI ID<\/th>\n      <th>High-level mammalian phenotype<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\");\n  }"},{"targets":3,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\");\n  }"},{"targets":4,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\");\n  }"},{"className":"dt-right","targets":[2,3,4]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render","options.columnDefs.2.render"],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-e948555e45e1e9771a0d" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-e948555e45e1e9771a0d">{"x":{"filter":"none","vertical":false,"data":[["CDKN2B","CDKN2B","CDKN2B","CDKN2B","CDKN2B","CDKN2A","CDKN2A","CDKN2A","CDKN2A","CDKN2A","CDKN2A","CDKN2A","CDKN2A","CDKN2A","CDKN2A","CDKN2A","CDKN2A","CDKN2A","CDKN2A","CDKN2A","CDKN2A","SLC22A3","SLC22A3","SLC22A3","WDR12","WDR12","WDR12","WDR12","FAM117B","FAM117B","FAM117B","IFIT2","IFIT2","IFIT2","IFIT2","IFIT3","CH25H","CH25H","CH25H","CH25H","CH25H","LIPA","LIPA","LIPA","LIPA","LIPA","LIPA","LIPA","LIPA","LIPA","LIPA","LIPA","LIPA","LIPA","LIPA","LIPA","RALGDS","RALGDS","GBGT1","GBGT1","GBGT1","MED22","MED22","MED22","MED22","MED22","SURF1","SURF1","SURF1","SURF1","SURF1","SURF1","SURF1","SURF1","SURF1","OBP2B","OBP2B","MIA3","MIA3","MIA3","MIA3","MIA3","MIA3","MIA3","MIA3","MIA3","MIA3","SORT1","SORT1","SORT1","SORT1","SORT1","SORT1","KIAA1324","KIAA1324","KIAA1324","KIAA1324","KIAA1324","KIAA1324","KIAA1324","KIAA1324","KIAA1324","KIAA1324","CELSR2","MYBPHL","MYBPHL","MYBPHL","MYBPHL","MYBPHL","MYBPHL","MYBPHL","MYBPHL","MYBPHL","MYBPHL","MYBPHL","MYBPHL","MYBPHL","MYBPHL","MYBPHL","MYBPHL","MYBPHL","MYBPHL","SH2B3","SH2B3","SH2B3","CUX2","CUX2","CUX2","CUX2","CUX2","CUX2","CUX2","CUX2","ATP2B1","ATP2B1","ATP2B1","ATP2B1","ATP2B1","ATP2B1","ATP2B1","ATP2B1","ATP2B1","ATP2B1","ATP2B1","COL4A1","COL4A1","COL4A1","COL4A1","COL4A1","COL4A1","COL4A1","COL4A1","COL4A1","COL4A1","COL4A1","COL4A1","COL4A1","COL4A1","COL4A1","COL4A2","COL4A2","COL4A2","COL4A2","COL4A2","COL4A2","COL4A2","COL4A2","COL4A2","COL4A2","COL4A2","COL4A2","COL4A2","COL4A2","COL4A2","COL4A2","COL4A2","COL4A2","COL4A2","SPECC1L","SPECC1L","SPECC1L","SPECC1L","SPECC1L","GGT5","KCNK5","KCNK5","KCNK5","KCNK5","KCNK5","KCNK5","ADAMTS7","ADAMTS7","ADAMTS7","ADAMTS7","ADAMTS7","ADAMTS7","ADAMTS7","MORF4L1","MORF4L1","MORF4L1","MORF4L1","MORF4L1","MORF4L1","MORF4L1","MORF4L1","MORF4L1","MORF4L1","MORF4L1","LDLR","LDLR","LDLR","LDLR","LDLR","LDLR","LDLR","LDLR","LDLR","LDLR","LDLR","LDLR","LDLR","LDLR","SMARCA4","SMARCA4","SMARCA4","SMARCA4","SMARCA4","SMARCA4","SMARCA4","SMARCA4","SMARCA4","SMARCA4","SMARCA4","SMARCA4","SMARCA4","SMARCA4","SMARCA4","SMARCA4","SMARCA4","SMARCA4","SMARCA4","SMARCA4","CAPG","CAPG","CAPG","VAMP8","VAMP8","VAMP8","VAMP8","VAMP8","VAMP8","VAMP8","VAMP8","VAMP8","MAT2A","MAT2A","WBP1L","WBP1L","AS3MT","AS3MT","USP39","USP39","TCF21","TCF21","TCF21","TCF21","TCF21","TCF21","TCF21","TCF21","TCF21","TCF21","TCF21","VAMP5","VAMP5","VAMP5","VAMP5","CYP17A1","CYP17A1","CYP17A1","CYP17A1","CYP17A1","CYP17A1","CYP17A1","CYP17A1","CYP17A1","CYP17A1","USP10","USP10","COTL1","COTL1","COTL1","FURIN","FURIN","FURIN","FURIN","FURIN","FURIN","FURIN","FURIN","FURIN","FURIN","MAN2A2","MAN2A2","MAN2A2","FES","FES","FES","FES","FES","FES","FES","FES","FES","FES","FES","FES","FES","FES","FES","FES","UNC45A","UNC45A","UNC45A","UNC45A","HDDC3","HDDC3","HDDC3","HDDC3","HDDC3","HDDC3","HDDC3","BLM","BLM","BLM","BLM","BLM","BLM","BLM","BLM","BLM","BLM","PDLIM5","PDLIM5","PDLIM5","PDLIM5","PDLIM5","PRC1","PRC1","PRC1","IL6R","IL6R","IL6R","IL6R","IL6R","IL6R","IL6R","IL6R","IL6R","IL6R","ATP8B2","ATP8B2","ATP8B2","ATP8B2","CNNM2","CNNM2","CNNM2","CNNM2","CNNM2","CNNM2","GGCX","GGCX","GGCX","GGCX","GGCX","GGCX","GGCX","SLC44A3","SLC44A3","SMAD3","SMAD3","SMAD3","SMAD3","SMAD3","SMAD3","SMAD3","SMAD3","SMAD3","SMAD3","SMAD3","SMAD3","SMAD3","SMAD3","SMAD3","SMAD3","TBXAS1","TBXAS1","TBXAS1","CXCL12","CXCL12","CXCL12","CXCL12","CXCL12","CXCL12","CXCL12","CXCL12","CXCL12","CXCL12","PARP12","PARP12","USP24","USP24","USP24","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","EDNRA","LPL","LPL","LPL","LPL","LPL","LPL","LPL","LPL","LPL","LPL","PCSK9","PCSK9","CYP4F2","CYP4F2","SOCS5","SOCS5","SOCS5","TRIB1","TRIB1","TRIB1","TRIB1","TRIB1","TRIB1","TRIB1","TRIB1","TRIB1","TRIB1","CEP120","CEP120","CEP120","CEP120","KALRN","KALRN","KALRN","KALRN","KALRN","KALRN","KALRN","KALRN","KALRN","CSNK1G3","CSNK1G3"],["TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TF","TF","TF","TF","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TF","TF","TF","TF","TF","TF","TF","TF","TF","TF","TF","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TF","TF","TF","TF","TF","TF","TF","TF","TF","TF","TF","TF","TF","TF","TF","TF","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG"],[0.9999999999999998,0.9999999999999998,0.9999999999999998,0.9999999999999998,0.9999999999999998,0.9999999999999998,0.9999999999999998,0.9999999999999998,0.9999999999999998,0.9999999999999998,0.9999999999999998,0.9999999999999998,0.9999999999999998,0.9999999999999998,0.9999999999999998,0.9999999999999998,0.9999999999999998,0.9999999999999998,0.9999999999999998,0.9999999999999998,0.9999999999999998,0.9999947684273829,0.9999947684273829,0.9999947684273829,0.9999952365625087,0.9999952365625087,0.9999952365625087,0.9999952365625087,0.9999952375645579,0.9999952375645579,0.9999952375645579,0.9999865369982797,0.9999865369982797,0.9999865369982797,0.9999865369982797,0.9999865392479932,0.9999865226888768,0.9999865226888768,0.9999865226888768,0.9999865226888768,0.9999865226888768,0.9999865452347442,0.9999865452347442,0.9999865452347442,0.9999865452347442,0.9999865452347442,0.9999865452347442,0.9999865452347442,0.9999865452347442,0.9999865452347442,0.9999865452347442,0.9999865452347442,0.9999865452347442,0.9999865452347442,0.9999865452347442,0.9999865452347442,0.999967802277092,0.999967802277092,0.9999677871304143,0.9999677871304143,0.9999677871304143,0.9999683379138079,0.9999683379138079,0.9999683379138079,0.9999683379138079,0.9999683379138079,0.9999683368091931,0.9999683368091931,0.9999683368091931,0.9999683368091931,0.9999683368091931,0.9999683368091931,0.9999683368091931,0.9999683368091931,0.9999683368091931,0.9999681785642637,0.9999681785642637,0.9998640375572352,0.9998640375572352,0.9998640375572352,0.9998640375572352,0.9998640375572352,0.9998640375572352,0.9998640375572352,0.9998640375572352,0.9998640375572352,0.9998640375572352,0.9997706305329447,0.9997706305329447,0.9997706305329447,0.9997706305329447,0.9997706305329447,0.9997706305329447,0.9997706219141995,0.9997706219141995,0.9997706219141995,0.9997706219141995,0.9997706219141995,0.9997706219141995,0.9997706219141995,0.9997706219141995,0.9997706219141995,0.9997706219141995,0.9997706239627627,0.9997706262018029,0.9997706262018029,0.9997706262018029,0.9997706262018029,0.9997706262018029,0.9997706262018029,0.9997706262018029,0.9997706262018029,0.9997706262018029,0.9997706262018029,0.9997706262018029,0.9997706262018029,0.9997706262018029,0.9997706262018029,0.9997706262018029,0.9997706262018029,0.9997706262018029,0.9997706262018029,0.9986566023874202,0.9986566023874202,0.9986566023874202,0.9986569186770833,0.9986569186770833,0.9986569186770833,0.9986569186770833,0.9986569186770833,0.9986569186770833,0.9986569186770833,0.9986569186770833,0.9792019030650512,0.9792019030650512,0.9792019030650512,0.9792019030650512,0.9792019030650512,0.9792019030650512,0.9792019030650512,0.9792019030650512,0.9792019030650512,0.9792019030650512,0.9792019030650512,0.875466461523342,0.875466461523342,0.875466461523342,0.875466461523342,0.875466461523342,0.875466461523342,0.875466461523342,0.875466461523342,0.875466461523342,0.875466461523342,0.875466461523342,0.875466461523342,0.875466461523342,0.875466461523342,0.875466461523342,0.8740519751327189,0.8740519751327189,0.8740519751327189,0.8740519751327189,0.8740519751327189,0.8740519751327189,0.8740519751327189,0.8740519751327189,0.8740519751327189,0.8740519751327189,0.8740519751327189,0.8740519751327189,0.8740519751327189,0.8740519751327189,0.8740519751327189,0.8740519751327189,0.8740519751327189,0.8740519751327189,0.8740519751327189,0.93837961821994,0.93837961821994,0.93837961821994,0.93837961821994,0.93837961821994,0.9383489684351823,0.9107844422345228,0.9107844422345228,0.9107844422345228,0.9107844422345228,0.9107844422345228,0.9107844422345228,0.8903450498040179,0.8903450498040179,0.8903450498040179,0.8903450498040179,0.8903450498040179,0.8903450498040179,0.8903450498040179,0.8903527517427302,0.8903527517427302,0.8903527517427302,0.8903527517427302,0.8903527517427302,0.8903527517427302,0.8903527517427302,0.8903527517427302,0.8903527517427302,0.8903527517427302,0.8903527517427302,0.8465185401700255,0.8465185401700255,0.8465185401700255,0.8465185401700255,0.8465185401700255,0.8465185401700255,0.8465185401700255,0.8465185401700255,0.8465185401700255,0.8465185401700255,0.8465185401700255,0.8465185401700255,0.8465185401700255,0.8465185401700255,0.847453710442707,0.847453710442707,0.847453710442707,0.847453710442707,0.847453710442707,0.847453710442707,0.847453710442707,0.847453710442707,0.847453710442707,0.847453710442707,0.847453710442707,0.847453710442707,0.847453710442707,0.847453710442707,0.847453710442707,0.847453710442707,0.847453710442707,0.847453710442707,0.847453710442707,0.847453710442707,0.7923832581134929,0.7923832581134929,0.7923832581134929,0.7924333742290652,0.7924333742290652,0.7924333742290652,0.7924333742290652,0.7924333742290652,0.7924333742290652,0.7924333742290652,0.7924333742290652,0.7924333742290652,0.7924349276952973,0.7924349276952973,0.80199771239451,0.80199771239451,0.8019708111432692,0.8019708111432692,0.792460969837775,0.792460969837775,0.7030237303443504,0.7030237303443504,0.7030237303443504,0.7030237303443504,0.7030237303443504,0.7030237303443504,0.7030237303443504,0.7030237303443504,0.7030237303443504,0.7030237303443504,0.7030237303443504,0.7924332826672175,0.7924332826672175,0.7924332826672175,0.7924332826672175,0.8019750233350803,0.8019750233350803,0.8019750233350803,0.8019750233350803,0.8019750233350803,0.8019750233350803,0.8019750233350803,0.8019750233350803,0.8019750233350803,0.8019750233350803,0.6912096854813345,0.6912096854813345,0.6911083213932362,0.6911083213932362,0.6911083213932362,0.5787084111246644,0.5787084111246644,0.5787084111246644,0.5787084111246644,0.5787084111246644,0.5787084111246644,0.5787084111246644,0.5787084111246644,0.5787084111246644,0.5787084111246644,0.5786976468870529,0.5786976468870529,0.5786976468870529,0.5787026637189551,0.5787026637189551,0.5787026637189551,0.5787026637189551,0.5787026637189551,0.5787026637189551,0.5787026637189551,0.5787026637189551,0.5787026637189551,0.5787026637189551,0.5787026637189551,0.5787026637189551,0.5787026637189551,0.5787026637189551,0.5787026637189551,0.5787026637189551,0.5786926023185536,0.5786926023185536,0.5786926023185536,0.5786926023185536,0.5786624969093348,0.5786624969093348,0.5786624969093348,0.5786624969093348,0.5786624969093348,0.5786624969093348,0.5786624969093348,0.5786783138938311,0.5786783138938311,0.5786783138938311,0.5786783138938311,0.5786783138938311,0.5786783138938311,0.5786783138938311,0.5786783138938311,0.5786783138938311,0.5786783138938311,0.4864299931939198,0.4864299931939198,0.4864299931939198,0.4864299931939198,0.4864299931939198,0.5787387266748296,0.5787387266748296,0.5787387266748296,0.667986588168634,0.667986588168634,0.667986588168634,0.667986588168634,0.667986588168634,0.667986588168634,0.667986588168634,0.667986588168634,0.667986588168634,0.667986588168634,0.6679019576638899,0.6679019576638899,0.6679019576638899,0.6679019576638899,0.8019975073265255,0.8019975073265255,0.8019975073265255,0.8019975073265255,0.8019975073265255,0.8019975073265255,0.7924360697846489,0.7924360697846489,0.7924360697846489,0.7924360697846489,0.7924360697846489,0.7924360697846489,0.7924360697846489,0.4968277278951654,0.4968277278951654,0.7012546093926996,0.7012546093926996,0.7012546093926996,0.7012546093926996,0.7012546093926996,0.7012546093926996,0.7012546093926996,0.7012546093926996,0.7012546093926996,0.7012546093926996,0.7012546093926996,0.7012546093926996,0.7012546093926996,0.7012546093926996,0.7012546093926996,0.7012546093926996,0.4376038905526262,0.4376038905526262,0.4376038905526262,0.3038639978447404,0.3038639978447404,0.3038639978447404,0.3038639978447404,0.3038639978447404,0.3038639978447404,0.3038639978447404,0.3038639978447404,0.3038639978447404,0.3038639978447404,0.4369956534623403,0.4369956534623403,0.3660546687820849,0.3660546687820849,0.3660546687820849,0.3488884963242515,0.3488884963242515,0.3488884963242515,0.3488884963242515,0.3488884963242515,0.3488884963242515,0.3488884963242515,0.3488884963242515,0.3488884963242515,0.3488884963242515,0.3488884963242515,0.3488884963242515,0.3488884963242515,0.3488884963242515,0.3488884963242515,0.3488884963242515,0.3488884963242515,0.3488884963242515,0.3488884963242515,0.29982130210309,0.29982130210309,0.29982130210309,0.29982130210309,0.29982130210309,0.29982130210309,0.29982130210309,0.29982130210309,0.29982130210309,0.29982130210309,0.3658137432346497,0.3658137432346497,0.2219941091456191,0.2219941091456191,0.3720160878141969,0.3720160878141969,0.3720160878141969,0.1459717496460165,0.1459717496460165,0.1459717496460165,0.1459717496460165,0.1459717496460165,0.1459717496460165,0.1459717496460165,0.1459717496460165,0.1459717496460165,0.1459717496460165,0.1429158463131802,0.1429158463131802,0.1429158463131802,0.1429158463131802,0.1111852361642857,0.1111852361642857,0.1111852361642857,0.1111852361642857,0.1111852361642857,0.1111852361642857,0.1111852361642857,0.1111852361642857,0.1111852361642857,0.1458583059907274,0.1458583059907274],[0.9999999999999999,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.9999999999999999,0.9999969336769376,0.9999969336769376,0.9999969336769376,0.9999971873241751,0.9999971873241751,0.9999971873241751,0.9999971873241751,0.9999971883139486,0.9999971883139486,0.9999971883139486,0.9999917147973686,0.9999917147973686,0.9999917147973686,0.9999917147973686,0.9999917170576649,0.9999917004696253,0.9999917004696253,0.9999917004696253,0.9999917004696253,0.9999917004696253,0.999991723127276,0.999991723127276,0.999991723127276,0.999991723127276,0.999991723127276,0.999991723127276,0.999991723127276,0.999991723127276,0.999991723127276,0.999991723127276,0.999991723127276,0.999991723127276,0.999991723127276,0.999991723127276,0.999991723127276,0.9999783688734265,0.9999783688734265,0.9999783535591822,0.9999783535591822,0.9999783535591822,0.9999788868422788,0.9999788868422788,0.9999788868422788,0.9999788868422788,0.9999788868422788,0.9999788857551599,0.9999788857551599,0.9999788857551599,0.9999788857551599,0.9999788857551599,0.9999788857551599,0.9999788857551599,0.9999788857551599,0.9999788857551599,0.9999787333928645,0.9999787333928645,0.9999217874857462,0.9999217874857462,0.9999217874857462,0.9999217874857462,0.9999217874857462,0.9999217874857462,0.9999217874857462,0.9999217874857462,0.9999217874857462,0.9999217874857462,0.9998411495645103,0.9998411495645103,0.9998411495645103,0.9998411495645103,0.9998411495645103,0.9998411495645103,0.9998411413994035,0.9998411413994035,0.9998411413994035,0.9998411413994035,0.9998411413994035,0.9998411413994035,0.9998411413994035,0.9998411413994035,0.9998411413994035,0.9998411413994035,0.9998411432927961,0.9998411454717147,0.9998411454717147,0.9998411454717147,0.9998411454717147,0.9998411454717147,0.9998411454717147,0.9998411454717147,0.9998411454717147,0.9998411454717147,0.9998411454717147,0.9998411454717147,0.9998411454717147,0.9998411454717147,0.9998411454717147,0.9998411454717147,0.9998411454717147,0.9998411454717147,0.9998411454717147,0.9991404642655446,0.9991404642655446,0.9991404642655446,0.9991407794696692,0.9991407794696692,0.9991407794696692,0.9991407794696692,0.9991407794696692,0.9991407794696692,0.9991407794696692,0.9991407794696692,0.9888985218140898,0.9888985218140898,0.9888985218140898,0.9888985218140898,0.9888985218140898,0.9888985218140898,0.9888985218140898,0.9888985218140898,0.9888985218140898,0.9888985218140898,0.9888985218140898,0.9457720000672968,0.9457720000672968,0.9457720000672968,0.9457720000672968,0.9457720000672968,0.9457720000672968,0.9457720000672968,0.9457720000672968,0.9457720000672968,0.9457720000672968,0.9457720000672968,0.9457720000672968,0.9457720000672968,0.9457720000672968,0.9457720000672968,0.9447707996273357,0.9447707996273357,0.9447707996273357,0.9447707996273357,0.9447707996273357,0.9447707996273357,0.9447707996273357,0.9447707996273357,0.9447707996273357,0.9447707996273357,0.9447707996273357,0.9447707996273357,0.9447707996273357,0.9447707996273357,0.9447707996273357,0.9447707996273357,0.9447707996273357,0.9447707996273357,0.9447707996273357,0.9581180889407677,0.9581180889407677,0.9581180889407677,0.9581180889407677,0.9581180889407677,0.958086069835262,0.9468686992588021,0.9468686992588021,0.9468686992588021,0.9468686992588021,0.9468686992588021,0.9468686992588021,0.929117510060689,0.929117510060689,0.929117510060689,0.929117510060689,0.929117510060689,0.929117510060689,0.929117510060689,0.9291246223216623,0.9291246223216623,0.9291246223216623,0.9291246223216623,0.9291246223216623,0.9291246223216623,0.9291246223216623,0.9291246223216623,0.9291246223216623,0.9291246223216623,0.9291246223216623,0.8850128075626434,0.8850128075626434,0.8850128075626434,0.8850128075626434,0.8850128075626434,0.8850128075626434,0.8850128075626434,0.8850128075626434,0.8850128075626434,0.8850128075626434,0.8850128075626434,0.8850128075626434,0.8850128075626434,0.8850128075626434,0.8857378804604822,0.8857378804604822,0.8857378804604822,0.8857378804604822,0.8857378804604822,0.8857378804604822,0.8857378804604822,0.8857378804604822,0.8857378804604822,0.8857378804604822,0.8857378804604822,0.8857378804604822,0.8857378804604822,0.8857378804604822,0.8857378804604822,0.8857378804604822,0.8857378804604822,0.8857378804604822,0.8857378804604822,0.8857378804604822,0.8527692975852041,0.8527692975852041,0.8527692975852041,0.8527914350874251,0.8527914350874251,0.8527914350874251,0.8527914350874251,0.8527914350874251,0.8527914350874251,0.8527914350874251,0.8527914350874251,0.8527914350874251,0.8527934098225353,0.8527934098225353,0.8549632054526812,0.8549632054526812,0.8549372713217285,0.8549372713217285,0.8528209354295063,0.8528209354295063,0.8185880765586766,0.8185880765586766,0.8185880765586766,0.8185880765586766,0.8185880765586766,0.8185880765586766,0.8185880765586766,0.8185880765586766,0.8185880765586766,0.8185880765586766,0.8185880765586766,0.8527913298475756,0.8527913298475756,0.8527913298475756,0.8527913298475756,0.8549411570831678,0.8549411570831678,0.8549411570831678,0.8549411570831678,0.8549411570831678,0.8549411570831678,0.8549411570831678,0.8549411570831678,0.8549411570831678,0.8549411570831678,0.7792814804612798,0.7792814804612798,0.7791933001232314,0.7791933001232314,0.7791933001232314,0.6844522738855715,0.6844522738855715,0.6844522738855715,0.6844522738855715,0.6844522738855715,0.6844522738855715,0.6844522738855715,0.6844522738855715,0.6844522738855715,0.6844522738855715,0.6844390444038637,0.6844390444038637,0.6844390444038637,0.6844456232469449,0.6844456232469449,0.6844456232469449,0.6844456232469449,0.6844456232469449,0.6844456232469449,0.6844456232469449,0.6844456232469449,0.6844456232469449,0.6844456232469449,0.6844456232469449,0.6844456232469449,0.6844456232469449,0.6844456232469449,0.6844456232469449,0.6844456232469449,0.6844348113464338,0.6844348113464338,0.6844348113464338,0.6844348113464338,0.6843983814327909,0.6843983814327909,0.6843983814327909,0.6843983814327909,0.6843983814327909,0.6843983814327909,0.6843983814327909,0.6844148513914843,0.6844148513914843,0.6844148513914843,0.6844148513914843,0.6844148513914843,0.6844148513914843,0.6844148513914843,0.6844148513914843,0.6844148513914843,0.6844148513914843,0.6352357571414173,0.6352357571414173,0.6352357571414173,0.6352357571414173,0.6352357571414173,0.6845128882631382,0.6845128882631382,0.6845128882631382,0.7230492731824643,0.7230492731824643,0.7230492731824643,0.7230492731824643,0.7230492731824643,0.7230492731824643,0.7230492731824643,0.7230492731824643,0.7230492731824643,0.7230492731824643,0.7229744815301717,0.7229744815301717,0.7229744815301717,0.7229744815301717,0.8549645309936302,0.8549645309936302,0.8549645309936302,0.8549645309936302,0.8549645309936302,0.8549645309936302,0.8527945598493198,0.8527945598493198,0.8527945598493198,0.8527945598493198,0.8527945598493198,0.8527945598493198,0.8527945598493198,0.6289145215093654,0.6289145215093654,0.797425141261958,0.797425141261958,0.797425141261958,0.797425141261958,0.797425141261958,0.797425141261958,0.797425141261958,0.797425141261958,0.797425141261958,0.797425141261958,0.797425141261958,0.797425141261958,0.797425141261958,0.797425141261958,0.797425141261958,0.797425141261958,0.5586426261260322,0.5586426261260322,0.5586426261260322,0.4917554294046685,0.4917554294046685,0.4917554294046685,0.4917554294046685,0.4917554294046685,0.4917554294046685,0.4917554294046685,0.4917554294046685,0.4917554294046685,0.4917554294046685,0.5578868247556277,0.5578868247556277,0.4829121015547232,0.4829121015547232,0.4829121015547232,0.5101711888374303,0.5101711888374303,0.5101711888374303,0.5101711888374303,0.5101711888374303,0.5101711888374303,0.5101711888374303,0.5101711888374303,0.5101711888374303,0.5101711888374303,0.5101711888374303,0.5101711888374303,0.5101711888374303,0.5101711888374303,0.5101711888374303,0.5101711888374303,0.5101711888374303,0.5101711888374303,0.5101711888374303,0.4343737057166317,0.4343737057166317,0.4343737057166317,0.4343737057166317,0.4343737057166317,0.4343737057166317,0.4343737057166317,0.4343737057166317,0.4343737057166317,0.4343737057166317,0.4825769240121384,0.4825769240121384,0.3463382988445405,0.3463382988445405,0.4923377909593435,0.4923377909593435,0.4923377909593435,0.2409212171636076,0.2409212171636076,0.2409212171636076,0.2409212171636076,0.2409212171636076,0.2409212171636076,0.2409212171636076,0.2409212171636076,0.2409212171636076,0.2409212171636076,0.2419602315586999,0.2419602315586999,0.2419602315586999,0.2419602315586999,0.1693342037608439,0.1693342037608439,0.1693342037608439,0.1693342037608439,0.1693342037608439,0.1693342037608439,0.1693342037608439,0.1693342037608439,0.1693342037608439,0.2424774482323752,0.2424774482323752],[1,1,1,1,1,0.9999999999999998,0.9999999999999998,0.9999999999999998,0.9999999999999998,0.9999999999999998,0.9999999999999998,0.9999999999999998,0.9999999999999998,0.9999999999999998,0.9999999999999998,0.9999999999999998,0.9999999999999998,0.9999999999999998,0.9999999999999998,0.9999999999999998,0.9999999999999998,0.9999992555991414,0.9999992555991414,0.9999992555991414,0.9999992356691416,0.9999992356691416,0.9999992356691416,0.9999992356691416,0.999999183880422,0.999999183880422,0.999999183880422,0.9999977008547877,0.9999977008547877,0.9999977008547877,0.9999977008547877,0.999997645257533,0.9999975541136137,0.9999975541136137,0.9999975541136137,0.9999975541136137,0.9999975541136137,0.9999975074024142,0.9999975074024142,0.9999975074024142,0.9999975074024142,0.9999975074024142,0.9999975074024142,0.9999975074024142,0.9999975074024142,0.9999975074024142,0.9999975074024142,0.9999975074024142,0.9999975074024142,0.9999975074024142,0.9999975074024142,0.9999975074024142,0.9999936704745372,0.9999936704745372,0.9999927402734904,0.9999927402734904,0.9999927402734904,0.9999875738623909,0.9999875738623909,0.9999875738623909,0.9999875738623909,0.9999875738623909,0.9999875727139418,0.9999875727139418,0.9999875727139418,0.9999875727139418,0.9999875727139418,0.9999875727139418,0.9999875727139418,0.9999875727139418,0.9999875727139418,0.9999874424756205,0.9999874424756205,0.9999776319619129,0.9999776319619129,0.9999776319619129,0.9999776319619129,0.9999776319619129,0.9999776319619129,0.9999776319619129,0.9999776319619129,0.9999776319619129,0.9999776319619129,0.9999589410527652,0.9999589410527652,0.9999589410527652,0.9999589410527652,0.9999589410527652,0.9999589410527652,0.9999578485979991,0.9999578485979991,0.9999578485979991,0.9999578485979991,0.9999578485979991,0.9999578485979991,0.9999578485979991,0.9999578485979991,0.9999578485979991,0.9999578485979991,0.9999463216846067,0.9999247748124825,0.9999247748124825,0.9999247748124825,0.9999247748124825,0.9999247748124825,0.9999247748124825,0.9999247748124825,0.9999247748124825,0.9999247748124825,0.9999247748124825,0.9999247748124825,0.9999247748124825,0.9999247748124825,0.9999247748124825,0.9999247748124825,0.9999247748124825,0.9999247748124825,0.9999247748124825,0.9998081388389966,0.9998081388389966,0.9998081388389966,0.9997698807137027,0.9997698807137027,0.9997698807137027,0.9997698807137027,0.9997698807137027,0.9997698807137027,0.9997698807137027,0.9997698807137027,0.9976653681157531,0.9976653681157531,0.9976653681157531,0.9976653681157531,0.9976653681157531,0.9976653681157531,0.9976653681157531,0.9976653681157531,0.9976653681157531,0.9976653681157531,0.9976653681157531,0.9959457475428306,0.9959457475428306,0.9959457475428306,0.9959457475428306,0.9959457475428306,0.9959457475428306,0.9959457475428306,0.9959457475428306,0.9959457475428306,0.9959457475428306,0.9959457475428306,0.9959457475428306,0.9959457475428306,0.9959457475428306,0.9959457475428306,0.9957176006153046,0.9957176006153046,0.9957176006153046,0.9957176006153046,0.9957176006153046,0.9957176006153046,0.9957176006153046,0.9957176006153046,0.9957176006153046,0.9957176006153046,0.9957176006153046,0.9957176006153046,0.9957176006153046,0.9957176006153046,0.9957176006153046,0.9957176006153046,0.9957176006153046,0.9957176006153046,0.9957176006153046,0.9864380335956884,0.9864380335956884,0.9864380335956884,0.9864380335956884,0.9864380335956884,0.9847299964444437,0.9844602281213344,0.9844602281213344,0.9844602281213344,0.9844602281213344,0.9844602281213344,0.9844602281213344,0.9831852603413217,0.9831852603413217,0.9831852603413217,0.9831852603413217,0.9831852603413217,0.9831852603413217,0.9831852603413217,0.9824163452230246,0.9824163452230246,0.9824163452230246,0.9824163452230246,0.9824163452230246,0.9824163452230246,0.9824163452230246,0.9824163452230246,0.9824163452230246,0.9824163452230246,0.9824163452230246,0.9821706308914423,0.9821706308914423,0.9821706308914423,0.9821706308914423,0.9821706308914423,0.9821706308914423,0.9821706308914423,0.9821706308914423,0.9821706308914423,0.9821706308914423,0.9821706308914423,0.9821706308914423,0.9821706308914423,0.9821706308914423,0.9820244540298941,0.9820244540298941,0.9820244540298941,0.9820244540298941,0.9820244540298941,0.9820244540298941,0.9820244540298941,0.9820244540298941,0.9820244540298941,0.9820244540298941,0.9820244540298941,0.9820244540298941,0.9820244540298941,0.9820244540298941,0.9820244540298941,0.9820244540298941,0.9820244540298941,0.9820244540298941,0.9820244540298941,0.9820244540298941,0.9566978711253538,0.9566978711253538,0.9566978711253538,0.9557405226895367,0.9557405226895367,0.9557405226895367,0.9557405226895367,0.9557405226895367,0.9557405226895367,0.9557405226895367,0.9557405226895367,0.9557405226895367,0.9551028697759809,0.9551028697759809,0.9523448039164812,0.9523448039164812,0.9497913868140686,0.9497913868140686,0.946985595417335,0.946985595417335,0.9452644429123152,0.9452644429123152,0.9452644429123152,0.9452644429123152,0.9452644429123152,0.9452644429123152,0.9452644429123152,0.9452644429123152,0.9452644429123152,0.9452644429123152,0.9452644429123152,0.9446807300668734,0.9446807300668734,0.9446807300668734,0.9446807300668734,0.9384194648366461,0.9384194648366461,0.9384194648366461,0.9384194648366461,0.9384194648366461,0.9384194648366461,0.9384194648366461,0.9384194648366461,0.9384194648366461,0.9384194648366461,0.937405647482758,0.937405647482758,0.9363933679839587,0.9363933679839587,0.9363933679839587,0.9071373652000325,0.9071373652000325,0.9071373652000325,0.9071373652000325,0.9071373652000325,0.9071373652000325,0.9071373652000325,0.9071373652000325,0.9071373652000325,0.9071373652000325,0.8927715766304322,0.8927715766304322,0.8927715766304322,0.8915833101772642,0.8915833101772642,0.8915833101772642,0.8915833101772642,0.8915833101772642,0.8915833101772642,0.8915833101772642,0.8915833101772642,0.8915833101772642,0.8915833101772642,0.8915833101772642,0.8915833101772642,0.8915833101772642,0.8915833101772642,0.8915833101772642,0.8915833101772642,0.8894836925324868,0.8894836925324868,0.8894836925324868,0.8894836925324868,0.8880720493201301,0.8880720493201301,0.8880720493201301,0.8880720493201301,0.8880720493201301,0.8880720493201301,0.8880720493201301,0.8874326806871971,0.8874326806871971,0.8874326806871971,0.8874326806871971,0.8874326806871971,0.8874326806871971,0.8874326806871971,0.8874326806871971,0.8874326806871971,0.8874326806871971,0.8859796355826173,0.8859796355826173,0.8859796355826173,0.8859796355826173,0.8859796355826173,0.8852732851149873,0.8852732851149873,0.8852732851149873,0.881016081786643,0.881016081786643,0.881016081786643,0.881016081786643,0.881016081786643,0.881016081786643,0.881016081786643,0.881016081786643,0.881016081786643,0.881016081786643,0.8803313830760131,0.8803313830760131,0.8803313830760131,0.8803313830760131,0.8769503483612817,0.8769503483612817,0.8769503483612817,0.8769503483612817,0.8769503483612817,0.8769503483612817,0.8737460217145534,0.8737460217145534,0.8737460217145534,0.8737460217145534,0.8737460217145534,0.8737460217145534,0.8737460217145534,0.8730015833036773,0.8730015833036773,0.8704839154480394,0.8704839154480394,0.8704839154480394,0.8704839154480394,0.8704839154480394,0.8704839154480394,0.8704839154480394,0.8704839154480394,0.8704839154480394,0.8704839154480394,0.8704839154480394,0.8704839154480394,0.8704839154480394,0.8704839154480394,0.8704839154480394,0.8704839154480394,0.8678858156500581,0.8678858156500581,0.8678858156500581,0.8368595319157808,0.8368595319157808,0.8368595319157808,0.8368595319157808,0.8368595319157808,0.8368595319157808,0.8368595319157808,0.8368595319157808,0.8368595319157808,0.8368595319157808,0.8266529565568905,0.8266529565568905,0.7868927064912136,0.7868927064912136,0.7868927064912136,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.782037247677848,0.7142646656715524,0.7142646656715524,0.7142646656715524,0.7142646656715524,0.7142646656715524,0.7142646656715524,0.7142646656715524,0.7142646656715524,0.7142646656715524,0.7142646656715524,0.7057881559362864,0.7057881559362864,0.6774237861731723,0.6774237861731723,0.6520133884379632,0.6520133884379632,0.6520133884379632,0.6085384435079033,0.6085384435079033,0.6085384435079033,0.6085384435079033,0.6085384435079033,0.6085384435079033,0.6085384435079033,0.6085384435079033,0.6085384435079033,0.6085384435079033,0.5952163333657128,0.5952163333657128,0.5952163333657128,0.5952163333657128,0.5788670055430194,0.5788670055430194,0.5788670055430194,0.5788670055430194,0.5788670055430194,0.5788670055430194,0.5788670055430194,0.5788670055430194,0.5788670055430194,0.5665764877649256,0.5665764877649256],["MGI:104737","MGI:104737","MGI:104737","MGI:104737","MGI:104737","MGI:104738","MGI:104738","MGI:104738","MGI:104738","MGI:104738","MGI:104738","MGI:104738","MGI:104738","MGI:104738","MGI:104738","MGI:104738","MGI:104738","MGI:104738","MGI:104738","MGI:104738","MGI:104738","MGI:1333817","MGI:1333817","MGI:1333817","MGI:1927241","MGI:1927241","MGI:1927241","MGI:1927241","MGI:1920000","MGI:1920000","MGI:1920000","MGI:99449","MGI:99449","MGI:99449","MGI:99449","MGI:1101055","MGI:1333869","MGI:1333869","MGI:1333869","MGI:1333869","MGI:1333869","MGI:96789","MGI:96789","MGI:96789","MGI:96789","MGI:96789","MGI:96789","MGI:96789","MGI:96789","MGI:96789","MGI:96789","MGI:96789","MGI:96789","MGI:96789","MGI:96789","MGI:96789","MGI:107485","MGI:107485","MGI:2449143","MGI:2449143","MGI:2449143","MGI:98446","MGI:98446","MGI:98446","MGI:98446","MGI:98446","MGI:98443","MGI:98443","MGI:98443","MGI:98443","MGI:98443","MGI:98443","MGI:98443","MGI:98443","MGI:98443","MGI:2387617","MGI:2387617","MGI:2443183","MGI:2443183","MGI:2443183","MGI:2443183","MGI:2443183","MGI:2443183","MGI:2443183","MGI:2443183","MGI:2443183","MGI:2443183","MGI:1338015","MGI:1338015","MGI:1338015","MGI:1338015","MGI:1338015","MGI:1338015","MGI:1923930","MGI:1923930","MGI:1923930","MGI:1923930","MGI:1923930","MGI:1923930","MGI:1923930","MGI:1923930","MGI:1923930","MGI:1923930","MGI:1858235","MGI:1916003","MGI:1916003","MGI:1916003","MGI:1916003","MGI:1916003","MGI:1916003","MGI:1916003","MGI:1916003","MGI:1916003","MGI:1916003","MGI:1916003","MGI:1916003","MGI:1916003","MGI:1916003","MGI:1916003","MGI:1916003","MGI:1916003","MGI:1916003","MGI:893598","MGI:893598","MGI:893598","MGI:107321","MGI:107321","MGI:107321","MGI:107321","MGI:107321","MGI:107321","MGI:107321","MGI:107321","MGI:104653","MGI:104653","MGI:104653","MGI:104653","MGI:104653","MGI:104653","MGI:104653","MGI:104653","MGI:104653","MGI:104653","MGI:104653","MGI:88454","MGI:88454","MGI:88454","MGI:88454","MGI:88454","MGI:88454","MGI:88454","MGI:88454","MGI:88454","MGI:88454","MGI:88454","MGI:88454","MGI:88454","MGI:88454","MGI:88454","MGI:88455","MGI:88455","MGI:88455","MGI:88455","MGI:88455","MGI:88455","MGI:88455","MGI:88455","MGI:88455","MGI:88455","MGI:88455","MGI:88455","MGI:88455","MGI:88455","MGI:88455","MGI:88455","MGI:88455","MGI:88455","MGI:88455","MGI:1921642","MGI:1921642","MGI:1921642","MGI:1921642","MGI:1921642","MGI:1346063","MGI:1336175","MGI:1336175","MGI:1336175","MGI:1336175","MGI:1336175","MGI:1336175","MGI:1347346","MGI:1347346","MGI:1347346","MGI:1347346","MGI:1347346","MGI:1347346","MGI:1347346","MGI:1096551","MGI:1096551","MGI:1096551","MGI:1096551","MGI:1096551","MGI:1096551","MGI:1096551","MGI:1096551","MGI:1096551","MGI:1096551","MGI:1096551","MGI:96765","MGI:96765","MGI:96765","MGI:96765","MGI:96765","MGI:96765","MGI:96765","MGI:96765","MGI:96765","MGI:96765","MGI:96765","MGI:96765","MGI:96765","MGI:96765","MGI:88192","MGI:88192","MGI:88192","MGI:88192","MGI:88192","MGI:88192","MGI:88192","MGI:88192","MGI:88192","MGI:88192","MGI:88192","MGI:88192","MGI:88192","MGI:88192","MGI:88192","MGI:88192","MGI:88192","MGI:88192","MGI:88192","MGI:88192","MGI:1098259","MGI:1098259","MGI:1098259","MGI:1336882","MGI:1336882","MGI:1336882","MGI:1336882","MGI:1336882","MGI:1336882","MGI:1336882","MGI:1336882","MGI:1336882","MGI:2443731","MGI:2443731","MGI:107577","MGI:107577","MGI:1929882","MGI:1929882","MGI:107622","MGI:107622","MGI:1202715","MGI:1202715","MGI:1202715","MGI:1202715","MGI:1202715","MGI:1202715","MGI:1202715","MGI:1202715","MGI:1202715","MGI:1202715","MGI:1202715","MGI:1858622","MGI:1858622","MGI:1858622","MGI:1858622","MGI:88586","MGI:88586","MGI:88586","MGI:88586","MGI:88586","MGI:88586","MGI:88586","MGI:88586","MGI:88586","MGI:88586","MGI:894652","MGI:894652","MGI:1919292","MGI:1919292","MGI:1919292","MGI:97513","MGI:97513","MGI:97513","MGI:97513","MGI:97513","MGI:97513","MGI:97513","MGI:97513","MGI:97513","MGI:97513","MGI:2150656","MGI:2150656","MGI:2150656","MGI:95514","MGI:95514","MGI:95514","MGI:95514","MGI:95514","MGI:95514","MGI:95514","MGI:95514","MGI:95514","MGI:95514","MGI:95514","MGI:95514","MGI:95514","MGI:95514","MGI:95514","MGI:95514","MGI:2142246","MGI:2142246","MGI:2142246","MGI:2142246","MGI:1915945","MGI:1915945","MGI:1915945","MGI:1915945","MGI:1915945","MGI:1915945","MGI:1915945","MGI:1328362","MGI:1328362","MGI:1328362","MGI:1328362","MGI:1328362","MGI:1328362","MGI:1328362","MGI:1328362","MGI:1328362","MGI:1328362","MGI:1927489","MGI:1927489","MGI:1927489","MGI:1927489","MGI:1927489","MGI:1858961","MGI:1858961","MGI:1858961","MGI:105304","MGI:105304","MGI:105304","MGI:105304","MGI:105304","MGI:105304","MGI:105304","MGI:105304","MGI:105304","MGI:105304","MGI:1859660","MGI:1859660","MGI:1859660","MGI:1859660","MGI:2151054","MGI:2151054","MGI:2151054","MGI:2151054","MGI:2151054","MGI:2151054","MGI:1927655","MGI:1927655","MGI:1927655","MGI:1927655","MGI:1927655","MGI:1927655","MGI:1927655","MGI:2384860","MGI:2384860","MGI:1201674","MGI:1201674","MGI:1201674","MGI:1201674","MGI:1201674","MGI:1201674","MGI:1201674","MGI:1201674","MGI:1201674","MGI:1201674","MGI:1201674","MGI:1201674","MGI:1201674","MGI:1201674","MGI:1201674","MGI:1201674","MGI:98497","MGI:98497","MGI:98497","MGI:103556","MGI:103556","MGI:103556","MGI:103556","MGI:103556","MGI:103556","MGI:103556","MGI:103556","MGI:103556","MGI:103556","MGI:2143990","MGI:2143990","MGI:1919936","MGI:1919936","MGI:1919936","MGI:105923","MGI:105923","MGI:105923","MGI:105923","MGI:105923","MGI:105923","MGI:105923","MGI:105923","MGI:105923","MGI:105923","MGI:105923","MGI:105923","MGI:105923","MGI:105923","MGI:105923","MGI:105923","MGI:105923","MGI:105923","MGI:105923","MGI:96820","MGI:96820","MGI:96820","MGI:96820","MGI:96820","MGI:96820","MGI:96820","MGI:96820","MGI:96820","MGI:96820","MGI:2140260","MGI:2140260","MGI:1919304","MGI:1919304","MGI:2385459","MGI:2385459","MGI:2385459","MGI:2443397","MGI:2443397","MGI:2443397","MGI:2443397","MGI:2443397","MGI:2443397","MGI:2443397","MGI:2443397","MGI:2443397","MGI:2443397","MGI:2147298","MGI:2147298","MGI:2147298","MGI:2147298","MGI:2685385","MGI:2685385","MGI:2685385","MGI:2685385","MGI:2685385","MGI:2685385","MGI:2685385","MGI:2685385","MGI:2685385","MGI:1917675","MGI:1917675"],["immune system phenotype","neoplasm","hematopoietic system phenotype","mortality/aging","cellular phenotype","integument phenotype","endocrine/exocrine gland phenotype","cellular phenotype","homeostasis/metabolism phenotype","immune system phenotype","renal/urinary system phenotype","skeleton phenotype","behavior/neurological phenotype","respiratory system phenotype","mortality/aging","reproductive system phenotype","hematopoietic system phenotype","neoplasm","nervous system phenotype","digestive/alimentary phenotype","vision/eye phenotype","nervous system phenotype","homeostasis/metabolism phenotype","cellular phenotype","pigmentation phenotype","integument phenotype","mortality/aging","behavior/neurological phenotype","homeostasis/metabolism phenotype","vision/eye phenotype","skeleton phenotype","homeostasis/metabolism phenotype","mortality/aging","behavior/neurological phenotype","immune system phenotype","mortality/aging","hematopoietic system phenotype","cardiovascular system phenotype","reproductive system phenotype","immune system phenotype","endocrine/exocrine gland phenotype","behavior/neurological phenotype","liver/biliary system phenotype","respiratory system phenotype","mortality/aging","cardiovascular system phenotype","hematopoietic system phenotype","nervous system phenotype","digestive/alimentary phenotype","homeostasis/metabolism phenotype","immune system phenotype","renal/urinary system phenotype","integument phenotype","growth/size/body region phenotype","adipose tissue phenotype","endocrine/exocrine gland phenotype","neoplasm","homeostasis/metabolism phenotype","endocrine/exocrine gland phenotype","behavior/neurological phenotype","reproductive system phenotype","behavior/neurological phenotype","hematopoietic system phenotype","mortality/aging","skeleton phenotype","growth/size/body region phenotype","homeostasis/metabolism phenotype","cellular phenotype","growth/size/body region phenotype","mortality/aging","nervous system phenotype","limbs/digits/tail phenotype","embryo phenotype","behavior/neurological phenotype","reproductive system phenotype","integument phenotype","pigmentation phenotype","respiratory system phenotype","mortality/aging","cardiovascular system phenotype","limbs/digits/tail phenotype","skeleton phenotype","cellular phenotype","homeostasis/metabolism phenotype","integument phenotype","growth/size/body region phenotype","craniofacial phenotype","cellular phenotype","homeostasis/metabolism phenotype","vision/eye phenotype","mortality/aging","immune system phenotype","nervous system phenotype","vision/eye phenotype","limbs/digits/tail phenotype","skeleton phenotype","immune system phenotype","reproductive system phenotype","mortality/aging","hematopoietic system phenotype","cardiovascular system phenotype","cellular phenotype","homeostasis/metabolism phenotype","nervous system phenotype","muscle phenotype","craniofacial phenotype","homeostasis/metabolism phenotype","growth/size/body region phenotype","mortality/aging","endocrine/exocrine gland phenotype","digestive/alimentary phenotype","nervous system phenotype","vision/eye phenotype","immune system phenotype","skeleton phenotype","renal/urinary system phenotype","embryo phenotype","liver/biliary system phenotype","respiratory system phenotype","behavior/neurological phenotype","cardiovascular system phenotype","hematopoietic system phenotype","cellular phenotype","immune system phenotype","hematopoietic system phenotype","embryo phenotype","mortality/aging","nervous system phenotype","cellular phenotype","embryo phenotype","mortality/aging","nervous system phenotype","cellular phenotype","digestive/alimentary phenotype","renal/urinary system phenotype","skeleton phenotype","reproductive system phenotype","mortality/aging","integument phenotype","cardiovascular system phenotype","growth/size/body region phenotype","muscle phenotype","homeostasis/metabolism phenotype","endocrine/exocrine gland phenotype","cellular phenotype","homeostasis/metabolism phenotype","muscle phenotype","growth/size/body region phenotype","embryo phenotype","behavior/neurological phenotype","respiratory system phenotype","immune system phenotype","renal/urinary system phenotype","nervous system phenotype","vision/eye phenotype","mortality/aging","reproductive system phenotype","hematopoietic system phenotype","cardiovascular system phenotype","skeleton phenotype","immune system phenotype","vision/eye phenotype","digestive/alimentary phenotype","limbs/digits/tail phenotype","hearing/vestibular/ear phenotype","nervous system phenotype","neoplasm","cardiovascular system phenotype","hematopoietic system phenotype","reproductive system phenotype","mortality/aging","respiratory system phenotype","embryo phenotype","homeostasis/metabolism phenotype","craniofacial phenotype","muscle phenotype","endocrine/exocrine gland phenotype","growth/size/body region phenotype","embryo phenotype","mortality/aging","nervous system phenotype","cellular phenotype","craniofacial phenotype","immune system phenotype","homeostasis/metabolism phenotype","mortality/aging","growth/size/body region phenotype","nervous system phenotype","renal/urinary system phenotype","respiratory system phenotype","homeostasis/metabolism phenotype","cellular phenotype","cardiovascular system phenotype","hematopoietic system phenotype","behavior/neurological phenotype","respiratory system phenotype","liver/biliary system phenotype","growth/size/body region phenotype","integument phenotype","muscle phenotype","homeostasis/metabolism phenotype","cellular phenotype","respiratory system phenotype","liver/biliary system phenotype","cardiovascular system phenotype","hematopoietic system phenotype","mortality/aging","immune system phenotype","vision/eye phenotype","nervous system phenotype","immune system phenotype","liver/biliary system phenotype","behavior/neurological phenotype","pigmentation phenotype","adipose tissue phenotype","hematopoietic system phenotype","cardiovascular system phenotype","growth/size/body region phenotype","integument phenotype","homeostasis/metabolism phenotype","cellular phenotype","endocrine/exocrine gland phenotype","skeleton phenotype","immune system phenotype","vision/eye phenotype","limbs/digits/tail phenotype","nervous system phenotype","digestive/alimentary phenotype","neoplasm","mortality/aging","hematopoietic system phenotype","cardiovascular system phenotype","liver/biliary system phenotype","respiratory system phenotype","embryo phenotype","cellular phenotype","homeostasis/metabolism phenotype","craniofacial phenotype","muscle phenotype","endocrine/exocrine gland phenotype","integument phenotype","growth/size/body region phenotype","cellular phenotype","hematopoietic system phenotype","immune system phenotype","endocrine/exocrine gland phenotype","growth/size/body region phenotype","homeostasis/metabolism phenotype","immune system phenotype","behavior/neurological phenotype","hematopoietic system phenotype","mortality/aging","digestive/alimentary phenotype","renal/urinary system phenotype","mortality/aging","nervous system phenotype","nervous system phenotype","behavior/neurological phenotype","liver/biliary system phenotype","homeostasis/metabolism phenotype","pigmentation phenotype","integument phenotype","renal/urinary system phenotype","immune system phenotype","hematopoietic system phenotype","cardiovascular system phenotype","mortality/aging","reproductive system phenotype","respiratory system phenotype","homeostasis/metabolism phenotype","muscle phenotype","endocrine/exocrine gland phenotype","integument phenotype","growth/size/body region phenotype","renal/urinary system phenotype","respiratory system phenotype","mortality/aging","skeleton phenotype","hearing/vestibular/ear phenotype","cardiovascular system phenotype","mortality/aging","reproductive system phenotype","behavior/neurological phenotype","homeostasis/metabolism phenotype","cellular phenotype","growth/size/body region phenotype","adipose tissue phenotype","cellular phenotype","mortality/aging","integument phenotype","vision/eye phenotype","pigmentation phenotype","growth/size/body region phenotype","integument phenotype","embryo phenotype","hematopoietic system phenotype","cardiovascular system phenotype","mortality/aging","digestive/alimentary phenotype","limbs/digits/tail phenotype","nervous system phenotype","immune system phenotype","endocrine/exocrine gland phenotype","reproductive system phenotype","cellular phenotype","skeleton phenotype","immune system phenotype","vision/eye phenotype","digestive/alimentary phenotype","nervous system phenotype","cardiovascular system phenotype","hematopoietic system phenotype","reproductive system phenotype","mortality/aging","liver/biliary system phenotype","homeostasis/metabolism phenotype","craniofacial phenotype","muscle phenotype","endocrine/exocrine gland phenotype","growth/size/body region phenotype","integument phenotype","vision/eye phenotype","cardiovascular system phenotype","hematopoietic system phenotype","mortality/aging","endocrine/exocrine gland phenotype","renal/urinary system phenotype","liver/biliary system phenotype","cardiovascular system phenotype","hematopoietic system phenotype","reproductive system phenotype","immune system phenotype","neoplasm","cardiovascular system phenotype","hematopoietic system phenotype","mortality/aging","embryo phenotype","immune system phenotype","endocrine/exocrine gland phenotype","growth/size/body region phenotype","integument phenotype","cellular phenotype","behavior/neurological phenotype","cardiovascular system phenotype","mortality/aging","nervous system phenotype","muscle phenotype","mortality/aging","vision/eye phenotype","adipose tissue phenotype","endocrine/exocrine gland phenotype","adipose tissue phenotype","cellular phenotype","immune system phenotype","homeostasis/metabolism phenotype","liver/biliary system phenotype","behavior/neurological phenotype","neoplasm","mortality/aging","hematopoietic system phenotype","mortality/aging","skeleton phenotype","adipose tissue phenotype","homeostasis/metabolism phenotype","craniofacial phenotype","growth/size/body region phenotype","embryo phenotype","behavior/neurological phenotype","cardiovascular system phenotype","mortality/aging","growth/size/body region phenotype","adipose tissue phenotype","homeostasis/metabolism phenotype","mortality/aging","reproductive system phenotype","hematopoietic system phenotype","cardiovascular system phenotype","vision/eye phenotype","cardiovascular system phenotype","growth/size/body region phenotype","integument phenotype","endocrine/exocrine gland phenotype","homeostasis/metabolism phenotype","cellular phenotype","cardiovascular system phenotype","hematopoietic system phenotype","mortality/aging","reproductive system phenotype","neoplasm","behavior/neurological phenotype","immune system phenotype","renal/urinary system phenotype","skeleton phenotype","digestive/alimentary phenotype","limbs/digits/tail phenotype","immune system phenotype","hematopoietic system phenotype","homeostasis/metabolism phenotype","mortality/aging","reproductive system phenotype","cardiovascular system phenotype","hematopoietic system phenotype","liver/biliary system phenotype","immune system phenotype","nervous system phenotype","endocrine/exocrine gland phenotype","cellular phenotype","muscle phenotype","endocrine/exocrine gland phenotype","reproductive system phenotype","hematopoietic system phenotype","homeostasis/metabolism phenotype","growth/size/body region phenotype","growth/size/body region phenotype","endocrine/exocrine gland phenotype","muscle phenotype","craniofacial phenotype","homeostasis/metabolism phenotype","cellular phenotype","skeleton phenotype","renal/urinary system phenotype","embryo phenotype","behavior/neurological phenotype","respiratory system phenotype","hematopoietic system phenotype","cardiovascular system phenotype","mortality/aging","digestive/alimentary phenotype","hearing/vestibular/ear phenotype","nervous system phenotype","vision/eye phenotype","immune system phenotype","homeostasis/metabolism phenotype","cellular phenotype","muscle phenotype","growth/size/body region phenotype","integument phenotype","adipose tissue phenotype","respiratory system phenotype","liver/biliary system phenotype","cardiovascular system phenotype","mortality/aging","liver/biliary system phenotype","homeostasis/metabolism phenotype","homeostasis/metabolism phenotype","cellular phenotype","integument phenotype","endocrine/exocrine gland phenotype","reproductive system phenotype","immune system phenotype","vision/eye phenotype","mortality/aging","hematopoietic system phenotype","liver/biliary system phenotype","embryo phenotype","homeostasis/metabolism phenotype","adipose tissue phenotype","integument phenotype","growth/size/body region phenotype","embryo phenotype","cardiovascular system phenotype","mortality/aging","cellular phenotype","integument phenotype","growth/size/body region phenotype","endocrine/exocrine gland phenotype","homeostasis/metabolism phenotype","muscle phenotype","mortality/aging","reproductive system phenotype","behavior/neurological phenotype","nervous system phenotype","skeleton phenotype","craniofacial phenotype"]],"container":"<table class=\"white-space: nowrap\">\n  <thead>\n    <tr>\n      <th>Gene<\/th>\n      <th>Role<\/th>\n      <th><i>P<\/i><sub>1<\/sub><sup>base<\/sup><\/th>\n      <th><i>P<\/i><sub>1<\/sub><sup>near<\/sup><\/th>\n      <th><i>P<\/i><sub>1<\/sub><sup>bma<\/sup><\/th>\n      <th>MGI ID<\/th>\n      <th>High-level mammalian phenotype<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\", null);\n  }"},{"targets":3,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\", null);\n  }"},{"targets":4,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\", null);\n  }"},{"className":"dt-right","targets":[2,3,4]},{"name":"Gene","targets":0},{"name":"Role","targets":1},{"name":"<i>P<\/i><sub>1<\/sub><sup>base<\/sup>","targets":2},{"name":"<i>P<\/i><sub>1<\/sub><sup>near<\/sup>","targets":3},{"name":"<i>P<\/i><sub>1<\/sub><sup>bma<\/sup>","targets":4},{"name":"MGI ID","targets":5},{"name":"High-level mammalian phenotype","targets":6}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render","options.columnDefs.2.render"],"jsHooks":[]}</script>
 </div>
-<div id="online-mendelian-inheritance-in-man-omim" class="section level2">
+<div id="online-mendelian-inheritance-in-man-omim"
+class="section level2">
 <h2>Online Mendelian Inheritance in Man (OMIM)</h2>
 <p><br></p>
-<div id="htmlwidget-be7ef12aac2f96185af6" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-be7ef12aac2f96185af6">{"x":{"filter":"none","data":[["CDKN2A","CDKN2A","CDKN2A","LIPA","LIPA","SURF1","SURF1","SORT1","SH2B3","SH2B3","SH2B3","CUX2","CUX2","POC1B","COL4A1","COL4A1","COL4A1","COL4A1","COL4A1","COL4A2","COL4A2","SPECC1L","SPECC1L","SPECC1L","LDLR","LDLR","SMARCA4","SMARCA4","KANK2","KANK2","GUCY1A3","CYP17A1","CYP17A1","IL6R","IL6R","CNNM2","CNNM2","GGCX","GGCX","SMAD3","TBXAS1","TBXAS1","CXCL12","EDNRA","EDNRA","LPL","LPL","LPL","PCSK9","PCSK9","CEP120","CEP120"],["TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TF","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TF","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG"],[1,1,1,0.999986545234744,0.999986545234744,0.999968336809193,0.999968336809193,0.999770630532945,0.99865660238742,0.99865660238742,0.99865660238742,0.998656918677083,0.998656918677083,0.979188755521215,0.875466461523342,0.875466461523342,0.875466461523342,0.875466461523342,0.875466461523342,0.874051975132719,0.874051975132719,0.93837961821994,0.93837961821994,0.93837961821994,0.846518540170025,0.846518540170025,0.847453710442707,0.847453710442707,0.845848038236961,0.845848038236961,0.826405269674843,0.80197502333508,0.80197502333508,0.667986588168634,0.667986588168634,0.801997507326526,0.801997507326526,0.792436069784649,0.792436069784649,0.7012546093927,0.437603890552626,0.437603890552626,0.30386399784474,0.348888496324251,0.348888496324251,0.29982130210309,0.29982130210309,0.29982130210309,0.36581374323465,0.36581374323465,0.14291584631318,0.14291584631318],[1,1,1,0.999991723127276,0.999991723127276,0.99997888575516,0.99997888575516,0.99984114956451,0.999140464265545,0.999140464265545,0.999140464265545,0.999140779469669,0.999140779469669,0.988885332206227,0.945772000067297,0.945772000067297,0.945772000067297,0.945772000067297,0.945772000067297,0.944770799627336,0.944770799627336,0.958118088940768,0.958118088940768,0.958118088940768,0.885012807562643,0.885012807562643,0.885737880460482,0.885737880460482,0.884548127006146,0.884548127006146,0.895843435082045,0.854941157083168,0.854941157083168,0.723049273182464,0.723049273182464,0.85496453099363,0.85496453099363,0.85279455984932,0.85279455984932,0.797425141261958,0.558642626126032,0.558642626126032,0.491755429404668,0.51017118883743,0.51017118883743,0.434373705716632,0.434373705716632,0.434373705716632,0.482576924012138,0.482576924012138,0.2419602315587,0.2419602315587],[1,1,1,0.999997507402414,0.999997507402414,0.999987572713942,0.999987572713942,0.999958941052765,0.999808138838997,0.999808138838997,0.999808138838997,0.999769880713703,0.999769880713703,0.997423905406601,0.995945747542831,0.995945747542831,0.995945747542831,0.995945747542831,0.995945747542831,0.995717600615305,0.995717600615305,0.986438033595688,0.986438033595688,0.986438033595688,0.982170630891442,0.982170630891442,0.982024454029894,0.982024454029894,0.981950603972838,0.981950603972838,0.976343994242896,0.938419464836646,0.938419464836646,0.881016081786643,0.881016081786643,0.876950348361282,0.876950348361282,0.873746021714553,0.873746021714553,0.870483915448039,0.867885815650058,0.867885815650058,0.836859531915781,0.782037247677848,0.782037247677848,0.714264665671552,0.714264665671552,0.714264665671552,0.705788155936286,0.705788155936286,0.595216333365713,0.595216333365713],["{Melanoma and neural system tumor syndrome}, 155755 (3)","{Melanoma, cutaneous malignant, 2}, 155601 (3)","{Melanoma-pancreatic cancer syndrome}, 606719 (3)","Cholesteryl ester storage disease, 278000 (3)","Wolman disease, 278000 (3)","Charcot-Marie-Tooth disease, type 4K, 616684 (3)","Leigh syndrome, due to COX IV deficiency, 256000 (3)","[Low density lipoprotein cholesterol level QTL6], 613589 (3)","Erythrocytosis, somatic, 133100 (3)","Myelofibrosis, somatic, 254450 (3)","Thrombocythemia, somatic, 187950 (3)","Epileptic encephalopathy, early infantile, 67, 618141 (3)","Epileptic encephalopathy, early infantile, 67, 618141 (3)","Cone-rod dystrophy 20, 615973 (3)","?Retinal arteries, tortuosity of, 180000 (3)","Angiopathy, hereditary, with nephropathy, aneurysms, and muscle cramps, 611773 (3)","Brain small vessel disease with or without ocular anomalies, 175780 (3)","Microangiopathy and leukoencephalopathy, pontine, autosomal dominant, 618564 (3)","{Hemorrhage, intracerebral, susceptibility to}, 614519 (3)","Brain small vessel disease 2, 614483 (3)","{Hemorrhage, intracerebral, susceptibility to}, 614519 (3)","?Facial clefting, oblique, 1, 600251 (3)","Hypertelorism, Teebi type, 145420 (3)","Opitz GBBB syndrome, type II, 145410 (3)","Hypercholesterolemia, familial, 1, 143890 (3)","LDL cholesterol level QTL2, 143890 (3)","Coffin-Siris syndrome 4, 614609 (3)","{Rhabdoid tumor predisposition syndrome 2}, 613325 (3)","Nephrotic syndrome, type 16, 617783 (3)","Palmoplantar keratoderma and woolly hair, 616099 (3)","Moyamoya 6 with achalasia, 615750 (3)","17,20-lyase deficiency, isolated, 202110 (3)","17-alpha-hydroxylase/17,20-lyase deficiency, 202110 (3)","[Interleukin 6, serum level of, QTL], 614752 (3)","[Interleukin-6 receptor, soluble, serum level of, QTL], 614689 (3)","Hypomagnesemia 6, renal, 613882 (3)","Hypomagnesemia, seizures, and mental retardation, 616418 (3)","Pseudoxanthoma elasticum-like disorder with multiple coagulation factor deficiency, 610842 (3)","Vitamin K-dependent clotting factors, combined deficiency of, 1, 277450 (3)","Loeys-Dietz syndrome 3, 613795 (3)","?Thromboxane synthase deficiency, 614158 (1)","Ghosal hematodiaphyseal syndrome, 231095 (3)","{AIDS, resistance to}, 609423 (3)","Mandibulofacial dysostosis with alopecia, 616367 (3)","{Migraine, resistance to}, 157300 (3)","Combined hyperlipidemia, familial, 144250 (3)","Lipoprotein lipase deficiency, 238600 (3)","[High density lipoprotein cholesterol level QTL 11], 238600 (3)","Hypercholesterolemia, familial, 3, 603776 (3)","{Low density lipoprotein cholesterol level QTL 1}, 603776 (3)","Joubert syndrome 31, 617761 (3)","Short-rib thoracic dysplasia 13 with or without polydactyly, 616300 (3)"]],"container":"<table class=\"white-space: nowrap\">\n  <thead>\n    <tr>\n      <th>Gene<\/th>\n      <th>Role<\/th>\n      <th><i>P<\/i><sub>1<\/sub><sup>base<\/sup><\/th>\n      <th><i>P<\/i><sub>1<\/sub><sup>near<\/sup><\/th>\n      <th><i>P<\/i><sub>1<\/sub><sup>bma<\/sup><\/th>\n      <th>Disease, OMIM ID<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\");\n  }"},{"targets":3,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\");\n  }"},{"targets":4,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\");\n  }"},{"className":"dt-right","targets":[2,3,4]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render","options.columnDefs.2.render"],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-be7ef12aac2f96185af6" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-be7ef12aac2f96185af6">{"x":{"filter":"none","vertical":false,"data":[["CDKN2A","CDKN2A","CDKN2A","LIPA","LIPA","SURF1","SURF1","SORT1","SH2B3","SH2B3","SH2B3","CUX2","CUX2","POC1B","COL4A1","COL4A1","COL4A1","COL4A1","COL4A1","COL4A2","COL4A2","SPECC1L","SPECC1L","SPECC1L","LDLR","LDLR","SMARCA4","SMARCA4","KANK2","KANK2","GUCY1A3","CYP17A1","CYP17A1","IL6R","IL6R","CNNM2","CNNM2","GGCX","GGCX","SMAD3","TBXAS1","TBXAS1","CXCL12","EDNRA","EDNRA","LPL","LPL","LPL","PCSK9","PCSK9","CEP120","CEP120"],["TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TF","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TF","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG","TG"],[0.9999999999999998,0.9999999999999998,0.9999999999999998,0.9999865452347442,0.9999865452347442,0.9999683368091931,0.9999683368091931,0.9997706305329447,0.9986566023874202,0.9986566023874202,0.9986566023874202,0.9986569186770833,0.9986569186770833,0.9791887555212152,0.875466461523342,0.875466461523342,0.875466461523342,0.875466461523342,0.875466461523342,0.8740519751327189,0.8740519751327189,0.93837961821994,0.93837961821994,0.93837961821994,0.8465185401700255,0.8465185401700255,0.847453710442707,0.847453710442707,0.845848038236961,0.845848038236961,0.8264052696748433,0.8019750233350803,0.8019750233350803,0.667986588168634,0.667986588168634,0.8019975073265255,0.8019975073265255,0.7924360697846489,0.7924360697846489,0.7012546093926996,0.4376038905526262,0.4376038905526262,0.3038639978447404,0.3488884963242515,0.3488884963242515,0.29982130210309,0.29982130210309,0.29982130210309,0.3658137432346497,0.3658137432346497,0.1429158463131802,0.1429158463131802],[0.9999999999999999,0.9999999999999999,0.9999999999999999,0.999991723127276,0.999991723127276,0.9999788857551599,0.9999788857551599,0.9998411495645103,0.9991404642655446,0.9991404642655446,0.9991404642655446,0.9991407794696692,0.9991407794696692,0.988885332206227,0.9457720000672968,0.9457720000672968,0.9457720000672968,0.9457720000672968,0.9457720000672968,0.9447707996273357,0.9447707996273357,0.9581180889407677,0.9581180889407677,0.9581180889407677,0.8850128075626434,0.8850128075626434,0.8857378804604822,0.8857378804604822,0.8845481270061459,0.8845481270061459,0.8958434350820446,0.8549411570831678,0.8549411570831678,0.7230492731824643,0.7230492731824643,0.8549645309936302,0.8549645309936302,0.8527945598493198,0.8527945598493198,0.797425141261958,0.5586426261260322,0.5586426261260322,0.4917554294046685,0.5101711888374303,0.5101711888374303,0.4343737057166317,0.4343737057166317,0.4343737057166317,0.4825769240121384,0.4825769240121384,0.2419602315586999,0.2419602315586999],[0.9999999999999998,0.9999999999999998,0.9999999999999998,0.9999975074024142,0.9999975074024142,0.9999875727139418,0.9999875727139418,0.9999589410527652,0.9998081388389966,0.9998081388389966,0.9998081388389966,0.9997698807137027,0.9997698807137027,0.997423905406601,0.9959457475428306,0.9959457475428306,0.9959457475428306,0.9959457475428306,0.9959457475428306,0.9957176006153046,0.9957176006153046,0.9864380335956884,0.9864380335956884,0.9864380335956884,0.9821706308914423,0.9821706308914423,0.9820244540298941,0.9820244540298941,0.9819506039728376,0.9819506039728376,0.9763439942428955,0.9384194648366461,0.9384194648366461,0.881016081786643,0.881016081786643,0.8769503483612817,0.8769503483612817,0.8737460217145534,0.8737460217145534,0.8704839154480394,0.8678858156500581,0.8678858156500581,0.8368595319157808,0.782037247677848,0.782037247677848,0.7142646656715524,0.7142646656715524,0.7142646656715524,0.7057881559362864,0.7057881559362864,0.5952163333657128,0.5952163333657128],["{Melanoma and neural system tumor syndrome}, 155755 (3)","{Melanoma, cutaneous malignant, 2}, 155601 (3)","{Melanoma-pancreatic cancer syndrome}, 606719 (3)","Cholesteryl ester storage disease, 278000 (3)","Wolman disease, 278000 (3)","Charcot-Marie-Tooth disease, type 4K, 616684 (3)","Leigh syndrome, due to COX IV deficiency, 256000 (3)","[Low density lipoprotein cholesterol level QTL6], 613589 (3)","Erythrocytosis, somatic, 133100 (3)","Myelofibrosis, somatic, 254450 (3)","Thrombocythemia, somatic, 187950 (3)","Epileptic encephalopathy, early infantile, 67, 618141 (3)","Epileptic encephalopathy, early infantile, 67, 618141 (3)","Cone-rod dystrophy 20, 615973 (3)","?Retinal arteries, tortuosity of, 180000 (3)","Angiopathy, hereditary, with nephropathy, aneurysms, and muscle cramps, 611773 (3)","Brain small vessel disease with or without ocular anomalies, 175780 (3)","Microangiopathy and leukoencephalopathy, pontine, autosomal dominant, 618564 (3)","{Hemorrhage, intracerebral, susceptibility to}, 614519 (3)","Brain small vessel disease 2, 614483 (3)","{Hemorrhage, intracerebral, susceptibility to}, 614519 (3)","?Facial clefting, oblique, 1, 600251 (3)","Hypertelorism, Teebi type, 145420 (3)","Opitz GBBB syndrome, type II, 145410 (3)","Hypercholesterolemia, familial, 1, 143890 (3)","LDL cholesterol level QTL2, 143890 (3)","Coffin-Siris syndrome 4, 614609 (3)","{Rhabdoid tumor predisposition syndrome 2}, 613325 (3)","Nephrotic syndrome, type 16, 617783 (3)","Palmoplantar keratoderma and woolly hair, 616099 (3)","Moyamoya 6 with achalasia, 615750 (3)","17,20-lyase deficiency, isolated, 202110 (3)","17-alpha-hydroxylase/17,20-lyase deficiency, 202110 (3)","[Interleukin 6, serum level of, QTL], 614752 (3)","[Interleukin-6 receptor, soluble, serum level of, QTL], 614689 (3)","Hypomagnesemia 6, renal, 613882 (3)","Hypomagnesemia, seizures, and mental retardation, 616418 (3)","Pseudoxanthoma elasticum-like disorder with multiple coagulation factor deficiency, 610842 (3)","Vitamin K-dependent clotting factors, combined deficiency of, 1, 277450 (3)","Loeys-Dietz syndrome 3, 613795 (3)","?Thromboxane synthase deficiency, 614158 (1)","Ghosal hematodiaphyseal syndrome, 231095 (3)","{AIDS, resistance to}, 609423 (3)","Mandibulofacial dysostosis with alopecia, 616367 (3)","{Migraine, resistance to}, 157300 (3)","Combined hyperlipidemia, familial, 144250 (3)","Lipoprotein lipase deficiency, 238600 (3)","[High density lipoprotein cholesterol level QTL 11], 238600 (3)","Hypercholesterolemia, familial, 3, 603776 (3)","{Low density lipoprotein cholesterol level QTL 1}, 603776 (3)","Joubert syndrome 31, 617761 (3)","Short-rib thoracic dysplasia 13 with or without polydactyly, 616300 (3)"]],"container":"<table class=\"white-space: nowrap\">\n  <thead>\n    <tr>\n      <th>Gene<\/th>\n      <th>Role<\/th>\n      <th><i>P<\/i><sub>1<\/sub><sup>base<\/sup><\/th>\n      <th><i>P<\/i><sub>1<\/sub><sup>near<\/sup><\/th>\n      <th><i>P<\/i><sub>1<\/sub><sup>bma<\/sup><\/th>\n      <th>Disease, OMIM ID<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\", null);\n  }"},{"targets":3,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\", null);\n  }"},{"targets":4,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 4, 3, \",\", \".\", null);\n  }"},{"className":"dt-right","targets":[2,3,4]},{"name":"Gene","targets":0},{"name":"Role","targets":1},{"name":"<i>P<\/i><sub>1<\/sub><sup>base<\/sup>","targets":2},{"name":"<i>P<\/i><sub>1<\/sub><sup>near<\/sup>","targets":3},{"name":"<i>P<\/i><sub>1<\/sub><sup>bma<\/sup>","targets":4},{"name":"Disease, OMIM ID","targets":5}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render","options.columnDefs.2.render"],"jsHooks":[]}</script>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
-<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Session information
+<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+Session information
 </button>
 </p>
 <div id="workflowr-sessioninfo" class="collapse">
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1">devtools<span class="op">::</span><span class="kw">session_info</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">session_info</span>()</span></code></pre></div>
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────
- setting  value                       
- version  R version 4.0.3 (2020-10-10)
- os       Ubuntu 20.04.1 LTS          
- system   x86_64, linux-gnu           
- ui       X11                         
- language (EN)                        
- collate  en_US.UTF-8                 
- ctype    en_US.UTF-8                 
- tz       America/New_York            
- date     2020-12-02                  
+ setting  value
+ version  R version 4.4.1 (2024-06-14)
+ os       macOS Sonoma 14.6.1
+ system   aarch64, darwin20
+ ui       X11
+ language (EN)
+ collate  en_US.UTF-8
+ ctype    en_US.UTF-8
+ tz       America/Los_Angeles
+ date     2024-09-17
+ pandoc   3.1.11 @ /Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools/aarch64/ (via rmarkdown)
 
 ─ Packages ───────────────────────────────────────────────────────────────────
- package     * version date       lib source        
- assertthat    0.2.1   2019-03-21 [3] CRAN (R 4.0.0)
- callr         3.5.1   2020-10-13 [1] CRAN (R 4.0.3)
- cli           2.2.0   2020-11-20 [3] CRAN (R 4.0.3)
- crayon        1.3.4   2017-09-16 [3] CRAN (R 4.0.0)
- crosstalk     1.1.0.1 2020-03-13 [3] CRAN (R 4.0.0)
- data.table  * 1.13.2  2020-10-19 [1] CRAN (R 4.0.3)
- desc          1.2.0   2018-05-01 [3] CRAN (R 4.0.0)
- devtools      2.3.2   2020-09-18 [3] CRAN (R 4.0.2)
- digest        0.6.27  2020-10-24 [3] CRAN (R 4.0.3)
- dplyr       * 1.0.2   2020-08-18 [1] CRAN (R 4.0.2)
- DT          * 0.16    2020-10-13 [3] CRAN (R 4.0.3)
- ellipsis      0.3.1   2020-05-15 [3] CRAN (R 4.0.0)
- evaluate      0.14    2019-05-28 [3] CRAN (R 4.0.0)
- fansi         0.4.1   2020-01-08 [3] CRAN (R 4.0.0)
- fs            1.5.0   2020-07-31 [1] CRAN (R 4.0.2)
- generics      0.1.0   2020-10-31 [1] CRAN (R 4.0.3)
- git2r         0.27.1  2020-05-03 [3] CRAN (R 4.0.0)
- glue          1.4.2   2020-08-27 [3] CRAN (R 4.0.2)
- htmltools     0.5.0   2020-06-16 [3] CRAN (R 4.0.1)
- htmlwidgets   1.5.2   2020-10-03 [3] CRAN (R 4.0.2)
- httpuv        1.5.4   2020-06-06 [3] CRAN (R 4.0.0)
- jsonlite      1.7.1   2020-09-07 [3] CRAN (R 4.0.2)
- knitr         1.30    2020-09-22 [3] CRAN (R 4.0.2)
- later         1.1.0.1 2020-06-05 [3] CRAN (R 4.0.0)
- lifecycle     0.2.0   2020-03-06 [3] CRAN (R 4.0.0)
- magrittr      2.0.1   2020-11-17 [3] CRAN (R 4.0.3)
- memoise       1.1.0   2017-04-21 [3] CRAN (R 4.0.0)
- pillar        1.4.7   2020-11-20 [3] CRAN (R 4.0.3)
- pkgbuild      1.1.0   2020-07-13 [3] CRAN (R 4.0.2)
- pkgconfig     2.0.3   2019-09-22 [3] CRAN (R 4.0.0)
- pkgload       1.1.0   2020-05-29 [3] CRAN (R 4.0.0)
- prettyunits   1.1.1   2020-01-24 [3] CRAN (R 4.0.0)
- processx      3.4.4   2020-09-03 [3] CRAN (R 4.0.2)
- promises      1.1.1   2020-06-09 [3] CRAN (R 4.0.1)
- ps            1.4.0   2020-10-07 [3] CRAN (R 4.0.2)
- purrr         0.3.4   2020-04-17 [3] CRAN (R 4.0.0)
- R6            2.5.0   2020-10-28 [3] CRAN (R 4.0.3)
- Rcpp          1.0.5   2020-07-06 [3] CRAN (R 4.0.2)
- remotes       2.2.0   2020-07-21 [3] CRAN (R 4.0.2)
- rlang         0.4.9   2020-11-26 [3] CRAN (R 4.0.3)
- rmarkdown     2.5     2020-10-21 [1] CRAN (R 4.0.3)
- rprojroot     2.0.2   2020-11-15 [3] CRAN (R 4.0.3)
- sessioninfo   1.1.1   2018-11-05 [3] CRAN (R 4.0.0)
- stringi       1.5.3   2020-09-09 [3] CRAN (R 4.0.2)
- stringr       1.4.0   2019-02-10 [3] CRAN (R 4.0.0)
- testthat      3.0.0   2020-10-31 [3] CRAN (R 4.0.3)
- tibble        3.0.4   2020-10-12 [3] CRAN (R 4.0.3)
- tidyr       * 1.1.2   2020-08-27 [1] CRAN (R 4.0.2)
- tidyselect    1.1.0   2020-05-11 [1] CRAN (R 4.0.0)
- usethis       1.6.3   2020-09-17 [3] CRAN (R 4.0.2)
- vctrs         0.3.5   2020-11-17 [3] CRAN (R 4.0.3)
- whisker       0.4     2019-08-28 [3] CRAN (R 4.0.0)
- withr         2.3.0   2020-09-22 [3] CRAN (R 4.0.2)
- workflowr     1.6.2   2020-04-30 [1] CRAN (R 4.0.0)
- xfun          0.19    2020-10-30 [3] CRAN (R 4.0.3)
- yaml          2.2.1   2020-02-01 [3] CRAN (R 4.0.0)
+ package     * version    date (UTC) lib source
+ bslib         0.8.0      2024-07-29 [1] CRAN (R 4.4.0)
+ cachem        1.1.0      2024-05-16 [1] CRAN (R 4.4.0)
+ cli           3.6.3      2024-06-21 [1] CRAN (R 4.4.0)
+ crosstalk     1.2.1      2023-11-23 [1] CRAN (R 4.4.0)
+ data.table  * 1.16.0     2024-08-27 [1] CRAN (R 4.4.1)
+ devtools      2.4.5      2022-10-11 [1] CRAN (R 4.4.0)
+ digest        0.6.37     2024-08-19 [1] CRAN (R 4.4.1)
+ dplyr       * 1.1.4      2023-11-17 [1] CRAN (R 4.4.0)
+ DT          * 0.33       2024-04-04 [1] CRAN (R 4.4.0)
+ ellipsis      0.3.2      2021-04-29 [1] CRAN (R 4.4.0)
+ evaluate      0.24.0     2024-06-10 [1] CRAN (R 4.4.0)
+ fansi         1.0.6      2023-12-08 [1] CRAN (R 4.4.0)
+ fastmap       1.2.0      2024-05-15 [1] CRAN (R 4.4.0)
+ fs            1.6.4      2024-04-25 [1] CRAN (R 4.4.0)
+ generics      0.1.3      2022-07-05 [1] CRAN (R 4.4.0)
+ git2r         0.33.0     2023-11-26 [1] CRAN (R 4.4.0)
+ glue          1.7.0      2024-01-09 [1] CRAN (R 4.4.0)
+ htmltools     0.5.8.1    2024-04-04 [1] CRAN (R 4.4.0)
+ htmlwidgets   1.6.4      2023-12-06 [1] CRAN (R 4.4.0)
+ httpuv        1.6.15     2024-03-26 [1] CRAN (R 4.4.0)
+ jquerylib     0.1.4      2021-04-26 [1] CRAN (R 4.4.0)
+ jsonlite      1.8.8      2023-12-04 [1] CRAN (R 4.4.0)
+ knitr         1.48       2024-07-07 [1] CRAN (R 4.4.0)
+ later         1.3.2      2023-12-06 [1] CRAN (R 4.4.0)
+ lifecycle     1.0.4      2023-11-07 [1] CRAN (R 4.4.0)
+ magrittr      2.0.3      2022-03-30 [1] CRAN (R 4.4.0)
+ memoise       2.0.1      2021-11-26 [1] CRAN (R 4.4.0)
+ mime          0.12       2021-09-28 [1] CRAN (R 4.4.0)
+ miniUI        0.1.1.1    2018-05-18 [1] CRAN (R 4.4.0)
+ pillar        1.9.0      2023-03-22 [1] CRAN (R 4.4.0)
+ pkgbuild      1.4.4      2024-03-17 [1] CRAN (R 4.4.0)
+ pkgconfig     2.0.3      2019-09-22 [1] CRAN (R 4.4.0)
+ pkgload       1.4.0      2024-06-28 [1] CRAN (R 4.4.0)
+ profvis       0.3.8      2023-05-02 [1] CRAN (R 4.4.0)
+ promises      1.3.0      2024-04-05 [1] CRAN (R 4.4.0)
+ purrr         1.0.2      2023-08-10 [1] CRAN (R 4.4.0)
+ R6            2.5.1      2021-08-19 [1] CRAN (R 4.4.0)
+ Rcpp          1.0.13     2024-07-17 [1] CRAN (R 4.4.0)
+ remotes       2.5.0      2024-03-17 [1] CRAN (R 4.4.0)
+ rlang         1.1.4      2024-06-04 [1] CRAN (R 4.4.0)
+ rmarkdown     2.28       2024-08-17 [1] CRAN (R 4.4.0)
+ rprojroot     2.0.4      2023-11-05 [1] CRAN (R 4.4.0)
+ rstudioapi    0.16.0     2024-03-24 [1] CRAN (R 4.4.0)
+ sass          0.4.9.9000 2024-07-11 [1] Github (rstudio/sass@9228fcf)
+ sessioninfo   1.2.2      2021-12-06 [1] CRAN (R 4.4.0)
+ shiny         1.9.1      2024-08-01 [1] CRAN (R 4.4.0)
+ stringi       1.8.4      2024-05-06 [1] CRAN (R 4.4.0)
+ stringr       1.5.1      2023-11-14 [1] CRAN (R 4.4.0)
+ tibble        3.2.1      2023-03-20 [1] CRAN (R 4.4.0)
+ tidyr       * 1.3.1      2024-01-24 [1] CRAN (R 4.4.0)
+ tidyselect    1.2.1      2024-03-11 [1] CRAN (R 4.4.0)
+ urlchecker    1.0.1      2021-11-30 [1] CRAN (R 4.4.0)
+ usethis       3.0.0      2024-07-29 [1] CRAN (R 4.4.0)
+ utf8          1.2.4      2023-10-22 [1] CRAN (R 4.4.0)
+ vctrs         0.6.5      2023-12-01 [1] CRAN (R 4.4.0)
+ whisker       0.4.1      2022-12-05 [1] CRAN (R 4.4.0)
+ withr         3.0.1      2024-07-31 [1] CRAN (R 4.4.0)
+ workflowr     1.7.1      2023-08-23 [1] CRAN (R 4.4.0)
+ xfun          0.47       2024-08-17 [1] CRAN (R 4.4.0)
+ xtable        1.8-4      2019-04-21 [1] CRAN (R 4.4.0)
+ yaml          2.3.10     2024-07-26 [1] CRAN (R 4.4.0)
 
-[1] /home/maimaizhu/R/x86_64-pc-linux-gnu-library/4.0
-[2] /usr/local/lib/R/site-library
-[3] /usr/lib/R/site-library
-[4] /usr/lib/R/library</code></pre>
+ [1] /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library
+
+──────────────────────────────────────────────────────────────────────────────</code></pre>
 </div>
 </div>
 
 
 <!-- Adjust MathJax settings so that all math formulae are shown using
 TeX fonts only; see
-http://docs.mathjax.org/en/latest/configuration.html.  This will make
+https://docs.mathjax.org/en/latest/web/configuration.html. This will make
 the presentation more consistent at the cost of the webpage sometimes
 taking slightly longer to load. Note that this only works because the
 footer is added to webpages before the MathJax javascript. -->
@@ -985,6 +1059,8 @@ footer is added to webpages before the MathJax javascript. -->
     "HTML-CSS": { availableFonts: ["TeX"] }
   });
 </script>
+
+
 
 
 
@@ -1012,7 +1088,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>
